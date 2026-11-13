@@ -1,69 +1,69 @@
 # MOMOA
 
-MOMOA is a fictional university gallery of Greek sculpture and reproductions. This project contains 22 French and English pages in HTML, CSS, and JavaScript, based on the Builder export and the [approved Figma maquettes](https://www.figma.com/design/2hP92QF9qMobRzZcJIsvFf/Momoa-Export-HTM-Builder.io?node-id=282-1408).
+MOMOA est une galerie fictive consacrée à la sculpture grecque et à ses reproductions, créée dans le cadre d’un projet universitaire. Le site comprend 22 pages en français et en anglais, réalisées en HTML, CSS et JavaScript à partir de l’export Builder.io et des [maquettes Figma approuvées](https://www.figma.com/design/2hP92QF9qMobRzZcJIsvFf/Momoa-Export-HTM-Builder.io?node-id=282-1408).
 
-| Path | Contents |
+| Chemin | Contenu |
 | --- | --- |
-| `docs/` | Complete website, ready to serve from a static host |
-| `docs/assets/styles.css` | Shared layout, typography, and responsive styles |
-| `docs/assets/site.js` | Mobile menu and local demo form |
-| `docs/assets/images/` and `docs/assets/fonts/` | Local images, typefaces, and font licenses |
-| `src/content.mjs` | French and English copy, artwork records, and route map |
-| `src/build.mjs` | Rebuilds the HTML from the shared templates and copy |
+| `docs/` | Site complet, prêt pour un hébergement statique |
+| `docs/assets/styles.css` | Mise en page, typographie et styles adaptatifs communs |
+| `docs/assets/site.js` | Menu mobile et formulaire de démonstration local |
+| `docs/assets/images/` et `docs/assets/fonts/` | Images, polices et licences des polices hébergées localement |
+| `src/content.mjs` | Textes français et anglais, fiches des œuvres et liste des routes |
+| `src/build.mjs` | Script de génération des pages HTML à partir des modèles communs et des textes |
 
-## Preview on your computer
+## Prévisualiser le site sur votre ordinateur
 
-1. Extract the ZIP. Open the extracted `momoa-website` folder.
-2. Open a terminal in that folder. On Windows, you can type `powershell` in the File Explorer address bar and press Enter.
-3. If Python is installed, run the command for your system.
+1. Décompressez l’archive ZIP, puis ouvrez le dossier `momoa-website` obtenu.
+2. Ouvrez un terminal dans ce dossier. Sous Windows, vous pouvez saisir `powershell` dans la barre d’adresse de l’Explorateur de fichiers et appuyer sur Entrée.
+3. Si Python est installé, exécutez la commande correspondant à votre système.
 
-   Windows:
+   **Sous Windows**
 
    ```powershell
    py -m http.server 8000 --bind 127.0.0.1 --directory docs
    ```
 
-   macOS or Linux:
+   **Sous macOS ou Linux**
 
    ```bash
    python3 -m http.server 8000 --bind 127.0.0.1 --directory docs
    ```
 
-4. Open [http://localhost:8000/](http://localhost:8000/) in your browser. Keep the terminal open while previewing. Press Ctrl+C in the terminal to stop.
+4. Ouvrez [http://localhost:8000/](http://localhost:8000/) dans votre navigateur. Laissez le terminal ouvert pendant la prévisualisation. Pour arrêter le serveur, appuyez sur Ctrl+C dans le terminal.
 
-The HTML is already generated. To edit copy, change `src/content.mjs` and run `node src/build.mjs` with Node.js 22 or later. Refresh the browser after editing the styles or JavaScript.
+Les pages HTML sont déjà générées. Pour modifier les textes, éditez `src/content.mjs`, puis exécutez `node src/build.mjs` avec Node.js 22 ou une version plus récente. Après une modification du CSS ou du JavaScript, actualisez la page dans le navigateur.
 
-## Publish on GitHub Pages
+## Publier sur GitHub Pages
 
-1. In the team's GitHub repository, add the extracted project's contents so `docs/index.html` is at the root of the `docs` folder. Include `docs/.nojekyll`.
-2. Commit the project to the branch you want to publish, such as `main`.
-3. Open **Settings → Pages**. Choose **Deploy from a branch**. Select your branch and **/docs**, then click **Save**.
-4. Open the address GitHub displays. Check the homepage, the English switch, and a notice reached directly through its URL.
+1. À la racine du dépôt GitHub de l’équipe, ajoutez le contenu du projet décompressé. Vérifiez que `index.html` et `.nojekyll` se trouvent à la racine du dossier `docs/`.
+2. Enregistrez les fichiers dans un commit sur la branche à publier, par exemple `main`.
+3. Ouvrez **Settings → Pages**. Choisissez **Deploy from a branch**, sélectionnez votre branche et le dossier **/docs**, puis cliquez sur **Save**.
+4. Ouvrez l’adresse affichée par GitHub. Vérifiez l’accueil, le passage à l’anglais et l’ouverture directe d’une notice par son URL.
 
-The generated links are relative to the project folder. GitHub documents the publishing options and the `/docs` source folder in its [Pages setup guide](https://docs.github.com/en/pages/getting-started-with-github-pages/configuring-a-publishing-source-for-your-github-pages-site).
+Les liens générés sont relatifs au dossier du projet. Les options de publication et le dossier source `/docs` sont décrits dans le [guide de configuration de GitHub Pages](https://docs.github.com/en/pages/getting-started-with-github-pages/configuring-a-publishing-source-for-your-github-pages-site).
 
-## Verification
+## Vérifications
 
-| Check | Result |
+| Contrôle | Résultat |
 | --- | --- |
-| HTML and CSS | Nu HTML Checker reported zero errors across the 22 documents and the stylesheet. |
-| Routes and local assets | All 22 pages, their language counterparts, and 811 local references resolved under a GitHub Pages style project path. |
-| Collection and FAQ | Checked all six cards in both languages, all twelve previous/next links in each direction, and the homepage links to the full FAQ. |
-| Resizing | Chromium rendered all 22 pages at 320, 360, 390, 639, 640, 768, 895, 896, 1024, 1440, and 1920 CSS px. The measured layouts had zero horizontal overflow, clipped text, or unintended intersections in the checked grids and controls. The open menu and form error and confirmation states also passed. |
-| Keyboard navigation | Chromium passed 58 interaction checks, including Tab, Shift+Tab, skip-to-content, Enter, Space, Escape, menu focus return, a notice language switch, and both demo forms. A separate test passed 90 menu resize cases across both languages. The form resets input and makes no submission requests. |
-| Accessibility scan and contrast | axe-core 4.14.0 reported zero automated WCAG A/AA violations in 54 checks across mobile, desktop, menus, and form states. The 832 text samples on textured backgrounds met their contrast thresholds. The lowest sampled ratio was 5.07 to 1. |
-| Image files | All WebP files decoded. The bust and pedestal stay in one responsive image, and smaller viewports can load smaller assets. Collection cards and notices use their corresponding Figma crops, with separate desktop and mobile notice sources. |
-| Lighthouse 13.6.0 | All 22 pages scored 94–99 for mobile Performance and 100 for mobile Accessibility, Best Practices, and SEO. Both Gallery pages scored 99 for mobile Performance. All four desktop scores were 100 on every page. Every page passed the meta description and HTTP status audits. |
-| WAVE | Pending a WebAIM report for the published site. Enter the GitHub Pages URL in the WAVE web tool and review the Errors, Contrast Errors, and Alerts counts for each page tested. Use the WAVE extension for interactive states such as the open menu and form messages. |
+| HTML et CSS | Nu HTML Checker a relevé zéro erreur dans les 22 documents HTML et la feuille de style. |
+| Routes et ressources locales | Les 22 pages, leurs équivalents dans l’autre langue et les 811 références locales ont été vérifiés sous un chemin de projet de type GitHub Pages. |
+| Collection et FAQ | Les six cartes dans les deux langues, les douze liens vers l’œuvre précédente, les douze liens vers l’œuvre suivante et les liens de l’accueil vers la FAQ complète ont été vérifiés. |
+| Redimensionnement | Les 22 pages ont été testées dans Chromium à 320, 360, 390, 639, 640, 768, 895, 896, 1024, 1440 et 1920 pixels CSS. Les grilles et commandes vérifiées ne présentaient ni débordement horizontal, ni texte tronqué, ni chevauchement involontaire. Le menu ouvert et les états d’erreur et de confirmation du formulaire ont également été vérifiés. |
+| Navigation au clavier | Les 58 tests d’interaction dans Chromium ont réussi. Ils couvraient notamment Tab, Maj+Tab, le lien d’accès direct au contenu, Entrée, Espace, Échap, le retour du focus au menu, le changement de langue sur une notice et les deux formulaires de démonstration. Les 90 tests de redimensionnement du menu dans les deux langues ont aussi réussi. Le formulaire efface les champs et n’envoie aucune requête de soumission. |
+| Accessibilité et contraste | axe-core 4.14.0 n’a détecté aucune violation automatisée des critères WCAG de niveaux A et AA lors de 54 contrôles sur mobile et ordinateur, y compris les états du menu et du formulaire. Les 832 échantillons de texte sur fond texturé respectaient les seuils de contraste applicables. Le rapport le plus bas mesuré était de 5,07 pour 1. |
+| Images | Tous les fichiers WebP ont été décodés. Le buste et son socle forment une seule image adaptative, disponible en plusieurs tailles. Les cartes et les notices reprennent les cadrages Figma, avec des fichiers distincts pour les notices sur mobile et ordinateur. |
+| Lighthouse 13.6.0 | Sur mobile, les 22 pages ont obtenu de 94 à 99 en performances et 100 en accessibilité, bonnes pratiques et SEO. Les deux pages de la galerie ont obtenu 99 en performances sur mobile. Sur ordinateur, les 22 pages ont obtenu 100 dans les quatre catégories. Toutes les pages ont réussi les contrôles de la méta-description et du code de statut HTTP. |
+| WAVE | Rapport WebAIM du site publié en attente. Saisissez l’URL de GitHub Pages dans l’outil WAVE en ligne. Pour chaque page testée, examinez les rubriques **Errors**, **Contrast Errors** et **Alerts**. Utilisez l’extension WAVE pour contrôler les états interactifs, comme le menu ouvert et les messages du formulaire. |
 
-The browser checks included 12 layouts at the CSS viewport size corresponding to 200% zoom in a 1440px window. A test using the browser's zoom control remains separate. Lighthouse ran against the locally served site. The `verification/` folder contains all 44 scores and the mobile and desktop reports for the French homepage and Gallery.
+Les contrôles dans le navigateur comprenaient 12 mises en page testées avec une zone d’affichage CSS équivalente à un zoom de 200 % dans une fenêtre de 1440 px. Un essai avec la commande de zoom du navigateur reste à effectuer. Lighthouse a été exécuté sur le site servi localement. Le dossier `verification/` de l’archive ZIP contient les résultats des 44 tests ainsi que les rapports mobile et ordinateur pour l’accueil et la galerie en français.
 
-Run PageSpeed Insights against the public GitHub Pages URL after deployment. A sign-in-protected preview returns HTTP 401 to PageSpeed, which then audits the sign-in screen. Check that the report screenshot shows MOMOA.
+Après le déploiement, utilisez l’URL publique de GitHub Pages dans PageSpeed Insights. Un aperçu protégé par une connexion renvoie un code HTTP 401 à PageSpeed, qui analyse alors l’écran de connexion. Vérifiez que la capture du rapport affiche bien MOMOA.
 
-## Content and credits for submission
+## Contenus et crédits
 
-- The final collection follows the six works in the approved Figma maquettes: Victoire de Samothrace, Discobole, Vénus de Milo, Prométhée, Athéna, and Poséidon.
-- The Gallery information card links to the FAQ in both languages. This replaces the legacy DEDAL email and phone from the Builder export.
-- Notice credits and original photo links are included where available. The adapted Discobole images carry the CC BY-SA 3.0 attribution and license link. The original museum link is retained, with the Cambridge museum page as a second source.
-- The Prométhée notice cites the Berlin Nationalgalerie archive entry for the sculpture. The GNM replica record was unavailable during verification.
-- The export credits the gallery portrait and exhibition photograph to Montserrat Mondragón / Pexels and the caryatids photograph to Efrem Efre / Pexels. The image files follow the supplied maquettes.
+- La collection reprend les six œuvres des maquettes Figma approuvées, à savoir la Victoire de Samothrace, le Discobole, la Vénus de Milo, Prométhée, Athéna et Poséidon.
+- Sur la page de la galerie, la carte d’information renvoie vers la FAQ dans les deux langues. Ce lien remplace l’ancienne adresse électronique et l’ancien numéro de téléphone de DEDAL figurant dans l’export Builder.io.
+- Les notices indiquent les crédits et les liens vers les photographies originales lorsqu’ils sont disponibles. Les images adaptées du Discobole comportent l’attribution et le lien de la licence CC BY-SA 3.0. La page du musée de Cambridge complète le lien vers le musée d’origine.
+- La notice de Prométhée cite la fiche d’archives de la sculpture à la Nationalgalerie de Berlin. La fiche de la réplique du GNM était indisponible lors de la vérification.
+- L’export attribue le portrait de la galerie et la photographie de l’exposition à Montserrat Mondragón / Pexels, ainsi que la photographie des cariatides à Efrem Efre / Pexels. Les fichiers image suivent les maquettes fournies.
