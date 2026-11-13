@@ -386,7 +386,7 @@ function documentFor(page) {
   const copy = languages[page.lang];
   const title = page.name === "home" ? copy.htmlTitle : `${page.artwork?.title[page.lang] ?? copy.title[page.name]} — MOMOA`;
   const description = page.artwork ? page.artwork.notices[page.lang].heading : copy.descriptions[page.name];
-  const galleryFontPreload = (page.name === "gallery" || page.name === "home")
+  const heroPreload = page.name === "home" ? `\n  <link rel="preload" as="image" href="${assetLink(page, "hero-bust-plinth-400.webp")}" imagesrcset="${[400, 680, 960, 1260].map((size) => `${assetLink(page, size === 1260 ? "hero-bust-plinth.webp" : `hero-bust-plinth-${size}.webp`)} ${size}w`).join(", ")}" imagesizes="(min-width: 90rem) 624px, (min-width: 56rem) 43.05vw, (min-width: 42rem) 624px, calc(100vw - 3rem)" fetchpriority="high">` : "";\n  const galleryFontPreload = (page.name === "gallery" || page.name === "home")
     ? `\n  <link rel="preload" href="${relative(page, "assets/fonts/cormorant-garamond-latin-wght-normal.woff2")}" as="font" type="font/woff2" crossorigin>`
     : "";
   return `<!doctype html>
