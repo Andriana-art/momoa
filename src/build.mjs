@@ -386,7 +386,7 @@ function documentFor(page) {
   const copy = languages[page.lang];
   const title = page.name === "home" ? copy.htmlTitle : `${page.artwork?.title[page.lang] ?? copy.title[page.name]} — MOMOA`;
   const description = page.artwork ? page.artwork.notices[page.lang].heading : copy.descriptions[page.name];
-  const galleryFontPreload = page.name === "gallery"
+  const galleryFontPreload = (page.name === "gallery" || page.name === "home")
     ? `\n  <link rel="preload" href="${relative(page, "assets/fonts/cormorant-garamond-latin-wght-normal.woff2")}" as="font" type="font/woff2" crossorigin>`
     : "";
   return `<!doctype html>
