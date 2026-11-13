@@ -43,8 +43,6 @@ desktopLayout.addEventListener("change", (event) => {
 window.addEventListener("pageshow", (event) => {
   if (event.persisted && !mobileMenu.hidden) setMenu(false, false);
 });
-menuButton.hidden = false;
-menuButton.closest(".header-inner").classList.add("menu-ready");
 
 const form = document.querySelector(".signup-form");
 if (form) {

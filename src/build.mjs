@@ -7,6 +7,7 @@ const output = fileURLToPath(new URL("../docs/", import.meta.url));
 const imageFolder = "assets/images/";
 const imageBreakpoint = "(min-width: 56rem)";
 const splitImageSizes = "(min-width: 90rem) 624px, (min-width: 56rem) 43.05vw, calc(100vw - 3rem)";
+const homeCardImageSizes = "(min-width: 90rem) 624px, (min-width: 56rem) calc((100vw - 2 * clamp(2rem, 5.56vw, 5rem) - 2rem) / 2), (min-width: 40rem) calc((100vw - 5.5rem) / 2), calc(100vw - 3rem)";
 const panelImageSizes = "(min-width: 90rem) 576px, (min-width: 56rem) calc(43.05vw - 3rem), (min-width: 40rem) calc(50vw - 5.75rem), calc(100vw - 6rem)";
 const caryatidWidths = [480, 640, 768, 1248, 2048];
 
@@ -108,7 +109,7 @@ function header(page) {
           <span class="language-divider" aria-hidden="true">/</span>
           ${controls[1]}
         </div>
-        <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="mobile-menu" aria-label="${escape(copy.menuOpen)}" data-open-label="${escape(copy.menuOpen)}" data-close-label="${escape(copy.menuClose)}" hidden>
+        <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="mobile-menu" aria-label="${escape(copy.menuOpen)}" data-open-label="${escape(copy.menuOpen)}" data-close-label="${escape(copy.menuClose)}">
           ${image(page, "menu-open.svg", "", 24, 18, { className: "menu-icon-open" })}
           ${image(page, "menu-close.svg", "", 24, 24, { className: "menu-icon-close" })}
         </button>
@@ -155,7 +156,10 @@ function artworkCard(page, artwork, { home = false } = {}) {
   const firstInCollection = !home && artwork.key === artworks[0].key;
   return `<article class="artwork-card${home ? " artwork-card--home" : ""}">
       <a class="artwork-link" href="${pageLink(page, noticeRoute(page.lang, artwork))}">
-        ${image(page, file, "", ...imageSize, { lazy: !firstInCollection, priority: firstInCollection, className: "artwork-image" })}
+        ${image(page, file, "", ...imageSize, {
+          lazy: !firstInCollection, priority: firstInCollection, className: "artwork-image",
+          ...(home ? { widths: [480, 680, 936], sizes: homeCardImageSizes } : {}),
+        })}
         <div class="artwork-description">
           <${heading}>${escape(title)}</${heading}>
           <p>${escape(description)}</p>
@@ -386,7 +390,8 @@ function documentFor(page) {
   const copy = languages[page.lang];
   const title = page.name === "home" ? copy.htmlTitle : `${page.artwork?.title[page.lang] ?? copy.title[page.name]} — MOMOA`;
   const description = page.artwork ? page.artwork.notices[page.lang].heading : copy.descriptions[page.name];
-  const heroPreload = page.name === "home" ? `\n  <link rel="preload" as="image" href="${assetLink(page, "hero-bust-plinth-400.webp")}" imagesrcset="${[400, 680, 960, 1260].map((size) => `${assetLink(page, size === 1260 ? "hero-bust-plinth.webp" : `hero-bust-plinth-${size}.webp`)} ${size}w`).join(", ")}" imagesizes="(min-width: 90rem) 624px, (min-width: 56rem) 43.05vw, (min-width: 42rem) 624px, calc(100vw - 3rem)" fetchpriority="high">` : "";\n  const galleryFontPreload = (page.name === "gallery" || page.name === "home")
+  const heroPreload = page.name === "home" ? `\n  <link rel="preload" as="image" href="${assetLink(page, "hero-bust-plinth-400.webp")}" imagesrcset="${[400, 680, 960, 1260].map((size) => `${assetLink(page, size === 1260 ? "hero-bust-plinth.webp" : `hero-bust-plinth-${size}.webp`)} ${size}w`).join(", ")}" imagesizes="(min-width: 90rem) 624px, (min-width: 56rem) 43.05vw, (min-width: 42rem) 624px, calc(100vw - 3rem)" fetchpriority="high">` : "";
+  const galleryFontPreload = (page.name === "gallery" || page.name === "home")
     ? `\n  <link rel="preload" href="${relative(page, "assets/fonts/cormorant-garamond-latin-wght-normal.woff2")}" as="font" type="font/woff2" crossorigin>`
     : "";
   return `<!doctype html>
@@ -397,9 +402,11 @@ function documentFor(page) {
   <meta name="description" content="${escape(description)}">
   <meta name="theme-color" content="#101722">
   <title>${escape(title)}</title>
+  <script>document.documentElement.classList.add("js");</script>
   <link rel="icon" href="${assetLink(page, "emblem.svg")}" type="image/svg+xml">
   <link rel="stylesheet" href="${relative(page, "assets/styles.css")}">${galleryFontPreload}${heroPreload}
-  <script src="${relative(page, "assets/site.js")}" defer blocking="render"></script>
+  <link rel="preload" href="${relative(page, "assets/fonts/dm-sans-latin-standard-normal.woff2")}" as="font" type="font/woff2" crossorigin>
+  <script src="${relative(page, "assets/site.js")}" defer></script>
 </head>
 <body class="page-${page.name}">
   <a class="skip-link" href="#main-content">${escape(copy.skipLink)}</a>

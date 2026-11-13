@@ -286,12 +286,12 @@ button {
   padding-block-end: 1rem;
 }
 
-.menu-ready .desktop-nav {
+.js .desktop-nav {
   display: none;
 }
 
 .menu-toggle {
-  display: grid;
+  display: none;
   width: 2.75rem;
   height: 2.75rem;
   place-items: center;
@@ -299,6 +299,11 @@ button {
   border: 0;
   border-radius: 0.25rem;
   background: transparent;
+}
+
+/* Establish the enhanced header before first paint, without waiting for site.js. */
+.js .menu-toggle {
+  display: grid;
 }
 
 .menu-toggle[aria-expanded="true"] .menu-icon-open {
@@ -995,7 +1000,7 @@ button {
     padding-block-end: 0;
   }
 
-  .menu-ready .desktop-nav, .language-divider {
+  .js .desktop-nav, .language-divider {
     display: block;
   }
 
@@ -1006,7 +1011,7 @@ button {
     font-weight: 500;
   }
 
-  .menu-toggle, .mobile-menu {
+  .js .menu-toggle, .mobile-menu {
     display: none;
   }
 

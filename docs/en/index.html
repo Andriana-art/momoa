@@ -6,11 +6,13 @@
   <meta name="description" content="Discover MOMOA, a fictional gallery of Greek sculpture and reproductions.">
   <meta name="theme-color" content="#101722">
   <title>MOMOA — Greek sculpture and reproductions</title>
+  <script>document.documentElement.classList.add("js");</script>
   <link rel="icon" href="../assets/images/emblem.svg" type="image/svg+xml">
   <link rel="stylesheet" href="../assets/styles.css">
   <link rel="preload" href="../assets/fonts/cormorant-garamond-latin-wght-normal.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="preload" as="image" href="../assets/images/hero-bust-plinth-400.webp" imagesrcset="../assets/images/hero-bust-plinth-400.webp 400w, ../assets/images/hero-bust-plinth-680.webp 680w, ../assets/images/hero-bust-plinth-960.webp 960w, ../assets/images/hero-bust-plinth.webp 1260w" imagesizes="(min-width: 90rem) 624px, (min-width: 56rem) 43.05vw, (min-width: 42rem) 624px, calc(100vw - 3rem)" fetchpriority="high">
-  <script src="../assets/site.js" defer blocking="render"></script>
+  <link rel="preload" href="../assets/fonts/dm-sans-latin-standard-normal.woff2" as="font" type="font/woff2" crossorigin>
+  <script src="../assets/site.js" defer></script>
 </head>
 <body class="page-home">
   <a class="skip-link" href="#main-content">Skip to content</a>
@@ -31,7 +33,7 @@
           <span class="language-divider" aria-hidden="true">/</span>
           <span lang="en" aria-current="true" title="English">EN</span>
         </div>
-        <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="mobile-menu" aria-label="Open menu" data-open-label="Open menu" data-close-label="Close the menu" hidden>
+        <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="mobile-menu" aria-label="Open menu" data-open-label="Open menu" data-close-label="Close the menu">
           <img class="menu-icon-open" src="../assets/images/menu-open.svg" alt="" width="24" height="18" decoding="async">
           <img class="menu-icon-close" src="../assets/images/menu-close.svg" alt="" width="24" height="24" decoding="async">
         </button>
@@ -72,7 +74,7 @@
         <div class="home-card-grid">
           <article class="artwork-card artwork-card--home">
       <a class="artwork-link" href="collection/winged-victory-of-samothrace/">
-        <img class="artwork-image" src="../assets/images/home-victoire-en.webp" alt="" width="936" height="780" loading="lazy" decoding="async">
+        <img class="artwork-image" src="../assets/images/home-victoire-en.webp" srcset="../assets/images/home-victoire-en-480.webp 480w, ../assets/images/home-victoire-en-680.webp 680w, ../assets/images/home-victoire-en.webp 936w" sizes="(min-width: 90rem) 624px, (min-width: 56rem) calc((100vw - 2 * clamp(2rem, 5.56vw, 5rem) - 2rem) / 2), (min-width: 40rem) calc((100vw - 5.5rem) / 2), calc(100vw - 3rem)" alt="" width="936" height="780" loading="lazy" decoding="async">
         <div class="artwork-description">
           <h3>Winged Victory of Samothrace</h3>
           <p>Wind takes shape in the folds of marble.</p>
@@ -82,7 +84,7 @@
     </article>
           <article class="artwork-card artwork-card--home">
       <a class="artwork-link" href="collection/venus-de-milo/">
-        <img class="artwork-image" src="../assets/images/home-venus-en.webp" alt="" width="936" height="780" loading="lazy" decoding="async">
+        <img class="artwork-image" src="../assets/images/home-venus-en.webp" srcset="../assets/images/home-venus-en-480.webp 480w, ../assets/images/home-venus-en-680.webp 680w, ../assets/images/home-venus-en.webp 936w" sizes="(min-width: 90rem) 624px, (min-width: 56rem) calc((100vw - 2 * clamp(2rem, 5.56vw, 5rem) - 2rem) / 2), (min-width: 40rem) calc((100vw - 5.5rem) / 2), calc(100vw - 3rem)" alt="" width="936" height="780" loading="lazy" decoding="async">
         <div class="artwork-description">
           <h3>Venus de Milo</h3>
           <p>A bare torso above drapery gathered at the hips.</p>
@@ -107,7 +109,7 @@
       <div class="container home-card-grid">
         <article class="artwork-card artwork-card--home">
       <a class="artwork-link" href="collection/discobolus/">
-        <img class="artwork-image" src="../assets/images/home-discobole-en.webp" alt="" width="936" height="780" loading="lazy" decoding="async">
+        <img class="artwork-image" src="../assets/images/home-discobole-en.webp" srcset="../assets/images/home-discobole-en-480.webp 480w, ../assets/images/home-discobole-en-680.webp 680w, ../assets/images/home-discobole-en.webp 936w" sizes="(min-width: 90rem) 624px, (min-width: 56rem) calc((100vw - 2 * clamp(2rem, 5.56vw, 5rem) - 2rem) / 2), (min-width: 40rem) calc((100vw - 5.5rem) / 2), calc(100vw - 3rem)" alt="" width="936" height="780" loading="lazy" decoding="async">
         <div class="artwork-description">
           <h2>Discobolus</h2>
           <p>The athlete pauses before throwing his discus.</p>
@@ -117,7 +119,7 @@
     </article>
         <article class="artwork-card artwork-card--home">
       <a class="artwork-link" href="collection/poseidon/">
-        <img class="artwork-image" src="../assets/images/home-poseidon.webp" alt="" width="936" height="780" loading="lazy" decoding="async">
+        <img class="artwork-image" src="../assets/images/home-poseidon.webp" srcset="../assets/images/home-poseidon-480.webp 480w, ../assets/images/home-poseidon-680.webp 680w, ../assets/images/home-poseidon.webp 936w" sizes="(min-width: 90rem) 624px, (min-width: 56rem) calc((100vw - 2 * clamp(2rem, 5.56vw, 5rem) - 2rem) / 2), (min-width: 40rem) calc((100vw - 5.5rem) / 2), calc(100vw - 3rem)" alt="" width="936" height="780" loading="lazy" decoding="async">
         <div class="artwork-description">
           <h2>Poseidon</h2>
           <p>With his arm raised, Poseidon probably held a trident.</p>
