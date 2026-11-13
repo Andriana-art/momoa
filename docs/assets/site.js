@@ -5,6 +5,11 @@ const mobileMenu = document.getElementById("mobile-menu");
 const closeButton = mobileMenu.querySelector(".menu-close");
 const desktopLayout = window.matchMedia("(min-width: 56rem)");
 let scrollBeforeMenu = 0;
+let menuHasFocus = false;
+
+document.addEventListener("focusin", (event) => {
+  menuHasFocus = event.target === menuButton || mobileMenu.contains(event.target);
+});
 
 function setMenu(open, returnFocus = true) {
   if (open) scrollBeforeMenu = window.scrollY;
@@ -28,9 +33,10 @@ document.addEventListener("keydown", (event) => {
 });
 desktopLayout.addEventListener("change", (event) => {
   if (!event.matches || mobileMenu.hidden) return;
-  const menuHadFocus = document.activeElement === menuButton || mobileMenu.contains(document.activeElement);
+  // The desktop CSS can blur the mobile controls before this callback runs.
+  const restoreFocus = menuHasFocus;
   setMenu(false, false);
-  if (menuHadFocus) {
+  if (restoreFocus) {
     document.querySelector(".desktop-nav a").focus({ preventScroll: true });
   }
 });
