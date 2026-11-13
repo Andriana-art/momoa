@@ -31,8 +31,10 @@ function relative(page, destination) {
 }
 
 function pageLink(page, route) {
-  const directory = relative(page, route.slice(1) || ".");
-  return directory ? `${directory}/` : "./";
+  const [pathname, fragment] = route.split("#", 2);
+  const directory = relative(page, pathname.slice(1) || ".");
+  const href = directory ? `${directory}/` : "./";
+  return fragment ? `${href}#${fragment}` : href;
 }
 
 function assetLink(page, file) {
@@ -68,9 +70,7 @@ function externalLink(url, label) {
 }
 
 function brand(page) {
-  const logo = `${image(page, "emblem.svg", "", 26, 48)}<span>momoa</span>`;
-  if (page.name === "home") return `<span class="brand">${logo}</span>`;
-  return `<a class="brand" href="${pageLink(page, languages[page.lang].routes.home)}">${logo}</a>`;
+  return `<span class="brand">${image(page, "emblem.svg", "", 26, 48)}<span>momoa</span></span>`;
 }
 
 function navigation(page, className) {
@@ -353,7 +353,7 @@ function signup(page) {
       <p>${escape(copy.body)}</p>
     </div>
     <div class="container signup-grid split-grid">
-      <div>
+      <div id="signup-form" tabindex="-1">
         <p class="signup-unavailable">${escape(signupUnavailable)}</p>
         <form class="signup-form" aria-labelledby="signup-title" aria-describedby="form-instructions demo-note" novalidate hidden>
           <p id="form-instructions" class="form-note">${escape(copy.formNote)}</p>

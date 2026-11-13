@@ -106,7 +106,7 @@ export const languages = {
           "note": "Note : ce site est une démonstration universitaire ; le formulaire est fictif et aucune donnée n’est conservée.",
           "action": {
             "label": "S’inscrire",
-            "href": "/inscription"
+            "href": "/inscription#signup-form"
           }
         }
       ]
@@ -286,7 +286,7 @@ export const languages = {
           "note": "Note: As this is an academic project, the form is for demonstration purposes only and no data is stored.",
           "action": {
             "label": "Sign up",
-            "href": "/en/sign-up"
+            "href": "/en/sign-up#signup-form"
           }
         }
       ]
