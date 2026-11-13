@@ -90,14 +90,17 @@ export const languages = {
     "faq": {
       "items": [
         {
+          "id": "a-propos-de-momoa",
           "question": "MOMOA est-elle une vraie galerie ?",
           "answer": "MOMOA est une galerie imaginée pour un projet universitaire. Vous pouvez y découvrir les œuvres et leur histoire, comme dans une véritable collection."
         },
         {
+          "id": "origine-des-sculptures",
           "question": "Toutes les sculptures sont-elles grecques ?",
           "answer": "La collection va au-delà de la Grèce antique : elle réunit aussi des copies romaines et des œuvres plus récentes inspirées des mythes grecs. Chaque notice vous aide à les situer."
         },
         {
+          "id": "inscription",
           "question": "Comment s’inscrire ?",
           "answer": "Directement sur notre page Inscription ! Il vous suffit de renseigner votre nom et votre adresse e-mail.",
           "note": "Note : ce site est une démonstration universitaire ; le formulaire est fictif et aucune donnée n’est conservée.",
@@ -267,14 +270,17 @@ export const languages = {
     "faq": {
       "items": [
         {
+          "id": "about-momoa",
           "question": "Is MOMOA a real gallery?",
           "answer": "MOMOA is an imagined gallery created for a university project. You can explore the works and their stories, just as you would in a real collection."
         },
         {
+          "id": "sculpture-origins",
           "question": "Are all the sculptures Greek?",
           "answer": "The collection reaches beyond ancient Greece, with Roman copies and later works inspired by Greek myths. Each artwork page helps you place the work in its time."
         },
         {
+          "id": "sign-up",
           "question": "How do I sign up?",
           "answer": "Simply head to our Sign Up page and enter your name and email.",
           "note": "Note: As this is an academic project, the form is for demonstration purposes only and no data is stored.",

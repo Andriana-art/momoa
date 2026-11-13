@@ -113,7 +113,7 @@ function header(page) {
     </div>
     <nav id="mobile-menu" class="mobile-menu" aria-label="${escape(copy.menuLabel)}" hidden>
       <div class="container">
-        <p class="menu-heading">${escape(copy.menuHeading)}</p>
+        <h2 class="menu-heading">${escape(copy.menuHeading)}</h2>
         ${navigation(page, "menu-links")}
         <button class="button button--primary menu-close" type="button">${escape(copy.menuClose)}</button>
       </div>
@@ -221,7 +221,7 @@ function home(page) {
       <div class="container home-faq-grid">
         <h2 id="home-faq-title">${escape(faqTitle)}</h2>
         <ul class="faq-links">
-          ${copy.faq.items.map(({ question }) => `<li><a href="${pageLink(page, routes.faq)}"><span>${escape(question)}</span><span aria-hidden="true">+</span></a></li>`).join("\n          ")}
+          ${copy.faq.items.map(({ id, question }) => `<li><a href="${pageLink(page, routes.faq)}#${id}"><span>${escape(question)}</span><span aria-hidden="true">+</span></a></li>`).join("\n          ")}
         </ul>
       </div>
     </section>
@@ -331,7 +331,7 @@ function faq(page) {
       <h1 id="faq-title">${escape(copy.home.faqTitle)}</h1>
       <ul class="faq-answers">
         ${copy.faq.items.map((item) => `<li>
-          <h2>${escape(item.question)}</h2>
+          <h2 id="${item.id}" tabindex="-1">${escape(item.question)}</h2>
           <p>${escape(item.answer)}</p>
           ${item.note ? `<p class="faq-note">${escape(item.note)}</p>` : ""}
           ${item.action ? buttonLink(page, item.action.href, item.action.label) : ""}
