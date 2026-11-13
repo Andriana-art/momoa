@@ -398,7 +398,7 @@ function documentFor(page) {
   <meta name="theme-color" content="#101722">
   <title>${escape(title)}</title>
   <link rel="icon" href="${assetLink(page, "emblem.svg")}" type="image/svg+xml">
-  <link rel="stylesheet" href="${relative(page, "assets/styles.css")}">${galleryFontPreload}
+  <link rel="stylesheet" href="${relative(page, "assets/styles.css")}">${galleryFontPreload}${heroPreload}
   <script src="${relative(page, "assets/site.js")}" defer blocking="render"></script>
 </head>
 <body class="page-${page.name}">
