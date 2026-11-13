@@ -1,0 +1,202 @@
+{
+  "commit_teste": "36e98ce0e2cf54d76a69b9645b8a89a553e609ea",
+  "site": "https://andriana-art.github.io/momoa/",
+  "pages_publiees": 22,
+  "references_locales_verifiees": 715,
+  "mises_en_page_verifiees": 44,
+  "largeurs_mises_en_page_px": [
+    390,
+    1440
+  ],
+  "langues_interactions": [
+    "fr",
+    "en"
+  ],
+  "erreurs_javascript": 0,
+  "requetes_en_echec": 0,
+  "navigation_sans_javascript": "validee",
+  "accueils_apres_defilement": {
+    "langues": [
+      "fr",
+      "en"
+    ],
+    "largeurs_px": [
+      412,
+      1350
+    ],
+    "images_chargees_par_accueil": 10
+  },
+  "liens_externes_http_200": 13,
+  "lighthouse": [
+    {
+      "page": "https://andriana-art.github.io/momoa/",
+      "langue": "fr",
+      "appareil": "mobile",
+      "rapport": "accueil-fr-mobile.html",
+      "date_utc": "2026-11-13T21:41:10.986Z",
+      "version_lighthouse": "13.6.0",
+      "scores": {
+        "performance": 100,
+        "accessibility": 100,
+        "best-practices": 100,
+        "seo": 100
+      },
+      "mesures": {
+        "first-contentful-paint": {
+          "valeur": 885.7455,
+          "unite": "millisecond"
+        },
+        "largest-contentful-paint": {
+          "valeur": 1825.7455,
+          "unite": "millisecond"
+        },
+        "speed-index": {
+          "valeur": 1358.6706560000184,
+          "unite": "millisecond"
+        },
+        "total-blocking-time": {
+          "valeur": 29,
+          "unite": "millisecond"
+        },
+        "cumulative-layout-shift": {
+          "valeur": 0,
+          "unite": "unitless"
+        }
+      }
+    },
+    {
+      "page": "https://andriana-art.github.io/momoa/",
+      "langue": "fr",
+      "appareil": "ordinateur",
+      "rapport": "accueil-fr-ordinateur.html",
+      "date_utc": "2026-11-13T21:41:56.103Z",
+      "version_lighthouse": "13.6.0",
+      "scores": {
+        "performance": 100,
+        "accessibility": 100,
+        "best-practices": 100,
+        "seo": 100
+      },
+      "mesures": {
+        "first-contentful-paint": {
+          "valeur": 326.1785,
+          "unite": "millisecond"
+        },
+        "largest-contentful-paint": {
+          "valeur": 544.1785,
+          "unite": "millisecond"
+        },
+        "speed-index": {
+          "valeur": 537.5174171403861,
+          "unite": "millisecond"
+        },
+        "total-blocking-time": {
+          "valeur": 0,
+          "unite": "millisecond"
+        },
+        "cumulative-layout-shift": {
+          "valeur": 0,
+          "unite": "unitless"
+        }
+      }
+    },
+    {
+      "page": "https://andriana-art.github.io/momoa/en/",
+      "langue": "en",
+      "appareil": "mobile",
+      "rapport": "accueil-en-mobile.html",
+      "date_utc": "2026-11-13T21:35:16.206Z",
+      "version_lighthouse": "13.6.0",
+      "scores": {
+        "performance": 100,
+        "accessibility": 100,
+        "best-practices": 100,
+        "seo": 100
+      },
+      "mesures": {
+        "first-contentful-paint": {
+          "valeur": 864.2305,
+          "unite": "millisecond"
+        },
+        "largest-contentful-paint": {
+          "valeur": 1607.2305000000001,
+          "unite": "millisecond"
+        },
+        "speed-index": {
+          "valeur": 1127.3285643394106,
+          "unite": "millisecond"
+        },
+        "total-blocking-time": {
+          "valeur": 31,
+          "unite": "millisecond"
+        },
+        "cumulative-layout-shift": {
+          "valeur": 0,
+          "unite": "unitless"
+        }
+      }
+    },
+    {
+      "page": "https://andriana-art.github.io/momoa/en/",
+      "langue": "en",
+      "appareil": "ordinateur",
+      "rapport": "accueil-en-ordinateur.html",
+      "date_utc": "2026-11-13T21:35:45.811Z",
+      "version_lighthouse": "13.6.0",
+      "scores": {
+        "performance": 100,
+        "accessibility": 100,
+        "best-practices": 100,
+        "seo": 100
+      },
+      "mesures": {
+        "first-contentful-paint": {
+          "valeur": 274.65049999999997,
+          "unite": "millisecond"
+        },
+        "largest-contentful-paint": {
+          "valeur": 516.6505,
+          "unite": "millisecond"
+        },
+        "speed-index": {
+          "valeur": 458.6576333035616,
+          "unite": "millisecond"
+        },
+        "total-blocking-time": {
+          "valeur": 0,
+          "unite": "millisecond"
+        },
+        "cumulative-layout-shift": {
+          "valeur": 0,
+          "unite": "unitless"
+        }
+      }
+    }
+  ],
+  "pagespeed_insights": {
+    "nouveau_rapport_disponible": false,
+    "erreur": "Unable to resolve https://andriana-art.github.io/momoa/en/. Try checking the URL for validity."
+  },
+  "validation_html_css": {
+    "outil": "Nu HTML Checker",
+    "version": "26.11.9 (524d973)",
+    "documents_html": 22,
+    "feuilles_css": 1,
+    "messages": []
+  },
+  "accessibilite_axe": {
+    "version": "4.14.0",
+    "controles": 50,
+    "violations_detectees": 0,
+    "limite": "Les fonds en dégradé sont signalés comme indéterminés par axe ; leurs contrastes textuels stables ont été contrôlés séparément par calcul conservateur."
+  },
+  "contrastes": {
+    "rapport": "contrastes.json",
+    "script": "contrastes.py",
+    "associations": 18,
+    "seuil_aa_texte_normal": 4.5,
+    "borne_minimale": 4.685876480208053,
+    "toutes_associations_conformes_au_seuil": true,
+    "portee": "Couleurs stables du texte et survols stabilisés ; phases intermédiaires des animations, icônes et contours de focus exclus."
+  }
+}

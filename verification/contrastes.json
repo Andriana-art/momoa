@@ -1,0 +1,255 @@
+{
+  "cssSHA256": "1ace04b0b6a9f0fa0957b7d40081bacc4fa32fab064e3e2e5c1c03144fe752ba",
+  "method": "Conservative sRGB source-over channel bounds followed by WCAG 2 relative luminance; arbitrary image channels 0..255; composite channel bounds rounded outwards to integer RGB for display quantization; all text is tested at the stricter normal-text AA threshold 4.5:1 regardless of size or weight.",
+  "mapping": "CSS foreground inheritance and explicit color overrides were reviewed for each textured family and for solid text/button palettes. The gallery-history bound uses its lowest alpha 0.64 anywhere in either mobile or desktop gradient. Additional ink-to-transparent hero/featured gradients only improve light-text contrast.",
+  "scope": "Stable authored foreground/background colors of regular text, including all gradient families and normal/settled hover palettes. This resolves the gradient-background contrast uncertainty from the 50 axe checks; it is not a complete manual WCAG audit and does not model antialiasing or intermediate animation frames.",
+  "gradientChecks": [
+    {
+      "family": "stone",
+      "backgroundSelectors": ".stone, .site-header, .mobile-menu",
+      "overlay": "#dce2e4",
+      "minimumAlpha": 0.97,
+      "foreground": "#101722",
+      "textScope": "Inherited body text, headings, ordinary links, form labels, mobile-menu text",
+      "worstUnderlyingImagePixel": "#000000",
+      "worstCompositeRGB": [
+        213,
+        219,
+        221
+      ],
+      "minimumContrastRatio": 12.850961610237585,
+      "normalTextAAThreshold": 4.5,
+      "passesForNormalAndLargeText": true
+    },
+    {
+      "family": "stone",
+      "backgroundSelectors": ".stone, .site-header, .mobile-menu",
+      "overlay": "#dce2e4",
+      "minimumAlpha": 0.97,
+      "foreground": "#233653",
+      "textScope": ".faq-links",
+      "worstUnderlyingImagePixel": "#000000",
+      "worstCompositeRGB": [
+        213,
+        219,
+        221
+      ],
+      "minimumContrastRatio": 8.703939648773185,
+      "normalTextAAThreshold": 4.5,
+      "passesForNormalAndLargeText": true
+    },
+    {
+      "family": "stone",
+      "backgroundSelectors": ".stone, .site-header, .mobile-menu",
+      "overlay": "#dce2e4",
+      "minimumAlpha": 0.97,
+      "foreground": "#983d35",
+      "textScope": ".field-error",
+      "worstUnderlyingImagePixel": "#000000",
+      "worstCompositeRGB": [
+        213,
+        219,
+        221
+      ],
+      "minimumContrastRatio": 4.913554618053131,
+      "normalTextAAThreshold": 4.5,
+      "passesForNormalAndLargeText": true
+    },
+    {
+      "family": "home-artworks",
+      "backgroundSelectors": ".home-artworks, .home-featured",
+      "overlay": "#233340",
+      "minimumAlpha": 0.78,
+      "foreground": "#ffffff",
+      "textScope": "Inherited .home-artworks headings",
+      "worstUnderlyingImagePixel": "#ffffff",
+      "worstCompositeRGB": [
+        84,
+        96,
+        107
+      ],
+      "minimumContrastRatio": 6.436940717885987,
+      "normalTextAAThreshold": 4.5,
+      "passesForNormalAndLargeText": true
+    },
+    {
+      "family": "home-artworks",
+      "backgroundSelectors": ".home-artworks, .home-featured",
+      "overlay": "#233340",
+      "minimumAlpha": 0.78,
+      "foreground": "#dadee3",
+      "textScope": ".featured-heading p, .artwork-card--home .artwork-description p",
+      "worstUnderlyingImagePixel": "#ffffff",
+      "worstCompositeRGB": [
+        84,
+        96,
+        107
+      ],
+      "minimumContrastRatio": 4.7629701229171415,
+      "normalTextAAThreshold": 4.5,
+      "passesForNormalAndLargeText": true
+    },
+    {
+      "family": "hero",
+      "backgroundSelectors": ".hero::before",
+      "overlay": "#101722",
+      "minimumAlpha": 0.87,
+      "foreground": "#ffffff",
+      "textScope": "Inherited .hero headings and homepage-header text",
+      "worstUnderlyingImagePixel": "#ffffff",
+      "worstCompositeRGB": [
+        48,
+        54,
+        63
+      ],
+      "minimumContrastRatio": 12.17307581920892,
+      "normalTextAAThreshold": 4.5,
+      "passesForNormalAndLargeText": true
+    },
+    {
+      "family": "hero",
+      "backgroundSelectors": ".hero::before",
+      "overlay": "#101722",
+      "minimumAlpha": 0.87,
+      "foreground": "#dadee3",
+      "textScope": ".hero-subtitle",
+      "worstUnderlyingImagePixel": "#ffffff",
+      "worstCompositeRGB": [
+        48,
+        54,
+        63
+      ],
+      "minimumContrastRatio": 9.007383937806237,
+      "normalTextAAThreshold": 4.5,
+      "passesForNormalAndLargeText": true
+    },
+    {
+      "family": "reproductions",
+      "backgroundSelectors": ".home-reproductions",
+      "overlay": "#30404a",
+      "minimumAlpha": 0.95,
+      "foreground": "#ffffff",
+      "textScope": "Inherited headings and transparent outline button",
+      "worstUnderlyingImagePixel": "#ffffff",
+      "worstCompositeRGB": [
+        59,
+        74,
+        84
+      ],
+      "minimumContrastRatio": 9.156344241287217,
+      "normalTextAAThreshold": 4.5,
+      "passesForNormalAndLargeText": true
+    },
+    {
+      "family": "reproductions",
+      "backgroundSelectors": ".home-reproductions",
+      "overlay": "#30404a",
+      "minimumAlpha": 0.95,
+      "foreground": "#dadee3",
+      "textScope": ".reproductions-copy p",
+      "worstUnderlyingImagePixel": "#ffffff",
+      "worstCompositeRGB": [
+        59,
+        74,
+        84
+      ],
+      "minimumContrastRatio": 6.775174103315067,
+      "normalTextAAThreshold": 4.5,
+      "passesForNormalAndLargeText": true
+    },
+    {
+      "family": "gallery-history",
+      "backgroundSelectors": ".gallery-history",
+      "overlay": "#101722",
+      "minimumAlpha": 0.64,
+      "foreground": "#ffffff",
+      "textScope": ".history-copy h2",
+      "worstUnderlyingImagePixel": "#ffffff",
+      "worstCompositeRGB": [
+        103,
+        107,
+        114
+      ],
+      "minimumContrastRatio": 5.353357334908358,
+      "normalTextAAThreshold": 4.5,
+      "passesForNormalAndLargeText": true
+    },
+    {
+      "family": "gallery-history",
+      "backgroundSelectors": ".gallery-history",
+      "overlay": "#101722",
+      "minimumAlpha": 0.64,
+      "foreground": "#eef0f2",
+      "textScope": ".history-copy",
+      "worstUnderlyingImagePixel": "#ffffff",
+      "worstCompositeRGB": [
+        103,
+        107,
+        114
+      ],
+      "minimumContrastRatio": 4.685876480208053,
+      "normalTextAAThreshold": 4.5,
+      "passesForNormalAndLargeText": true
+    }
+  ],
+  "solidChecks": [
+    {
+      "foreground": "#233653",
+      "background": "#ffffff",
+      "textScope": ".button--ivory",
+      "contrastRatio": 12.180703680430149,
+      "normalTextAAThreshold": 4.5,
+      "passesForNormalAndLargeText": true
+    },
+    {
+      "foreground": "#233653",
+      "background": "#f5f2ec",
+      "textScope": ".button--ivory:hover",
+      "contrastRatio": 10.901482420460669,
+      "normalTextAAThreshold": 4.5,
+      "passesForNormalAndLargeText": true
+    },
+    {
+      "foreground": "#101722",
+      "background": "#ffffff",
+      "textScope": ".skip-link; .home-reproductions .button:hover",
+      "contrastRatio": 17.984241814561624,
+      "normalTextAAThreshold": 4.5,
+      "passesForNormalAndLargeText": true
+    },
+    {
+      "foreground": "#101722",
+      "background": "#e8eceb",
+      "textScope": ".panel; .menu-links a:hover; .signup-complete .signup-about",
+      "contrastRatio": 15.097320340158365,
+      "normalTextAAThreshold": 4.5,
+      "passesForNormalAndLargeText": true
+    },
+    {
+      "foreground": "#101722",
+      "background": "#f5f2ec",
+      "textScope": ".form-field input",
+      "contrastRatio": 16.095531188542445,
+      "normalTextAAThreshold": 4.5,
+      "passesForNormalAndLargeText": true
+    },
+    {
+      "foreground": "#ffffff",
+      "background": "#101722",
+      "textScope": ".button--primary; .button--outline:hover; footer; menu-open header",
+      "contrastRatio": 17.984241814561624,
+      "normalTextAAThreshold": 4.5,
+      "passesForNormalAndLargeText": true
+    },
+    {
+      "foreground": "#ffffff",
+      "background": "#233653",
+      "textScope": ".button--primary:hover; .artwork-card--home .artwork-link:hover .button",
+      "contrastRatio": 12.180703680430149,
+      "normalTextAAThreshold": 4.5,
+      "passesForNormalAndLargeText": true
+    }
+  ],
+  "lowestGradientRatio": 4.685876480208053,
+  "allPassNormalTextAA": true
+}
