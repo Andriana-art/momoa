@@ -8,7 +8,7 @@ const imageFolder = "assets/images/";
 const imageBreakpoint = "(min-width: 56rem)";
 const splitImageSizes = "(min-width: 90rem) 624px, (min-width: 56rem) 43.05vw, calc(100vw - 3rem)";
 const homeCardImageSizes = "(min-width: 90rem) 624px, (min-width: 56rem) calc((100vw - 2 * clamp(2rem, 5.56vw, 5rem) - 2rem) / 2), (min-width: 40rem) calc((100vw - 5.5rem) / 2), calc(100vw - 3rem)";
-const panelImageSizes = "(min-width: 90rem) 576px, (min-width: 56rem) calc(43.05vw - 3rem), (min-width: 40rem) calc(50vw - 5.75rem), calc(100vw - 6rem)";
+const panelImageSizes = "(min-width: 90rem) 576px, (min-width: 56rem) calc(43.05vw - 3rem), (min-width: 40rem) calc(50vw - 5.25rem), calc(100vw - 5.5rem)";
 const caryatidWidths = [480, 640, 768, 1248, 2048];
 
 function escape(value) {
@@ -250,7 +250,7 @@ function gallery(page) {
     <section class="gallery-history" aria-labelledby="history-title">
       <div class="container">
         <div class="history-copy">
-          <h2 id="history-title">${escape(copy.historyTitle)}</h2>
+          <h2 id="history-title">${copy.historyTitle.map((line) => `<span>${escape(line)}</span>`).join(" ")}</h2>
           <p>${escape(copy.historyBody)}</p>
           <p>${escape(copy.historyAuthor)}</p>
           <p>${escape(copy.historyNote)}</p>

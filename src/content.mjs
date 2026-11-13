@@ -123,7 +123,10 @@ export const languages = {
       ],
       "introBody": "Chaque sculpture se découvre aussi dans les détails.",
       "photoCredit": "Photo : Montserrat Mondragón / Pexels",
-      "historyTitle": "La galerie et son histoire",
+      "historyTitle": [
+        "La galerie et",
+        "son histoire"
+      ],
       "historyBody": "Paul Dechewsky travaille dans le milieu artistique depuis plus de trente ans. MOMOA prolonge cette activité avec une collection consacrée à la sculpture grecque et à ses héritages.",
       "historyAuthor": "Paul Dechewsky, responsable de la galerie",
       "historyNote": "MOMOA est une galerie fictive conçue dans le cadre d’un projet universitaire.",
@@ -302,7 +305,10 @@ export const languages = {
       ],
       "introBody": "Every sculpture has more to reveal up close.",
       "photoCredit": "Photo: Montserrat Mondragón / Pexels",
-      "historyTitle": "The story of the gallery",
+      "historyTitle": [
+        "The story of",
+        "the gallery"
+      ],
       "historyBody": "Paul Dechewsky has worked in the art world for over thirty years. MOMOA continues this work with a collection devoted to Greek sculpture and its legacy.",
       "historyAuthor": "Paul Dechewsky, gallery manager",
       "historyNote": "MOMOA is a fictional gallery created as part of a university project.",
