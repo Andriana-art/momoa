@@ -68,9 +68,9 @@ function externalLink(url, label) {
 }
 
 function brand(page) {
-  return `<a class="brand" href="${pageLink(page, languages[page.lang].routes.home)}">
-        ${image(page, "emblem.svg", "", 26, 48)}<span>momoa</span>
-      </a>`;
+  const logo = `${image(page, "emblem.svg", "", 26, 48)}<span>momoa</span>`;
+  if (page.name === "home") return `<span class="brand">${logo}</span>`;
+  return `<a class="brand" href="${pageLink(page, languages[page.lang].routes.home)}">${logo}</a>`;
 }
 
 function navigation(page, className) {
@@ -88,18 +88,21 @@ function navigation(page, className) {
 function header(page) {
   const copy = languages[page.lang];
   const controls = ["fr", "en"].map((lang) => {
-    const translated = pageFor(lang, page.name, page.artwork);
-    const current = lang === page.lang ? ' aria-current="true"' : "";
     const label = lang === "fr" ? "Français" : "English";
-    return `<a href="${pageLink(page, translated.route)}" hreflang="${lang}" lang="${lang}" aria-label="${lang.toUpperCase()} ${label}"${current}>${lang.toUpperCase()}</a>`;
+    const abbreviation = lang.toUpperCase();
+    if (lang === page.lang) {
+      return `<span lang="${lang}" aria-current="true" title="${label}">${abbreviation}</span>`;
+    }
+    const translated = pageFor(lang, page.name, page.artwork);
+    return `<a href="${pageLink(page, translated.route)}" hreflang="${lang}" lang="${lang}" aria-label="${abbreviation} ${label}">${abbreviation}</a>`;
   });
   return `<header class="site-header">
     <div class="header-inner">
       ${brand(page)}
+      <nav class="desktop-nav" aria-label="${escape(copy.mainNav)}">
+        ${navigation(page, "nav-links")}
+      </nav>
       <div class="header-controls">
-        <nav class="desktop-nav" aria-label="${escape(copy.mainNav)}">
-          ${navigation(page, "nav-links")}
-        </nav>
         <div class="languages" role="group" aria-label="${escape(copy.languageLabel)}">
           ${controls[0]}
           <span class="language-divider" aria-hidden="true">/</span>
@@ -118,11 +121,6 @@ function header(page) {
         <button class="button button--primary menu-close" type="button">${escape(copy.menuClose)}</button>
       </div>
     </nav>
-    <noscript>
-      <nav class="fallback-nav" aria-label="${escape(copy.mainNav)}">
-        ${navigation(page, "footer-links")}
-      </nav>
-    </noscript>
   </header>`;
 }
 
@@ -175,8 +173,10 @@ function home(page) {
   return `<section class="hero" aria-labelledby="home-title">
       <div class="container hero-grid">
         <div class="hero-copy">
-          <h1 id="home-title">${hero.title.map((line) => `<span>${escape(line)}</span>`).join(" ")}</h1>
-          <p>${hero.mobileSubtitle.map((line) => `<span>${escape(line)}</span>`).join(" ")}</p>
+          <h1 id="home-title">
+            ${hero.title.map((line) => `<span>${escape(line)}</span>`).join(" ")}
+            <span class="hero-subtitle">${hero.mobileSubtitle.map((line) => `<span>${escape(line)}</span>`).join(" ")}</span>
+          </h1>
           ${buttonLink(page, routes.collection, hero.cta, "ivory", "hero-cta")}
         </div>
         ${image(page, "hero-bust-plinth.webp", copy.bustAlt, 1260, 1262, {
@@ -354,7 +354,7 @@ function signup(page) {
     </div>
     <div class="container signup-grid split-grid">
       <div>
-        <noscript><p>${escape(signupUnavailable)}</p></noscript>
+        <p class="signup-unavailable">${escape(signupUnavailable)}</p>
         <form class="signup-form" aria-labelledby="signup-title" aria-describedby="form-instructions demo-note" novalidate hidden>
           <p id="form-instructions" class="form-note">${escape(copy.formNote)}</p>
           ${fields.map(([name, type, autocomplete]) => `<div class="form-field">
@@ -399,7 +399,7 @@ function documentFor(page) {
   <title>${escape(title)}</title>
   <link rel="icon" href="${assetLink(page, "emblem.svg")}" type="image/svg+xml">
   <link rel="stylesheet" href="${relative(page, "assets/styles.css")}">${galleryFontPreload}
-  <script src="${relative(page, "assets/site.js")}" defer></script>
+  <script src="${relative(page, "assets/site.js")}" defer blocking="render"></script>
 </head>
 <body class="page-${page.name}">
   <a class="skip-link" href="#main-content">${escape(copy.skipLink)}</a>

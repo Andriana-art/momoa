@@ -8,28 +8,26 @@
   <title>MOMOA — Greek sculpture and reproductions</title>
   <link rel="icon" href="../assets/images/emblem.svg" type="image/svg+xml">
   <link rel="stylesheet" href="../assets/styles.css">
-  <script src="../assets/site.js" defer></script>
+  <script src="../assets/site.js" defer blocking="render"></script>
 </head>
 <body class="page-home">
   <a class="skip-link" href="#main-content">Skip to content</a>
   <header class="site-header">
     <div class="header-inner">
-      <a class="brand" href="./">
-        <img src="../assets/images/emblem.svg" alt="" width="26" height="48" decoding="async"><span>momoa</span>
-      </a>
-      <div class="header-controls">
-        <nav class="desktop-nav" aria-label="Main navigation">
-          <ul class="nav-links">
+      <span class="brand"><img src="../assets/images/emblem.svg" alt="" width="26" height="48" decoding="async"><span>momoa</span></span>
+      <nav class="desktop-nav" aria-label="Main navigation">
+        <ul class="nav-links">
         <li><a href="./" aria-current="page">Home</a></li>
         <li><a href="gallery/">The gallery</a></li>
         <li><a href="collection/">Collection</a></li>
         <li><a href="sign-up/">Sign up</a></li>
       </ul>
-        </nav>
+      </nav>
+      <div class="header-controls">
         <div class="languages" role="group" aria-label="Language">
           <a href="../" hreflang="fr" lang="fr" aria-label="FR Français">FR</a>
           <span class="language-divider" aria-hidden="true">/</span>
-          <a href="./" hreflang="en" lang="en" aria-label="EN English" aria-current="true">EN</a>
+          <span lang="en" aria-current="true" title="English">EN</span>
         </div>
         <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="mobile-menu" aria-label="Open menu" data-open-label="Open menu" data-close-label="Close the menu" hidden>
           <img class="menu-icon-open" src="../assets/images/menu-open.svg" alt="" width="24" height="18" decoding="async">
@@ -49,23 +47,15 @@
         <button class="button button--primary menu-close" type="button">Close the menu</button>
       </div>
     </nav>
-    <noscript>
-      <nav class="fallback-nav" aria-label="Main navigation">
-        <ul class="footer-links">
-        <li><a href="./" aria-current="page">Home</a></li>
-        <li><a href="gallery/">The gallery</a></li>
-        <li><a href="collection/">Collection</a></li>
-        <li><a href="sign-up/">Sign up</a></li>
-      </ul>
-      </nav>
-    </noscript>
   </header>
   <main id="main-content" tabindex="-1">
     <section class="hero" aria-labelledby="home-title">
       <div class="container hero-grid">
         <div class="hero-copy">
-          <h1 id="home-title"><span>Antiquity,</span> <span>up close</span></h1>
-          <p><span>Greek sculpture</span> <span>and reproductions.</span></p>
+          <h1 id="home-title">
+            <span>Antiquity,</span> <span>up close</span>
+            <span class="hero-subtitle"><span>Greek sculpture</span> <span>and reproductions.</span></span>
+          </h1>
           <a class="button button--ivory hero-cta" href="collection/">Explore the collection</a>
         </div>
         <img class="hero-artwork" src="../assets/images/hero-bust-plinth.webp" srcset="../assets/images/hero-bust-plinth-400.webp 400w, ../assets/images/hero-bust-plinth-680.webp 680w, ../assets/images/hero-bust-plinth-960.webp 960w, ../assets/images/hero-bust-plinth.webp 1260w" sizes="(min-width: 90rem) 624px, (min-width: 56rem) 43.05vw, (min-width: 42rem) 624px, calc(100vw - 3rem)" alt="Marble bust on a stone plinth" width="1260" height="1262" fetchpriority="high">
@@ -156,9 +146,7 @@
     <div class="container footer-inner">
       <div class="footer-grid">
         <div class="footer-identity">
-          <a class="brand" href="./">
-        <img src="../assets/images/emblem.svg" alt="" width="26" height="48" decoding="async"><span>momoa</span>
-      </a>
+          <span class="brand"><img src="../assets/images/emblem.svg" alt="" width="26" height="48" decoding="async"><span>momoa</span></span>
           <p>Fictional gallery of Greek sculpture reproductions · University project</p>
         </div>
         <nav aria-label="Useful links">

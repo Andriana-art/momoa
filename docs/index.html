@@ -8,26 +8,24 @@
   <title>MOMOA — Sculpture grecque et reproductions</title>
   <link rel="icon" href="assets/images/emblem.svg" type="image/svg+xml">
   <link rel="stylesheet" href="assets/styles.css">
-  <script src="assets/site.js" defer></script>
+  <script src="assets/site.js" defer blocking="render"></script>
 </head>
 <body class="page-home">
   <a class="skip-link" href="#main-content">Aller au contenu</a>
   <header class="site-header">
     <div class="header-inner">
-      <a class="brand" href="./">
-        <img src="assets/images/emblem.svg" alt="" width="26" height="48" decoding="async"><span>momoa</span>
-      </a>
-      <div class="header-controls">
-        <nav class="desktop-nav" aria-label="Navigation principale">
-          <ul class="nav-links">
+      <span class="brand"><img src="assets/images/emblem.svg" alt="" width="26" height="48" decoding="async"><span>momoa</span></span>
+      <nav class="desktop-nav" aria-label="Navigation principale">
+        <ul class="nav-links">
         <li><a href="./" aria-current="page">Accueil</a></li>
         <li><a href="galerie/">La galerie</a></li>
         <li><a href="collection/">Collection</a></li>
         <li><a href="inscription/">Inscription</a></li>
       </ul>
-        </nav>
+      </nav>
+      <div class="header-controls">
         <div class="languages" role="group" aria-label="Langue">
-          <a href="./" hreflang="fr" lang="fr" aria-label="FR Français" aria-current="true">FR</a>
+          <span lang="fr" aria-current="true" title="Français">FR</span>
           <span class="language-divider" aria-hidden="true">/</span>
           <a href="en/" hreflang="en" lang="en" aria-label="EN English">EN</a>
         </div>
@@ -49,23 +47,15 @@
         <button class="button button--primary menu-close" type="button">Fermer le menu</button>
       </div>
     </nav>
-    <noscript>
-      <nav class="fallback-nav" aria-label="Navigation principale">
-        <ul class="footer-links">
-        <li><a href="./" aria-current="page">Accueil</a></li>
-        <li><a href="galerie/">La galerie</a></li>
-        <li><a href="collection/">Collection</a></li>
-        <li><a href="inscription/">Inscription</a></li>
-      </ul>
-      </nav>
-    </noscript>
   </header>
   <main id="main-content" tabindex="-1">
     <section class="hero" aria-labelledby="home-title">
       <div class="container hero-grid">
         <div class="hero-copy">
-          <h1 id="home-title"><span>L’Antiquité,</span> <span>de près</span></h1>
-          <p><span>Sculptures grecques</span> <span>et reproductions.</span></p>
+          <h1 id="home-title">
+            <span>L’Antiquité,</span> <span>de près</span>
+            <span class="hero-subtitle"><span>Sculptures grecques</span> <span>et reproductions.</span></span>
+          </h1>
           <a class="button button--ivory hero-cta" href="collection/">Découvrir la collection</a>
         </div>
         <img class="hero-artwork" src="assets/images/hero-bust-plinth.webp" srcset="assets/images/hero-bust-plinth-400.webp 400w, assets/images/hero-bust-plinth-680.webp 680w, assets/images/hero-bust-plinth-960.webp 960w, assets/images/hero-bust-plinth.webp 1260w" sizes="(min-width: 90rem) 624px, (min-width: 56rem) 43.05vw, (min-width: 42rem) 624px, calc(100vw - 3rem)" alt="Buste de marbre sur un socle de pierre" width="1260" height="1262" fetchpriority="high">
@@ -156,9 +146,7 @@
     <div class="container footer-inner">
       <div class="footer-grid">
         <div class="footer-identity">
-          <a class="brand" href="./">
-        <img src="assets/images/emblem.svg" alt="" width="26" height="48" decoding="async"><span>momoa</span>
-      </a>
+          <span class="brand"><img src="assets/images/emblem.svg" alt="" width="26" height="48" decoding="async"><span>momoa</span></span>
           <p>Galerie fictive de reproductions de sculptures grecques · Projet universitaire</p>
         </div>
         <nav aria-label="Liens utiles">

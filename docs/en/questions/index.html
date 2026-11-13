@@ -8,28 +8,26 @@
   <title>Frequently asked questions — MOMOA</title>
   <link rel="icon" href="../../assets/images/emblem.svg" type="image/svg+xml">
   <link rel="stylesheet" href="../../assets/styles.css">
-  <script src="../../assets/site.js" defer></script>
+  <script src="../../assets/site.js" defer blocking="render"></script>
 </head>
 <body class="page-faq">
   <a class="skip-link" href="#main-content">Skip to content</a>
   <header class="site-header">
     <div class="header-inner">
-      <a class="brand" href="../">
-        <img src="../../assets/images/emblem.svg" alt="" width="26" height="48" decoding="async"><span>momoa</span>
-      </a>
-      <div class="header-controls">
-        <nav class="desktop-nav" aria-label="Main navigation">
-          <ul class="nav-links">
+      <a class="brand" href="../"><img src="../../assets/images/emblem.svg" alt="" width="26" height="48" decoding="async"><span>momoa</span></a>
+      <nav class="desktop-nav" aria-label="Main navigation">
+        <ul class="nav-links">
         <li><a href="../">Home</a></li>
         <li><a href="../gallery/" class="section-current">The gallery</a></li>
         <li><a href="../collection/">Collection</a></li>
         <li><a href="../sign-up/">Sign up</a></li>
       </ul>
-        </nav>
+      </nav>
+      <div class="header-controls">
         <div class="languages" role="group" aria-label="Language">
           <a href="../../questions/" hreflang="fr" lang="fr" aria-label="FR Français">FR</a>
           <span class="language-divider" aria-hidden="true">/</span>
-          <a href="./" hreflang="en" lang="en" aria-label="EN English" aria-current="true">EN</a>
+          <span lang="en" aria-current="true" title="English">EN</span>
         </div>
         <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="mobile-menu" aria-label="Open menu" data-open-label="Open menu" data-close-label="Close the menu" hidden>
           <img class="menu-icon-open" src="../../assets/images/menu-open.svg" alt="" width="24" height="18" decoding="async">
@@ -49,16 +47,6 @@
         <button class="button button--primary menu-close" type="button">Close the menu</button>
       </div>
     </nav>
-    <noscript>
-      <nav class="fallback-nav" aria-label="Main navigation">
-        <ul class="footer-links">
-        <li><a href="../">Home</a></li>
-        <li><a href="../gallery/" class="section-current">The gallery</a></li>
-        <li><a href="../collection/">Collection</a></li>
-        <li><a href="../sign-up/">Sign up</a></li>
-      </ul>
-      </nav>
-    </noscript>
   </header>
   <main id="main-content" tabindex="-1" class="stone">
     <section class="container faq-page" aria-labelledby="faq-title">
@@ -89,9 +77,7 @@
     <div class="container footer-inner">
       <div class="footer-grid">
         <div class="footer-identity">
-          <a class="brand" href="../">
-        <img src="../../assets/images/emblem.svg" alt="" width="26" height="48" decoding="async"><span>momoa</span>
-      </a>
+          <a class="brand" href="../"><img src="../../assets/images/emblem.svg" alt="" width="26" height="48" decoding="async"><span>momoa</span></a>
           <p>Fictional gallery of Greek sculpture reproductions · University project</p>
         </div>
         <nav aria-label="Useful links">
