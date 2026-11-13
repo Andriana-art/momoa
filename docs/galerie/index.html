@@ -1,0 +1,132 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Découvrez l’histoire de la galerie MOMOA et les œuvres présentées.">
+  <meta name="theme-color" content="#101722">
+  <title>La galerie — MOMOA</title>
+  <link rel="icon" href="../assets/images/emblem.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="../assets/styles.css">
+  <link rel="preload" href="../assets/fonts/cormorant-garamond-latin-wght-normal.woff2" as="font" type="font/woff2" crossorigin>
+  <script src="../assets/site.js" defer></script>
+</head>
+<body class="page-gallery">
+  <a class="skip-link" href="#main-content">Aller au contenu</a>
+  <header class="site-header">
+    <div class="header-inner">
+      <a class="brand" href="../">
+        <img src="../assets/images/emblem.svg" alt="" width="26" height="48" decoding="async"><span>momoa</span>
+      </a>
+      <div class="header-controls">
+        <nav class="desktop-nav" aria-label="Navigation principale">
+          <ul class="nav-links">
+        <li><a href="../">Accueil</a></li>
+        <li><a href="./" aria-current="page">La galerie</a></li>
+        <li><a href="../collection/">Collection</a></li>
+        <li><a href="../inscription/">Inscription</a></li>
+      </ul>
+        </nav>
+        <div class="languages" role="group" aria-label="Langue">
+          <a href="./" hreflang="fr" lang="fr" aria-label="FR Français" aria-current="true">FR</a>
+          <span class="language-divider" aria-hidden="true">/</span>
+          <a href="../en/gallery/" hreflang="en" lang="en" aria-label="EN English">EN</a>
+        </div>
+        <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="mobile-menu" aria-label="Ouvrir le menu" data-open-label="Ouvrir le menu" data-close-label="Fermer le menu" hidden>
+          <img class="menu-icon-open" src="../assets/images/menu-open.svg" alt="" width="24" height="18" decoding="async">
+          <img class="menu-icon-close" src="../assets/images/menu-close.svg" alt="" width="24" height="24" decoding="async">
+        </button>
+      </div>
+    </div>
+    <nav id="mobile-menu" class="mobile-menu" aria-label="Menu" hidden>
+      <div class="container">
+        <p class="menu-heading">Explorer MOMOA</p>
+        <ul class="menu-links">
+        <li><a href="../">Accueil</a></li>
+        <li><a href="./" aria-current="page">La galerie</a></li>
+        <li><a href="../collection/">Collection</a></li>
+        <li><a href="../inscription/">Inscription</a></li>
+      </ul>
+        <button class="button button--primary menu-close" type="button">Fermer le menu</button>
+      </div>
+    </nav>
+    <noscript>
+      <nav class="fallback-nav" aria-label="Navigation principale">
+        <ul class="footer-links">
+        <li><a href="../">Accueil</a></li>
+        <li><a href="./" aria-current="page">La galerie</a></li>
+        <li><a href="../collection/">Collection</a></li>
+        <li><a href="../inscription/">Inscription</a></li>
+      </ul>
+      </nav>
+    </noscript>
+  </header>
+  <main id="main-content" tabindex="-1" class="stone">
+    <section class="container gallery-intro split-grid" aria-labelledby="gallery-title">
+      <div class="gallery-intro-copy">
+        <h1 id="gallery-title"><span>Prenez le temps</span> <span>de regarder</span></h1>
+        <p>Chaque sculpture se découvre aussi dans les détails.</p>
+      </div>
+      <picture class="gallery-portrait">
+        <source media="(min-width: 56rem)" srcset="../assets/images/gallery-portrait.webp" width="560" height="620">
+        <img src="../assets/images/gallery-portrait-mobile.webp" alt="Prométhée" width="342" height="440" fetchpriority="high">
+      </picture>
+    </section>
+    <section class="gallery-history" aria-labelledby="history-title">
+      <div class="container">
+        <div class="history-copy">
+          <h2 id="history-title">La galerie et son histoire</h2>
+          <p>Paul Dechewsky travaille dans le milieu artistique depuis plus de trente ans. MOMOA prolonge cette activité avec une collection consacrée à la sculpture grecque et à ses héritages.</p>
+          <p>Paul Dechewsky, responsable de la galerie</p>
+          <p>MOMOA est une galerie fictive conçue dans le cadre d’un projet universitaire.</p>
+        </div>
+      </div>
+    </section>
+    <div class="container gallery-cards split-grid">
+      <article class="panel">
+        <img class="panel-image" src="../assets/images/gallery-exhibition.webp" srcset="../assets/images/gallery-exhibition-576.webp 576w, ../assets/images/gallery-exhibition.webp 864w" sizes="(min-width: 90rem) 576px, (min-width: 56rem) calc(43.05vw - 3rem), (min-width: 40rem) calc(50vw - 5.75rem), calc(100vw - 6rem)" alt="Détail du groupe de Prométhée et des Océanides" width="864" height="420" loading="lazy" decoding="async">
+        <h2>Expositions</h2>
+        <p>Vous préparez une exposition ? La galerie vous accompagne dans votre projet.</p>
+      </article>
+      <article class="panel">
+        <img class="panel-image panel-image--caryatids" src="../assets/images/caryatids.webp" srcset="../assets/images/caryatids-480.webp 480w, ../assets/images/caryatids-640.webp 640w, ../assets/images/caryatids-768.webp 768w, ../assets/images/caryatids-1248.webp 1248w, ../assets/images/caryatids.webp 2048w" sizes="(min-width: 90rem) 576px, (min-width: 56rem) calc(43.05vw - 3rem), (min-width: 40rem) calc(50vw - 5.75rem), calc(100vw - 6rem)" alt="Caryatides" width="2048" height="1365" loading="lazy" decoding="async">
+        <h2>Observer les œuvres</h2>
+        <p>Des présentations commentées pour comprendre l’histoire des œuvres et les détails à observer.</p>
+      </article>
+    </div>
+    <div class="container gallery-information split-grid">
+      <section class="panel" aria-labelledby="contact-title">
+        <h2 id="contact-title">Besoin d’informations ?</h2>
+        <p>Paris · Galerie fictive</p>
+        <a class="button button--primary" href="../questions/">Consulter les questions fréquentes</a>
+      </section>
+      <section class="panel" aria-labelledby="gallery-news-title">
+        <h2 id="gallery-news-title">L’actualité de MOMOA</h2>
+        <p>Pour suivre les expositions et les œuvres présentées.</p>
+        <a class="button button--outline" href="../inscription/">S’inscrire</a>
+      </section>
+    </div>
+  </main>
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <div class="footer-grid">
+        <div class="footer-identity">
+          <a class="brand" href="../">
+        <img src="../assets/images/emblem.svg" alt="" width="26" height="48" decoding="async"><span>momoa</span>
+      </a>
+          <p>Galerie fictive de reproductions de sculptures grecques · Projet universitaire</p>
+        </div>
+        <nav aria-label="Liens utiles">
+          <ul class="footer-links">
+        <li><a href="../">Accueil</a></li>
+        <li><a href="./" aria-current="page">La galerie</a></li>
+        <li><a href="../collection/">Collection</a></li>
+        <li><a href="../inscription/">Inscription</a></li>
+      </ul>
+        </nav>
+      </div>
+      <p class="footer-copyright">© MOMOA 2026</p>
+    </div>
+  </footer>
+</body>
+</html>
