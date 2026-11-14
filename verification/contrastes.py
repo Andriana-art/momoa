@@ -39,7 +39,7 @@ families = [
          ('#ffffff', 'Inherited .home-artworks headings'),
          ('#dadee3', '.featured-heading p, .artwork-card--home .artwork-description p'),
      ]),
-    ('hero', '.hero::before', '#101722', .87,
+    ('hero', '.hero::before (min-width: 40rem)', '#101722', .87,
      'rgba(16, 23, 34, 0.87)', [
          ('#ffffff', 'Inherited .hero headings and homepage-header text'),
          ('#dadee3', '.hero-subtitle'),
@@ -110,6 +110,25 @@ result = {
     'lowestGradientRatio': min(row['minimumContrastRatio'] for row in rows),
     'allPassNormalTextAA': all(row['passesForNormalAndLargeText'] for row in rows + solids),
 }
+
+# The mobile photograph already contains its 87% ink shade. Its actual decoded
+# RGB channel maxima bound every crop; the additional ink gradient only darkens it.
+mobile_hero = ROOT / 'docs/assets/images/hero-gallery-dark-640.webp'
+mobile_hero_hash = '0a34e7858d75736cbbef1a6de28fadcadfe0714e7ce0a10e149a7edffc9d7086'
+assert hashlib.sha256(mobile_hero.read_bytes()).hexdigest() == mobile_hero_hash
+maximum_rgb = [41, 49, 60]
+mobile_checks = [
+    {'foreground': fore, 'maximumBackgroundRGB': maximum_rgb,
+     'minimumContrastRatio': contrast(rgb(fore), maximum_rgb),
+     'passesForNormalAndLargeText': contrast(rgb(fore), maximum_rgb) >= 4.5}
+    for fore in ['#ffffff', '#dadee3']
+]
+result['mobilePrecomposedHero'] = {
+    'image': str(mobile_hero.relative_to(ROOT)), 'sha256': mobile_hero_hash,
+    'method': 'Maximum decoded sRGB channel values measured with Pillow; image bytes checked above.',
+    'checks': mobile_checks,
+}
+result['allPassNormalTextAA'] &= all(row['passesForNormalAndLargeText'] for row in mobile_checks)
 OUT.write_text(json.dumps(result, ensure_ascii=False, indent=2) + '\n')
 print(json.dumps({'gradientPairs': len(rows), 'solidPairs': len(solids),
                   'lowestRatio': result['lowestGradientRatio'],

@@ -12,7 +12,8 @@ Le [site publié sur GitHub Pages](https://andriana-art.github.io/momoa/) peut �
 | `docs/assets/images/` et `docs/assets/fonts/` | Images, polices et licences des polices hébergées localement |
 | `src/content.mjs` | Textes français et anglais, fiches des œuvres et liste des routes |
 | `src/build.mjs` | Génération des 22 pages HTML à partir des modèles communs et des textes |
-| `src/optimize-home-images.py` | Génération des variantes WebP des cartes de l’accueil ; nécessite Pillow |
+| `src/optimize-home-images.py` | Génération des images adaptatives de l’accueil avec Pillow (WebP et AVIF) |
+| `src/optimize-fonts.py` | Optimisation facultative de DM Sans avec fontTools ; graisses et taille optique utilisées par le site |
 | `verification/` | Bilan des contrôles et rapports Lighthouse autonomes du site publié |
 
 ## Prévisualiser le site sur votre ordinateur
@@ -37,6 +38,8 @@ Le [site publié sur GitHub Pages](https://andriana-art.github.io/momoa/) peut �
 
 Les pages HTML et les images sont déjà générées ; aucune installation de dépendances n’est nécessaire pour consulter le site. Pour modifier les textes, éditez `src/content.mjs`, puis exécutez `node src/build.mjs` avec Node.js 22 ou une version plus récente. Après une modification du CSS ou du JavaScript, actualisez la page dans le navigateur.
 
+Pour régénérer les variantes d’images de l’accueil, exécutez `python3 src/optimize-home-images.py` avec une version de Pillow qui prend en charge WebP et AVIF. Le navigateur choisit une version adaptée à l’écran. Sur mobile, le buste est proposé en AVIF avec une variante WebP de secours.
+
 ## Publier sur GitHub Pages
 
 1. Ajoutez les fichiers du projet à la racine du dépôt GitHub. Vérifiez que `index.html` et `.nojekyll` se trouvent dans `docs/`.
@@ -50,6 +53,8 @@ Les liens générés sont relatifs au dossier du projet. Les options de publicat
 
 La [grille de remise détaillée](verification/GRILLE-REMISE.md) reprend les sept critères du projet. Les [preuves et leur périmètre](verification/README.md) sont inclus dans le dépôt ; les empreintes SHA-256 identifient les fichiers contrôlés après les corrections graphiques, publiés dans le commit `1ede3b68f7ffa7fa5c0cccc4780ed1563a81cbef`.
 
+Le 14 novembre 2026, PageSpeed Insights a mesuré **100 en performances, accessibilité, bonnes pratiques et SEO** sur l’accueil et la galerie en français, sur mobile et ordinateur. Les deux rapports ont été générés après la publication du commit `23e1d1b`. [Rapport de l’accueil](https://pagespeed.web.dev/analysis/https-andriana-art-github-io-momoa/gwpmqxnzpp?form_factor=mobile) · [Rapport de la galerie](https://pagespeed.web.dev/analysis/https-andriana-art-github-io-momoa-galerie/4u32hpct1y?form_factor=mobile)
+
 | Critère | Résultat |
 | --- | --- |
 | Conformité graphique | 44 vues de base comparées aux maquettes Figma, en français et en anglais à 390 et 1440 px, avec contrôle des états interactifs. Les écarts résiduels et adaptations utiles sont documentés. |
@@ -61,6 +66,8 @@ La [grille de remise détaillée](verification/GRILLE-REMISE.md) reprend les sep
 | Accessibilité | 50 contrôles axe-core sans violation détectée ; navigation au clavier et formulaire contrôlés ; borne minimale de contraste textuel calculée à 4,686:1. |
 
 Les derniers rapports Lighthouse du site publié après corrections obtiennent 100 dans les quatre catégories sur les deux accueils, en français et en anglais, sur mobile et ordinateur. Un premier passage anglais mobile a obtenu 99 ; le contrôle suivant a obtenu 100 sans changement de code. Les rapports et les dates sont conservés dans `verification/`.
+
+Les scores concernent les pages et les conditions indiquées dans chaque rapport. Les polices et les images optimisées sont hébergées avec le site. La version de DM Sans utilise la taille optique de 14 déjà définie dans la feuille de style. La licence SIL Open Font License est incluse dans `docs/assets/fonts/`.
 
 Le formulaire reste une démonstration universitaire sans envoi ni conservation des données. Les sources, crédits et licences sont conservés. Le contrôle du zoom couvre un équivalent CSS à 200 % ; la commande de zoom native du navigateur n’a pas été vérifiée.
 

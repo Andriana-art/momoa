@@ -50,6 +50,7 @@
   --radius: 0.75rem;
   --gutter: 1.5rem;
   --content-width: 80rem;
+  --stone-texture: url("images/stone-texture-320.webp");
   --serif: "Cormorant Garamond", Georgia, serif;
   --sans: "DM Sans", Arial, sans-serif;
 }
@@ -153,7 +154,7 @@ button {
 
 .stone, .site-header {
   background-color: var(--stone);
-  background-image: linear-gradient(rgba(220, 226, 228, 0.97), rgba(220, 226, 228, 0.97)), url("images/stone-texture.webp");
+  background-image: linear-gradient(rgba(220, 226, 228, 0.97), rgba(220, 226, 228, 0.97)), var(--stone-texture);
   background-size: cover;
   background-position: center;
 }
@@ -320,7 +321,7 @@ button {
   border-top: 1px solid #6f899c;
   color: var(--ink);
   background-color: var(--stone);
-  background-image: linear-gradient(rgba(220, 226, 228, 0.97), rgba(220, 226, 228, 0.97)), url("images/stone-texture.webp");
+  background-image: linear-gradient(rgba(220, 226, 228, 0.97), rgba(220, 226, 228, 0.97)), var(--stone-texture);
   background-size: cover;
 }
 
@@ -454,13 +455,14 @@ button {
 }
 
 .hero::before {
-  --hero-background: url("images/hero-gallery-640.webp");
+  --hero-background: url("images/hero-gallery-dark-640.webp");
+  --hero-shade: none;
   position: absolute;
   z-index: -1;
   inset: -5rem 0 0;
   background:
     linear-gradient(to top, var(--ink), transparent 6rem),
-    linear-gradient(rgba(16, 23, 34, 0.87), rgba(16, 23, 34, 0.87)),
+    var(--hero-shade),
     var(--hero-background) center / cover;
   content: "";
 }
@@ -628,8 +630,13 @@ button {
   inset: 0;
   width: 100%;
   height: 100%;
-  object-fit: cover;
   opacity: 0.03;
+}
+
+.home-texture > img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
 .home-reproductions > .home-texture {
@@ -1038,8 +1045,13 @@ button {
 }
 
 @media (min-width: 40rem) {
+  :root {
+    --stone-texture: url("images/stone-texture.webp");
+  }
+
   .hero::before {
     --hero-background: url("images/hero-gallery.webp");
+    --hero-shade: linear-gradient(rgba(16, 23, 34, 0.87), rgba(16, 23, 34, 0.87));
   }
 
   .gallery-history {
@@ -1159,7 +1171,7 @@ button {
   .hero::before {
     background-image:
       linear-gradient(to top, var(--ink), transparent 7.5rem),
-      linear-gradient(rgba(16, 23, 34, 0.87), rgba(16, 23, 34, 0.87)),
+      var(--hero-shade),
       var(--hero-background);
   }
 
