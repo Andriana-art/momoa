@@ -1,5 +1,14 @@
 # Vérifications de MOMOA avant remise
 
+## Adresse à analyser dans PageSpeed
+
+L’adresse publique du site est **https://andriana-art.github.io/momoa/**.
+
+- [Lancer une nouvelle analyse mobile de l’accueil français](https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fandriana-art.github.io%2Fmomoa%2F&form_factor=mobile)
+- [Lancer une nouvelle analyse mobile de l’accueil anglais](https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fandriana-art.github.io%2Fmomoa%2Fen%2F&form_factor=mobile)
+
+Cette page README présente les preuves de vérification. Une analyse de son adresse `github.com/Andriana-art/momoa/blob/main/verification/README.md` mesure l’interface GitHub. Pour mesurer MOMOA, utilisez les liens PageSpeed ci-dessus.
+
 Le [bilan selon les sept critères](GRILLE-REMISE.md) rassemble les conclusions de la remise. Les contrôles sont datés dans chaque rapport et couvrent les corrections graphiques et les optimisations intégrées, sur les fichiers identifiés dans [empreintes-finales.json](empreintes-finales.json), identiques aux fichiers du site publiés dans le commit `57e156f34f697b3f07b73534adda23a3f558b462`. Les valeurs SHA-256 des CSS et HTML sont également présentes dans les relevés responsive et W3C.
 
 Les preuves brutes sont conservées avec leurs dates, identifiants de base et chemins de travail d’origine. Ces chemins servent à documenter le contrôle ; les fichiers inclus ci-dessous sont consultables dans le dépôt. Les identifiants de base antérieurs à la mise à jour de l’historique n’identifient pas à eux seuls l’arbre final : les empreintes des fichiers font foi.
