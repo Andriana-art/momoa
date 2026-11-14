@@ -9,6 +9,9 @@ const stylesheet = await readFile(new URL("../docs/assets/styles.css", import.me
 const stylesheetVersion = createHash("sha256")
   .update(stylesheet)
   .digest("hex").slice(0, 12);
+const scriptVersion = createHash("sha256")
+  .update(await readFile(new URL("../docs/assets/site.js", import.meta.url)))
+  .digest("hex").slice(0, 12);
 const imageFolder = "assets/images/";
 const imageBreakpoint = "(min-width: 56rem)";
 const mobileHeroMedia = "(width < 40rem)";
@@ -387,7 +390,7 @@ function signup(page) {
     <div class="container signup-grid split-grid">
       <div id="signup-form" tabindex="-1">
         <p class="signup-unavailable">${escape(signupUnavailable)}</p>
-        <form class="signup-form" aria-labelledby="signup-title" aria-describedby="form-instructions demo-note" novalidate hidden>
+        <form class="signup-form" aria-labelledby="signup-title" aria-describedby="form-instructions demo-note" novalidate inert>
           <p id="form-instructions" class="form-note">${escape(copy.formNote)}</p>
           ${fields.map(([name, type, autocomplete]) => `<div class="form-field">
             <label for="${name}">${escape(copy.fields[name])}</label>
@@ -436,13 +439,11 @@ function documentFor(page) {
   const copy = languages[page.lang];
   const title = page.name === "home" ? copy.htmlTitle : `${page.artwork?.title[page.lang] ?? copy.title[page.name]} — MOMOA`;
   const description = page.artwork ? page.artwork.notices[page.lang].heading : copy.descriptions[page.name];
-  const galleryFontPreload = (page.name === "gallery" || page.name === "home")
-    ? `\n  <link rel="preload" href="${relative(page, "assets/fonts/cormorant-garamond-latin-wght-normal.woff2")}" as="font" type="font/woff2" crossorigin>`
-    : "";
+  const serifFontPreload = `\n  <link rel="preload" href="${relative(page, "assets/fonts/cormorant-garamond-latin-wght-normal.woff2")}" as="font" type="font/woff2" crossorigin>`;
   const bodyFontPreload = `<link rel="preload" href="${relative(page, "assets/fonts/dm-sans-latin-standard-normal.woff2")}" as="font" type="font/woff2" crossorigin>`;
   const stylesAndPreloads = page.name === "home"
-    ? `${galleryFontPreload.trimStart()}${heroPreloads(page)}\n  ${bodyFontPreload}\n  ${pageStyles(page)}`
-    : `${pageStyles(page)}${galleryFontPreload}\n  ${bodyFontPreload}`;
+    ? `${serifFontPreload.trimStart()}${heroPreloads(page)}\n  ${bodyFontPreload}\n  ${pageStyles(page)}`
+    : `${pageStyles(page)}${serifFontPreload}\n  ${bodyFontPreload}`;
   return `<!doctype html>
 <html lang="${page.lang}">
 <head>
@@ -451,10 +452,17 @@ function documentFor(page) {
   <meta name="description" content="${escape(description)}">
   <meta name="theme-color" content="#101722">
   <title>${escape(title)}</title>
-  <script>document.documentElement.classList.add("js");</script>
+  <script>
+    document.documentElement.classList.add("js");
+    document.addEventListener("error", (event) => {
+      if (event.target.tagName === "SCRIPT") {
+        document.documentElement.classList.remove("js");
+      }
+    }, true);
+  </script>
   <link rel="icon" href="${assetLink(page, "emblem.svg")}" type="image/svg+xml">
   ${stylesAndPreloads}
-  <script src="${relative(page, "assets/site.js")}" defer></script>
+  <script src="${relative(page, "assets/site.js")}?v=${scriptVersion}" defer></script>
 </head>
 <body class="page-${page.name}">
   <a class="skip-link" href="#main-content">${escape(copy.skipLink)}</a>
