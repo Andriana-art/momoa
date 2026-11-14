@@ -1,7 +1,7 @@
 {
-  "cssSHA256": "1ace04b0b6a9f0fa0957b7d40081bacc4fa32fab064e3e2e5c1c03144fe752ba",
+  "cssSHA256": "143e310701f5abcaa1a3108f1bd3cbd0b65b355d3dba3468ed7e66172d27adf7",
   "method": "Conservative sRGB source-over channel bounds followed by WCAG 2 relative luminance; arbitrary image channels 0..255; composite channel bounds rounded outwards to integer RGB for display quantization; all text is tested at the stricter normal-text AA threshold 4.5:1 regardless of size or weight.",
-  "mapping": "CSS foreground inheritance and explicit color overrides were reviewed for each textured family and for solid text/button palettes. The gallery-history bound uses its lowest alpha 0.64 anywhere in either mobile or desktop gradient. Additional ink-to-transparent hero/featured gradients only improve light-text contrast.",
+  "mapping": "CSS foreground inheritance and explicit color overrides were reviewed for each textured family and for solid text/button palettes. A texture image at opacity 0.05 over the slate background is equivalent to the previous 0.95 slate overlay; opacity 0.03 over stone is likewise equivalent to its 0.97 overlay. The gallery-history bound uses its lowest alpha 0.64 anywhere in either mobile or desktop gradient. Additional ink-to-transparent hero/featured gradients only improve light-text contrast.",
   "scope": "Stable authored foreground/background colors of regular text, including all gradient families and normal/settled hover palettes. This resolves the gradient-background contrast uncertainty from the 50 axe checks; it is not a complete manual WCAG audit and does not model antialiasing or intermediate animation frames.",
   "gradientChecks": [
     {

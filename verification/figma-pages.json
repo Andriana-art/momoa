@@ -1,0 +1,209 @@
+{
+  "fichier_figma": "2hP92QF9qMobRzZcJIsvFf",
+  "page_figma": "282:1408",
+  "version_site": "Arbre de travail issu de a82d8b7, après corrections graphiques ciblées et régénération des pages",
+  "portee": {
+    "pages_base": 16,
+    "etats_mobiles_complementaires": 4,
+    "largeurs": [
+      1440,
+      390
+    ],
+    "familles": [
+      "galerie",
+      "collection",
+      "inscription",
+      "questions fréquentes"
+    ],
+    "langues": [
+      "fr",
+      "en"
+    ]
+  },
+  "conclusion": "Recontrôle final réussi après12 corrections ou confirmations ciblées : typographie et espacements attendus, avec structure, visuels, cadrages et palette fidèles aux maquettes. Les différences de contenu utile, de contraste et de flux normal sont documentées et conservées. Aucun écart matériel non traité identifié dans le périmètre16pages+4états contrôlé.",
+  "conformes": [
+    "Les sculptures et photographies attendues figurent dans les emplacements correspondants.",
+    "Les polices Cormorant Garamond et DM Sans sont utilisées avec les corps principaux attendus.",
+    "Les grilles, les marges principales de 80 px sur ordinateur et de 24 px sur mobile, les sections et leur ordre correspondent.",
+    "La galerie présente le même portrait, l’image d’exposition et les Caryatides ; la collection présente les six mêmes œuvres dans le même ordre."
+  ],
+  "differences_a_preserver": [
+    {
+      "cas": "Informations de contact",
+      "raison": "Les coordonnées DEDAL des maquettes sont remplacées par un lien utile vers la FAQ, conformément aux crédits et adaptations décrits dans le README."
+    },
+    {
+      "cas": "Inscription anglaise sur ordinateur, frame1175:5603",
+      "raison": "La maquette fixe une hauteur trop courte et fait chevaucher le pied de page avec le texte et le bouton. Le site conserve le flux normal et évite ce défaut."
+    },
+    {
+      "cas": "Overlay de la section d’histoire",
+      "raison": "Le site garde une opacité minimale0,64 plutôt que0,58 au bord afin de conserver la garantie de contraste ; la disposition et l’image restent identiques."
+    }
+  ],
+  "hauteurs_avant_correction": [
+    {
+      "page": "galerie FR desktop",
+      "figma": 2526,
+      "site": 2480,
+      "site_apres_correction": 2526
+    },
+    {
+      "page": "galerie FR mobile",
+      "figma": 3152,
+      "site": 3122,
+      "site_apres_correction": 3111
+    },
+    {
+      "page": "galerie EN desktop",
+      "figma": 2526,
+      "site": 2480,
+      "site_apres_correction": 2526
+    },
+    {
+      "page": "galerie EN mobile",
+      "figma": 3038,
+      "site": 3024,
+      "site_apres_correction": 3013
+    },
+    {
+      "page": "collection FR desktop",
+      "figma": 1930,
+      "site": 1905,
+      "site_apres_correction": 1929
+    },
+    {
+      "page": "collection FR mobile",
+      "figma": 4082,
+      "site": 4054,
+      "site_apres_correction": 4078
+    },
+    {
+      "page": "collection EN desktop",
+      "figma": 1930,
+      "site": 1905,
+      "site_apres_correction": 1929
+    },
+    {
+      "page": "collection EN mobile",
+      "figma": 4010,
+      "site": 3982,
+      "site_apres_correction": 4006
+    }
+  ],
+  "preuves": {
+    "captures": "/workspace/work/rubric-figma-pages/*-compare.png",
+    "geometrie": "/workspace/work/rubric-figma-pages/site-geometry.json",
+    "inscription_FAQ": "/workspace/work/rubric-figma-pages/signup-faq/audit-signup-faq.json",
+    "patch_prepare": "/workspace/work/rubric-figma-pages/corrections-ciblees.patch",
+    "assertions_apres": "/workspace/work/rubric-figma-pages/assertions-after.json",
+    "captures_apres": "/workspace/work/rubric-figma-pages/*-compare-after.png",
+    "inscription_FAQ_assertions_apres": "/workspace/work/rubric-figma-pages/signup-faq/typography-after.json",
+    "captures_avant": "/workspace/work/rubric-figma-pages/before/",
+    "collection_alignement_final": "/workspace/work/rubric-figma-pages/collection-final.json"
+  },
+  "limites": "Comparaison visuelle et mesures de géométrie/typographie ; ne constitue pas une affirmation d’identité pixel à pixel. Des variations subpixel, de rendu de police, de compression d’images et des hauteurs automatiques adaptatives subsistent.",
+  "css_sha256_apres": "dc83d369746fcc84bff4071a83451b6ab15fca3d812acda7439dd209c022cbf6",
+  "corrections_effectuees": [
+    {
+      "famille": "galerie",
+      "selecteur": ".gallery-cards h2, .gallery-information h2",
+      "attendu": "28 px",
+      "observe": "24 px",
+      "statut": "corrigé et contrôlé sur le rendu Chromium, FR/EN, 390/1440px"
+    },
+    {
+      "famille": "galerie",
+      "selecteur": ".gallery-cards .panel mobile",
+      "attendu": "padding 20 px ; gap 12 px ; image 302×151 px à390 px de viewport",
+      "observe": "padding 24 px ; gap16 px ; image294×147 px",
+      "statut": "corrigé et contrôlé sur le rendu Chromium, FR/EN, 390/1440px"
+    },
+    {
+      "famille": "galerie",
+      "selecteur": ".gallery-cards .panel desktop",
+      "attendu": "padding24px ; gap16px",
+      "observe": "déjà correct ; à préserver lors de la surcharge mobile",
+      "statut": "valeur desktop conservée et contrôlée : padding24px et gap16px"
+    },
+    {
+      "famille": "galerie",
+      "selecteur": ".history-copy h2 mobile",
+      "attendu": "césures FR « La galerie et / son histoire » et EN « The story of / the gallery »",
+      "observe": "retour automatique différent",
+      "statut": "corrigé et contrôlé sur le rendu Chromium, FR/EN, 390/1440px"
+    },
+    {
+      "famille": "galerie",
+      "selecteur": ".history-copy > p:last-child",
+      "attendu": "16px /24px",
+      "observe": "18px /28,08px",
+      "statut": "corrigé et contrôlé sur le rendu Chromium, FR/EN, 390/1440px"
+    },
+    {
+      "famille": "galerie",
+      "selecteur": ".gallery-intro-copy desktop",
+      "attendu": "padding24px haut et40px bas",
+      "observe": "16px haut etbas",
+      "statut": "corrigé et contrôlé sur le rendu Chromium, FR/EN, 390/1440px"
+    },
+    {
+      "famille": "galerie",
+      "selecteur": ".gallery-information .panel desktop",
+      "attendu": "hauteur minimale266px",
+      "observe": "225,19px avec le contenu adapté",
+      "statut": "corrigé et contrôlé sur le rendu Chromium, FR/EN, 390/1440px"
+    },
+    {
+      "famille": "collection",
+      "selecteur": ".collection-grid desktop",
+      "attendu": "padding-top16px",
+      "observe": "absent ; première rangée16px trop haute",
+      "statut": "corrigé et contrôlé sur le rendu Chromium, FR/EN, 390/1440px"
+    },
+    {
+      "famille": "collection",
+      "selecteur": ".artwork-cta",
+      "attendu": "padding12px vertical ; hauteur48px",
+      "observe": "padding8px vertical ; hauteur44px",
+      "statut": "corrigé et contrôlé sur le rendu Chromium, FR/EN, 390/1440px"
+    },
+    {
+      "famille": "FAQ",
+      "selecteur": ".faq-answers h2",
+      "attendu": "font-weight600",
+      "observe": "500",
+      "statut": "corrigé et contrôlé sur le rendu Chromium, FR/EN, 390/1440px"
+    },
+    {
+      "famille": "confirmation inscription",
+      "selecteur": ".signup-complete .signup-about p",
+      "attendu": "16px /24px",
+      "observe": "18px /28,08px",
+      "statut": "corrigé et contrôlé sur le rendu Chromium, FR/EN, 390/1440px"
+    },
+    {
+      "cas": "Description des cartes de collection sur ordinateur",
+      "observation": "Figma impose48px minimum aux paragraphes ; le site étire les rangées du wrapper grid de88px et décale les descriptions courtes de12px. Sonde locale min-height:3rem sur le p vérifiée : y827,72→815,72, sans changement des hauteurs de cartes.",
+      "statut": "Corrigé et vérifié sur le rendu FR/EN à1440px : min-height48px ; paragraphes des trois premières cartes alignés à0,02px près ; hauteurs globales conservées.",
+      "correction_appliquee": "Ajouter .collection-grid .artwork-description p { min-height:3rem; } dans la media query min-width56rem."
+    }
+  ],
+  "ecarts_residuels": [
+    {
+      "cas": "Galerie mobile, panneau contact et CTA FAQ",
+      "observation": "Le contenu adapté (absence des anciennes coordonnées DEDAL et CTA de FAQ sur deux lignes) donne une hauteur naturelle différente. Total FR3111px vs3152px maquette ; EN3013px vs3038px. Les autres cartes retrouvent leurs padding20/gap12 et titres28.",
+      "raison": "Préserver le contenu utile et la navigation validée sans réintroduire de coordonnées fictives tierces."
+    },
+    {
+      "cas": "Collection",
+      "observation": "Après correction, hauteur desktop1929px vs1930px maquette arrondie ; mobile FR4078px vs4082px, EN4006px vs4010px. Les mesures de grille, liens48px, images et typographies correspondent.",
+      "raison": "Différences résiduelles de métriques et d’arrondis de rendu ; aucun effet sur contenu ou responsive."
+    },
+    {
+      "cas": "Fonds texturés et séparateurs",
+      "observation": "De faibles différences de cadrage des textures entre en-tête et contenu et d’opacité de séparateurs subsistent.",
+      "raison": "Variations décoratives faibles, sans changement de famille de couleurs ni de visuel."
+    }
+  ]
+}

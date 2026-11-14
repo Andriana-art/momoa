@@ -1,0 +1,30 @@
+{
+  "baseCommit": "a82d8b7e2b46169580a9f4374640b7e281ce09a6",
+  "workingTreeDirty": true,
+  "sha256": {
+    "docs/assets/styles.css": "dc83d369746fcc84bff4071a83451b6ab15fca3d812acda7439dd209c022cbf6",
+    "docs/assets/site.js": "46ff8627d9fb986850a39b45db2ae914acc80890a5e1717909fd21eea6c6e2dc",
+    "docs/collection/athena/index.html": "74d13945ee7ff37a02144d854c447229fb93d3fb12e8de7dac7bed905ac49176",
+    "docs/collection/discobole/index.html": "a396f9d2be12a91271cbf4cfd491a3994e1052182cad020897f3af342a50a774",
+    "docs/collection/index.html": "6c32de7840597955bf283717f60795c1287b6dd1db35f005255a47c124786270",
+    "docs/collection/poseidon/index.html": "b85c7954e0bcdd24efdea3eafccfdadf0355ee4cdfaa7500bceea6c770ce2db3",
+    "docs/collection/prometheus/index.html": "806bcb4884da794cd8c29b9f009172cc142deac4d4c656da20cf86e3d1f641b3",
+    "docs/collection/venus-de-milo/index.html": "c90a853a214af4b45f8fa8cf1d10b70f0f13f895c7c53d0ad3f0c0f99b75ffbc",
+    "docs/collection/victoire-de-samothrace/index.html": "d6c5cc67b9bbb3e8adf30d5e2cf45e11e60727b5c9f09deeb1a3cab53e1aaa14",
+    "docs/en/collection/athena/index.html": "88e2c6be97b38f3a0ee62141aff66aedcb2132fff3a71b713330f0248b4301f7",
+    "docs/en/collection/discobolus/index.html": "c590b560b17765152f460df263e7039955dea9a3b15ce6361ccdc2661ec9c18b",
+    "docs/en/collection/index.html": "ec9c28fb876a93e21d8569e5454caf4bdb1d6f3e1eac36713731ac8e36742af1",
+    "docs/en/collection/poseidon/index.html": "ca0519c1745718166d0a29403dcc8925e332aa0f0f279c5b837430da5aa45cc8",
+    "docs/en/collection/prometheus/index.html": "c6e54607cf6ae768e501d65356c96788272a93da4e2b99a1dcf3f3d45cc0a7ff",
+    "docs/en/collection/venus-de-milo/index.html": "56e549ab61e25bf56d9a17290bb55356dbd68a69e913575b29dec4b3502b8664",
+    "docs/en/collection/winged-victory-of-samothrace/index.html": "e50284d29a7b1a5b9531ec93e2ef0165ac4c5612cbdead0ef4daa154a319d882",
+    "docs/en/gallery/index.html": "249ffe1eb88bb009c1e3f08d6fd51482d9c5ed89f48ebffba65a986c5012e5ab",
+    "docs/en/index.html": "565e1fc7901c90e57b88aaa5c8c02d0c1480265d07acedf09bbad58a496efca9",
+    "docs/en/questions/index.html": "9927ae239c29c26e1531be1df1d34d2739697a4f44196224e9536fe6255b24d6",
+    "docs/en/sign-up/index.html": "06ce4e61764478282b0d4ac413a7930d13ec752c3680c1905c452ceef72aca10",
+    "docs/galerie/index.html": "df93f05ee56c390bee64be5e0eb2e6cce159c0d5de05cd38df866a0ee9bc8f07",
+    "docs/index.html": "fa47c42d785e6a889df508210627b36ba96751985a358aac7eceb71e75b1bb03",
+    "docs/inscription/index.html": "65c62f5b36480d137884477d8e005611ec2391c94db532bc986017534444dd5b",
+    "docs/questions/index.html": "0207726910f15af9e6c32ac9d4010165a06ff6943709018e654e7eca254b65cd"
+  }
+}

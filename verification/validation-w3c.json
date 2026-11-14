@@ -1,0 +1,134 @@
+{
+  "critere": "Le code HTML et CSS passe le W3C Validator sans erreur",
+  "statut": "validé sans erreur",
+  "date_utc": "2026-11-13T22:34:48.551710+00:00",
+  "html": {
+    "methode": "Nu HTML Checker local, moteur libre du service W3C validator.w3.org/nu",
+    "version": "26.11.9 (524d973)",
+    "pages": 22,
+    "erreurs": 0,
+    "avertissements": 0,
+    "options": [
+      "--also-check-css",
+      "--format",
+      "json",
+      "--stdout"
+    ],
+    "resultat_brut": "nu-local-raw.json",
+    "fichiers": [
+      {
+        "chemin": "collection/athena/index.html",
+        "sha256": "74d13945ee7ff37a02144d854c447229fb93d3fb12e8de7dac7bed905ac49176"
+      },
+      {
+        "chemin": "collection/discobole/index.html",
+        "sha256": "a396f9d2be12a91271cbf4cfd491a3994e1052182cad020897f3af342a50a774"
+      },
+      {
+        "chemin": "collection/index.html",
+        "sha256": "6c32de7840597955bf283717f60795c1287b6dd1db35f005255a47c124786270"
+      },
+      {
+        "chemin": "collection/poseidon/index.html",
+        "sha256": "b85c7954e0bcdd24efdea3eafccfdadf0355ee4cdfaa7500bceea6c770ce2db3"
+      },
+      {
+        "chemin": "collection/prometheus/index.html",
+        "sha256": "806bcb4884da794cd8c29b9f009172cc142deac4d4c656da20cf86e3d1f641b3"
+      },
+      {
+        "chemin": "collection/venus-de-milo/index.html",
+        "sha256": "c90a853a214af4b45f8fa8cf1d10b70f0f13f895c7c53d0ad3f0c0f99b75ffbc"
+      },
+      {
+        "chemin": "collection/victoire-de-samothrace/index.html",
+        "sha256": "d6c5cc67b9bbb3e8adf30d5e2cf45e11e60727b5c9f09deeb1a3cab53e1aaa14"
+      },
+      {
+        "chemin": "en/collection/athena/index.html",
+        "sha256": "88e2c6be97b38f3a0ee62141aff66aedcb2132fff3a71b713330f0248b4301f7"
+      },
+      {
+        "chemin": "en/collection/discobolus/index.html",
+        "sha256": "c590b560b17765152f460df263e7039955dea9a3b15ce6361ccdc2661ec9c18b"
+      },
+      {
+        "chemin": "en/collection/index.html",
+        "sha256": "ec9c28fb876a93e21d8569e5454caf4bdb1d6f3e1eac36713731ac8e36742af1"
+      },
+      {
+        "chemin": "en/collection/poseidon/index.html",
+        "sha256": "ca0519c1745718166d0a29403dcc8925e332aa0f0f279c5b837430da5aa45cc8"
+      },
+      {
+        "chemin": "en/collection/prometheus/index.html",
+        "sha256": "c6e54607cf6ae768e501d65356c96788272a93da4e2b99a1dcf3f3d45cc0a7ff"
+      },
+      {
+        "chemin": "en/collection/venus-de-milo/index.html",
+        "sha256": "56e549ab61e25bf56d9a17290bb55356dbd68a69e913575b29dec4b3502b8664"
+      },
+      {
+        "chemin": "en/collection/winged-victory-of-samothrace/index.html",
+        "sha256": "e50284d29a7b1a5b9531ec93e2ef0165ac4c5612cbdead0ef4daa154a319d882"
+      },
+      {
+        "chemin": "en/gallery/index.html",
+        "sha256": "249ffe1eb88bb009c1e3f08d6fd51482d9c5ed89f48ebffba65a986c5012e5ab"
+      },
+      {
+        "chemin": "en/index.html",
+        "sha256": "565e1fc7901c90e57b88aaa5c8c02d0c1480265d07acedf09bbad58a496efca9"
+      },
+      {
+        "chemin": "en/questions/index.html",
+        "sha256": "9927ae239c29c26e1531be1df1d34d2739697a4f44196224e9536fe6255b24d6"
+      },
+      {
+        "chemin": "en/sign-up/index.html",
+        "sha256": "06ce4e61764478282b0d4ac413a7930d13ec752c3680c1905c452ceef72aca10"
+      },
+      {
+        "chemin": "galerie/index.html",
+        "sha256": "df93f05ee56c390bee64be5e0eb2e6cce159c0d5de05cd38df866a0ee9bc8f07"
+      },
+      {
+        "chemin": "index.html",
+        "sha256": "fa47c42d785e6a889df508210627b36ba96751985a358aac7eceb71e75b1bb03"
+      },
+      {
+        "chemin": "inscription/index.html",
+        "sha256": "65c62f5b36480d137884477d8e005611ec2391c94db532bc986017534444dd5b"
+      },
+      {
+        "chemin": "questions/index.html",
+        "sha256": "0207726910f15af9e6c32ac9d4010165a06ff6943709018e654e7eca254b65cd"
+      }
+    ]
+  },
+  "css": {
+    "service": "W3C CSS Validation Service",
+    "methode": "Fichier CSS local exact soumis en multipart/form-data",
+    "profil": "css3",
+    "validite": true,
+    "erreurs": 0,
+    "avertissements": 192,
+    "types_avertissements": {
+      "redefinition": 146,
+      "no-color": 18,
+      "css-variable": 9,
+      "no-generic-family": 4,
+      "no-background-color": 13,
+      "same-colors": 2
+    },
+    "sha256": "dc83d369746fcc84bff4071a83451b6ab15fca3d812acda7439dd209c022cbf6",
+    "proprietes_controlees": [
+      "text-wrap: balance",
+      "background-position avec variables CSS de cadrage",
+      "espacements des notices et hauteur minimale des descriptions de collection"
+    ],
+    "resultat_brut": "css-multipart-response.json"
+  },
+  "limite_html_en_ligne": "Aucun nouvel appel HTML au service public W3C Nu après sa réponse HTTP429. Les22 pages du contenu final sont contrôlées avec son moteur officiel local.",
+  "note_avertissements": "Le critère demande zéro erreur. Les192 avertissements CSS sont distincts des erreurs et présentés sans être masqués :146 concernent des redéfinitions de propriétés dans la cascade adaptative, les autres des variables dynamiques, couleurs héritées, familles de polices et couleurs de bordures."
+}

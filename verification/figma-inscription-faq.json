@@ -1,0 +1,192 @@
+{
+  "figmaFile": "2hP92QF9qMobRzZcJIsvFf",
+  "figmaSession": "faa794cd-4b87-496d-a38e-31d63bcc3da0",
+  "site": "http://127.0.0.1:4181/momoa/",
+  "scope": "Visual comparison of 8 base pages and 4 mobile states; design contexts additionally retrieved for desktop confirmation and mobile errors. No repository edits. Screenshots use exact1440/390 viewports after fonts/image load.",
+  "frames": [
+    {
+      "name": "signup-fr-desktop",
+      "node": "1175:2395",
+      "figmaWidth": 1440,
+      "figmaHeightRounded": 1309,
+      "siteWidth": 1440,
+      "siteHeightRounded": 1308,
+      "siteScreenshot": "signup-fr-desktop-site.png",
+      "figmaScreenshot": "signup-fr-desktop-figma.png",
+      "siteHeightBefore": 1308
+    },
+    {
+      "name": "signup-fr-mobile",
+      "node": "1175:2453",
+      "figmaWidth": 390,
+      "figmaHeightRounded": 1781,
+      "siteWidth": 390,
+      "siteHeightRounded": 1781,
+      "siteScreenshot": "signup-fr-mobile-site.png",
+      "figmaScreenshot": "signup-fr-mobile-figma.png",
+      "siteHeightBefore": 1781
+    },
+    {
+      "name": "faq-fr-desktop",
+      "node": "1175:4004",
+      "figmaWidth": 1440,
+      "figmaHeightRounded": 1141,
+      "siteWidth": 1440,
+      "siteHeightRounded": 1143,
+      "siteScreenshot": "faq-fr-desktop-site.png",
+      "figmaScreenshot": "faq-fr-desktop-figma.png",
+      "siteHeightBefore": 1143
+    },
+    {
+      "name": "faq-fr-mobile",
+      "node": "1175:4061",
+      "figmaWidth": 390,
+      "figmaHeightRounded": 1537,
+      "siteWidth": 390,
+      "siteHeightRounded": 1518,
+      "siteScreenshot": "faq-fr-mobile-site.png",
+      "figmaScreenshot": "faq-fr-mobile-figma.png",
+      "siteHeightBefore": 1518
+    },
+    {
+      "name": "signup-en-desktop",
+      "node": "1175:5603",
+      "figmaWidth": 1440,
+      "figmaHeightRounded": 1065,
+      "siteWidth": 1440,
+      "siteHeightRounded": 1308,
+      "siteScreenshot": "signup-en-desktop-site.png",
+      "figmaScreenshot": "signup-en-desktop-figma.png",
+      "siteHeightBefore": 1308
+    },
+    {
+      "name": "signup-en-mobile",
+      "node": "1175:5666",
+      "figmaWidth": 390,
+      "figmaHeightRounded": 1760,
+      "siteWidth": 390,
+      "siteHeightRounded": 1760,
+      "siteScreenshot": "signup-en-mobile-site.png",
+      "figmaScreenshot": "signup-en-mobile-figma.png",
+      "siteHeightBefore": 1760
+    },
+    {
+      "name": "faq-en-desktop",
+      "node": "1175:7256",
+      "figmaWidth": 1440,
+      "figmaHeightRounded": 1141,
+      "siteWidth": 1440,
+      "siteHeightRounded": 1143,
+      "siteScreenshot": "faq-en-desktop-site.png",
+      "figmaScreenshot": "faq-en-desktop-figma.png",
+      "siteHeightBefore": 1143
+    },
+    {
+      "name": "faq-en-mobile",
+      "node": "1175:7313",
+      "figmaWidth": 390,
+      "figmaHeightRounded": 1437,
+      "siteWidth": 390,
+      "siteHeightRounded": 1418,
+      "siteScreenshot": "faq-en-mobile-site.png",
+      "figmaScreenshot": "faq-en-mobile-figma.png",
+      "siteHeightBefore": 1418
+    },
+    {
+      "name": "menu-fr-mobile",
+      "node": "1175:3958",
+      "figmaWidth": 390,
+      "figmaHeightRounded": 1034,
+      "siteWidth": 390,
+      "siteHeightRounded": 1021,
+      "siteScreenshot": "menu-fr-mobile-site.png",
+      "figmaScreenshot": "menu-fr-mobile-figma.png",
+      "siteHeightBefore": 1021
+    },
+    {
+      "name": "confirmation-fr-mobile",
+      "node": "1175:3897",
+      "figmaWidth": 390,
+      "figmaHeightRounded": 1296,
+      "siteWidth": 390,
+      "siteHeightRounded": 1283,
+      "siteScreenshot": "confirmation-fr-mobile-site.png",
+      "figmaScreenshot": "confirmation-fr-mobile-figma.png",
+      "siteHeightBefore": 1291
+    },
+    {
+      "name": "menu-en-mobile",
+      "node": "1175:7210",
+      "figmaWidth": 390,
+      "figmaHeightRounded": 1034,
+      "siteWidth": 390,
+      "siteHeightRounded": 1021,
+      "siteScreenshot": "menu-en-mobile-site.png",
+      "figmaScreenshot": "menu-en-mobile-figma.png",
+      "siteHeightBefore": 1021
+    },
+    {
+      "name": "confirmation-en-mobile",
+      "node": "1175:7147",
+      "figmaWidth": 390,
+      "figmaHeightRounded": 1296,
+      "siteWidth": 390,
+      "siteHeightRounded": 1283,
+      "siteScreenshot": "confirmation-en-mobile-site.png",
+      "figmaScreenshot": "confirmation-en-mobile-figma.png",
+      "siteHeightBefore": 1291
+    }
+  ],
+  "verdict": "Close visual conformity of structure, text, imagery, crops, typography families and basegeometry. Both identified typographic differences are now corrected. Natural-height flow and small decorative differences remain documented; no claim of pixel-identical rendering.",
+  "justifiedDifferences": [
+    {
+      "frame": "signup-en-desktop",
+      "node": "1175:5603",
+      "figma": "Formulaire et informations has fixed height467px although sidebar content is ~598px high; footer begins aroundy789 and overlaps copy/actions; totalheight1065.",
+      "site": "Content flows to its naturalheight; footer startsy1032; totalheight1308. Both form/legalnotice and sidebar remain readable.",
+      "recommendation": "Preserve normal-flow implementation; do not reproduce the fixed-height reference defect."
+    },
+    {
+      "scope": "FAQ mobile/menu/footer",
+      "observation": "Common footer is ~414px on site; some reference states set436px. Menu content is naturalheight527px vs fixed518pxreference; controls differ by~1px near top and footer starts9pxlater.",
+      "recommendation": "Natural content flow is appropriate for responsiveness; avoid imposing fixed heights that can clip translated text."
+    },
+    {
+      "scope": "Textured light backgrounds and FAQ dividers",
+      "observation": "Same palette/texture family; texture scales/crops differ subtly because site backgrounds are applied to header andmain separately. FAQ border alpha is0.35 inCSS versus0.55×0.35 inFigma.",
+      "severity": "minor decorative variation"
+    }
+  ],
+  "assets": "Victory of Samothrace imagery and emblem/menu icons visually match reference slots/crops; local files render and have nonzero dimensions. No substituted artwork identified.",
+  "resolvedCorrections": [
+    {
+      "selector": ".faq-answers h2",
+      "figma": "font-weight:600",
+      "scope": "Both languages, desktop and mobile FAQ",
+      "severity": "minor visual mismatch",
+      "evidence": "faq-fr-desktop.txt node1175:4028 and corresponding pagecontexts show CormorantGaramond SemiBold; currentCSS declares500.",
+      "status": "Corrected and verified at390 and1440 CSSpx inbothlanguages",
+      "previous": "font-weight:500"
+    },
+    {
+      "selector": ".signup-complete .signup-about p",
+      "figma": "font-size16px; line-height24px",
+      "scope": "Both languages, confirmation state",
+      "severity": "minor visual mismatch",
+      "evidence": "confirmation-fr-mobile.txt node1175:3928; corresponding EN and desktop contexts agree.",
+      "status": "Corrected and verified at390 and1440 CSSpx inbothlanguages",
+      "previous": "font-size18px; line-height28.08px (inherited signup-about)"
+    }
+  ],
+  "recommendedCorrections": [],
+  "typographyAfterEvidence": "typography-after.json",
+  "verificationAfterCorrections": {
+    "checks": 8,
+    "passed": true,
+    "faqHeadingsFontWeight": "600",
+    "confirmationAsideParagraphFontSize": "16px",
+    "confirmationAsideParagraphLineHeight": "24px",
+    "cssSHA256": "30ff30b61ce3c90a60b91f9173b2644367c0647160ce1527655720e4a423370d",
+    "beforeCaptures": "before/"
+  }
+}

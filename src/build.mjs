@@ -52,6 +52,12 @@ function image(page, file, alt, width, height, options = {}) {
   return `<img${className} src="${assetLink(page, file)}"${sourceSet} alt="${escape(alt)}" width="${width}" height="${height}"${loading}${decoding}>`;
 }
 
+function homeTexture(page) {
+  return image(page, "stone-texture.webp", "", 480, 719, {
+    lazy: true, className: "home-texture",
+  });
+}
+
 function portrait(page, files, alt, sizes, className, options) {
   const [desktop, mobile] = files;
   const [wideWidth, wideHeight, narrowWidth, narrowHeight] = sizes;
@@ -204,6 +210,7 @@ function home(page) {
       </div>
     </section>
     <section class="home-reproductions" aria-labelledby="reproductions-title">
+      ${homeTexture(page)}
       <div class="container split-grid">
         ${image(page, "caryatids.webp", copy.gallery.storyFrameLabel, 2048, 1365, {
           lazy: true, className: "reproductions-image", widths: caryatidWidths, sizes: splitImageSizes,
@@ -222,6 +229,7 @@ function home(page) {
       </div>
     </div>
     <section class="stone home-faq" aria-labelledby="home-faq-title">
+      ${homeTexture(page)}
       <div class="container home-faq-grid">
         <h2 id="home-faq-title">${escape(faqTitle)}</h2>
         <ul class="faq-links">
@@ -230,6 +238,7 @@ function home(page) {
       </div>
     </section>
     <section class="stone home-news" aria-labelledby="newsletter-title">
+      ${homeTexture(page)}
       <div class="container split-grid">
         <div><h2 id="newsletter-title">${escape(newsletter.title)}</h2><p>${escape(newsletter.body)}</p></div>
         ${buttonLink(page, routes.signup, newsletter.cta)}

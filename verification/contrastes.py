@@ -45,7 +45,7 @@ families = [
          ('#dadee3', '.hero-subtitle'),
      ]),
     ('reproductions', '.home-reproductions', '#30404a', .95,
-     'rgba(48, 64, 74, 0.95)', [
+     ('background: var(--slate);', '.home-reproductions > .home-texture', 'opacity: 0.05;'), [
          ('#ffffff', 'Inherited headings and transparent outline button'),
          ('#dadee3', '.reproductions-copy p'),
      ]),
@@ -59,7 +59,8 @@ families = [
 source = CSS.read_text()
 rows = []
 for family, selector, overlay, alpha, css_rgba, foregrounds in families:
-    assert css_rgba in source, f'Expected overlay missing: {css_rgba}'
+    markers = (css_rgba,) if isinstance(css_rgba, str) else css_rgba
+    assert all(marker in source for marker in markers), f'Expected compositing rules missing: {markers}'
     # Round outwards so 8-bit display quantization cannot make the bound optimistic.
     darkest = [math.floor(alpha * value) for value in rgb(overlay)]
     brightest = [math.ceil(alpha * value + (1 - alpha) * 255) for value in rgb(overlay)]
@@ -102,7 +103,7 @@ solids = [{'foreground': fore, 'background': back, 'textScope': scope,
 result = {
     'cssSHA256': hashlib.sha256(CSS.read_bytes()).hexdigest(),
     'method': 'Conservative sRGB source-over channel bounds followed by WCAG 2 relative luminance; arbitrary image channels 0..255; composite channel bounds rounded outwards to integer RGB for display quantization; all text is tested at the stricter normal-text AA threshold 4.5:1 regardless of size or weight.',
-    'mapping': 'CSS foreground inheritance and explicit color overrides were reviewed for each textured family and for solid text/button palettes. The gallery-history bound uses its lowest alpha 0.64 anywhere in either mobile or desktop gradient. Additional ink-to-transparent hero/featured gradients only improve light-text contrast.',
+    'mapping': 'CSS foreground inheritance and explicit color overrides were reviewed for each textured family and for solid text/button palettes. A texture image at opacity 0.05 over the slate background is equivalent to the previous 0.95 slate overlay; opacity 0.03 over stone is likewise equivalent to its 0.97 overlay. The gallery-history bound uses its lowest alpha 0.64 anywhere in either mobile or desktop gradient. Additional ink-to-transparent hero/featured gradients only improve light-text contrast.',
     'scope': 'Stable authored foreground/background colors of regular text, including all gradient families and normal/settled hover palettes. This resolves the gradient-background contrast uncertainty from the 50 axe checks; it is not a complete manual WCAG audit and does not model antialiasing or intermediate animation frames.',
     'gradientChecks': rows,
     'solidChecks': solids,

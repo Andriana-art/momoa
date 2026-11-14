@@ -1,0 +1,54 @@
+{
+  "polices": [
+    {
+      "fichier": "docs/assets/fonts/dm-sans-latin-ext-standard-normal.woff2",
+      "octets_avant": 31292,
+      "octets_apres": 10752,
+      "sha256_avant": "5d18d31d23ada61ebee1d589b11d5da30db9e158f589d5e35221ba2b1a45de54",
+      "sha256_apres": "e46d7b7d630887d0af4e5e56343b492f5527534fa6aa4733a355c5ecabccf74a",
+      "nombre_glyphes": 216,
+      "nombre_caracteres_unicode": 149,
+      "glyphes_et_caracteres_conserves": true,
+      "axes_finaux": {
+        "wght": [
+          400.0,
+          400.0,
+          500.0
+        ]
+      },
+      "taille_optique_originale_conservee": 14
+    },
+    {
+      "fichier": "docs/assets/fonts/dm-sans-latin-standard-normal.woff2",
+      "octets_avant": 62724,
+      "octets_apres": 21332,
+      "sha256_avant": "ca72d2bcea8f4daa783dbdfa2d9b46068c3ce38168e05918fb867aa453b4f890",
+      "sha256_apres": "69225450042239e5f1a02f77107cea8c8edde71d4ab5e2ceaaf2bc0848fca98e",
+      "nombre_glyphes": 270,
+      "nombre_caracteres_unicode": 222,
+      "glyphes_et_caracteres_conserves": true,
+      "axes_finaux": {
+        "wght": [
+          400.0,
+          400.0,
+          500.0
+        ]
+      },
+      "taille_optique_originale_conservee": 14
+    }
+  ],
+  "gain_octets_police_latine": 41392,
+  "texture_decorative_reportee_sur_mobile_octets": 42982,
+  "gain_ressources_premier_ecran_mobile_octets_hors_html_css": 84374,
+  "preuve_typographie": {
+    "layouts": 44,
+    "maxDeltaCSSPixels": 0.0625,
+    "failures": []
+  },
+  "images_par_accueil_apres_defilement": 13,
+  "notes": [
+    "Les photos principales et les images des œuvres ne sont pas modifiées.",
+    "Le chargement anticipé des textures sur ordinateur dépend du navigateur.",
+    "Les quelques octets HTML/CSS ajoutés ne sont pas déduits du gain de ressources indiqué."
+  ]
+}

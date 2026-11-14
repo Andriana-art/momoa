@@ -1,0 +1,79 @@
+{
+  "passed": true,
+  "results": [
+    {
+      "lang": "fr",
+      "width": 1440,
+      "height": 1929,
+      "paragraphs": [
+        {
+          "minHeight": "48px",
+          "y": 815.71875,
+          "height": 48.40625
+        },
+        {
+          "minHeight": "48px",
+          "y": 815.71875,
+          "height": 48.40625
+        },
+        {
+          "minHeight": "48px",
+          "y": 815.734375,
+          "height": 48.40625
+        },
+        {
+          "minHeight": "48px",
+          "y": 1445.0625,
+          "height": 48.40625
+        },
+        {
+          "minHeight": "48px",
+          "y": 1445.0625,
+          "height": 48.40625
+        },
+        {
+          "minHeight": "48px",
+          "y": 1445.078125,
+          "height": 48.40625
+        }
+      ]
+    },
+    {
+      "lang": "en",
+      "width": 1440,
+      "height": 1929,
+      "paragraphs": [
+        {
+          "minHeight": "48px",
+          "y": 815.71875,
+          "height": 48.40625
+        },
+        {
+          "minHeight": "48px",
+          "y": 815.71875,
+          "height": 48.40625
+        },
+        {
+          "minHeight": "48px",
+          "y": 815.734375,
+          "height": 48.40625
+        },
+        {
+          "minHeight": "48px",
+          "y": 1445.0625,
+          "height": 48.40625
+        },
+        {
+          "minHeight": "48px",
+          "y": 1445.0625,
+          "height": 48.40625
+        },
+        {
+          "minHeight": "48px",
+          "y": 1445.078125,
+          "height": 48.40625
+        }
+      ]
+    }
+  ]
+}

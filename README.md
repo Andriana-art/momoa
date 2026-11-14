@@ -48,24 +48,21 @@ Les liens générés sont relatifs au dossier du projet. Les options de publicat
 
 ## Vérifications avant remise
 
-Les derniers contrôles portent sur le site publié à partir du commit `36e98ce`. Le [bilan détaillé et les rapports consultables hors ligne](verification/README.md) sont inclus dans le dépôt.
+La [grille de remise détaillée](verification/GRILLE-REMISE.md) reprend les sept critères du projet. Les [preuves et leur périmètre](verification/README.md) sont inclus dans le dépôt ; les empreintes SHA-256 identifient les fichiers contrôlés après les corrections graphiques, publiés dans le commit `1ede3b68f7ffa7fa5c0cccc4780ed1563a81cbef`.
 
-| Contrôle | Résultat |
+| Critère | Résultat |
 | --- | --- |
-| HTML et CSS | Nu HTML Checker 26.11.9 ne relève aucune erreur ni aucun avertissement dans les 22 pages HTML et la feuille de style. |
-| Pages publiées | Les 22 pages répondent avec le statut HTTP 200 et correspondent aux fichiers testés. |
-| Liens et ressources locales | 715 références locales, dont les liens vers les pages, les ancres et les ressources, vérifiées sans erreur. |
-| Mise en page | 44 contrôles : les 22 pages en vue mobile et ordinateur, sans débordement horizontal, erreur JavaScript ni ressource en échec. |
-| Accessibilité automatisée | axe-core 4.14.0 ne détecte aucune violation lors de 50 contrôles, couvrant les 22 pages sur mobile et ordinateur ainsi que les états interactifs. Les limites de ce contrôle sont indiquées dans `verification/README.md`. |
-| Navigation et formulaire | Ouverture et fermeture du menu, touche Échap, retour du focus et formulaire de démonstration vérifiés dans les deux langues. La navigation principale reste utilisable sans JavaScript. |
-| Contrastes du texte | Les 18 associations contrôlées passent le seuil AA de 4,5:1 ; la borne conservatrice la plus basse sur les fonds texturés est de 4,686:1. Méthode et portée détaillées dans `verification/`. |
-| Images publiées | Les 10 images de chaque accueil se chargent après défilement, en français et en anglais, sur mobile et ordinateur. |
-| Lighthouse 13.6.0 | Les accueils français et anglais publiés obtiennent 100 en performances, accessibilité, bonnes pratiques et SEO sur mobile et ordinateur. Les quatre rapports HTML complets sont inclus dans `verification/`. |
-| Sources et crédits | Les 13 liens externes présents dans les pages vers les sources, crédits et licences répondent avec le statut HTTP 200. Les licences des polices sont incluses. |
+| Conformité graphique | 44 vues de base comparées aux maquettes Figma, en français et en anglais à 390 et 1440 px, avec contrôle des états interactifs. Les écarts résiduels et adaptations utiles sont documentés. |
+| Responsive | 286 mises en page à 13 largeurs de 320 à 1920 px et 18 états interactifs sans échec ; 12 vues avec zone CSS équivalente à un zoom de 200 %. |
+| Bootstrap | Facultatif dans la grille, non utilisé ; mise en page en CSS Grid et Flexbox. |
+| Écriture du code | Sources communes, contenus bilingues centralisés, HTML sémantique, CSS et comportements JavaScript séparés ; génération reproductible des 22 pages. |
+| Validation W3C | Nu HTML Checker 26.11.9 : 22 HTML et CSS sans message. Service CSS W3C : zéro erreur et 192 avertissements, détaillés dans les preuves. |
+| SEO | Titres et descriptions renseignés, une hiérarchie de titres cohérente, langues FR/EN, images et liens nommés ; 22 URL publiées accessibles aux robots. |
+| Accessibilité | 50 contrôles axe-core sans violation détectée ; navigation au clavier et formulaire contrôlés ; borne minimale de contraste textuel calculée à 4,686:1. |
 
-Les contrôles actuels et leur périmètre sont détaillés dans `verification/`. Une nouvelle analyse sur le site de PageSpeed Insights a renvoyé « Unable to resolve » et n’a produit aucun nouveau rapport partageable ; les scores ci-dessus proviennent de Lighthouse exécuté directement sur le site publié. Ils concernent les pages et les conditions de test indiquées dans les rapports.
+Les derniers rapports Lighthouse du site publié après corrections obtiennent 100 dans les quatre catégories sur les deux accueils, en français et en anglais, sur mobile et ordinateur. Un premier passage anglais mobile a obtenu 99 ; le contrôle suivant a obtenu 100 sans changement de code. Les rapports et les dates sont conservés dans `verification/`.
 
-Pour effectuer un contrôle complémentaire avec WAVE, utilisez les adresses du [site public MOMOA](https://andriana-art.github.io/momoa/) dans [WAVE en ligne](https://wave.webaim.org/). L’extension WAVE permet aussi d’examiner les états interactifs, comme le menu ouvert et les messages du formulaire.
+Le formulaire reste une démonstration universitaire sans envoi ni conservation des données. Les sources, crédits et licences sont conservés. Le contrôle du zoom couvre un équivalent CSS à 200 % ; la commande de zoom native du navigateur n’a pas été vérifiée.
 
 ## Contenus et crédits
 

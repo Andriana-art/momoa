@@ -1462,7 +1462,13 @@
             },
             {
               "target": [
-                "#history-title"
+                "#history-title > span:nth-child(1)"
+              ],
+              "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a background gradient"
+            },
+            {
+              "target": [
+                "#history-title > span:nth-child(2)"
               ],
               "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a background gradient"
             },
@@ -1872,7 +1878,13 @@
             },
             {
               "target": [
-                "#history-title"
+                "#history-title > span:nth-child(1)"
+              ],
+              "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a background gradient"
+            },
+            {
+              "target": [
+                "#history-title > span:nth-child(2)"
               ],
               "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a background gradient"
             },
@@ -4056,7 +4068,13 @@
             },
             {
               "target": [
-                "#history-title"
+                "#history-title > span:nth-child(1)"
+              ],
+              "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a background gradient"
+            },
+            {
+              "target": [
+                "#history-title > span:nth-child(2)"
               ],
               "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a background gradient"
             },
@@ -4538,7 +4556,13 @@
             },
             {
               "target": [
-                "#history-title"
+                "#history-title > span:nth-child(1)"
+              ],
+              "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a background gradient"
+            },
+            {
+              "target": [
+                "#history-title > span:nth-child(2)"
               ],
               "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a background gradient"
             },
@@ -5351,5 +5375,13 @@
       ],
       "passes": 26
     }
-  ]
+  ],
+  "baseURL": "http://127.0.0.1:4181/momoa/",
+  "cssSHA256": "dc83d369746fcc84bff4071a83451b6ab15fca3d812acda7439dd209c022cbf6",
+  "interactiveStateSettlingMs": 300,
+  "summary": {
+    "checks": 50,
+    "violations": 0,
+    "incompleteRules": 50
+  }
 }
