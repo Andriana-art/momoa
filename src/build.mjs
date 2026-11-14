@@ -6,6 +6,10 @@ import { artworks, languages } from "./content.mjs";
 const output = fileURLToPath(new URL("../docs/", import.meta.url));
 const imageFolder = "assets/images/";
 const imageBreakpoint = "(min-width: 56rem)";
+const mobileHeroMedia = "(width < 40rem)";
+const mobileHeroSizes = "calc(100vw - 3rem)";
+const heroWidths = [400, 680, 960, 1260];
+const heroSizes = `(min-width: 90rem) 624px, ${imageBreakpoint} 43.05vw, (min-width: 42rem) 624px, ${mobileHeroSizes}`;
 const splitImageSizes = "(min-width: 90rem) 624px, (min-width: 56rem) 43.05vw, calc(100vw - 3rem)";
 const homeCardImageSizes = "(min-width: 90rem) 624px, (min-width: 56rem) calc((100vw - 2 * clamp(2rem, 5.56vw, 5rem) - 2rem) / 2), (min-width: 40rem) calc((100vw - 5.5rem) / 2), calc(100vw - 3rem)";
 const panelImageSizes = "(min-width: 90rem) 576px, (min-width: 56rem) calc(43.05vw - 3rem), (min-width: 40rem) calc(50vw - 5.25rem), calc(100vw - 5.5rem)";
@@ -42,11 +46,20 @@ function assetLink(page, file) {
   return relative(page, `${imageFolder}${file}`);
 }
 
+function imageSourceSet(page, file, width, widths) {
+  const extension = posix.extname(file);
+  const stem = posix.basename(file, extension);
+  return widths.map((size) => {
+    const source = size === width ? file : `${stem}-${size}${extension}`;
+    return `${assetLink(page, source)} ${size}w`;
+  }).join(", ");
+}
+
 function image(page, file, alt, width, height, options = {}) {
   const loading = options.priority ? ' fetchpriority="high"' : options.lazy ? ' loading="lazy"' : "";
   const className = options.className ? ` class="${options.className}"` : "";
   const sourceSet = options.widths
-    ? ` srcset="${options.widths.map((size) => `${assetLink(page, size === width ? file : file.replace(".webp", `-${size}.webp`))} ${size}w`).join(", ")}" sizes="${options.sizes}"`
+    ? ` srcset="${imageSourceSet(page, file, width, options.widths)}" sizes="${options.sizes}"`
     : "";
   const decoding = options.priority ? "" : ' decoding="async"';
   return `<img${className} src="${assetLink(page, file)}"${sourceSet} alt="${escape(alt)}" width="${width}" height="${height}"${loading}${decoding}>`;
@@ -183,12 +196,12 @@ function home(page) {
           </h1>
           ${buttonLink(page, routes.collection, hero.cta, "ivory", "hero-cta")}
         </div>
-        ${image(page, "hero-bust-plinth.webp", copy.bustAlt, 1260, 1262, {
-          priority: true,
-          className: "hero-artwork",
-          widths: [400, 680, 960, 1260],
-          sizes: "(min-width: 90rem) 624px, (min-width: 56rem) 43.05vw, (min-width: 42rem) 624px, calc(100vw - 3rem)",
-        })}
+        <picture class="hero-artwork">
+          <source type="image/avif" media="${escape(mobileHeroMedia)}" srcset="${imageSourceSet(page, "hero-bust-plinth.avif", 1260, heroWidths)}" sizes="${mobileHeroSizes}">
+          ${image(page, "hero-bust-plinth.webp", copy.bustAlt, 1260, 1262, {
+            priority: true, widths: heroWidths, sizes: heroSizes,
+          })}
+        </picture>
       </div>
     </section>
     <section class="home-artworks home-featured" aria-labelledby="featured-title">
@@ -386,14 +399,17 @@ function signup(page) {
 
 const render = { home, gallery, collection, notice, signup, faq };
 
+function heroPreloads(page) {
+  return `
+  <link rel="preload" as="image" type="image/avif" media="${escape(mobileHeroMedia)}" imagesrcset="${imageSourceSet(page, "hero-bust-plinth.avif", 1260, heroWidths)}" imagesizes="${mobileHeroSizes}" fetchpriority="high">
+  <link rel="preload" as="image" type="image/webp" media="(min-width: 40rem)" imagesrcset="${imageSourceSet(page, "hero-bust-plinth.webp", 1260, heroWidths)}" imagesizes="${heroSizes}" fetchpriority="high">
+  <link rel="preload" as="image" type="image/webp" media="${escape(mobileHeroMedia)}" href="${assetLink(page, "hero-gallery-dark-640.webp")}">`;
+}
+
 function documentFor(page) {
   const copy = languages[page.lang];
   const title = page.name === "home" ? copy.htmlTitle : `${page.artwork?.title[page.lang] ?? copy.title[page.name]} — MOMOA`;
   const description = page.artwork ? page.artwork.notices[page.lang].heading : copy.descriptions[page.name];
-  const heroPreload = page.name === "home" ? `\n  <link rel="preload" as="image" href="${assetLink(page, "hero-bust-plinth-400.webp")}" imagesrcset="${[400, 680, 960, 1260].map((size) => `${assetLink(page, size === 1260 ? "hero-bust-plinth.webp" : `hero-bust-plinth-${size}.webp`)} ${size}w`).join(", ")}" imagesizes="(min-width: 90rem) 624px, (min-width: 56rem) 43.05vw, (min-width: 42rem) 624px, calc(100vw - 3rem)" fetchpriority="high">` : "";
-  const heroBackgroundPreload = page.name === "home"
-    ? `\n  <link rel="preload" href="${assetLink(page, "hero-gallery-640.webp")}" as="image" type="image/webp" media="(width &lt; 40rem)">`
-    : "";
   const galleryFontPreload = (page.name === "gallery" || page.name === "home")
     ? `\n  <link rel="preload" href="${relative(page, "assets/fonts/cormorant-garamond-latin-wght-normal.woff2")}" as="font" type="font/woff2" crossorigin>`
     : "";
@@ -407,7 +423,7 @@ function documentFor(page) {
   <title>${escape(title)}</title>
   <script>document.documentElement.classList.add("js");</script>
   <link rel="icon" href="${assetLink(page, "emblem.svg")}" type="image/svg+xml">
-  <link rel="stylesheet" href="${relative(page, "assets/styles.css")}">${galleryFontPreload}${heroPreload}${heroBackgroundPreload}
+  <link rel="stylesheet" href="${relative(page, "assets/styles.css")}">${galleryFontPreload}${page.name === "home" ? heroPreloads(page) : ""}
   <link rel="preload" href="${relative(page, "assets/fonts/dm-sans-latin-standard-normal.woff2")}" as="font" type="font/woff2" crossorigin>
   <script src="${relative(page, "assets/site.js")}" defer></script>
 </head>

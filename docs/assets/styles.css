@@ -455,13 +455,14 @@ button {
 }
 
 .hero::before {
-  --hero-background: url("images/hero-gallery-640.webp");
+  --hero-background: url("images/hero-gallery-dark-640.webp");
+  --hero-shade: none;
   position: absolute;
   z-index: -1;
   inset: -5rem 0 0;
   background:
     linear-gradient(to top, var(--ink), transparent 6rem),
-    linear-gradient(rgba(16, 23, 34, 0.87), rgba(16, 23, 34, 0.87)),
+    var(--hero-shade),
     var(--hero-background) center / cover;
   content: "";
 }
@@ -1023,6 +1024,7 @@ button {
 
   .hero::before {
     --hero-background: url("images/hero-gallery.webp");
+    --hero-shade: linear-gradient(rgba(16, 23, 34, 0.87), rgba(16, 23, 34, 0.87));
   }
 
   .gallery-history {
@@ -1142,7 +1144,7 @@ button {
   .hero::before {
     background-image:
       linear-gradient(to top, var(--ink), transparent 7.5rem),
-      linear-gradient(rgba(16, 23, 34, 0.87), rgba(16, 23, 34, 0.87)),
+      var(--hero-shade),
       var(--hero-background);
   }
 

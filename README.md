@@ -12,7 +12,7 @@ Le [site publié sur GitHub Pages](https://andriana-art.github.io/momoa/) peut �
 | `docs/assets/images/` et `docs/assets/fonts/` | Images, polices et licences des polices hébergées localement |
 | `src/content.mjs` | Textes français et anglais, fiches des œuvres et liste des routes |
 | `src/build.mjs` | Génération des 22 pages HTML à partir des modèles communs et des textes |
-| `src/optimize-home-images.py` | Génération des variantes WebP des cartes de l’accueil ; nécessite Pillow |
+| `src/optimize-home-images.py` | Génération des images adaptatives de l’accueil avec Pillow (WebP et AVIF) |
 | `verification/` | Bilan des contrôles et rapports Lighthouse autonomes du site publié |
 
 ## Prévisualiser le site sur votre ordinateur
@@ -37,6 +37,8 @@ Le [site publié sur GitHub Pages](https://andriana-art.github.io/momoa/) peut �
 
 Les pages HTML et les images sont déjà générées ; aucune installation de dépendances n’est nécessaire pour consulter le site. Pour modifier les textes, éditez `src/content.mjs`, puis exécutez `node src/build.mjs` avec Node.js 22 ou une version plus récente. Après une modification du CSS ou du JavaScript, actualisez la page dans le navigateur.
 
+Pour régénérer les variantes d’images de l’accueil, exécutez `python3 src/optimize-home-images.py` avec une version de Pillow qui prend en charge WebP et AVIF. Le navigateur choisit une version adaptée à l’écran. Sur mobile, le buste est proposé en AVIF avec une variante WebP de secours.
+
 ## Publier sur GitHub Pages
 
 1. Ajoutez les fichiers du projet à la racine du dépôt GitHub. Vérifiez que `index.html` et `.nojekyll` se trouvent dans `docs/`.
@@ -56,12 +58,12 @@ Les contrôles ci-dessous ont été répétés après l’optimisation, à l’e
 | --- | --- |
 | HTML et CSS | Nu HTML Checker 26.11.9 ne relève aucune erreur ni aucun avertissement dans les 22 pages HTML et la feuille de style. |
 | Pages publiées | Les 22 pages répondent avec le statut HTTP 200 et correspondent aux fichiers testés. |
-| Liens et ressources locales | 708 références locales, dont les liens vers les pages, les ancres et les ressources, vérifiées sans erreur. |
+| Liens et ressources locales | 730 références locales, dont les liens vers les pages, les ancres et les ressources, vérifiées sans erreur. |
 | Mise en page | 342 contrôles de mise en page sur les 22 pages, de 320 à 1920 pixels CSS, sans débordement horizontal, chevauchement ni ressource en échec. |
 | Accessibilité automatisée | axe-core 4.14.0 ne détecte aucune violation lors de 54 contrôles, couvrant les 22 pages sur mobile et ordinateur ainsi que les états interactifs. |
 | Navigation et formulaire | Ouverture et fermeture du menu, touche Échap, retour du focus et formulaire de démonstration vérifiés dans les deux langues. La navigation principale reste utilisable sans JavaScript. |
 | Contrastes du texte | Les 836 échantillons contrôlés sur les fonds texturés respectent les seuils applicables. Le rapport le plus bas mesuré est de 5,07 pour 1. |
-| Images | Les 75 fichiers WebP ont été décodés. Les images optimisées ont été vérifiées sur le site publié. |
+| Images | Les 80 fichiers WebP et AVIF ont été décodés. |
 | Lighthouse 13.6.0 | En complément des rapports PageSpeed, l’accueil et la galerie en français et en anglais ont obtenu 100 dans les quatre catégories lors des essais locaux sur mobile et ordinateur. |
 | Sources et crédits | Les 13 liens externes vers les sources, crédits et licences répondaient avec le statut HTTP 200 lors de l’audit précédent. Les licences des polices sont incluses. |
 

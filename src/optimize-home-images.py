@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
-"""Build responsive homepage card images without changing their originals.
+"""Build responsive homepage images without changing their originals.
 
-Requires Pillow (``python3 -m pip install Pillow``).
+Requires Pillow with WebP and AVIF support (``python3 -m pip install Pillow``).
 Run from any directory: ``python3 src/optimize-home-images.py``.
 """
 
@@ -16,7 +16,7 @@ WIDTHS = (480, 680)
 QUALITY = 85
 
 
-def main():
+def build_cards():
     originals = sorted(
         image
         for image in IMAGE_DIRECTORY.glob("home-*.webp")
@@ -43,5 +43,26 @@ def main():
                 )
 
 
+def build_mobile_hero():
+    for suffix in ("-400", "-680", "-960", ""):
+        source = IMAGE_DIRECTORY / f"hero-bust-plinth{suffix}.webp"
+        with Image.open(source) as image:
+            image.save(
+                source.with_suffix(".avif"),
+                quality=65,
+                speed=4,
+                subsampling="4:4:4",
+            )
+
+    with Image.open(IMAGE_DIRECTORY / "hero-gallery-640.webp") as image:
+        # Bake the mobile hero's solid 87% ink overlay into the photo.
+        scene = image.convert("RGB")
+        ink = Image.new("RGB", scene.size, (16, 23, 34))
+        Image.blend(scene, ink, 0.87).save(
+            IMAGE_DIRECTORY / "hero-gallery-dark-640.webp", quality=90, method=6,
+        )
+
+
 if __name__ == "__main__":
-    main()
+    build_cards()
+    build_mobile_hero()
