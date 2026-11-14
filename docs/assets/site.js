@@ -100,4 +100,5 @@ if (form) {
   });
   document.querySelector(".signup-unavailable").hidden = true;
   form.hidden = false;
+  form.inert = false;
 }

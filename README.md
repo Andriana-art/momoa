@@ -36,7 +36,7 @@ Le [site publié sur GitHub Pages](https://andriana-art.github.io/momoa/) peut �
 
 4. Ouvrez [http://localhost:8000/](http://localhost:8000/) dans votre navigateur. Laissez le terminal ouvert pendant la prévisualisation. Pour arrêter le serveur, appuyez sur Ctrl+C dans le terminal.
 
-Les pages HTML et les images sont déjà générées ; aucune installation de dépendances n’est nécessaire pour consulter le site. Pour modifier les textes, éditez `src/content.mjs`, puis exécutez `node src/build.mjs` avec Node.js 22 ou une version plus récente. Après une modification du CSS, relancez aussi `node src/build.mjs` pour réintégrer les styles aux accueils et actualiser l’URL versionnée utilisée par les autres pages, puis actualisez la page dans le navigateur. Après une modification du JavaScript, actualisez également la page.
+Les pages HTML et les images sont déjà générées ; aucune installation de dépendances n’est nécessaire pour consulter le site. Pour modifier les textes, éditez `src/content.mjs`, puis exécutez `node src/build.mjs` avec Node.js 22 ou une version plus récente. Après une modification du CSS ou du JavaScript, relancez aussi `node src/build.mjs` pour réintégrer les styles aux accueils et actualiser les URL versionnées des ressources, puis actualisez la page dans le navigateur.
 
 La réduction facultative des polices utilise `python3 src/optimize-fonts.py` avec fontTools et son support WOFF2 (`python3 -m pip install "fonttools[woff]"`). Les caractères sont conservés ; les fichiers optimisés sont déjà inclus.
 

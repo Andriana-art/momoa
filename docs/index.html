@@ -983,6 +983,12 @@ button {
   gap: 1.5rem;
 }
 
+/* The head script sets .js before rendering, so the form reserves its space
+   while its deferred event handlers load. Without JavaScript, show the note. */
+html:not(.js) .signup-form, .js .signup-unavailable {
+  display: none;
+}
+
 .form-note, .field-error {
   font-size: 0.875rem;
 }
@@ -1427,7 +1433,7 @@ button {
   }
 }
 </style>
-  <script src="assets/site.js" defer></script>
+  <script src="assets/site.js?v=1472df88a4ff" defer></script>
 </head>
 <body class="page-home">
   <a class="skip-link" href="#main-content">Aller au contenu</a>
