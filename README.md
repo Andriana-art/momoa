@@ -53,7 +53,7 @@ Les liens générés sont relatifs au dossier du projet. Les options de publicat
 
 ## Vérifications avant remise
 
-Le [contrôle complémentaire de l’affichage initial](verification/affichage-initial/README.md) documente le rapport mobile à 99 fourni, la suppression de la requête CSS bloquante des accueils et les vérifications de cette modification.
+Le [contrôle complémentaire de l’affichage initial](verification/affichage-initial/README.md) documente le rapport mobile à 99 fourni et la suppression de la requête CSS bloquante des accueils. Après publication, les quatre nouvelles mesures Google des accueils français et anglais, sur mobile et ordinateur, donnent **100 en performances, accessibilité, bonnes pratiques et SEO**. Les rapports datés et les vérifications sont conservés.
 
 La [grille de remise détaillée](verification/GRILLE-REMISE.md) reprend les sept critères du projet. Les [preuves et leur périmètre](verification/README.md) sont inclus dans le dépôt ; les empreintes SHA-256 identifient les fichiers contrôlés après les corrections graphiques, publiés dans le commit `57e156f34f697b3f07b73534adda23a3f558b462`.
 

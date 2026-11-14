@@ -1,0 +1,614 @@
+[
+  {
+    "name": "fr-mobile",
+    "source": "Google PageSpeed Insights via Lighthouse viewer psiurl",
+    "viewerUrl": "https://googlechrome.github.io/lighthouse/viewer/?psiurl=https%3A%2F%2Fandriana-art.github.io%2Fmomoa%2F&strategy=mobile",
+    "requestedUrl": "https://andriana-art.github.io/momoa/",
+    "finalUrl": "https://andriana-art.github.io/momoa/",
+    "fetchTime": "2026-11-14T20:31:44.667Z",
+    "lighthouseVersion": "13.6.0",
+    "configSettings": {
+      "emulatedFormFactor": "mobile",
+      "formFactor": "mobile",
+      "locale": "en-US",
+      "onlyCategories": [
+        "performance",
+        "accessibility",
+        "best-practices",
+        "seo",
+        "agentic-browsing"
+      ],
+      "channel": "lr"
+    },
+    "publishedSha256": "6160628b26765b3ab5bd2c4ea6877772c825d88baacfe9526d3101cd26c3a7dc",
+    "scores": {
+      "performance": 1,
+      "accessibility": 1,
+      "best-practices": 1,
+      "seo": 1,
+      "agentic-browsing": 1
+    },
+    "metrics": {
+      "first-contentful-paint": {
+        "value": 779.5,
+        "display": "0.8 s",
+        "score": 1
+      },
+      "largest-contentful-paint": {
+        "value": 1201.5,
+        "display": "1.2 s",
+        "score": 1
+      },
+      "speed-index": {
+        "value": 2133.336069934011,
+        "display": "2.1 s",
+        "score": 0.99
+      },
+      "total-blocking-time": {
+        "value": 0,
+        "display": "0 ms",
+        "score": 1
+      },
+      "cumulative-layout-shift": {
+        "value": 0,
+        "display": "0",
+        "score": 1
+      }
+    },
+    "runWarnings": [],
+    "cssRequests": [],
+    "renderBlockingInsight": {
+      "id": "render-blocking-insight",
+      "title": "Render-blocking requests",
+      "description": "Requests are blocking the page’s initial render, which may delay LCP. [Deferring or inlining](https://developer.chrome.com/docs/performance/insights/render-blocking) can move these network requests out of the critical path.",
+      "score": 1,
+      "scoreDisplayMode": "metricSavings",
+      "metricSavings": {
+        "LCP": 0,
+        "FCP": 0
+      },
+      "details": {
+        "items": [],
+        "headings": [
+          {
+            "key": "url",
+            "label": "URL",
+            "valueType": "url"
+          },
+          {
+            "valueType": "bytes",
+            "key": "totalBytes",
+            "label": "Transfer Size"
+          },
+          {
+            "label": "Duration",
+            "valueType": "timespanMs",
+            "key": "wastedMs"
+          }
+        ],
+        "type": "table"
+      },
+      "numericValue": 0,
+      "numericUnit": "millisecond"
+    },
+    "networkDependencyTree": {
+      "id": "network-dependency-tree-insight",
+      "title": "Network dependency tree",
+      "description": "[Avoid chaining critical requests](https://developer.chrome.com/docs/performance/insights/network-dependency-tree) by reducing the length of chains, reducing the download size of resources, or deferring the download of unnecessary resources to improve page load",
+      "score": 1,
+      "scoreDisplayMode": "numeric",
+      "metricSavings": {
+        "LCP": 0
+      },
+      "details": {
+        "items": [
+          {
+            "type": "list-section",
+            "value": {
+              "longestChain": {
+                "duration": 150
+              },
+              "type": "network-tree",
+              "chains": {
+                "78A56DE91DADF6656B9396F044FB8F67": {
+                  "url": "https://andriana-art.github.io/momoa/",
+                  "navStartToEndTime": 150,
+                  "isLongest": true,
+                  "children": {},
+                  "transferSize": 8866
+                }
+              }
+            }
+          },
+          {
+            "description": "[preconnect](https://developer.chrome.com/docs/lighthouse/performance/uses-rel-preconnect/) hints help the browser establish a connection earlier in the page load, saving time when the first request for that origin is made. The following are the origins that the page preconnected to.",
+            "type": "list-section",
+            "value": {
+              "type": "text",
+              "value": "No origins were preconnected"
+            },
+            "title": "Preconnected origins"
+          },
+          {
+            "title": "Preconnect candidates",
+            "type": "list-section",
+            "description": "Add [preconnect](https://developer.chrome.com/docs/lighthouse/performance/uses-rel-preconnect/) hints to your most important origins, but try to use no more than 4",
+            "value": {
+              "value": "No additional origins are good candidates for preconnecting",
+              "type": "text"
+            }
+          }
+        ],
+        "type": "list"
+      }
+    },
+    "observedMetrics": {
+      "observedFirstPaint": 1292,
+      "observedFirstContentfulPaint": 1292,
+      "observedLargestContentfulPaint": 1292,
+      "observedSpeedIndex": 1295,
+      "observedDomContentLoaded": 225,
+      "observedLoad": 307
+    },
+    "interpretation": "Mesure unique datée, sans répétition pour sélectionner un score. La suppression de la requête CSS est vérifiable ; ces données ne démontrent pas la cause du délai observé avant peinture, ni une note constante de 100 à chaque mesure future."
+  },
+  {
+    "name": "fr-desktop",
+    "source": "Google PageSpeed Insights via Lighthouse viewer psiurl",
+    "viewerUrl": "https://googlechrome.github.io/lighthouse/viewer/?psiurl=https%3A%2F%2Fandriana-art.github.io%2Fmomoa%2F&strategy=desktop",
+    "requestedUrl": "https://andriana-art.github.io/momoa/",
+    "finalUrl": "https://andriana-art.github.io/momoa/",
+    "fetchTime": "2026-11-14T20:31:57.007Z",
+    "lighthouseVersion": "13.6.0",
+    "configSettings": {
+      "emulatedFormFactor": "desktop",
+      "formFactor": "desktop",
+      "locale": "en-US",
+      "onlyCategories": [
+        "performance",
+        "accessibility",
+        "best-practices",
+        "seo",
+        "agentic-browsing"
+      ],
+      "channel": "lr"
+    },
+    "publishedSha256": "6160628b26765b3ab5bd2c4ea6877772c825d88baacfe9526d3101cd26c3a7dc",
+    "scores": {
+      "performance": 1,
+      "accessibility": 1,
+      "best-practices": 1,
+      "seo": 1,
+      "agentic-browsing": 1
+    },
+    "metrics": {
+      "first-contentful-paint": {
+        "value": 245.5,
+        "display": "0.2 s",
+        "score": 1
+      },
+      "largest-contentful-paint": {
+        "value": 401.5,
+        "display": "0.4 s",
+        "score": 1
+      },
+      "speed-index": {
+        "value": 383.45365783094735,
+        "display": "0.4 s",
+        "score": 1
+      },
+      "total-blocking-time": {
+        "value": 0,
+        "display": "0 ms",
+        "score": 1
+      },
+      "cumulative-layout-shift": {
+        "value": 0,
+        "display": "0",
+        "score": 1
+      }
+    },
+    "runWarnings": [],
+    "cssRequests": [],
+    "renderBlockingInsight": {
+      "id": "render-blocking-insight",
+      "title": "Render-blocking requests",
+      "description": "Requests are blocking the page’s initial render, which may delay LCP. [Deferring or inlining](https://developer.chrome.com/docs/performance/insights/render-blocking) can move these network requests out of the critical path.",
+      "score": 1,
+      "scoreDisplayMode": "metricSavings",
+      "metricSavings": {
+        "LCP": 0,
+        "FCP": 0
+      },
+      "details": {
+        "headings": [
+          {
+            "label": "URL",
+            "valueType": "url",
+            "key": "url"
+          },
+          {
+            "label": "Transfer Size",
+            "valueType": "bytes",
+            "key": "totalBytes"
+          },
+          {
+            "label": "Duration",
+            "key": "wastedMs",
+            "valueType": "timespanMs"
+          }
+        ],
+        "items": [],
+        "type": "table"
+      },
+      "numericValue": 0,
+      "numericUnit": "millisecond"
+    },
+    "networkDependencyTree": {
+      "id": "network-dependency-tree-insight",
+      "title": "Network dependency tree",
+      "description": "[Avoid chaining critical requests](https://developer.chrome.com/docs/performance/insights/network-dependency-tree) by reducing the length of chains, reducing the download size of resources, or deferring the download of unnecessary resources to improve page load",
+      "score": 1,
+      "scoreDisplayMode": "numeric",
+      "metricSavings": {
+        "LCP": 0
+      },
+      "details": {
+        "type": "list",
+        "items": [
+          {
+            "type": "list-section",
+            "value": {
+              "longestChain": {
+                "duration": 109
+              },
+              "chains": {
+                "799A38CC53B0C3355FC32A33A4E3334C": {
+                  "navStartToEndTime": 109,
+                  "url": "https://andriana-art.github.io/momoa/",
+                  "isLongest": true,
+                  "transferSize": 8887,
+                  "children": {}
+                }
+              },
+              "type": "network-tree"
+            }
+          },
+          {
+            "type": "list-section",
+            "title": "Preconnected origins",
+            "value": {
+              "type": "text",
+              "value": "No origins were preconnected"
+            },
+            "description": "[preconnect](https://developer.chrome.com/docs/lighthouse/performance/uses-rel-preconnect/) hints help the browser establish a connection earlier in the page load, saving time when the first request for that origin is made. The following are the origins that the page preconnected to."
+          },
+          {
+            "type": "list-section",
+            "value": {
+              "type": "text",
+              "value": "No additional origins are good candidates for preconnecting"
+            },
+            "description": "Add [preconnect](https://developer.chrome.com/docs/lighthouse/performance/uses-rel-preconnect/) hints to your most important origins, but try to use no more than 4",
+            "title": "Preconnect candidates"
+          }
+        ]
+      }
+    },
+    "observedMetrics": {
+      "observedFirstPaint": 382,
+      "observedFirstContentfulPaint": 382,
+      "observedLargestContentfulPaint": 501,
+      "observedSpeedIndex": 450,
+      "observedDomContentLoaded": 291,
+      "observedLoad": 305
+    },
+    "interpretation": "Mesure unique datée, sans répétition pour sélectionner un score. La suppression de la requête CSS est vérifiable ; ces données ne démontrent pas la cause du délai observé avant peinture, ni une note constante de 100 à chaque mesure future."
+  },
+  {
+    "name": "en-mobile",
+    "source": "Google PageSpeed Insights via Lighthouse viewer psiurl",
+    "viewerUrl": "https://googlechrome.github.io/lighthouse/viewer/?psiurl=https%3A%2F%2Fandriana-art.github.io%2Fmomoa%2Fen%2F&strategy=mobile",
+    "requestedUrl": "https://andriana-art.github.io/momoa/en/",
+    "finalUrl": "https://andriana-art.github.io/momoa/en/",
+    "fetchTime": "2026-11-14T20:32:11.604Z",
+    "lighthouseVersion": "13.6.0",
+    "configSettings": {
+      "emulatedFormFactor": "mobile",
+      "formFactor": "mobile",
+      "locale": "en-US",
+      "onlyCategories": [
+        "performance",
+        "accessibility",
+        "best-practices",
+        "seo",
+        "agentic-browsing"
+      ],
+      "channel": "lr"
+    },
+    "publishedSha256": "7a9ce06d1a0c9c09e9d59a2507c65223b8dc31082c5a05498ab8f7a7f0c1d2ea",
+    "scores": {
+      "performance": 1,
+      "accessibility": 1,
+      "best-practices": 1,
+      "seo": 1,
+      "agentic-browsing": 1
+    },
+    "metrics": {
+      "first-contentful-paint": {
+        "value": 782,
+        "display": "0.8 s",
+        "score": 1
+      },
+      "largest-contentful-paint": {
+        "value": 1201,
+        "display": "1.2 s",
+        "score": 1
+      },
+      "speed-index": {
+        "value": 2118.413631931901,
+        "display": "2.1 s",
+        "score": 0.99
+      },
+      "total-blocking-time": {
+        "value": 0,
+        "display": "0 ms",
+        "score": 1
+      },
+      "cumulative-layout-shift": {
+        "value": 0,
+        "display": "0",
+        "score": 1
+      }
+    },
+    "runWarnings": [],
+    "cssRequests": [],
+    "renderBlockingInsight": {
+      "id": "render-blocking-insight",
+      "title": "Render-blocking requests",
+      "description": "Requests are blocking the page’s initial render, which may delay LCP. [Deferring or inlining](https://developer.chrome.com/docs/performance/insights/render-blocking) can move these network requests out of the critical path.",
+      "score": 1,
+      "scoreDisplayMode": "metricSavings",
+      "metricSavings": {
+        "LCP": 0,
+        "FCP": 0
+      },
+      "details": {
+        "type": "table",
+        "headings": [
+          {
+            "valueType": "url",
+            "key": "url",
+            "label": "URL"
+          },
+          {
+            "valueType": "bytes",
+            "label": "Transfer Size",
+            "key": "totalBytes"
+          },
+          {
+            "valueType": "timespanMs",
+            "key": "wastedMs",
+            "label": "Duration"
+          }
+        ],
+        "items": []
+      },
+      "numericValue": 0,
+      "numericUnit": "millisecond"
+    },
+    "networkDependencyTree": {
+      "id": "network-dependency-tree-insight",
+      "title": "Network dependency tree",
+      "description": "[Avoid chaining critical requests](https://developer.chrome.com/docs/performance/insights/network-dependency-tree) by reducing the length of chains, reducing the download size of resources, or deferring the download of unnecessary resources to improve page load",
+      "score": 1,
+      "scoreDisplayMode": "numeric",
+      "metricSavings": {
+        "LCP": 0
+      },
+      "details": {
+        "items": [
+          {
+            "type": "list-section",
+            "value": {
+              "chains": {
+                "1D491E6F9FA43E2D4D7F4ADA9BE87920": {
+                  "isLongest": true,
+                  "url": "https://andriana-art.github.io/momoa/en/",
+                  "transferSize": 8766,
+                  "children": {},
+                  "navStartToEndTime": 145
+                }
+              },
+              "type": "network-tree",
+              "longestChain": {
+                "duration": 145
+              }
+            }
+          },
+          {
+            "value": {
+              "type": "text",
+              "value": "No origins were preconnected"
+            },
+            "description": "[preconnect](https://developer.chrome.com/docs/lighthouse/performance/uses-rel-preconnect/) hints help the browser establish a connection earlier in the page load, saving time when the first request for that origin is made. The following are the origins that the page preconnected to.",
+            "title": "Preconnected origins",
+            "type": "list-section"
+          },
+          {
+            "title": "Preconnect candidates",
+            "value": {
+              "type": "text",
+              "value": "No additional origins are good candidates for preconnecting"
+            },
+            "type": "list-section",
+            "description": "Add [preconnect](https://developer.chrome.com/docs/lighthouse/performance/uses-rel-preconnect/) hints to your most important origins, but try to use no more than 4"
+          }
+        ],
+        "type": "list"
+      }
+    },
+    "observedMetrics": {
+      "observedFirstPaint": 1274,
+      "observedFirstContentfulPaint": 1274,
+      "observedLargestContentfulPaint": 1312,
+      "observedSpeedIndex": 1285,
+      "observedDomContentLoaded": 297,
+      "observedLoad": 339
+    },
+    "interpretation": "Mesure unique datée, sans répétition pour sélectionner un score. La suppression de la requête CSS est vérifiable ; ces données ne démontrent pas la cause du délai observé avant peinture, ni une note constante de 100 à chaque mesure future."
+  },
+  {
+    "name": "en-desktop",
+    "source": "Google PageSpeed Insights via Lighthouse viewer psiurl",
+    "viewerUrl": "https://googlechrome.github.io/lighthouse/viewer/?psiurl=https%3A%2F%2Fandriana-art.github.io%2Fmomoa%2Fen%2F&strategy=desktop",
+    "requestedUrl": "https://andriana-art.github.io/momoa/en/",
+    "finalUrl": "https://andriana-art.github.io/momoa/en/",
+    "fetchTime": "2026-11-14T20:32:25.422Z",
+    "lighthouseVersion": "13.6.0",
+    "configSettings": {
+      "emulatedFormFactor": "desktop",
+      "formFactor": "desktop",
+      "locale": "en-US",
+      "onlyCategories": [
+        "performance",
+        "accessibility",
+        "best-practices",
+        "seo",
+        "agentic-browsing"
+      ],
+      "channel": "lr"
+    },
+    "publishedSha256": "7a9ce06d1a0c9c09e9d59a2507c65223b8dc31082c5a05498ab8f7a7f0c1d2ea",
+    "scores": {
+      "performance": 1,
+      "accessibility": 1,
+      "best-practices": 1,
+      "seo": 1,
+      "agentic-browsing": 1
+    },
+    "metrics": {
+      "first-contentful-paint": {
+        "value": 214,
+        "display": "0.2 s",
+        "score": 1
+      },
+      "largest-contentful-paint": {
+        "value": 401,
+        "display": "0.4 s",
+        "score": 1
+      },
+      "speed-index": {
+        "value": 238.56670291601762,
+        "display": "0.2 s",
+        "score": 1
+      },
+      "total-blocking-time": {
+        "value": 0,
+        "display": "0 ms",
+        "score": 1
+      },
+      "cumulative-layout-shift": {
+        "value": 0,
+        "display": "0",
+        "score": 1
+      }
+    },
+    "runWarnings": [],
+    "cssRequests": [],
+    "renderBlockingInsight": {
+      "id": "render-blocking-insight",
+      "title": "Render-blocking requests",
+      "description": "Requests are blocking the page’s initial render, which may delay LCP. [Deferring or inlining](https://developer.chrome.com/docs/performance/insights/render-blocking) can move these network requests out of the critical path.",
+      "score": 1,
+      "scoreDisplayMode": "metricSavings",
+      "metricSavings": {
+        "LCP": 0,
+        "FCP": 0
+      },
+      "details": {
+        "headings": [
+          {
+            "label": "URL",
+            "valueType": "url",
+            "key": "url"
+          },
+          {
+            "key": "totalBytes",
+            "valueType": "bytes",
+            "label": "Transfer Size"
+          },
+          {
+            "key": "wastedMs",
+            "label": "Duration",
+            "valueType": "timespanMs"
+          }
+        ],
+        "items": [],
+        "type": "table"
+      },
+      "numericValue": 0,
+      "numericUnit": "millisecond"
+    },
+    "networkDependencyTree": {
+      "id": "network-dependency-tree-insight",
+      "title": "Network dependency tree",
+      "description": "[Avoid chaining critical requests](https://developer.chrome.com/docs/performance/insights/network-dependency-tree) by reducing the length of chains, reducing the download size of resources, or deferring the download of unnecessary resources to improve page load",
+      "score": 1,
+      "scoreDisplayMode": "numeric",
+      "metricSavings": {
+        "LCP": 0
+      },
+      "details": {
+        "items": [
+          {
+            "value": {
+              "type": "network-tree",
+              "longestChain": {
+                "duration": 65
+              },
+              "chains": {
+                "09C083EE43C8275A68EEA789DC619C8F": {
+                  "transferSize": 8745,
+                  "children": {},
+                  "isLongest": true,
+                  "url": "https://andriana-art.github.io/momoa/en/",
+                  "navStartToEndTime": 65
+                }
+              }
+            },
+            "type": "list-section"
+          },
+          {
+            "type": "list-section",
+            "value": {
+              "type": "text",
+              "value": "No origins were preconnected"
+            },
+            "title": "Preconnected origins",
+            "description": "[preconnect](https://developer.chrome.com/docs/lighthouse/performance/uses-rel-preconnect/) hints help the browser establish a connection earlier in the page load, saving time when the first request for that origin is made. The following are the origins that the page preconnected to."
+          },
+          {
+            "type": "list-section",
+            "title": "Preconnect candidates",
+            "value": {
+              "value": "No additional origins are good candidates for preconnecting",
+              "type": "text"
+            },
+            "description": "Add [preconnect](https://developer.chrome.com/docs/lighthouse/performance/uses-rel-preconnect/) hints to your most important origins, but try to use no more than 4"
+          }
+        ],
+        "type": "list"
+      }
+    },
+    "observedMetrics": {
+      "observedFirstPaint": 181,
+      "observedFirstContentfulPaint": 181,
+      "observedLargestContentfulPaint": 248,
+      "observedSpeedIndex": 222,
+      "observedDomContentLoaded": 121,
+      "observedLoad": 129
+    },
+    "interpretation": "Mesure unique datée, sans répétition pour sélectionner un score. La suppression de la requête CSS est vérifiable ; ces données ne démontrent pas la cause du délai observé avant peinture, ni une note constante de 100 à chaque mesure future."
+  }
+]

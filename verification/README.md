@@ -1,6 +1,6 @@
 # Vérifications de MOMOA avant remise
 
-Le [contrôle complémentaire de l’affichage initial](affichage-initial/README.md) documente le rapport mobile à 99 fourni après la campagne ci-dessous et la correction du chargement CSS des accueils. Il contient les nouvelles empreintes et les contrôles associés. Les rapports plus anciens restent conservés avec leurs dates et leurs sources d’origine.
+Le [contrôle complémentaire de l’affichage initial](affichage-initial/README.md) documente le rapport mobile à 99 fourni et la correction du chargement CSS des accueils. Les quatre nouvelles mesures Google des accueils FR/EN, sur mobile et ordinateur, obtiennent **100 dans les quatre catégories**. Il contient les rapports autonomes, les nouvelles empreintes et les contrôles associés. Les rapports plus anciens restent conservés avec leurs dates et leurs sources d’origine.
 
 ## Adresse à analyser dans PageSpeed
 
@@ -36,7 +36,7 @@ Le contraste est calculé sur les couleurs textuelles stables et les survols sta
 
 ## Rapports Lighthouse
 
-Les quatre derniers rapports ci-dessous portent sur le site publié après les corrections graphiques, au commit `57e156f34f697b3f07b73534adda23a3f558b462`. Ils obtiennent 100 dans les quatre catégories. Les [huit mesures](lighthouse-repetitions.json), dont trois passages mobiles par langue, obtiennent toutes 100.
+Les quatre rapports ci-dessous proviennent de la campagne antérieure à l’intégration CSS des accueils et portent sur le site publié après les corrections graphiques, au commit `57e156f34f697b3f07b73534adda23a3f558b462`. Ils obtiennent 100 dans les quatre catégories. Les [huit mesures de cette campagne](lighthouse-repetitions.json), dont trois passages mobiles par langue, obtiennent toutes 100. Les [derniers rapports Google](affichage-initial/README.md) sont présentés séparément.
 
 - [Accueil français, mobile](accueil-fr-mobile.html)
 - [Accueil français, ordinateur](accueil-fr-ordinateur.html)
@@ -50,6 +50,8 @@ Le fichier [resultats.json](resultats.json) rassemble les résultats chiffrés e
 À titre historique, un [passage anglais mobile avant optimisation](accueil-en-mobile-premier-passage.html) avait donné 99, puis un [contrôle sur cette ancienne version](historique/accueil-en-mobile-controle-avant-optimisation.html) avait donné 100. Les huit nouvelles mesures de la version optimisée obtiennent toutes 100.
 
 ## Ressources initiales
+
+La [page 404 publiée](page-404.json), ajoutée ultérieurement au dépôt, a également été contrôlée à 320, 390 et 1440 px : Nu sans erreur ni avertissement, axe sans violation, aucun débordement et lien de retour fonctionnel. Deux caractères de délimitation affichés autour du lien ont été retirés.
 
 Les [gains de ressources](performance-ressources.json) conservent tous les caractères de DM Sans. Les textures décoratives utilisent le chargement différé natif, avec variantes 320/480 px. La comparaison typographique de 44 vues ne relève aucun déplacement après l’optimisation des fontes de la version distante. Les [contrôles de pointeur](interactions-textures.json) confirment que les 20 liens concernés restent accessibles et que les 13 images de chaque accueil se chargent après défilement.
 
