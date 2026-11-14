@@ -1,7 +1,7 @@
 {
   "site": "https://andriana-art.github.io/momoa/",
   "pages_publiees": 22,
-  "references_locales_verifiees": 715,
+  "references_locales_verifiees": 742,
   "mises_en_page_verifiees": 286,
   "largeurs_mises_en_page_px": [
     320,
@@ -34,7 +34,7 @@
       412,
       1350
     ],
-    "images_chargees_par_accueil": 10
+    "images_chargees_par_accueil": 13
   },
   "liens_externes_http_200": 13,
   "lighthouse": [
@@ -199,7 +199,7 @@
   "contrastes": {
     "rapport": "contrastes.json",
     "script": "contrastes.py",
-    "associations": 18,
+    "associations": 20,
     "seuil_aa_texte_normal": 4.5,
     "borne_minimale": 4.685876480208053,
     "toutes_associations_conformes_au_seuil": true,
@@ -255,5 +255,7 @@
       "rapport": "accueil-en-mobile.html"
     },
     "code_modifie_entre_les_deux": false
-  }
+  },
+  "version_source_integree": "956791b7",
+  "optimisation_ressources": "performance-ressources.json"
 }

@@ -1,0 +1,28 @@
+{
+  "checks": [
+    {
+      "langue": "fr",
+      "largeur": 390,
+      "liens_accessibles_au_pointeur": 5,
+      "images_chargees": 13
+    },
+    {
+      "langue": "fr",
+      "largeur": 1440,
+      "liens_accessibles_au_pointeur": 5,
+      "images_chargees": 13
+    },
+    {
+      "langue": "en",
+      "largeur": 390,
+      "liens_accessibles_au_pointeur": 5,
+      "images_chargees": 13
+    },
+    {
+      "langue": "en",
+      "largeur": 1440,
+      "liens_accessibles_au_pointeur": 5,
+      "images_chargees": 13
+    }
+  ]
+}

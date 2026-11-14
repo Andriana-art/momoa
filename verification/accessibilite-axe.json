@@ -1574,25 +1574,25 @@
               "target": [
                 "#reproductions-title > span:nth-child(1)"
               ],
-              "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a background gradient"
+              "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because it is overlapped by another element"
             },
             {
               "target": [
                 "#reproductions-title > span:nth-child(2)"
               ],
-              "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a background gradient"
+              "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because it is overlapped by another element"
             },
             {
               "target": [
                 ".reproductions-copy > p"
               ],
-              "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a background gradient"
+              "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because it is overlapped by another element"
             },
             {
               "target": [
                 ".button--outline"
               ],
-              "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a background gradient"
+              "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because it is overlapped by another element"
             },
             {
               "target": [
@@ -1622,37 +1622,43 @@
               "target": [
                 "#home-faq-title"
               ],
-              "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a background gradient"
+              "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because it is overlapped by another element"
             },
             {
               "target": [
                 "a[href$=\"questions/#about-momoa\"] > span:nth-child(1)"
               ],
-              "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a background gradient"
+              "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because it is overlapped by another element"
             },
             {
               "target": [
                 "a[href=\"questions/#sculpture-origins\"] > span:nth-child(1)"
               ],
-              "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a background gradient"
+              "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because it is overlapped by another element"
             },
             {
               "target": [
                 "a[href$=\"questions/#sign-up\"] > span:nth-child(1)"
               ],
-              "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a background gradient"
+              "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because it is overlapped by another element"
             },
             {
               "target": [
                 "#newsletter-title"
               ],
-              "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a background gradient"
+              "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because it is overlapped by another element"
             },
             {
               "target": [
                 ".home-news > .split-grid.container > div > p"
               ],
-              "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a background gradient"
+              "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because it is overlapped by another element"
+            },
+            {
+              "target": [
+                ".button--primary.button[href$=\"sign-up/\"]"
+              ],
+              "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because it is overlapped by another element"
             }
           ]
         }
@@ -1990,25 +1996,25 @@
               "target": [
                 "#reproductions-title > span:nth-child(1)"
               ],
-              "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a background gradient"
+              "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because it is overlapped by another element"
             },
             {
               "target": [
                 "#reproductions-title > span:nth-child(2)"
               ],
-              "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a background gradient"
+              "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because it is overlapped by another element"
             },
             {
               "target": [
                 ".reproductions-copy > p"
               ],
-              "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a background gradient"
+              "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because it is overlapped by another element"
             },
             {
               "target": [
                 ".button--outline"
               ],
-              "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a background gradient"
+              "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because it is overlapped by another element"
             },
             {
               "target": [
@@ -2038,37 +2044,43 @@
               "target": [
                 "#home-faq-title"
               ],
-              "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a background gradient"
+              "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because it is overlapped by another element"
             },
             {
               "target": [
                 "a[href=\"questions/#a-propos-de-momoa\"] > span:nth-child(1)"
               ],
-              "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a background gradient"
+              "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because it is overlapped by another element"
             },
             {
               "target": [
                 "li:nth-child(2) > a > span:nth-child(1)"
               ],
-              "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a background gradient"
+              "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because it is overlapped by another element"
             },
             {
               "target": [
                 "a[href$=\"questions/#inscription\"] > span:nth-child(1)"
               ],
-              "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a background gradient"
+              "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because it is overlapped by another element"
             },
             {
               "target": [
                 "#newsletter-title"
               ],
-              "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a background gradient"
+              "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because it is overlapped by another element"
             },
             {
               "target": [
                 ".home-news > .split-grid.container > div > p"
               ],
-              "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a background gradient"
+              "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because it is overlapped by another element"
+            },
+            {
+              "target": [
+                ".button--primary.button[href$=\"inscription/\"]"
+              ],
+              "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because it is overlapped by another element"
             }
           ]
         }
@@ -4180,25 +4192,25 @@
               "target": [
                 "#reproductions-title > span:nth-child(1)"
               ],
-              "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a background gradient"
+              "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because it is overlapped by another element"
             },
             {
               "target": [
                 "#reproductions-title > span:nth-child(2)"
               ],
-              "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a background gradient"
+              "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because it is overlapped by another element"
             },
             {
               "target": [
                 ".reproductions-copy > p"
               ],
-              "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a background gradient"
+              "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because it is overlapped by another element"
             },
             {
               "target": [
                 ".button--outline"
               ],
-              "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a background gradient"
+              "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because it is overlapped by another element"
             },
             {
               "target": [
@@ -4228,37 +4240,43 @@
               "target": [
                 "#home-faq-title"
               ],
-              "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a background gradient"
+              "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because it is overlapped by another element"
             },
             {
               "target": [
                 "a[href$=\"questions/#about-momoa\"] > span:nth-child(1)"
               ],
-              "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a background gradient"
+              "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because it is overlapped by another element"
             },
             {
               "target": [
                 "a[href=\"questions/#sculpture-origins\"] > span:nth-child(1)"
               ],
-              "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a background gradient"
+              "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because it is overlapped by another element"
             },
             {
               "target": [
                 "a[href$=\"questions/#sign-up\"] > span:nth-child(1)"
               ],
-              "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a background gradient"
+              "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because it is overlapped by another element"
             },
             {
               "target": [
                 "#newsletter-title"
               ],
-              "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a background gradient"
+              "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because it is overlapped by another element"
             },
             {
               "target": [
                 ".home-news > .split-grid.container > div > p"
               ],
-              "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a background gradient"
+              "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because it is overlapped by another element"
+            },
+            {
+              "target": [
+                ".button--primary.button[href$=\"sign-up/\"]"
+              ],
+              "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because it is overlapped by another element"
             }
           ]
         }
@@ -4668,25 +4686,25 @@
               "target": [
                 "#reproductions-title > span:nth-child(1)"
               ],
-              "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a background gradient"
+              "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because it is overlapped by another element"
             },
             {
               "target": [
                 "#reproductions-title > span:nth-child(2)"
               ],
-              "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a background gradient"
+              "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because it is overlapped by another element"
             },
             {
               "target": [
                 ".reproductions-copy > p"
               ],
-              "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a background gradient"
+              "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because it is overlapped by another element"
             },
             {
               "target": [
                 ".button--outline"
               ],
-              "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a background gradient"
+              "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because it is overlapped by another element"
             },
             {
               "target": [
@@ -4716,37 +4734,43 @@
               "target": [
                 "#home-faq-title"
               ],
-              "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a background gradient"
+              "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because it is overlapped by another element"
             },
             {
               "target": [
                 "a[href=\"questions/#a-propos-de-momoa\"] > span:nth-child(1)"
               ],
-              "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a background gradient"
+              "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because it is overlapped by another element"
             },
             {
               "target": [
                 "li:nth-child(2) > a > span:nth-child(1)"
               ],
-              "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a background gradient"
+              "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because it is overlapped by another element"
             },
             {
               "target": [
                 "a[href$=\"questions/#inscription\"] > span:nth-child(1)"
               ],
-              "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a background gradient"
+              "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because it is overlapped by another element"
             },
             {
               "target": [
                 "#newsletter-title"
               ],
-              "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a background gradient"
+              "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because it is overlapped by another element"
             },
             {
               "target": [
                 ".home-news > .split-grid.container > div > p"
               ],
-              "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a background gradient"
+              "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because it is overlapped by another element"
+            },
+            {
+              "target": [
+                ".button--primary.button[href$=\"inscription/\"]"
+              ],
+              "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because it is overlapped by another element"
             }
           ]
         }
@@ -5377,11 +5401,15 @@
     }
   ],
   "baseURL": "http://127.0.0.1:4181/momoa/",
-  "cssSHA256": "dc83d369746fcc84bff4071a83451b6ab15fca3d812acda7439dd209c022cbf6",
+  "cssSHA256": "ee206eb99422fd83218b35e59ea027754d6dfbcea7c82c31afc1a4f2a92ec2b2",
   "interactiveStateSettlingMs": 300,
   "summary": {
     "checks": 50,
+    "pageViewportChecks": 44,
+    "interactiveStateChecks": 6,
     "violations": 0,
-    "incompleteRules": 50
+    "incompleteRules": {
+      "color-contrast": 50
+    }
   }
 }

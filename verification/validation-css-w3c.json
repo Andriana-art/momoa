@@ -1,12 +1,12 @@
 {
-  "date_utc": "2026-11-13T22:34:26.231402+00:00",
+  "date_utc": "2026-11-14T15:42:55.038160+00:00",
   "service": "W3C CSS Validation Service",
-  "soumission": "Fichier CSS local exact soumis en multipart/form-data",
+  "soumission": "Contenu exact du fichier CSS local soumis en multipart/form-data",
   "profil": "css3",
   "validite": true,
   "resultat": {
     "errorcount": 0,
-    "warningcount": 192
+    "warningcount": 191
   },
   "erreurs": [],
   "types_avertissements": {
@@ -14,14 +14,9 @@
     "no-color": 18,
     "css-variable": 9,
     "no-generic-family": 4,
-    "no-background-color": 13,
+    "no-background-color": 12,
     "same-colors": 2
   },
-  "css_sha256": "dc83d369746fcc84bff4071a83451b6ab15fca3d812acda7439dd209c022cbf6",
-  "proprietes_controlees": [
-    "text-wrap: balance",
-    "background-position avec variables CSS de cadrage",
-    "espacements des notices et hauteur minimale des descriptions de collection"
-  ],
+  "css_sha256": "ee206eb99422fd83218b35e59ea027754d6dfbcea7c82c31afc1a4f2a92ec2b2",
   "reponse_brute": "css-multipart-response.json"
 }

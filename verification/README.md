@@ -1,6 +1,6 @@
 # Vérifications de MOMOA avant remise
 
-Le [bilan selon les sept critères](GRILLE-REMISE.md) rassemble les conclusions de la remise. Les contrôles finaux ont été effectués le 13 novembre 2026 après les corrections graphiques, sur les fichiers identifiés dans [empreintes-finales.json](empreintes-finales.json), identiques aux fichiers du site publiés dans le commit `1ede3b68f7ffa7fa5c0cccc4780ed1563a81cbef`. Les valeurs SHA-256 des CSS et HTML sont également présentes dans les relevés responsive et W3C.
+Le [bilan selon les sept critères](GRILLE-REMISE.md) rassemble les conclusions de la remise. Les contrôles sont datés dans chaque rapport et couvrent les corrections graphiques et les optimisations intégrées, sur les fichiers identifiés dans [empreintes-finales.json](empreintes-finales.json), identiques aux fichiers du site publiés dans le commit `1ede3b68f7ffa7fa5c0cccc4780ed1563a81cbef`. Les valeurs SHA-256 des CSS et HTML sont également présentes dans les relevés responsive et W3C.
 
 Les preuves brutes sont conservées avec leurs dates, identifiants de base et chemins de travail d’origine. Ces chemins servent à documenter le contrôle ; les fichiers inclus ci-dessous sont consultables dans le dépôt. Les identifiants de base antérieurs à la mise à jour de l’historique n’identifient pas à eux seuls l’arbre final : les empreintes des fichiers font foi.
 
@@ -12,9 +12,9 @@ Les preuves brutes sont conservées avec leurs dates, identifiants de base et ch
 | Responsive | 22 pages × 13 largeurs = 286 mises en page ; 18 états interactifs ; aucun échec, débordement horizontal ou ressource cassée détecté | [Résultats](responsive.json), [sources testées](sources-testees.json) |
 | Équivalent CSS du zoom | 12 vues à 720 × 450 pixels CSS et densité 2, correspondant à la surface CSS d’une fenêtre 1440 × 900 au zoom 200 % ; aucun échec | [Résultats et limites](zoom-equivalent.json) |
 | HTML et CSS | Nu HTML Checker 26.11.9 : 22 HTML et feuille CSS sans erreur ni avertissement | [Nu](validation-html-css.json), [réponse brute](nu-local-raw.json) |
-| CSS W3C | Profil CSS3 : zéro erreur, 192 avertissements | [Bilan W3C](validation-w3c.json), [bilan CSS](validation-css-w3c.json), [réponse brute CSS](css-multipart-response.json) |
+| CSS W3C | Profil CSS3 : zéro erreur, 191 avertissements | [Bilan W3C](validation-w3c.json), [bilan CSS](validation-css-w3c.json), [réponse brute CSS](css-multipart-response.json) |
 | Accessibilité automatisée | axe-core 4.14.0 : 50 contrôles sans violation détectée | [Résultats axe](accessibilite-axe.json) |
-| Contraste textuel | 18 associations contrôlées au seuil normal AA de 4,5:1 ; borne minimale conservatrice de 4,686:1 | [Calculs](contrastes.json), [script reproductible](contrastes.py) |
+| Contraste textuel | 20 associations contrôlées au seuil normal AA de 4,5:1 ; borne minimale conservatrice de 4,686:1 | [Calculs](contrastes.json), [script reproductible](contrastes.py) |
 | Code et SEO | Analyse des 22 documents, langues, titres, descriptions, hiérarchie et structure | [Code et SEO](code-seo.json), [accessibilité des URL publiques aux robots](indexabilite.json) |
 
 Les contrôles responsive couvrent 320, 360, 390, 412, 639, 640, 768, 895, 896, 1024, 1280, 1440 et 1920 pixels CSS. Les états comprennent le menu ouvert, Échap, le changement de point de rupture et les erreurs, la confirmation et le retour du formulaire dans les deux langues. Le zoom natif du navigateur n’est pas couvert par les 12 contrôles CSS équivalents.
@@ -37,3 +37,7 @@ Une tentative puis un nouvel essai sur le site de PageSpeed Insights ont renvoy�
 Le fichier [resultats.json](resultats.json) rassemble les résultats chiffrés et distingue le périmètre des mesures Lighthouse de celui des contrôles finaux.
 
 Un [premier passage anglais mobile](accueil-en-mobile-premier-passage.html) a donné 99 en performances ; le contrôle suivant a donné 100, sans changement de code. Les deux mesures sont conservées pour rendre cette variation visible.
+
+## Ressources initiales
+
+Les [gains de ressources](performance-ressources.json) conservent tous les caractères de DM Sans. Les textures décoratives utilisent le chargement différé natif, avec variantes 320/480 px. La comparaison typographique de 44 vues ne relève aucun déplacement après l’optimisation des fontes de la version distante. Les [contrôles de pointeur](interactions-textures.json) confirment que les 20 liens concernés restent accessibles et que les 13 images de chaque accueil se chargent après défilement.

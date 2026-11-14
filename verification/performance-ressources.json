@@ -1,11 +1,12 @@
 {
+  "revision_reference": "7b1cb3ecdbf774c5320d4abf6f6e0bef8e0fbc9a",
   "polices": [
     {
       "fichier": "docs/assets/fonts/dm-sans-latin-ext-standard-normal.woff2",
-      "octets_avant": 31292,
-      "octets_apres": 10752,
-      "sha256_avant": "5d18d31d23ada61ebee1d589b11d5da30db9e158f589d5e35221ba2b1a45de54",
-      "sha256_apres": "e46d7b7d630887d0af4e5e56343b492f5527534fa6aa4733a355c5ecabccf74a",
+      "octets_avant": 18204,
+      "octets_apres": 10740,
+      "sha256_avant": "c12291d5b1b71d97ea62392082c2352f90f6a3ed8add6e9ef90354bcf50c6301",
+      "sha256_apres": "b5c07b60f00cd601212f567ac02625c62b48fcc8c474dd8403aa32561174a35c",
       "nombre_glyphes": 216,
       "nombre_caracteres_unicode": 149,
       "glyphes_et_caracteres_conserves": true,
@@ -16,14 +17,14 @@
           500.0
         ]
       },
-      "taille_optique_originale_conservee": 14
+      "taille_optique_conservee": 14
     },
     {
       "fichier": "docs/assets/fonts/dm-sans-latin-standard-normal.woff2",
-      "octets_avant": 62724,
-      "octets_apres": 21332,
-      "sha256_avant": "ca72d2bcea8f4daa783dbdfa2d9b46068c3ce38168e05918fb867aa453b4f890",
-      "sha256_apres": "69225450042239e5f1a02f77107cea8c8edde71d4ab5e2ceaaf2bc0848fca98e",
+      "octets_avant": 36884,
+      "octets_apres": 21364,
+      "sha256_avant": "2efefd988abe387bd783b0becd0845454430d30dea70921cc745826d86bc6a0c",
+      "sha256_apres": "a672ff3030e5d19f56641d97046bb4825c7b40943d32906640eb72ffb0f031a4",
       "nombre_glyphes": 270,
       "nombre_caracteres_unicode": 222,
       "glyphes_et_caracteres_conserves": true,
@@ -34,20 +35,20 @@
           500.0
         ]
       },
-      "taille_optique_originale_conservee": 14
+      "taille_optique_conservee": 14
     }
   ],
-  "gain_octets_police_latine": 41392,
-  "texture_decorative_reportee_sur_mobile_octets": 42982,
-  "gain_ressources_premier_ecran_mobile_octets_hors_html_css": 84374,
+  "gain_octets_police_latine": 15520,
+  "texture_decorative_reportee_sur_mobile_octets": 14292,
+  "gain_ressources_premier_ecran_mobile_octets_hors_html_css": 29812,
   "preuve_typographie": {
     "layouts": 44,
-    "maxDeltaCSSPixels": 0.0625,
+    "maxDeltaCSSPixels": 0,
     "failures": []
   },
   "images_par_accueil_apres_defilement": 13,
   "notes": [
-    "Les photos principales et les images des œuvres ne sont pas modifiées.",
+    "Les optimisations AVIF, les fonds précomposés et les images allégées du dépôt distant sont conservés.",
     "Le chargement anticipé des textures sur ordinateur dépend du navigateur.",
     "Les quelques octets HTML/CSS ajoutés ne sont pas déduits du gain de ressources indiqué."
   ]

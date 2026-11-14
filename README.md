@@ -36,7 +36,9 @@ Le [site publié sur GitHub Pages](https://andriana-art.github.io/momoa/) peut �
 
 4. Ouvrez [http://localhost:8000/](http://localhost:8000/) dans votre navigateur. Laissez le terminal ouvert pendant la prévisualisation. Pour arrêter le serveur, appuyez sur Ctrl+C dans le terminal.
 
-Les pages HTML et les images sont déjà générées ; aucune installation de dépendances n’est nécessaire pour consulter le site. Pour modifier les textes, éditez `src/content.mjs`, puis exécutez `node src/build.mjs` avec Node.js 22 ou une version plus récente. Après une modification du CSS ou du JavaScript, actualisez la page dans le navigateur.
+Les pages HTML et les images sont déjà générées ; aucune installation de dépendances n’est nécessaire pour consulter le site. Pour modifier les textes, éditez `src/content.mjs`, puis exécutez `node src/build.mjs` avec Node.js 22 ou une version plus récente. Après une modification du CSS, relancez aussi `node src/build.mjs` pour actualiser son URL versionnée, puis actualisez la page dans le navigateur. Après une modification du JavaScript, actualisez également la page.
+
+La réduction facultative des polices utilise `python3 src/optimize-fonts.py` avec fontTools et son support WOFF2 (`python3 -m pip install "fonttools[woff]"`). Les caractères sont conservés ; les fichiers optimisés sont déjà inclus.
 
 Pour régénérer les variantes d’images de l’accueil, exécutez `python3 src/optimize-home-images.py` avec une version de Pillow qui prend en charge WebP et AVIF. Le navigateur choisit une version adaptée à l’écran. Sur mobile, le buste est proposé en AVIF avec une variante WebP de secours.
 
@@ -61,13 +63,15 @@ Le 14 novembre 2026, PageSpeed Insights a mesuré **100 en performances, accessi
 | Responsive | 286 mises en page à 13 largeurs de 320 à 1920 px et 18 états interactifs sans échec ; 12 vues avec zone CSS équivalente à un zoom de 200 %. |
 | Bootstrap | Facultatif dans la grille, non utilisé ; mise en page en CSS Grid et Flexbox. |
 | Écriture du code | Sources communes, contenus bilingues centralisés, HTML sémantique, CSS et comportements JavaScript séparés ; génération reproductible des 22 pages. |
-| Validation W3C | Nu HTML Checker 26.11.9 : 22 HTML et CSS sans message. Service CSS W3C : zéro erreur et 192 avertissements, détaillés dans les preuves. |
+| Validation W3C | Nu HTML Checker 26.11.9 : 22 HTML et CSS sans message. Service CSS W3C : zéro erreur et 191 avertissements, détaillés dans les preuves. |
 | SEO | Titres et descriptions renseignés, une hiérarchie de titres cohérente, langues FR/EN, images et liens nommés ; 22 URL publiées accessibles aux robots. |
 | Accessibilité | 50 contrôles axe-core sans violation détectée ; navigation au clavier et formulaire contrôlés ; borne minimale de contraste textuel calculée à 4,686:1. |
 
 Les derniers rapports Lighthouse du site publié après corrections obtiennent 100 dans les quatre catégories sur les deux accueils, en français et en anglais, sur mobile et ordinateur. Un premier passage anglais mobile a obtenu 99 ; le contrôle suivant a obtenu 100 sans changement de code. Les rapports et les dates sont conservés dans `verification/`.
 
 Les scores concernent les pages et les conditions indiquées dans chaque rapport. Les polices et les images optimisées sont hébergées avec le site. La version de DM Sans utilise la taille optique de 14 déjà définie dans la feuille de style. La licence SIL Open Font License est incluse dans `docs/assets/fonts/`.
+
+La version intégrée conserve les variantes AVIF et les images optimisées du dépôt. DM Sans latin passe de 36 884 à 21 364 octets, sans retirer de caractères ; la texture mobile de 14 292 octets attend le défilement. Le [bilan de ressources](verification/performance-ressources.json) détaille les gains et les contrôles de typographie.
 
 Le formulaire reste une démonstration universitaire sans envoi ni conservation des données. Les sources, crédits et licences sont conservés. Le contrôle du zoom couvre un équivalent CSS à 200 % ; la commande de zoom native du navigateur n’a pas été vérifiée.
 
