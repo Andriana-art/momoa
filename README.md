@@ -1,88 +1,36 @@
 # MOMOA
 
-MOMOA est une galerie fictive consacrée à la sculpture grecque et à ses reproductions, créée dans le cadre d’un projet universitaire. Le site comprend 22 pages en français et en anglais, réalisées en HTML, CSS et JavaScript à partir de l’export Builder.io et des [maquettes Figma approuvées](https://www.figma.com/design/2hP92QF9qMobRzZcJIsvFf/Momoa-Export-HTM-Builder.io?node-id=282-1408).
+MOMOA est une galerie fictive consacrée à la sculpture grecque, réalisée dans le cadre d’un projet universitaire. Le site comprend 22 pages en français et en anglais, en HTML, CSS et JavaScript, à partir d’un export Builder.io et des maquettes Figma.
 
-Le [site publié sur GitHub Pages](https://andriana-art.github.io/momoa/) peut être consulté directement. Le formulaire est une démonstration locale : aucune inscription n’est créée et aucune donnée n’est envoyée ni conservée.
+[Voir le site](https://andriana-art.github.io/momoa/) · [Maquettes Figma](https://www.figma.com/design/2hP92QF9qMobRzZcJIsvFf/Momoa-Export-HTM-Builder.io?node-id=282-1408)
 
-| Chemin | Contenu |
-| --- | --- |
-| `docs/` | Site complet, prêt pour un hébergement statique |
-| `docs/assets/styles.css` | Mise en page, typographie et styles adaptatifs communs |
-| `docs/assets/site.js` | Menu mobile et formulaire de démonstration local |
-| `docs/assets/images/` et `docs/assets/fonts/` | Images, polices et licences des polices hébergées localement |
-| `src/content.mjs` | Textes français et anglais, fiches des œuvres et liste des routes |
-| `src/build.mjs` | Génération des 22 pages HTML à partir des modèles communs et des textes |
-| `src/optimize-home-images.py` | Génération des images adaptatives de l’accueil avec Pillow (WebP et AVIF) |
-| `src/optimize-fonts.py` | Optimisation facultative de DM Sans avec fontTools ; graisses et taille optique utilisées par le site |
-| `verification/` | Bilan des contrôles et rapports Lighthouse autonomes du site publié |
+Le formulaire est une démonstration : aucune inscription n’est créée et aucune donnée n’est envoyée ni conservée.
 
-## Prévisualiser le site sur votre ordinateur
+## Ouvrir le projet
 
-1. Téléchargez ou clonez le dépôt. Si vous utilisez une archive ZIP, décompressez-la.
-2. Ouvrez un terminal dans le dossier qui contient `docs/`, `src/` et ce fichier `README.md`.
-3. Si Python est installé, exécutez la commande correspondant à votre système.
+Depuis le dossier du projet, lancer :
 
-   **Sous Windows**
+```bash
+python3 -m http.server 8000 --bind 127.0.0.1 --directory docs
+```
 
-   ```powershell
-   py -m http.server 8000 --bind 127.0.0.1 --directory docs
-   ```
+Sous Windows, remplacer `python3` par `py`. Ouvrir ensuite [localhost:8000](http://localhost:8000/).
 
-   **Sous macOS ou Linux**
+## Fichiers
 
-   ```bash
-   python3 -m http.server 8000 --bind 127.0.0.1 --directory docs
-   ```
+- `docs/` : pages du site, styles, JavaScript, images et polices.
+- `src/content.mjs` : textes français et anglais.
+- `src/build.mjs` : génération des pages HTML.
+- `verification/` : [vérifications avant remise](verification/README.md), deux captures et un rapport Lighthouse.
 
-4. Ouvrez [http://localhost:8000/](http://localhost:8000/) dans votre navigateur. Laissez le terminal ouvert pendant la prévisualisation. Pour arrêter le serveur, appuyez sur Ctrl+C dans le terminal.
+Après une modification des textes, du CSS ou du JavaScript, régénérer les pages avec Node.js :
 
-Les pages HTML et les images sont déjà générées ; aucune installation de dépendances n’est nécessaire pour consulter le site. Pour modifier les textes, éditez `src/content.mjs`, puis exécutez `node src/build.mjs` avec Node.js 22 ou une version plus récente. Après une modification du CSS ou du JavaScript, relancez aussi `node src/build.mjs` pour réintégrer les styles aux accueils et actualiser les URL versionnées des ressources, puis actualisez la page dans le navigateur.
+```bash
+node src/build.mjs
+```
 
-La réduction facultative des polices utilise `python3 src/optimize-fonts.py` avec fontTools et son support WOFF2 (`python3 -m pip install "fonttools[woff]"`). Les caractères sont conservés ; les fichiers optimisés sont déjà inclus.
+## Crédits
 
-Pour régénérer les variantes d’images de l’accueil, exécutez `python3 src/optimize-home-images.py` avec une version de Pillow qui prend en charge WebP et AVIF. Le navigateur choisit une version adaptée à l’écran. Sur mobile, le buste est proposé en AVIF avec une variante WebP de secours.
+Les sources des œuvres et photographies sont indiquées dans les notices. Le Discobole utilise une photographie de Valerio Perticone, sous [CC BY-SA 3.0](https://creativecommons.org/licenses/by-sa/3.0/), avec un fond modifié. Les photos du portrait et de l’exposition sont créditées à Montserrat Mondragón / Pexels ; celle des cariatides à Efrem Efre / Pexels.
 
-## Publier sur GitHub Pages
-
-1. Ajoutez les fichiers du projet à la racine du dépôt GitHub. Vérifiez que `index.html` et `.nojekyll` se trouvent dans `docs/`.
-2. Enregistrez les fichiers dans un commit sur la branche à publier, par exemple `main`.
-3. Ouvrez **Settings → Pages**. Choisissez **Deploy from a branch**, sélectionnez votre branche et le dossier **/docs**, puis cliquez sur **Save**.
-4. Ouvrez l’adresse affichée par GitHub. Vérifiez l’accueil, le changement de langue et l’ouverture directe d’une notice par son URL.
-
-Les liens générés sont relatifs au dossier du projet. Les options de publication et le dossier source `/docs` sont décrits dans le [guide de configuration de GitHub Pages](https://docs.github.com/en/pages/getting-started-with-github-pages/configuring-a-publishing-source-for-your-github-pages-site).
-
-## Vérifications avant remise
-
-Le [dernier contrôle de l’ensemble du projet](verification/CONTROLE-FINAL.md) couvre les 23 pages, le déploiement et les 22 pages mobiles dans Lighthouse. Il documente la correction du décalage initial du formulaire : l’inscription française passe de 89 à 100. La campagne finale donne 22 performances à 100 et deux à 99 ; les deux accueils sont à 100 sur mobile et ordinateur. Les 24 mesures donnent 100 en accessibilité, bonnes pratiques et SEO.
-
-Le [contrôle complémentaire de l’affichage initial](verification/affichage-initial/README.md) documente le rapport mobile à 99 fourni et la suppression de la requête CSS bloquante des accueils. Après publication, les quatre nouvelles mesures Google des accueils français et anglais, sur mobile et ordinateur, donnent **100 en performances, accessibilité, bonnes pratiques et SEO**. Les rapports datés et les vérifications sont conservés.
-
-La [grille de remise détaillée](verification/GRILLE-REMISE.md) reprend les sept critères du projet. Les [preuves et leur périmètre](verification/README.md) sont inclus dans le dépôt ; les [dernières empreintes SHA-256](verification/controle-final/empreintes.json) identifient les fichiers publiés dans le commit `90ac25625c539c70b6c79353c44dc21eacf909f6`. Les campagnes antérieures restent archivées avec leurs propres versions.
-
-Le 14 novembre 2026, PageSpeed Insights a mesuré **100 en performances, accessibilité, bonnes pratiques et SEO** sur l’accueil et la galerie en français, sur mobile et ordinateur. Les deux rapports ont été générés après la publication du commit `23e1d1b`. [Rapport de l’accueil](https://pagespeed.web.dev/analysis/https-andriana-art-github-io-momoa/gwpmqxnzpp?form_factor=mobile) · [Rapport de la galerie](https://pagespeed.web.dev/analysis/https-andriana-art-github-io-momoa-galerie/4u32hpct1y?form_factor=mobile)
-
-| Critère | Résultat |
-| --- | --- |
-| Conformité graphique | 44 vues de base comparées aux maquettes Figma, en français et en anglais à 390 et 1440 px, avec contrôle des états interactifs. Les écarts résiduels et adaptations utiles sont documentés. |
-| Responsive | 299 mises en page à 13 largeurs de 320 à 1920 px et 18 états interactifs sans échec ; 174 contrôles fonctionnels complémentaires réussis. |
-| Bootstrap | Facultatif dans la grille, non utilisé ; mise en page en CSS Grid et Flexbox. |
-| Écriture du code | Sources communes, contenus bilingues centralisés, HTML sémantique, CSS et comportements JavaScript séparés ; génération reproductible des 22 pages. |
-| Validation W3C | Nu HTML Checker 26.11.9 : 23 HTML et CSS sans message. Validateur CSS officiel W3C exécuté localement : zéro erreur et 11 avertissements, détaillés dans les preuves. |
-| SEO | Titres et descriptions renseignés, une hiérarchie de titres cohérente, langues FR/EN, images et liens nommés ; 22 URL publiées accessibles aux robots. |
-| Accessibilité | 52 contrôles axe-core sans violation détectée ; 171 contrôles clavier et 32 contrôles de repli réussis ; 23 associations textuelles au seuil AA, borne minimale de 4,686:1. |
-
-Les derniers rapports Lighthouse obtiennent 100 dans les quatre catégories sur les deux accueils, en français et en anglais, sur mobile et ordinateur. Le contrôle complet conserve aussi les deux notices mobiles mesurées à 99 : Poséidon en français et Vénus en anglais. Une campagne antérieure avait donné 100 sur huit passages des accueils ; ses rapports restent archivés avec leurs dates dans `verification/`.
-
-Les scores concernent les pages et les conditions indiquées dans chaque rapport. Les polices et les images optimisées sont hébergées avec le site. La version de DM Sans utilise la taille optique de 14 déjà définie dans la feuille de style. La licence SIL Open Font License est incluse dans `docs/assets/fonts/`.
-
-La version intégrée conserve les variantes AVIF et les images optimisées du dépôt. DM Sans latin passe de 36 884 à 21 364 octets, sans retirer de caractères ; la texture mobile de 14 292 octets attend le défilement. Le [bilan de ressources](verification/performance-ressources.json) détaille les gains et les contrôles de typographie.
-
-Le formulaire reste une démonstration universitaire sans envoi ni conservation des données. Les sources, crédits et licences sont conservés. Le contrôle du zoom couvre un équivalent CSS à 200 % ; la commande de zoom native du navigateur n’a pas été vérifiée.
-
-## Contenus et crédits
-
-- La collection reprend les six œuvres des maquettes Figma approuvées, à savoir la Victoire de Samothrace, le Discobole, la Vénus de Milo, Prométhée, Athéna et Poséidon.
-- Sur la page de la galerie, la carte d’information renvoie vers la FAQ dans les deux langues. Ce lien remplace l’ancienne adresse électronique et l’ancien numéro de téléphone de DEDAL figurant dans l’export Builder.io.
-- Les notices indiquent les crédits et les liens vers les photographies originales lorsqu’ils sont disponibles. Les images adaptées du Discobole comportent l’attribution et le lien de la licence CC BY-SA 3.0. La page du musée de Cambridge complète le lien vers le musée d’origine.
-- Les notices de Prométhée renvoient à la rubrique Nationalgalerie des archives des Staatliche Museen zu Berlin. L’inventaire « Findbuch Nationalgalerie » documente la réalisation de la sculpture et son transport vers Berlin à la page 259 du PDF, sous la cote I/NG 1812. [Archives de la Nationalgalerie](https://www.smb.museum/en/museums-institutions/zentralarchiv/holdings/overview/internal-business-records-up-to-1945/#c38859)
-- L’export attribue le portrait de la galerie et la photographie de l’exposition à Montserrat Mondragón / Pexels, ainsi que la photographie des cariatides à Efrem Efre / Pexels. Les fichiers image suivent les maquettes fournies.
+Les polices Cormorant Garamond et DM Sans sont accompagnées de leurs [licences OFL](docs/assets/fonts/).
