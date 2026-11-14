@@ -13,6 +13,7 @@ Le [site publié sur GitHub Pages](https://andriana-art.github.io/momoa/) peut �
 | `src/content.mjs` | Textes français et anglais, fiches des œuvres et liste des routes |
 | `src/build.mjs` | Génération des 22 pages HTML à partir des modèles communs et des textes |
 | `src/optimize-home-images.py` | Génération des images adaptatives de l’accueil avec Pillow (WebP et AVIF) |
+| `src/optimize-fonts.py` | Optimisation facultative de DM Sans avec fontTools ; graisses et taille optique utilisées par le site |
 | `verification/` | Bilan des contrôles et rapports Lighthouse autonomes du site publié |
 
 ## Prévisualiser le site sur votre ordinateur
@@ -35,7 +36,9 @@ Le [site publié sur GitHub Pages](https://andriana-art.github.io/momoa/) peut �
 
 4. Ouvrez [http://localhost:8000/](http://localhost:8000/) dans votre navigateur. Laissez le terminal ouvert pendant la prévisualisation. Pour arrêter le serveur, appuyez sur Ctrl+C dans le terminal.
 
-Les pages HTML et les images sont déjà générées ; aucune installation de dépendances n’est nécessaire pour consulter le site. Pour modifier les textes, éditez `src/content.mjs`, puis exécutez `node src/build.mjs` avec Node.js 22 ou une version plus récente. Après une modification du CSS ou du JavaScript, actualisez la page dans le navigateur.
+Les pages HTML et les images sont déjà générées ; aucune installation de dépendances n’est nécessaire pour consulter le site. Pour modifier les textes, éditez `src/content.mjs`, puis exécutez `node src/build.mjs` avec Node.js 22 ou une version plus récente. Après une modification du CSS, relancez aussi `node src/build.mjs` pour actualiser son URL versionnée, puis actualisez la page dans le navigateur. Après une modification du JavaScript, actualisez également la page.
+
+La réduction facultative des polices utilise `python3 src/optimize-fonts.py` avec fontTools et son support WOFF2 (`python3 -m pip install "fonttools[woff]"`). Les caractères sont conservés ; les fichiers optimisés sont déjà inclus.
 
 Pour régénérer les variantes d’images de l’accueil, exécutez `python3 src/optimize-home-images.py` avec une version de Pillow qui prend en charge WebP et AVIF. Le navigateur choisit une version adaptée à l’écran. Sur mobile, le buste est proposé en AVIF avec une variante WebP de secours.
 
@@ -50,26 +53,27 @@ Les liens générés sont relatifs au dossier du projet. Les options de publicat
 
 ## Vérifications avant remise
 
+La [grille de remise détaillée](verification/GRILLE-REMISE.md) reprend les sept critères du projet. Les [preuves et leur périmètre](verification/README.md) sont inclus dans le dépôt ; les empreintes SHA-256 identifient les fichiers contrôlés après les corrections graphiques, publiés dans le commit `1ede3b68f7ffa7fa5c0cccc4780ed1563a81cbef`.
+
 Le 14 novembre 2026, PageSpeed Insights a mesuré **100 en performances, accessibilité, bonnes pratiques et SEO** sur l’accueil et la galerie en français, sur mobile et ordinateur. Les deux rapports ont été générés après la publication du commit `23e1d1b`. [Rapport de l’accueil](https://pagespeed.web.dev/analysis/https-andriana-art-github-io-momoa/gwpmqxnzpp?form_factor=mobile) · [Rapport de la galerie](https://pagespeed.web.dev/analysis/https-andriana-art-github-io-momoa-galerie/4u32hpct1y?form_factor=mobile)
 
-Les contrôles ci-dessous ont été répétés après l’optimisation, à l’exception de la vérification des liens externes. Le [bilan de l’audit précédent et ses rapports hors ligne](verification/README.md) sont conservés dans le dépôt.
-
-| Contrôle | Résultat |
+| Critère | Résultat |
 | --- | --- |
-| HTML et CSS | Nu HTML Checker 26.11.9 ne relève aucune erreur ni aucun avertissement dans les 22 pages HTML et la feuille de style. |
-| Pages publiées | Les 22 pages répondent avec le statut HTTP 200 et correspondent aux fichiers testés. |
-| Liens et ressources locales | 730 références locales, dont les liens vers les pages, les ancres et les ressources, vérifiées sans erreur. |
-| Mise en page | 342 contrôles de mise en page sur les 22 pages, de 320 à 1920 pixels CSS, sans débordement horizontal, chevauchement ni ressource en échec. |
-| Accessibilité automatisée | axe-core 4.14.0 ne détecte aucune violation lors de 54 contrôles, couvrant les 22 pages sur mobile et ordinateur ainsi que les états interactifs. |
-| Navigation et formulaire | Ouverture et fermeture du menu, touche Échap, retour du focus et formulaire de démonstration vérifiés dans les deux langues. La navigation principale reste utilisable sans JavaScript. |
-| Contrastes du texte | Les 836 échantillons contrôlés sur les fonds texturés respectent les seuils applicables. Le rapport le plus bas mesuré est de 5,07 pour 1. |
-| Images | Les 80 fichiers WebP et AVIF ont été décodés. |
-| Lighthouse 13.6.0 | En complément des rapports PageSpeed, l’accueil et la galerie en français et en anglais ont obtenu 100 dans les quatre catégories lors des essais locaux sur mobile et ordinateur. |
-| Sources et crédits | Les 13 liens externes vers les sources, crédits et licences répondaient avec le statut HTTP 200 lors de l’audit précédent. Les licences des polices sont incluses. |
+| Conformité graphique | 44 vues de base comparées aux maquettes Figma, en français et en anglais à 390 et 1440 px, avec contrôle des états interactifs. Les écarts résiduels et adaptations utiles sont documentés. |
+| Responsive | 286 mises en page à 13 largeurs de 320 à 1920 px et 18 états interactifs sans échec ; 12 vues avec zone CSS équivalente à un zoom de 200 %. |
+| Bootstrap | Facultatif dans la grille, non utilisé ; mise en page en CSS Grid et Flexbox. |
+| Écriture du code | Sources communes, contenus bilingues centralisés, HTML sémantique, CSS et comportements JavaScript séparés ; génération reproductible des 22 pages. |
+| Validation W3C | Nu HTML Checker 26.11.9 : 22 HTML et CSS sans message. Service CSS W3C : zéro erreur et 191 avertissements, détaillés dans les preuves. |
+| SEO | Titres et descriptions renseignés, une hiérarchie de titres cohérente, langues FR/EN, images et liens nommés ; 22 URL publiées accessibles aux robots. |
+| Accessibilité | 50 contrôles axe-core sans violation détectée ; navigation au clavier et formulaire contrôlés ; borne minimale de contraste textuel calculée à 4,686:1. |
+
+Les derniers rapports Lighthouse du site publié après corrections obtiennent 100 dans les quatre catégories sur les deux accueils, en français et en anglais, sur mobile et ordinateur. Un premier passage anglais mobile a obtenu 99 ; le contrôle suivant a obtenu 100 sans changement de code. Les rapports et les dates sont conservés dans `verification/`.
 
 Les scores concernent les pages et les conditions indiquées dans chaque rapport. Les polices et les images optimisées sont hébergées avec le site. La version de DM Sans utilise la taille optique de 14 déjà définie dans la feuille de style. La licence SIL Open Font License est incluse dans `docs/assets/fonts/`.
 
-Pour effectuer un contrôle complémentaire avec WAVE, utilisez les adresses du [site public MOMOA](https://andriana-art.github.io/momoa/) dans [WAVE en ligne](https://wave.webaim.org/). L’extension WAVE permet aussi d’examiner les états interactifs, comme le menu ouvert et les messages du formulaire.
+La version intégrée conserve les variantes AVIF et les images optimisées du dépôt. DM Sans latin passe de 36 884 à 21 364 octets, sans retirer de caractères ; la texture mobile de 14 292 octets attend le défilement. Le [bilan de ressources](verification/performance-ressources.json) détaille les gains et les contrôles de typographie.
+
+Le formulaire reste une démonstration universitaire sans envoi ni conservation des données. Les sources, crédits et licences sont conservés. Le contrôle du zoom couvre un équivalent CSS à 200 % ; la commande de zoom native du navigateur n’a pas été vérifiée.
 
 ## Contenus et crédits
 

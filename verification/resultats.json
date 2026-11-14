@@ -1,12 +1,22 @@
 {
-  "commit_teste": "36e98ce0e2cf54d76a69b9645b8a89a553e609ea",
   "site": "https://andriana-art.github.io/momoa/",
   "pages_publiees": 22,
-  "references_locales_verifiees": 715,
-  "mises_en_page_verifiees": 44,
+  "references_locales_verifiees": 742,
+  "mises_en_page_verifiees": 286,
   "largeurs_mises_en_page_px": [
+    320,
+    360,
     390,
-    1440
+    412,
+    639,
+    640,
+    768,
+    895,
+    896,
+    1024,
+    1280,
+    1440,
+    1920
   ],
   "langues_interactions": [
     "fr",
@@ -24,16 +34,15 @@
       412,
       1350
     ],
-    "images_chargees_par_accueil": 10
+    "images_chargees_par_accueil": 13
   },
   "liens_externes_http_200": 13,
   "lighthouse": [
     {
       "page": "https://andriana-art.github.io/momoa/",
-      "langue": "fr",
       "appareil": "mobile",
       "rapport": "accueil-fr-mobile.html",
-      "date_utc": "2026-11-13T21:41:10.986Z",
+      "date_utc": "2026-11-13T22:42:55.535Z",
       "version_lighthouse": "13.6.0",
       "scores": {
         "performance": 100,
@@ -43,19 +52,19 @@
       },
       "mesures": {
         "first-contentful-paint": {
-          "valeur": 885.7455,
+          "valeur": 825.034,
           "unite": "millisecond"
         },
         "largest-contentful-paint": {
-          "valeur": 1825.7455,
+          "valeur": 1774.034,
           "unite": "millisecond"
         },
         "speed-index": {
-          "valeur": 1358.6706560000184,
+          "valeur": 973.4663420004736,
           "unite": "millisecond"
         },
         "total-blocking-time": {
-          "valeur": 29,
+          "valeur": 15,
           "unite": "millisecond"
         },
         "cumulative-layout-shift": {
@@ -66,10 +75,9 @@
     },
     {
       "page": "https://andriana-art.github.io/momoa/",
-      "langue": "fr",
       "appareil": "ordinateur",
       "rapport": "accueil-fr-ordinateur.html",
-      "date_utc": "2026-11-13T21:41:56.103Z",
+      "date_utc": "2026-11-13T22:43:07.831Z",
       "version_lighthouse": "13.6.0",
       "scores": {
         "performance": 100,
@@ -79,15 +87,15 @@
       },
       "mesures": {
         "first-contentful-paint": {
-          "valeur": 326.1785,
+          "valeur": 377.747,
           "unite": "millisecond"
         },
         "largest-contentful-paint": {
-          "valeur": 544.1785,
+          "valeur": 608.7470000000001,
           "unite": "millisecond"
         },
         "speed-index": {
-          "valeur": 537.5174171403861,
+          "valeur": 562.2108730400481,
           "unite": "millisecond"
         },
         "total-blocking-time": {
@@ -102,10 +110,9 @@
     },
     {
       "page": "https://andriana-art.github.io/momoa/en/",
-      "langue": "en",
       "appareil": "mobile",
       "rapport": "accueil-en-mobile.html",
-      "date_utc": "2026-11-13T21:35:16.206Z",
+      "date_utc": "2026-11-13T22:44:22.512Z",
       "version_lighthouse": "13.6.0",
       "scores": {
         "performance": 100,
@@ -115,19 +122,19 @@
       },
       "mesures": {
         "first-contentful-paint": {
-          "valeur": 864.2305,
+          "valeur": 876.088,
           "unite": "millisecond"
         },
         "largest-contentful-paint": {
-          "valeur": 1607.2305000000001,
+          "valeur": 1677.088,
           "unite": "millisecond"
         },
         "speed-index": {
-          "valeur": 1127.3285643394106,
+          "valeur": 1346.0018960004495,
           "unite": "millisecond"
         },
         "total-blocking-time": {
-          "valeur": 31,
+          "valeur": 62,
           "unite": "millisecond"
         },
         "cumulative-layout-shift": {
@@ -138,10 +145,9 @@
     },
     {
       "page": "https://andriana-art.github.io/momoa/en/",
-      "langue": "en",
       "appareil": "ordinateur",
       "rapport": "accueil-en-ordinateur.html",
-      "date_utc": "2026-11-13T21:35:45.811Z",
+      "date_utc": "2026-11-13T22:42:43.243Z",
       "version_lighthouse": "13.6.0",
       "scores": {
         "performance": 100,
@@ -151,15 +157,15 @@
       },
       "mesures": {
         "first-contentful-paint": {
-          "valeur": 274.65049999999997,
+          "valeur": 283.65,
           "unite": "millisecond"
         },
         "largest-contentful-paint": {
-          "valeur": 516.6505,
+          "valeur": 500.65,
           "unite": "millisecond"
         },
         "speed-index": {
-          "valeur": 458.6576333035616,
+          "valeur": 387.49607568951035,
           "unite": "millisecond"
         },
         "total-blocking-time": {
@@ -193,10 +199,63 @@
   "contrastes": {
     "rapport": "contrastes.json",
     "script": "contrastes.py",
-    "associations": 18,
+    "associations": 20,
     "seuil_aa_texte_normal": 4.5,
     "borne_minimale": 4.685876480208053,
     "toutes_associations_conformes_au_seuil": true,
     "portee": "Couleurs stables du texte et survols stabilisés ; phases intermédiaires des animations, icônes et contours de focus exclus."
-  }
+  },
+  "commit_de_base": "6bfba6486b2cb47ba85d1c572907f37e785bddbc",
+  "version_testee": "Arbre de travail final après corrections graphiques, identifié par empreintes-finales.json et les empreintes des rapports bruts.",
+  "empreintes": "empreintes-finales.json",
+  "etats_interactifs_verifies": 18,
+  "echecs_responsive": 0,
+  "zoom_equivalent_css": {
+    "vues": 12,
+    "nominal": 2,
+    "zoom_natif_du_navigateur_verifie": false,
+    "rapport": "zoom-equivalent.json"
+  },
+  "validation_w3c": {
+    "html_pages": 22,
+    "html_erreurs": 0,
+    "html_avertissements": 0,
+    "css_erreurs": 0,
+    "css_avertissements": 192,
+    "rapport": "validation-w3c.json"
+  },
+  "conformite_figma": {
+    "vues_base": 44,
+    "largeurs_px": [
+      390,
+      1440
+    ],
+    "etats_complementaires": true,
+    "bilans": [
+      "figma-accueils.json",
+      "figma-pages.json",
+      "figma-inscription-faq.json",
+      "figma-notices.json"
+    ],
+    "portee": "Conformité graphique générale et adaptations documentées ; aucune identité pixel à pixel revendiquée."
+  },
+  "portee_lighthouse": "Mesures finales sur les accueils français et anglais publiés depuis le commit 1ede3b68f7ffa7fa5c0cccc4780ed1563a81cbef, après les corrections graphiques.",
+  "commit_produit_final": "1ede3b68f7ffa7fa5c0cccc4780ed1563a81cbef",
+  "variabilite_lighthouse": {
+    "page": "https://andriana-art.github.io/momoa/en/",
+    "appareil": "mobile",
+    "premier_passage": {
+      "date_utc": "2026-11-13T22:42:30.243Z",
+      "performances": 99,
+      "rapport": "accueil-en-mobile-premier-passage.html"
+    },
+    "controle_suivant": {
+      "date_utc": "2026-11-13T22:44:22.512Z",
+      "performances": 100,
+      "rapport": "accueil-en-mobile.html"
+    },
+    "code_modifie_entre_les_deux": false
+  },
+  "version_source_integree": "956791b7",
+  "optimisation_ressources": "performance-ressources.json"
 }

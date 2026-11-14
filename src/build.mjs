@@ -1,9 +1,13 @@
-import { mkdir, writeFile } from "node:fs/promises";
+import { createHash } from "node:crypto";
+import { mkdir, readFile, writeFile } from "node:fs/promises";
 import { posix } from "node:path";
 import { fileURLToPath } from "node:url";
 import { artworks, languages } from "./content.mjs";
 
 const output = fileURLToPath(new URL("../docs/", import.meta.url));
+const stylesheetVersion = createHash("sha256")
+  .update(await readFile(new URL("../docs/assets/styles.css", import.meta.url)))
+  .digest("hex").slice(0, 12);
 const imageFolder = "assets/images/";
 const imageBreakpoint = "(min-width: 56rem)";
 const mobileHeroMedia = "(width < 40rem)";
@@ -63,6 +67,13 @@ function image(page, file, alt, width, height, options = {}) {
     : "";
   const decoding = options.priority ? "" : ' decoding="async"';
   return `<img${className} src="${assetLink(page, file)}"${sourceSet} alt="${escape(alt)}" width="${width}" height="${height}"${loading}${decoding}>`;
+}
+
+function homeTexture(page) {
+  return `<picture class="home-texture">
+        <source media="(min-width: 40rem)" srcset="${assetLink(page, "stone-texture.webp")}" width="480" height="719">
+        ${image(page, "stone-texture-320.webp", "", 320, 479, { lazy: true })}
+      </picture>`;
 }
 
 function portrait(page, files, alt, sizes, className, options) {
@@ -217,6 +228,7 @@ function home(page) {
       </div>
     </section>
     <section class="home-reproductions" aria-labelledby="reproductions-title">
+      ${homeTexture(page)}
       <div class="container split-grid">
         ${image(page, "caryatids.webp", copy.gallery.storyFrameLabel, 2048, 1365, {
           lazy: true, className: "reproductions-image", widths: caryatidWidths, sizes: splitImageSizes,
@@ -235,6 +247,7 @@ function home(page) {
       </div>
     </div>
     <section class="stone home-faq" aria-labelledby="home-faq-title">
+      ${homeTexture(page)}
       <div class="container home-faq-grid">
         <h2 id="home-faq-title">${escape(faqTitle)}</h2>
         <ul class="faq-links">
@@ -243,6 +256,7 @@ function home(page) {
       </div>
     </section>
     <section class="stone home-news" aria-labelledby="newsletter-title">
+      ${homeTexture(page)}
       <div class="container split-grid">
         <div><h2 id="newsletter-title">${escape(newsletter.title)}</h2><p>${escape(newsletter.body)}</p></div>
         ${buttonLink(page, routes.signup, newsletter.cta)}
@@ -423,7 +437,7 @@ function documentFor(page) {
   <title>${escape(title)}</title>
   <script>document.documentElement.classList.add("js");</script>
   <link rel="icon" href="${assetLink(page, "emblem.svg")}" type="image/svg+xml">
-  <link rel="stylesheet" href="${relative(page, "assets/styles.css")}">${galleryFontPreload}${page.name === "home" ? heroPreloads(page) : ""}
+  <link rel="stylesheet" href="${relative(page, "assets/styles.css")}?v=${stylesheetVersion}">${galleryFontPreload}${page.name === "home" ? heroPreloads(page) : ""}
   <link rel="preload" href="${relative(page, "assets/fonts/dm-sans-latin-standard-normal.woff2")}" as="font" type="font/woff2" crossorigin>
   <script src="${relative(page, "assets/site.js")}" defer></script>
 </head>

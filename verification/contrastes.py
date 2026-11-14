@@ -39,13 +39,13 @@ families = [
          ('#ffffff', 'Inherited .home-artworks headings'),
          ('#dadee3', '.featured-heading p, .artwork-card--home .artwork-description p'),
      ]),
-    ('hero', '.hero::before', '#101722', .87,
+    ('hero', '.hero::before (min-width: 40rem)', '#101722', .87,
      'rgba(16, 23, 34, 0.87)', [
          ('#ffffff', 'Inherited .hero headings and homepage-header text'),
          ('#dadee3', '.hero-subtitle'),
      ]),
     ('reproductions', '.home-reproductions', '#30404a', .95,
-     'rgba(48, 64, 74, 0.95)', [
+     ('background: var(--slate);', '.home-reproductions > .home-texture', 'opacity: 0.05;'), [
          ('#ffffff', 'Inherited headings and transparent outline button'),
          ('#dadee3', '.reproductions-copy p'),
      ]),
@@ -59,7 +59,8 @@ families = [
 source = CSS.read_text()
 rows = []
 for family, selector, overlay, alpha, css_rgba, foregrounds in families:
-    assert css_rgba in source, f'Expected overlay missing: {css_rgba}'
+    markers = (css_rgba,) if isinstance(css_rgba, str) else css_rgba
+    assert all(marker in source for marker in markers), f'Expected compositing rules missing: {markers}'
     # Round outwards so 8-bit display quantization cannot make the bound optimistic.
     darkest = [math.floor(alpha * value) for value in rgb(overlay)]
     brightest = [math.ceil(alpha * value + (1 - alpha) * 255) for value in rgb(overlay)]
@@ -102,13 +103,32 @@ solids = [{'foreground': fore, 'background': back, 'textScope': scope,
 result = {
     'cssSHA256': hashlib.sha256(CSS.read_bytes()).hexdigest(),
     'method': 'Conservative sRGB source-over channel bounds followed by WCAG 2 relative luminance; arbitrary image channels 0..255; composite channel bounds rounded outwards to integer RGB for display quantization; all text is tested at the stricter normal-text AA threshold 4.5:1 regardless of size or weight.',
-    'mapping': 'CSS foreground inheritance and explicit color overrides were reviewed for each textured family and for solid text/button palettes. The gallery-history bound uses its lowest alpha 0.64 anywhere in either mobile or desktop gradient. Additional ink-to-transparent hero/featured gradients only improve light-text contrast.',
+    'mapping': 'CSS foreground inheritance and explicit color overrides were reviewed for each textured family and for solid text/button palettes. A texture image at opacity 0.05 over the slate background is equivalent to the previous 0.95 slate overlay; opacity 0.03 over stone is likewise equivalent to its 0.97 overlay. The gallery-history bound uses its lowest alpha 0.64 anywhere in either mobile or desktop gradient. Additional ink-to-transparent hero/featured gradients only improve light-text contrast.',
     'scope': 'Stable authored foreground/background colors of regular text, including all gradient families and normal/settled hover palettes. This resolves the gradient-background contrast uncertainty from the 50 axe checks; it is not a complete manual WCAG audit and does not model antialiasing or intermediate animation frames.',
     'gradientChecks': rows,
     'solidChecks': solids,
     'lowestGradientRatio': min(row['minimumContrastRatio'] for row in rows),
     'allPassNormalTextAA': all(row['passesForNormalAndLargeText'] for row in rows + solids),
 }
+
+# The mobile photograph already contains its 87% ink shade. Its actual decoded
+# RGB channel maxima bound every crop; the additional ink gradient only darkens it.
+mobile_hero = ROOT / 'docs/assets/images/hero-gallery-dark-640.webp'
+mobile_hero_hash = '0a34e7858d75736cbbef1a6de28fadcadfe0714e7ce0a10e149a7edffc9d7086'
+assert hashlib.sha256(mobile_hero.read_bytes()).hexdigest() == mobile_hero_hash
+maximum_rgb = [41, 49, 60]
+mobile_checks = [
+    {'foreground': fore, 'maximumBackgroundRGB': maximum_rgb,
+     'minimumContrastRatio': contrast(rgb(fore), maximum_rgb),
+     'passesForNormalAndLargeText': contrast(rgb(fore), maximum_rgb) >= 4.5}
+    for fore in ['#ffffff', '#dadee3']
+]
+result['mobilePrecomposedHero'] = {
+    'image': str(mobile_hero.relative_to(ROOT)), 'sha256': mobile_hero_hash,
+    'method': 'Maximum decoded sRGB channel values measured with Pillow; image bytes checked above.',
+    'checks': mobile_checks,
+}
+result['allPassNormalTextAA'] &= all(row['passesForNormalAndLargeText'] for row in mobile_checks)
 OUT.write_text(json.dumps(result, ensure_ascii=False, indent=2) + '\n')
 print(json.dumps({'gradientPairs': len(rows), 'solidPairs': len(solids),
                   'lowestRatio': result['lowestGradientRatio'],
