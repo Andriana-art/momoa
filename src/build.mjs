@@ -391,6 +391,9 @@ function documentFor(page) {
   const title = page.name === "home" ? copy.htmlTitle : `${page.artwork?.title[page.lang] ?? copy.title[page.name]} — MOMOA`;
   const description = page.artwork ? page.artwork.notices[page.lang].heading : copy.descriptions[page.name];
   const heroPreload = page.name === "home" ? `\n  <link rel="preload" as="image" href="${assetLink(page, "hero-bust-plinth-400.webp")}" imagesrcset="${[400, 680, 960, 1260].map((size) => `${assetLink(page, size === 1260 ? "hero-bust-plinth.webp" : `hero-bust-plinth-${size}.webp`)} ${size}w`).join(", ")}" imagesizes="(min-width: 90rem) 624px, (min-width: 56rem) 43.05vw, (min-width: 42rem) 624px, calc(100vw - 3rem)" fetchpriority="high">` : "";
+  const heroBackgroundPreload = page.name === "home"
+    ? `\n  <link rel="preload" href="${assetLink(page, "hero-gallery-640.webp")}" as="image" type="image/webp" media="(width &lt; 40rem)">`
+    : "";
   const galleryFontPreload = (page.name === "gallery" || page.name === "home")
     ? `\n  <link rel="preload" href="${relative(page, "assets/fonts/cormorant-garamond-latin-wght-normal.woff2")}" as="font" type="font/woff2" crossorigin>`
     : "";
@@ -404,7 +407,7 @@ function documentFor(page) {
   <title>${escape(title)}</title>
   <script>document.documentElement.classList.add("js");</script>
   <link rel="icon" href="${assetLink(page, "emblem.svg")}" type="image/svg+xml">
-  <link rel="stylesheet" href="${relative(page, "assets/styles.css")}">${galleryFontPreload}${heroPreload}
+  <link rel="stylesheet" href="${relative(page, "assets/styles.css")}">${galleryFontPreload}${heroPreload}${heroBackgroundPreload}
   <link rel="preload" href="${relative(page, "assets/fonts/dm-sans-latin-standard-normal.woff2")}" as="font" type="font/woff2" crossorigin>
   <script src="${relative(page, "assets/site.js")}" defer></script>
 </head>

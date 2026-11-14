@@ -50,6 +50,7 @@
   --radius: 0.75rem;
   --gutter: 1.5rem;
   --content-width: 80rem;
+  --stone-texture: url("images/stone-texture-320.webp");
   --serif: "Cormorant Garamond", Georgia, serif;
   --sans: "DM Sans", Arial, sans-serif;
 }
@@ -153,7 +154,7 @@ button {
 
 .stone, .site-header {
   background-color: var(--stone);
-  background-image: linear-gradient(rgba(220, 226, 228, 0.97), rgba(220, 226, 228, 0.97)), url("images/stone-texture.webp");
+  background-image: linear-gradient(rgba(220, 226, 228, 0.97), rgba(220, 226, 228, 0.97)), var(--stone-texture);
   background-size: cover;
   background-position: center;
 }
@@ -320,7 +321,7 @@ button {
   border-top: 1px solid #6f899c;
   color: var(--ink);
   background-color: var(--stone);
-  background-image: linear-gradient(rgba(220, 226, 228, 0.97), rgba(220, 226, 228, 0.97)), url("images/stone-texture.webp");
+  background-image: linear-gradient(rgba(220, 226, 228, 0.97), rgba(220, 226, 228, 0.97)), var(--stone-texture);
   background-size: cover;
 }
 
@@ -611,7 +612,7 @@ button {
   padding-block: 3rem;
   background:
     linear-gradient(rgba(48, 64, 74, 0.95), rgba(48, 64, 74, 0.95)),
-    url("images/stone-texture.webp") center / cover;
+    var(--stone-texture) center / cover;
 }
 
 .home-reproductions .split-grid {
@@ -1016,6 +1017,10 @@ button {
 }
 
 @media (min-width: 40rem) {
+  :root {
+    --stone-texture: url("images/stone-texture.webp");
+  }
+
   .hero::before {
     --hero-background: url("images/hero-gallery.webp");
   }
