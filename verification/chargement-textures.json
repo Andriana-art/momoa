@@ -1,356 +1,65 @@
 {
-  "scope": "Homepage-only decorative stone texture loading, FR and EN at390/1440px; no Lighthouse run in this subtask.",
-  "psi": {
-    "attempts": 1,
-    "url": "https://andriana-art.github.io/momoa/",
-    "newReport": false,
-    "error": "Unable to resolve",
-    "evidenceDirectory": "psi-fr/"
-  },
-  "implementation": {
-    "generatedHomeImageCount": 13,
-    "newDecorativeImagesPerHome": 3,
-    "imageSource": "assets/images/stone-texture.webp",
-    "imageBytes": 42982,
-    "alt": "",
-    "loading": "lazy",
-    "decoding": "async",
-    "intrinsicSize": [
-      480,
-      719
-    ],
-    "opacity": {
-      "reproductions": 0.05,
-      "faq": 0.03,
-      "news": 0.03
-    },
-    "layout": "Absolute inset0, width/height100%, object-fit cover centered, negative z-index in isolated parent."
-  },
-  "networkFinding": "At390px on both languages, the42,982-byte texture is no longer requested initially and is loaded after scrolling. At1440px Chromium may still prefetch it because reproduction section lies within the native lazy-loading margin; no guaranteed desktop initial saving.",
-  "productChecks": [
+  "commit": "57e156f34f697b3f07b73534adda23a3f558b462",
+  "results": [
     {
-      "mode": "base",
-      "lang": "fr",
-      "width": 390,
-      "imageCount": 10,
-      "decorativeCount": 0,
-      "allDecorativeLoaded": true,
-      "height": 5150,
-      "overflow": false,
-      "initialRequests": [
-        "",
-        "styles.css",
-        "cormorant-garamond-latin-wght-normal.woff2",
-        "hero-bust-plinth-400.webp",
-        "dm-sans-latin-standard-normal.woff2",
-        "site.js",
-        "emblem.svg",
-        "menu-open.svg",
-        "menu-close.svg",
-        "hero-gallery-640.webp",
-        "slate-wall.webp",
-        "stone-texture.webp",
-        "home-victoire-fr-480.webp",
-        "home-venus-fr-480.webp",
-        "emblem.svg"
+      "langue": "fr",
+      "largeur": 412,
+      "texture_initiale": [],
+      "textures_apres_defilement": [
+        "https://andriana-art.github.io/momoa/assets/images/stone-texture-320.webp"
       ],
-      "initialStoneRequested": true,
-      "finalStoneRequested": true
+      "liens_sans_obstruction": 5,
+      "images": 13,
+      "broken": [],
+      "overflow": false,
+      "hero": "https://andriana-art.github.io/momoa/assets/images/hero-bust-plinth-680.avif",
+      "css": "https://andriana-art.github.io/momoa/assets/styles.css?v=ee206eb99422"
     },
     {
-      "mode": "product",
-      "lang": "fr",
-      "width": 390,
-      "imageCount": 13,
-      "decorativeCount": 3,
-      "allDecorativeLoaded": true,
-      "height": 5150,
-      "overflow": false,
-      "initialRequests": [
-        "",
-        "styles.css",
-        "cormorant-garamond-latin-wght-normal.woff2",
-        "hero-bust-plinth-400.webp",
-        "dm-sans-latin-standard-normal.woff2",
-        "site.js",
-        "emblem.svg",
-        "menu-open.svg",
-        "menu-close.svg",
-        "hero-gallery-640.webp",
-        "slate-wall.webp",
-        "home-victoire-fr-480.webp",
-        "home-venus-fr-480.webp",
-        "emblem.svg"
+      "langue": "fr",
+      "largeur": 1440,
+      "texture_initiale": [
+        "https://andriana-art.github.io/momoa/assets/images/stone-texture.webp"
       ],
-      "initialStoneRequested": false,
-      "finalStoneRequested": true
+      "textures_apres_defilement": [
+        "https://andriana-art.github.io/momoa/assets/images/stone-texture.webp"
+      ],
+      "liens_sans_obstruction": 5,
+      "images": 13,
+      "broken": [],
+      "overflow": false,
+      "hero": "https://andriana-art.github.io/momoa/assets/images/hero-bust-plinth-680.webp",
+      "css": "https://andriana-art.github.io/momoa/assets/styles.css?v=ee206eb99422"
     },
     {
-      "mode": "base",
-      "lang": "en",
-      "width": 390,
-      "imageCount": 10,
-      "decorativeCount": 0,
-      "allDecorativeLoaded": true,
-      "height": 5126,
-      "overflow": false,
-      "initialRequests": [
-        "",
-        "styles.css",
-        "cormorant-garamond-latin-wght-normal.woff2",
-        "hero-bust-plinth-400.webp",
-        "dm-sans-latin-standard-normal.woff2",
-        "site.js",
-        "emblem.svg",
-        "menu-open.svg",
-        "menu-close.svg",
-        "hero-gallery-640.webp",
-        "slate-wall.webp",
-        "stone-texture.webp",
-        "home-victoire-en-480.webp",
-        "home-venus-en-480.webp",
-        "emblem.svg"
+      "langue": "en",
+      "largeur": 412,
+      "texture_initiale": [],
+      "textures_apres_defilement": [
+        "https://andriana-art.github.io/momoa/assets/images/stone-texture-320.webp"
       ],
-      "initialStoneRequested": true,
-      "finalStoneRequested": true
+      "liens_sans_obstruction": 5,
+      "images": 13,
+      "broken": [],
+      "overflow": false,
+      "hero": "https://andriana-art.github.io/momoa/assets/images/hero-bust-plinth-680.avif",
+      "css": "https://andriana-art.github.io/momoa/assets/styles.css?v=ee206eb99422"
     },
     {
-      "mode": "product",
-      "lang": "en",
-      "width": 390,
-      "imageCount": 13,
-      "decorativeCount": 3,
-      "allDecorativeLoaded": true,
-      "height": 5126,
-      "overflow": false,
-      "initialRequests": [
-        "",
-        "styles.css",
-        "cormorant-garamond-latin-wght-normal.woff2",
-        "hero-bust-plinth-400.webp",
-        "dm-sans-latin-standard-normal.woff2",
-        "site.js",
-        "emblem.svg",
-        "menu-open.svg",
-        "menu-close.svg",
-        "hero-gallery-640.webp",
-        "slate-wall.webp",
-        "home-victoire-en-480.webp",
-        "home-venus-en-480.webp",
-        "emblem.svg"
+      "langue": "en",
+      "largeur": 1440,
+      "texture_initiale": [
+        "https://andriana-art.github.io/momoa/assets/images/stone-texture.webp"
       ],
-      "initialStoneRequested": false,
-      "finalStoneRequested": true
-    },
-    {
-      "mode": "base",
-      "lang": "fr",
-      "width": 1440,
-      "imageCount": 10,
-      "decorativeCount": 0,
-      "allDecorativeLoaded": true,
-      "height": 3927,
-      "overflow": false,
-      "initialRequests": [
-        "",
-        "styles.css",
-        "cormorant-garamond-latin-wght-normal.woff2",
-        "hero-bust-plinth-680.webp",
-        "dm-sans-latin-standard-normal.woff2",
-        "site.js",
-        "emblem.svg",
-        "menu-open.svg",
-        "menu-close.svg",
-        "hero-gallery.webp",
-        "slate-wall.webp",
-        "stone-texture.webp",
-        "home-victoire-fr-680.webp",
-        "home-venus-fr-680.webp",
-        "caryatids-640.webp",
-        "emblem.svg"
+      "textures_apres_defilement": [
+        "https://andriana-art.github.io/momoa/assets/images/stone-texture.webp"
       ],
-      "initialStoneRequested": true,
-      "finalStoneRequested": true
-    },
-    {
-      "mode": "product",
-      "lang": "fr",
-      "width": 1440,
-      "imageCount": 13,
-      "decorativeCount": 3,
-      "allDecorativeLoaded": true,
-      "height": 3927,
+      "liens_sans_obstruction": 5,
+      "images": 13,
+      "broken": [],
       "overflow": false,
-      "initialRequests": [
-        "",
-        "styles.css",
-        "cormorant-garamond-latin-wght-normal.woff2",
-        "hero-bust-plinth-680.webp",
-        "dm-sans-latin-standard-normal.woff2",
-        "site.js",
-        "emblem.svg",
-        "menu-open.svg",
-        "menu-close.svg",
-        "hero-gallery.webp",
-        "slate-wall.webp",
-        "home-victoire-fr-680.webp",
-        "home-venus-fr-680.webp",
-        "stone-texture.webp",
-        "caryatids-640.webp",
-        "emblem.svg"
-      ],
-      "initialStoneRequested": true,
-      "finalStoneRequested": true
-    },
-    {
-      "mode": "base",
-      "lang": "en",
-      "width": 1440,
-      "imageCount": 10,
-      "decorativeCount": 0,
-      "allDecorativeLoaded": true,
-      "height": 3927,
-      "overflow": false,
-      "initialRequests": [
-        "",
-        "styles.css",
-        "cormorant-garamond-latin-wght-normal.woff2",
-        "hero-bust-plinth-680.webp",
-        "dm-sans-latin-standard-normal.woff2",
-        "site.js",
-        "emblem.svg",
-        "menu-open.svg",
-        "menu-close.svg",
-        "hero-gallery.webp",
-        "slate-wall.webp",
-        "stone-texture.webp",
-        "home-victoire-en-680.webp",
-        "home-venus-en-680.webp",
-        "caryatids-640.webp",
-        "emblem.svg"
-      ],
-      "initialStoneRequested": true,
-      "finalStoneRequested": true
-    },
-    {
-      "mode": "product",
-      "lang": "en",
-      "width": 1440,
-      "imageCount": 13,
-      "decorativeCount": 3,
-      "allDecorativeLoaded": true,
-      "height": 3927,
-      "overflow": false,
-      "initialRequests": [
-        "",
-        "styles.css",
-        "cormorant-garamond-latin-wght-normal.woff2",
-        "hero-bust-plinth-680.webp",
-        "dm-sans-latin-standard-normal.woff2",
-        "site.js",
-        "emblem.svg",
-        "menu-open.svg",
-        "menu-close.svg",
-        "hero-gallery.webp",
-        "slate-wall.webp",
-        "home-victoire-en-680.webp",
-        "home-venus-en-680.webp",
-        "stone-texture.webp",
-        "caryatids-640.webp",
-        "emblem.svg"
-      ],
-      "initialStoneRequested": true,
-      "finalStoneRequested": true
+      "hero": "https://andriana-art.github.io/momoa/assets/images/hero-bust-plinth-680.webp",
+      "css": "https://andriana-art.github.io/momoa/assets/styles.css?v=ee206eb99422"
     }
-  ],
-  "pixelComparison": [
-    {
-      "width": 390,
-      "lang": "fr",
-      "capture": "viewport",
-      "geometryChanged": false,
-      "maxChannelDifference": 0,
-      "meanChannelDifference": 0.0,
-      "pixelsDifferentFraction": 0.0,
-      "pixelsAbove3Fraction": 0.0
-    },
-    {
-      "width": 390,
-      "lang": "fr",
-      "capture": "full",
-      "geometryChanged": false,
-      "maxChannelDifference": 2,
-      "meanChannelDifference": 0.1105783752385694,
-      "pixelsDifferentFraction": 0.18527806821010703,
-      "pixelsAbove3Fraction": 0.0
-    },
-    {
-      "width": 390,
-      "lang": "en",
-      "capture": "viewport",
-      "geometryChanged": false,
-      "maxChannelDifference": 0,
-      "meanChannelDifference": 0.0,
-      "pixelsDifferentFraction": 0.0,
-      "pixelsAbove3Fraction": 0.0
-    },
-    {
-      "width": 390,
-      "lang": "en",
-      "capture": "full",
-      "geometryChanged": false,
-      "maxChannelDifference": 3,
-      "meanChannelDifference": 0.1071735846413958,
-      "pixelsDifferentFraction": 0.17838870714407196,
-      "pixelsAbove3Fraction": 0.0
-    },
-    {
-      "width": 1440,
-      "lang": "fr",
-      "capture": "viewport",
-      "geometryChanged": false,
-      "maxChannelDifference": 0,
-      "meanChannelDifference": 0.0,
-      "pixelsDifferentFraction": 0.0,
-      "pixelsAbove3Fraction": 0.0
-    },
-    {
-      "width": 1440,
-      "lang": "fr",
-      "capture": "full",
-      "geometryChanged": false,
-      "maxChannelDifference": 2,
-      "meanChannelDifference": 0.11701450782333135,
-      "pixelsDifferentFraction": 0.18622446453328806,
-      "pixelsAbove3Fraction": 0.0
-    },
-    {
-      "width": 1440,
-      "lang": "en",
-      "capture": "viewport",
-      "geometryChanged": false,
-      "maxChannelDifference": 0,
-      "meanChannelDifference": 0.0,
-      "pixelsDifferentFraction": 0.0,
-      "pixelsAbove3Fraction": 0.0
-    },
-    {
-      "width": 1440,
-      "lang": "en",
-      "capture": "full",
-      "geometryChanged": false,
-      "maxChannelDifference": 2,
-      "meanChannelDifference": 0.11717737600090541,
-      "pixelsDifferentFraction": 0.18647999603881957,
-      "pixelsAbove3Fraction": 0.0
-    }
-  ],
-  "visualFinding": "First viewport pixel-identical in four captures. Complete-page geometry unchanged. Remaining raster differences are2–3RGBlevels at most from equivalent alpha-compositing rounding, with mean channel error about0.11/255.",
-  "filesChanged": [
-    "src/build.mjs",
-    "docs/assets/styles.css",
-    "docs/index.html",
-    "docs/en/index.html"
-  ],
-  "followup": "Regenerate contrast CSS mapping/assertion for the equivalent slate background + opacity0.05 composition; run normal full-site validation, accessibility and Lighthouse after all changes."
+  ]
 }

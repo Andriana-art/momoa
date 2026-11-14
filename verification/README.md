@@ -19,7 +19,7 @@ Les preuves brutes sont conservées avec leurs dates, identifiants de base et ch
 
 Les contrôles responsive couvrent 320, 360, 390, 412, 639, 640, 768, 895, 896, 1024, 1280, 1440 et 1920 pixels CSS. Les états comprennent le menu ouvert, Échap, le changement de point de rupture et les erreurs, la confirmation et le retour du formulaire dans les deux langues. Le zoom natif du navigateur n’est pas couvert par les 12 contrôles CSS équivalents.
 
-Le service CSS W3C signale 146 redéfinitions, 18 avertissements de couleur, 9 liés aux variables CSS, 4 aux familles génériques de polices, 13 aux couleurs de fond et 2 aux couleurs identiques. Ces avertissements sont conservés ; le nombre d’erreurs du service est nul.
+Le service CSS W3C signale 146 redéfinitions, 18 avertissements de couleur, 9 liés aux variables CSS, 4 aux familles génériques de polices, 12 aux couleurs de fond et 2 aux couleurs identiques. Ces avertissements sont conservés ; le nombre d’erreurs du service est nul.
 
 Le contraste est calculé sur les couleurs textuelles stables et les survols stabilisés, avec une borne conservatrice couvrant toute couleur d’image sous les dégradés. Les transitions intermédiaires, icônes et contours de focus ne sont pas inclus dans ce calcul. Les vérifications automatisées complètent les contrôles fonctionnels sans constituer un audit WCAG manuel exhaustif.
 
@@ -32,7 +32,7 @@ Les quatre derniers rapports ci-dessous portent sur le site publié après les c
 - [Accueil anglais, mobile](accueil-en-mobile.html)
 - [Accueil anglais, ordinateur](accueil-en-ordinateur.html)
 
-Une tentative puis un nouvel essai sur le site de PageSpeed Insights ont renvoyé « Unable to resolve » pour l’accueil anglais, sans nouveau rapport partageable. Les rapports HTML joints proviennent de Lighthouse exécuté directement sur le site publié.
+Les rapports HTML joints proviennent de Lighthouse exécuté directement sur le site publié. Des rapports PageSpeed publics antérieurs, tous à 100, sont conservés avec leurs dates et URL dans [pagespeed-public.json](pagespeed-public.json) ; ils précèdent les derniers allégements.
 
 Le fichier [resultats.json](resultats.json) rassemble les résultats chiffrés et distingue le périmètre des mesures Lighthouse de celui des contrôles finaux.
 
@@ -41,3 +41,5 @@ Le fichier [resultats.json](resultats.json) rassemble les résultats chiffrés e
 ## Ressources initiales
 
 Les [gains de ressources](performance-ressources.json) conservent tous les caractères de DM Sans. Les textures décoratives utilisent le chargement différé natif, avec variantes 320/480 px. La comparaison typographique de 44 vues ne relève aucun déplacement après l’optimisation des fontes de la version distante. Les [contrôles de pointeur](interactions-textures.json) confirment que les 20 liens concernés restent accessibles et que les 13 images de chaque accueil se chargent après défilement.
+
+Les contrôles complémentaires de zoom CSS sont conservés avec leurs dates et leurs empreintes d’origine. Les contrôles responsives de la version intégrée et les mesures Lighthouse récentes identifient séparément leurs fichiers testés.
