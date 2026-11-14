@@ -1,0 +1,175 @@
+{
+  "commit_teste": "57e156f34f697b3f07b73534adda23a3f558b462",
+  "methode": "Trois passages mobiles par langue et un passage ordinateur par langue, profils Lighthouse par défaut avec un nouveau navigateur à chaque passage.",
+  "tous_les_scores_100": true,
+  "mesures": [
+    {
+      "langue": "fr",
+      "appareil": "mobile",
+      "passage": 1,
+      "date_utc": "2026-11-14T15:52:22.554Z",
+      "scores": {
+        "performance": 100,
+        "accessibility": 100,
+        "best-practices": 100,
+        "seo": 100
+      },
+      "mesures": {
+        "first-contentful-paint": "0.9 s",
+        "largest-contentful-paint": "1.3 s",
+        "speed-index": "1.1 s",
+        "total-blocking-time": "50 ms",
+        "cumulative-layout-shift": "0"
+      },
+      "rapport": "repetitions/accueil-fr-mobile-1.html",
+      "avertissements": []
+    },
+    {
+      "langue": "en",
+      "appareil": "mobile",
+      "passage": 1,
+      "date_utc": "2026-11-14T15:52:34.927Z",
+      "scores": {
+        "performance": 100,
+        "accessibility": 100,
+        "best-practices": 100,
+        "seo": 100
+      },
+      "mesures": {
+        "first-contentful-paint": "0.8 s",
+        "largest-contentful-paint": "1.3 s",
+        "speed-index": "0.9 s",
+        "total-blocking-time": "20 ms",
+        "cumulative-layout-shift": "0"
+      },
+      "rapport": "repetitions/accueil-en-mobile-1.html",
+      "avertissements": []
+    },
+    {
+      "langue": "fr",
+      "appareil": "mobile",
+      "passage": 2,
+      "date_utc": "2026-11-14T15:52:47.311Z",
+      "scores": {
+        "performance": 100,
+        "accessibility": 100,
+        "best-practices": 100,
+        "seo": 100
+      },
+      "mesures": {
+        "first-contentful-paint": "0.8 s",
+        "largest-contentful-paint": "1.3 s",
+        "speed-index": "0.9 s",
+        "total-blocking-time": "40 ms",
+        "cumulative-layout-shift": "0"
+      },
+      "rapport": "repetitions/accueil-fr-mobile-2.html",
+      "avertissements": []
+    },
+    {
+      "langue": "en",
+      "appareil": "mobile",
+      "passage": 2,
+      "date_utc": "2026-11-14T15:52:59.669Z",
+      "scores": {
+        "performance": 100,
+        "accessibility": 100,
+        "best-practices": 100,
+        "seo": 100
+      },
+      "mesures": {
+        "first-contentful-paint": "0.9 s",
+        "largest-contentful-paint": "1.3 s",
+        "speed-index": "0.9 s",
+        "total-blocking-time": "0 ms",
+        "cumulative-layout-shift": "0"
+      },
+      "rapport": "repetitions/accueil-en-mobile-2.html",
+      "avertissements": []
+    },
+    {
+      "langue": "fr",
+      "appareil": "mobile",
+      "passage": 3,
+      "date_utc": "2026-11-14T15:53:12.020Z",
+      "scores": {
+        "performance": 100,
+        "accessibility": 100,
+        "best-practices": 100,
+        "seo": 100
+      },
+      "mesures": {
+        "first-contentful-paint": "0.9 s",
+        "largest-contentful-paint": "1.4 s",
+        "speed-index": "1.0 s",
+        "total-blocking-time": "10 ms",
+        "cumulative-layout-shift": "0"
+      },
+      "rapport": "accueil-fr-mobile.html",
+      "avertissements": []
+    },
+    {
+      "langue": "en",
+      "appareil": "mobile",
+      "passage": 3,
+      "date_utc": "2026-11-14T15:53:24.428Z",
+      "scores": {
+        "performance": 100,
+        "accessibility": 100,
+        "best-practices": 100,
+        "seo": 100
+      },
+      "mesures": {
+        "first-contentful-paint": "0.8 s",
+        "largest-contentful-paint": "1.3 s",
+        "speed-index": "0.9 s",
+        "total-blocking-time": "20 ms",
+        "cumulative-layout-shift": "0"
+      },
+      "rapport": "accueil-en-mobile.html",
+      "avertissements": []
+    },
+    {
+      "langue": "fr",
+      "appareil": "desktop",
+      "passage": 1,
+      "date_utc": "2026-11-14T15:53:36.795Z",
+      "scores": {
+        "performance": 100,
+        "accessibility": 100,
+        "best-practices": 100,
+        "seo": 100
+      },
+      "mesures": {
+        "first-contentful-paint": "0.3 s",
+        "largest-contentful-paint": "0.5 s",
+        "speed-index": "0.4 s",
+        "total-blocking-time": "0 ms",
+        "cumulative-layout-shift": "0"
+      },
+      "rapport": "accueil-fr-ordinateur.html",
+      "avertissements": []
+    },
+    {
+      "langue": "en",
+      "appareil": "desktop",
+      "passage": 1,
+      "date_utc": "2026-11-14T15:53:48.903Z",
+      "scores": {
+        "performance": 100,
+        "accessibility": 100,
+        "best-practices": 100,
+        "seo": 100
+      },
+      "mesures": {
+        "first-contentful-paint": "0.3 s",
+        "largest-contentful-paint": "0.5 s",
+        "speed-index": "0.4 s",
+        "total-blocking-time": "0 ms",
+        "cumulative-layout-shift": "0"
+      },
+      "rapport": "accueil-en-ordinateur.html",
+      "avertissements": []
+    }
+  ]
+}

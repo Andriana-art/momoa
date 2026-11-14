@@ -1,6 +1,6 @@
 # Grille de remise de MOMOA
 
-Cette grille reprend les sept critères fournis pour le projet. Les preuves finales portent sur les fichiers identifiés par leurs [empreintes SHA-256](empreintes-finales.json), après corrections graphiques et régénération des 22 pages, publiées dans le commit `1ede3b68f7ffa7fa5c0cccc4780ed1563a81cbef`. Le [détail des contrôles](README.md) donne les outils, le périmètre et les limites.
+Cette grille reprend les sept critères fournis pour le projet. Les preuves finales portent sur les fichiers identifiés par leurs [empreintes SHA-256](empreintes-finales.json), après corrections graphiques et régénération des 22 pages, publiées dans le commit `57e156f34f697b3f07b73534adda23a3f558b462`. Le [détail des contrôles](README.md) donne les outils, le périmètre et les limites.
 
 | Critère | Conclusion | Éléments vérifiés |
 | --- | --- | --- |
@@ -37,4 +37,4 @@ Le contrôle du code suit les conventions communes du projet ; aucun guide de st
 
 Les calculs de contraste couvrent le texte stable et les survols stabilisés. L’accessibilité des icônes, l’ensemble des technologies d’assistance et les transitions intermédiaires ne sont pas certifiés par ces calculs ou par axe. Le formulaire est explicitement une démonstration sans envoi ni conservation de données.
 
-Les derniers rapports Lighthouse du site corrigé obtiennent 100 dans les quatre catégories sur les deux accueils, en français et en anglais, sur mobile et ordinateur. Un premier passage anglais mobile à 99 et son contrôle suivant à 100, sans changement de code, sont conservés dans le [dossier de vérification](README.md).
+Les derniers rapports Lighthouse du site corrigé obtiennent 100 dans les quatre catégories sur les deux accueils, en français et en anglais, sur mobile et ordinateur. Les huit mesures de la version optimisée obtiennent 100 ; elles sont conservées dans le [dossier de vérification](README.md).

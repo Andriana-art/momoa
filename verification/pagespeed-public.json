@@ -1,0 +1,53 @@
+{
+  "note": "Rapports publics datés après le commit 23e1d1b, antérieurs à la dernière optimisation ; les mesures courantes sont celles de lighthouse-repetitions.json.",
+  "mesures": [
+    {
+      "page": "https://andriana-art.github.io/momoa/",
+      "rapport": "https://pagespeed.web.dev/analysis/https-andriana-art-github-io-momoa/gwpmqxnzpp?form_factor=mobile",
+      "date_utc": "2026-11-14T00:22:12.153Z",
+      "scores": {
+        "accessibility": 100,
+        "agentic-browsing": 100,
+        "best-practices": 100,
+        "performance": 100,
+        "seo": 100
+      }
+    },
+    {
+      "page": "https://andriana-art.github.io/momoa/",
+      "rapport": "https://pagespeed.web.dev/analysis/https-andriana-art-github-io-momoa/gwpmqxnzpp?form_factor=desktop",
+      "date_utc": "2026-11-14T00:22:12.163Z",
+      "scores": {
+        "accessibility": 100,
+        "agentic-browsing": 100,
+        "best-practices": 100,
+        "performance": 100,
+        "seo": 100
+      }
+    },
+    {
+      "page": "https://andriana-art.github.io/momoa/galerie/",
+      "rapport": "https://pagespeed.web.dev/analysis/https-andriana-art-github-io-momoa-galerie/4u32hpct1y?form_factor=mobile",
+      "date_utc": "2026-11-14T00:22:03.843Z",
+      "scores": {
+        "accessibility": 100,
+        "agentic-browsing": 100,
+        "best-practices": 100,
+        "performance": 100,
+        "seo": 100
+      }
+    },
+    {
+      "page": "https://andriana-art.github.io/momoa/galerie/",
+      "rapport": "https://pagespeed.web.dev/analysis/https-andriana-art-github-io-momoa-galerie/4u32hpct1y?form_factor=desktop",
+      "date_utc": "2026-11-14T00:22:04.290Z",
+      "scores": {
+        "accessibility": 100,
+        "agentic-browsing": 100,
+        "best-practices": 100,
+        "performance": 100,
+        "seo": 100
+      }
+    }
+  ]
+}

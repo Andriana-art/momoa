@@ -53,7 +53,7 @@ Les liens générés sont relatifs au dossier du projet. Les options de publicat
 
 ## Vérifications avant remise
 
-La [grille de remise détaillée](verification/GRILLE-REMISE.md) reprend les sept critères du projet. Les [preuves et leur périmètre](verification/README.md) sont inclus dans le dépôt ; les empreintes SHA-256 identifient les fichiers contrôlés après les corrections graphiques, publiés dans le commit `1ede3b68f7ffa7fa5c0cccc4780ed1563a81cbef`.
+La [grille de remise détaillée](verification/GRILLE-REMISE.md) reprend les sept critères du projet. Les [preuves et leur périmètre](verification/README.md) sont inclus dans le dépôt ; les empreintes SHA-256 identifient les fichiers contrôlés après les corrections graphiques, publiés dans le commit `57e156f34f697b3f07b73534adda23a3f558b462`.
 
 Le 14 novembre 2026, PageSpeed Insights a mesuré **100 en performances, accessibilité, bonnes pratiques et SEO** sur l’accueil et la galerie en français, sur mobile et ordinateur. Les deux rapports ont été générés après la publication du commit `23e1d1b`. [Rapport de l’accueil](https://pagespeed.web.dev/analysis/https-andriana-art-github-io-momoa/gwpmqxnzpp?form_factor=mobile) · [Rapport de la galerie](https://pagespeed.web.dev/analysis/https-andriana-art-github-io-momoa-galerie/4u32hpct1y?form_factor=mobile)
 
@@ -67,7 +67,7 @@ Le 14 novembre 2026, PageSpeed Insights a mesuré **100 en performances, accessi
 | SEO | Titres et descriptions renseignés, une hiérarchie de titres cohérente, langues FR/EN, images et liens nommés ; 22 URL publiées accessibles aux robots. |
 | Accessibilité | 50 contrôles axe-core sans violation détectée ; navigation au clavier et formulaire contrôlés ; borne minimale de contraste textuel calculée à 4,686:1. |
 
-Les derniers rapports Lighthouse du site publié après corrections obtiennent 100 dans les quatre catégories sur les deux accueils, en français et en anglais, sur mobile et ordinateur. Un premier passage anglais mobile a obtenu 99 ; le contrôle suivant a obtenu 100 sans changement de code. Les rapports et les dates sont conservés dans `verification/`.
+Les derniers rapports Lighthouse du site publié après corrections obtiennent 100 dans les quatre catégories sur les deux accueils, en français et en anglais, sur mobile et ordinateur. La version optimisée obtient 100 sur les huit mesures conservées : trois passages mobiles par langue et un passage ordinateur par langue. Les rapports et les dates sont conservés dans `verification/`.
 
 Les scores concernent les pages et les conditions indiquées dans chaque rapport. Les polices et les images optimisées sont hébergées avec le site. La version de DM Sans utilise la taille optique de 14 déjà définie dans la feuille de style. La licence SIL Open Font License est incluse dans `docs/assets/fonts/`.
 

@@ -1,6 +1,6 @@
 # Vérifications de MOMOA avant remise
 
-Le [bilan selon les sept critères](GRILLE-REMISE.md) rassemble les conclusions de la remise. Les contrôles sont datés dans chaque rapport et couvrent les corrections graphiques et les optimisations intégrées, sur les fichiers identifiés dans [empreintes-finales.json](empreintes-finales.json), identiques aux fichiers du site publiés dans le commit `1ede3b68f7ffa7fa5c0cccc4780ed1563a81cbef`. Les valeurs SHA-256 des CSS et HTML sont également présentes dans les relevés responsive et W3C.
+Le [bilan selon les sept critères](GRILLE-REMISE.md) rassemble les conclusions de la remise. Les contrôles sont datés dans chaque rapport et couvrent les corrections graphiques et les optimisations intégrées, sur les fichiers identifiés dans [empreintes-finales.json](empreintes-finales.json), identiques aux fichiers du site publiés dans le commit `57e156f34f697b3f07b73534adda23a3f558b462`. Les valeurs SHA-256 des CSS et HTML sont également présentes dans les relevés responsive et W3C.
 
 Les preuves brutes sont conservées avec leurs dates, identifiants de base et chemins de travail d’origine. Ces chemins servent à documenter le contrôle ; les fichiers inclus ci-dessous sont consultables dans le dépôt. Les identifiants de base antérieurs à la mise à jour de l’historique n’identifient pas à eux seuls l’arbre final : les empreintes des fichiers font foi.
 
@@ -25,7 +25,7 @@ Le contraste est calculé sur les couleurs textuelles stables et les survols sta
 
 ## Rapports Lighthouse
 
-Les quatre derniers rapports ci-dessous portent sur le site publié après les corrections graphiques, au commit `1ede3b68f7ffa7fa5c0cccc4780ed1563a81cbef`. Ils obtiennent 100 dans les quatre catégories.
+Les quatre derniers rapports ci-dessous portent sur le site publié après les corrections graphiques, au commit `57e156f34f697b3f07b73534adda23a3f558b462`. Ils obtiennent 100 dans les quatre catégories. Les [huit mesures](lighthouse-repetitions.json), dont trois passages mobiles par langue, obtiennent toutes 100.
 
 - [Accueil français, mobile](accueil-fr-mobile.html)
 - [Accueil français, ordinateur](accueil-fr-ordinateur.html)
@@ -36,7 +36,7 @@ Une tentative puis un nouvel essai sur le site de PageSpeed Insights ont renvoy�
 
 Le fichier [resultats.json](resultats.json) rassemble les résultats chiffrés et distingue le périmètre des mesures Lighthouse de celui des contrôles finaux.
 
-Un [premier passage anglais mobile](accueil-en-mobile-premier-passage.html) a donné 99 en performances ; le contrôle suivant a donné 100, sans changement de code. Les deux mesures sont conservées pour rendre cette variation visible.
+À titre historique, un [passage anglais mobile avant optimisation](accueil-en-mobile-premier-passage.html) avait donné 99, puis un [contrôle sur cette ancienne version](historique/accueil-en-mobile-controle-avant-optimisation.html) avait donné 100. Les huit nouvelles mesures de la version optimisée obtiennent toutes 100.
 
 ## Ressources initiales
 
