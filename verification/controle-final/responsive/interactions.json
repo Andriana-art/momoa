@@ -1,0 +1,1032 @@
+{
+  "dateUTC": "2026-11-14T21:28:36.247Z",
+  "testedCommit": "d0cc82660f58166022296534bb7f6d2cbe2c7b90",
+  "base": "http://127.0.0.1:4197/momoa/",
+  "sourceHashes": {
+    "docs/collection/athena/index.html": "971a54084d43afcdf5ae1448f0b4bab289a33d4af3eee01c901a30e85434a2cb",
+    "docs/collection/discobole/index.html": "8294b35c04e452f09a33e19827fbfdcd88d31dbddc5fdd3066a9f991c933339a",
+    "docs/collection/index.html": "7ee8d5e1cc03141877e8e2b6bc3251b560ba1d3510a3684974e7f900f873d988",
+    "docs/collection/poseidon/index.html": "b9c0f2b222ea82cf1076998d7a20edea97783fa25f4a3987b6274697c84eec27",
+    "docs/collection/prometheus/index.html": "31c97cbb9bf9708643d30d089a48123b37cd1700c8219ca30c823860c867497a",
+    "docs/collection/venus-de-milo/index.html": "9becbff9390bb0e4adc3a73b27e14c99fadf0b5874bbc238b30a36bed6ad26e9",
+    "docs/collection/victoire-de-samothrace/index.html": "80c27cd3b55d50892c4304b16a1bc3b6a33d0ec1b5ac4d9f7916a26a70f58ffd",
+    "docs/en/collection/athena/index.html": "0426539400f10d23d3aa5c7bc4b6c42a637a0f45e38321b7f384712a72858e91",
+    "docs/en/collection/discobolus/index.html": "6e79d5d95e237db57c7f26e5a9656c001c7afa2f1022055460d5ce19598c00bd",
+    "docs/en/collection/index.html": "f57f5d586514f14ec8e7bedadc656468c1eefc35670c12cc5ef6277b5f5fc6c3",
+    "docs/en/collection/poseidon/index.html": "a127a7ea797dd61805708d784caca6c4c409a6b0f3b1a2ea80cd3380fee747d1",
+    "docs/en/collection/prometheus/index.html": "3b84bb8cfbb68ec976d8faf51141adffafb6d49c768c6fa6c5c7bc296ce53d6c",
+    "docs/en/collection/venus-de-milo/index.html": "1dacef5a5364714bde7ce8cef7ab3661ff0bda100d70b0ad972b1215349881b3",
+    "docs/en/collection/winged-victory-of-samothrace/index.html": "9c954339e3de3f80a58197a01533606a215bebf9684937705805dc8eb62c695c",
+    "docs/en/gallery/index.html": "c0db1816d23af85254c25b27b2a2a7e680459d14a5319e98f91a066a17a5c422",
+    "docs/en/index.html": "b5ea920532fda01e0ac8c6bdeaf923c6e1bc1ab4b2cb29fe63b2a4c2e7859a31",
+    "docs/en/questions/index.html": "02d77577b211eb625684bd6e74f2beaa5194bd7ba6144b83ff8d55d94e907c39",
+    "docs/en/sign-up/index.html": "2486bf68db497dc3a8ac42e33e9ce7dafdee41694cbee914be2c6d8b825758a7",
+    "docs/galerie/index.html": "5f0e8c65655c4ef7f52fb27d019aee5625775a0d413cacebf97c875020fb293c",
+    "docs/index.html": "f905e234c49ca399d2a89a73bcb5ec29b4da0439745ea682f552a535f7eee5d0",
+    "docs/inscription/index.html": "1077737b422f6208e30e16dd1d0f3ff4f417e8231782008ab8539ec148a8f0dd",
+    "docs/questions/index.html": "73cfc5efc2216660a36c279a967dca7685346d9aacbb0f5ebb80b63b8b291221",
+    "docs/404.html": "0638b97726dc7dc943ef4c16d0df7470733474c68837b0d56e70f1b4f795883a",
+    "docs/assets/styles.css": "926106291faa31d8ad61d5a9f28200c5d184b5e8206cebbab2d168c716d1b823",
+    "docs/assets/site.js": "1472df88a4ff82fddc1c1f2d35fe193c99a9c76b37b0adc103dcda0dc214c0c8"
+  },
+  "totalChecks": 174,
+  "failedChecks": [],
+  "pageErrors": [],
+  "method": "Browser interaction checks at390px; no-JavaScript navigation on all22 business pages; bilingual roundtrips on all22; demo network and storage observation covers tested interactions only.",
+  "checks": [
+    {
+      "scope": "fr/",
+      "test": "Menu opens with Enter",
+      "passed": true
+    },
+    {
+      "scope": "fr/",
+      "test": "Tab enters menu first link",
+      "passed": true
+    },
+    {
+      "scope": "fr/",
+      "test": "Escape closes and restores focus",
+      "passed": true
+    },
+    {
+      "scope": "fr/",
+      "test": "Menu restores scroll position",
+      "passed": true,
+      "detail": {
+        "before": 300,
+        "after": 300
+      }
+    },
+    {
+      "scope": "fr/",
+      "test": "Homepage exposes FAQ links",
+      "passed": true,
+      "detail": {
+        "count": 3
+      }
+    },
+    {
+      "scope": "fr/",
+      "test": "FAQ link reaches a question with a visible answer",
+      "passed": true,
+      "detail": {
+        "url": "http://127.0.0.1:4197/momoa/questions/#a-propos-de-momoa"
+      }
+    },
+    {
+      "scope": "fr/",
+      "test": "FAQ link reaches a question with a visible answer",
+      "passed": true,
+      "detail": {
+        "url": "http://127.0.0.1:4197/momoa/questions/#origine-des-sculptures"
+      }
+    },
+    {
+      "scope": "fr/",
+      "test": "FAQ link reaches a question with a visible answer",
+      "passed": true,
+      "detail": {
+        "url": "http://127.0.0.1:4197/momoa/questions/#inscription"
+      }
+    },
+    {
+      "scope": "fr/",
+      "test": "Empty form flags all three fields",
+      "passed": true
+    },
+    {
+      "scope": "fr/",
+      "test": "First invalid field receives focus",
+      "passed": true
+    },
+    {
+      "scope": "fr/",
+      "test": "Whitespace names and malformed email stay invalid",
+      "passed": true
+    },
+    {
+      "scope": "fr/",
+      "test": "Malformed email is the only remaining error",
+      "passed": true
+    },
+    {
+      "scope": "fr/",
+      "test": "Invalid email receives focus",
+      "passed": true
+    },
+    {
+      "scope": "fr/",
+      "test": "Correcting input clears displayed error",
+      "passed": true
+    },
+    {
+      "scope": "fr/",
+      "test": "Valid form shows confirmation and hides form",
+      "passed": true
+    },
+    {
+      "scope": "fr/",
+      "test": "Confirmation heading receives focus",
+      "passed": true
+    },
+    {
+      "scope": "fr/",
+      "test": "Form values reset after demonstration",
+      "passed": true
+    },
+    {
+      "scope": "fr/",
+      "test": "Return restores form and first-field focus",
+      "passed": true
+    },
+    {
+      "scope": "fr/",
+      "test": "No network data submission during demo",
+      "passed": true,
+      "detail": []
+    },
+    {
+      "scope": "fr/",
+      "test": "No local/session storage or cookies written during demo",
+      "passed": true,
+      "detail": {
+        "before": {
+          "local": {},
+          "session": {},
+          "cookies": ""
+        },
+        "after": {
+          "local": {},
+          "session": {},
+          "cookies": ""
+        }
+      }
+    },
+    {
+      "scope": "en/",
+      "test": "Menu opens with Enter",
+      "passed": true
+    },
+    {
+      "scope": "en/",
+      "test": "Tab enters menu first link",
+      "passed": true
+    },
+    {
+      "scope": "en/",
+      "test": "Escape closes and restores focus",
+      "passed": true
+    },
+    {
+      "scope": "en/",
+      "test": "Menu restores scroll position",
+      "passed": true,
+      "detail": {
+        "before": 300,
+        "after": 300
+      }
+    },
+    {
+      "scope": "en/",
+      "test": "Homepage exposes FAQ links",
+      "passed": true,
+      "detail": {
+        "count": 3
+      }
+    },
+    {
+      "scope": "en/",
+      "test": "FAQ link reaches a question with a visible answer",
+      "passed": true,
+      "detail": {
+        "url": "http://127.0.0.1:4197/momoa/en/questions/#about-momoa"
+      }
+    },
+    {
+      "scope": "en/",
+      "test": "FAQ link reaches a question with a visible answer",
+      "passed": true,
+      "detail": {
+        "url": "http://127.0.0.1:4197/momoa/en/questions/#sculpture-origins"
+      }
+    },
+    {
+      "scope": "en/",
+      "test": "FAQ link reaches a question with a visible answer",
+      "passed": true,
+      "detail": {
+        "url": "http://127.0.0.1:4197/momoa/en/questions/#sign-up"
+      }
+    },
+    {
+      "scope": "en/",
+      "test": "Empty form flags all three fields",
+      "passed": true
+    },
+    {
+      "scope": "en/",
+      "test": "First invalid field receives focus",
+      "passed": true
+    },
+    {
+      "scope": "en/",
+      "test": "Whitespace names and malformed email stay invalid",
+      "passed": true
+    },
+    {
+      "scope": "en/",
+      "test": "Malformed email is the only remaining error",
+      "passed": true
+    },
+    {
+      "scope": "en/",
+      "test": "Invalid email receives focus",
+      "passed": true
+    },
+    {
+      "scope": "en/",
+      "test": "Correcting input clears displayed error",
+      "passed": true
+    },
+    {
+      "scope": "en/",
+      "test": "Valid form shows confirmation and hides form",
+      "passed": true
+    },
+    {
+      "scope": "en/",
+      "test": "Confirmation heading receives focus",
+      "passed": true
+    },
+    {
+      "scope": "en/",
+      "test": "Form values reset after demonstration",
+      "passed": true
+    },
+    {
+      "scope": "en/",
+      "test": "Return restores form and first-field focus",
+      "passed": true
+    },
+    {
+      "scope": "en/",
+      "test": "No network data submission during demo",
+      "passed": true,
+      "detail": []
+    },
+    {
+      "scope": "en/",
+      "test": "No local/session storage or cookies written during demo",
+      "passed": true,
+      "detail": {
+        "before": {
+          "local": {},
+          "session": {},
+          "cookies": ""
+        },
+        "after": {
+          "local": {},
+          "session": {},
+          "cookies": ""
+        }
+      }
+    },
+    {
+      "scope": "fr-home",
+      "test": "Language switch opens translated document",
+      "passed": true,
+      "detail": {
+        "href": "en/"
+      }
+    },
+    {
+      "scope": "fr-home",
+      "test": "Language switch roundtrip returns to same route",
+      "passed": true
+    },
+    {
+      "scope": "collection/",
+      "test": "Language switch opens translated document",
+      "passed": true,
+      "detail": {
+        "href": "../en/collection/"
+      }
+    },
+    {
+      "scope": "collection/",
+      "test": "Language switch roundtrip returns to same route",
+      "passed": true
+    },
+    {
+      "scope": "collection/athena/",
+      "test": "Language switch opens translated document",
+      "passed": true,
+      "detail": {
+        "href": "../../en/collection/athena/"
+      }
+    },
+    {
+      "scope": "collection/athena/",
+      "test": "Language switch roundtrip returns to same route",
+      "passed": true
+    },
+    {
+      "scope": "collection/discobole/",
+      "test": "Language switch opens translated document",
+      "passed": true,
+      "detail": {
+        "href": "../../en/collection/discobolus/"
+      }
+    },
+    {
+      "scope": "collection/discobole/",
+      "test": "Language switch roundtrip returns to same route",
+      "passed": true
+    },
+    {
+      "scope": "collection/poseidon/",
+      "test": "Language switch opens translated document",
+      "passed": true,
+      "detail": {
+        "href": "../../en/collection/poseidon/"
+      }
+    },
+    {
+      "scope": "collection/poseidon/",
+      "test": "Language switch roundtrip returns to same route",
+      "passed": true
+    },
+    {
+      "scope": "collection/prometheus/",
+      "test": "Language switch opens translated document",
+      "passed": true,
+      "detail": {
+        "href": "../../en/collection/prometheus/"
+      }
+    },
+    {
+      "scope": "collection/prometheus/",
+      "test": "Language switch roundtrip returns to same route",
+      "passed": true
+    },
+    {
+      "scope": "collection/venus-de-milo/",
+      "test": "Language switch opens translated document",
+      "passed": true,
+      "detail": {
+        "href": "../../en/collection/venus-de-milo/"
+      }
+    },
+    {
+      "scope": "collection/venus-de-milo/",
+      "test": "Language switch roundtrip returns to same route",
+      "passed": true
+    },
+    {
+      "scope": "collection/victoire-de-samothrace/",
+      "test": "Language switch opens translated document",
+      "passed": true,
+      "detail": {
+        "href": "../../en/collection/winged-victory-of-samothrace/"
+      }
+    },
+    {
+      "scope": "collection/victoire-de-samothrace/",
+      "test": "Language switch roundtrip returns to same route",
+      "passed": true
+    },
+    {
+      "scope": "en/",
+      "test": "Language switch opens translated document",
+      "passed": true,
+      "detail": {
+        "href": "../"
+      }
+    },
+    {
+      "scope": "en/",
+      "test": "Language switch roundtrip returns to same route",
+      "passed": true
+    },
+    {
+      "scope": "en/collection/",
+      "test": "Language switch opens translated document",
+      "passed": true,
+      "detail": {
+        "href": "../../collection/"
+      }
+    },
+    {
+      "scope": "en/collection/",
+      "test": "Language switch roundtrip returns to same route",
+      "passed": true
+    },
+    {
+      "scope": "en/collection/athena/",
+      "test": "Language switch opens translated document",
+      "passed": true,
+      "detail": {
+        "href": "../../../collection/athena/"
+      }
+    },
+    {
+      "scope": "en/collection/athena/",
+      "test": "Language switch roundtrip returns to same route",
+      "passed": true
+    },
+    {
+      "scope": "en/collection/discobolus/",
+      "test": "Language switch opens translated document",
+      "passed": true,
+      "detail": {
+        "href": "../../../collection/discobole/"
+      }
+    },
+    {
+      "scope": "en/collection/discobolus/",
+      "test": "Language switch roundtrip returns to same route",
+      "passed": true
+    },
+    {
+      "scope": "en/collection/poseidon/",
+      "test": "Language switch opens translated document",
+      "passed": true,
+      "detail": {
+        "href": "../../../collection/poseidon/"
+      }
+    },
+    {
+      "scope": "en/collection/poseidon/",
+      "test": "Language switch roundtrip returns to same route",
+      "passed": true
+    },
+    {
+      "scope": "en/collection/prometheus/",
+      "test": "Language switch opens translated document",
+      "passed": true,
+      "detail": {
+        "href": "../../../collection/prometheus/"
+      }
+    },
+    {
+      "scope": "en/collection/prometheus/",
+      "test": "Language switch roundtrip returns to same route",
+      "passed": true
+    },
+    {
+      "scope": "en/collection/venus-de-milo/",
+      "test": "Language switch opens translated document",
+      "passed": true,
+      "detail": {
+        "href": "../../../collection/venus-de-milo/"
+      }
+    },
+    {
+      "scope": "en/collection/venus-de-milo/",
+      "test": "Language switch roundtrip returns to same route",
+      "passed": true
+    },
+    {
+      "scope": "en/collection/winged-victory-of-samothrace/",
+      "test": "Language switch opens translated document",
+      "passed": true,
+      "detail": {
+        "href": "../../../collection/victoire-de-samothrace/"
+      }
+    },
+    {
+      "scope": "en/collection/winged-victory-of-samothrace/",
+      "test": "Language switch roundtrip returns to same route",
+      "passed": true
+    },
+    {
+      "scope": "en/gallery/",
+      "test": "Language switch opens translated document",
+      "passed": true,
+      "detail": {
+        "href": "../../galerie/"
+      }
+    },
+    {
+      "scope": "en/gallery/",
+      "test": "Language switch roundtrip returns to same route",
+      "passed": true
+    },
+    {
+      "scope": "en/questions/",
+      "test": "Language switch opens translated document",
+      "passed": true,
+      "detail": {
+        "href": "../../questions/"
+      }
+    },
+    {
+      "scope": "en/questions/",
+      "test": "Language switch roundtrip returns to same route",
+      "passed": true
+    },
+    {
+      "scope": "en/sign-up/",
+      "test": "Language switch opens translated document",
+      "passed": true,
+      "detail": {
+        "href": "../../inscription/"
+      }
+    },
+    {
+      "scope": "en/sign-up/",
+      "test": "Language switch roundtrip returns to same route",
+      "passed": true
+    },
+    {
+      "scope": "galerie/",
+      "test": "Language switch opens translated document",
+      "passed": true,
+      "detail": {
+        "href": "../en/gallery/"
+      }
+    },
+    {
+      "scope": "galerie/",
+      "test": "Language switch roundtrip returns to same route",
+      "passed": true
+    },
+    {
+      "scope": "inscription/",
+      "test": "Language switch opens translated document",
+      "passed": true,
+      "detail": {
+        "href": "../en/sign-up/"
+      }
+    },
+    {
+      "scope": "inscription/",
+      "test": "Language switch roundtrip returns to same route",
+      "passed": true
+    },
+    {
+      "scope": "questions/",
+      "test": "Language switch opens translated document",
+      "passed": true,
+      "detail": {
+        "href": "../en/questions/"
+      }
+    },
+    {
+      "scope": "questions/",
+      "test": "Language switch roundtrip returns to same route",
+      "passed": true
+    },
+    {
+      "scope": "nojs:",
+      "test": "Page loads without JavaScript",
+      "passed": true
+    },
+    {
+      "scope": "nojs:",
+      "test": "Fallback navigation is visible",
+      "passed": true
+    },
+    {
+      "scope": "nojs:",
+      "test": "Unavailable menu control is hidden",
+      "passed": true
+    },
+    {
+      "scope": "nojs:",
+      "test": "Navigation links stay inside project base",
+      "passed": true
+    },
+    {
+      "scope": "nojs:collection/",
+      "test": "Page loads without JavaScript",
+      "passed": true
+    },
+    {
+      "scope": "nojs:collection/",
+      "test": "Fallback navigation is visible",
+      "passed": true
+    },
+    {
+      "scope": "nojs:collection/",
+      "test": "Unavailable menu control is hidden",
+      "passed": true
+    },
+    {
+      "scope": "nojs:collection/",
+      "test": "Navigation links stay inside project base",
+      "passed": true
+    },
+    {
+      "scope": "nojs:collection/athena/",
+      "test": "Page loads without JavaScript",
+      "passed": true
+    },
+    {
+      "scope": "nojs:collection/athena/",
+      "test": "Fallback navigation is visible",
+      "passed": true
+    },
+    {
+      "scope": "nojs:collection/athena/",
+      "test": "Unavailable menu control is hidden",
+      "passed": true
+    },
+    {
+      "scope": "nojs:collection/athena/",
+      "test": "Navigation links stay inside project base",
+      "passed": true
+    },
+    {
+      "scope": "nojs:collection/discobole/",
+      "test": "Page loads without JavaScript",
+      "passed": true
+    },
+    {
+      "scope": "nojs:collection/discobole/",
+      "test": "Fallback navigation is visible",
+      "passed": true
+    },
+    {
+      "scope": "nojs:collection/discobole/",
+      "test": "Unavailable menu control is hidden",
+      "passed": true
+    },
+    {
+      "scope": "nojs:collection/discobole/",
+      "test": "Navigation links stay inside project base",
+      "passed": true
+    },
+    {
+      "scope": "nojs:collection/poseidon/",
+      "test": "Page loads without JavaScript",
+      "passed": true
+    },
+    {
+      "scope": "nojs:collection/poseidon/",
+      "test": "Fallback navigation is visible",
+      "passed": true
+    },
+    {
+      "scope": "nojs:collection/poseidon/",
+      "test": "Unavailable menu control is hidden",
+      "passed": true
+    },
+    {
+      "scope": "nojs:collection/poseidon/",
+      "test": "Navigation links stay inside project base",
+      "passed": true
+    },
+    {
+      "scope": "nojs:collection/prometheus/",
+      "test": "Page loads without JavaScript",
+      "passed": true
+    },
+    {
+      "scope": "nojs:collection/prometheus/",
+      "test": "Fallback navigation is visible",
+      "passed": true
+    },
+    {
+      "scope": "nojs:collection/prometheus/",
+      "test": "Unavailable menu control is hidden",
+      "passed": true
+    },
+    {
+      "scope": "nojs:collection/prometheus/",
+      "test": "Navigation links stay inside project base",
+      "passed": true
+    },
+    {
+      "scope": "nojs:collection/venus-de-milo/",
+      "test": "Page loads without JavaScript",
+      "passed": true
+    },
+    {
+      "scope": "nojs:collection/venus-de-milo/",
+      "test": "Fallback navigation is visible",
+      "passed": true
+    },
+    {
+      "scope": "nojs:collection/venus-de-milo/",
+      "test": "Unavailable menu control is hidden",
+      "passed": true
+    },
+    {
+      "scope": "nojs:collection/venus-de-milo/",
+      "test": "Navigation links stay inside project base",
+      "passed": true
+    },
+    {
+      "scope": "nojs:collection/victoire-de-samothrace/",
+      "test": "Page loads without JavaScript",
+      "passed": true
+    },
+    {
+      "scope": "nojs:collection/victoire-de-samothrace/",
+      "test": "Fallback navigation is visible",
+      "passed": true
+    },
+    {
+      "scope": "nojs:collection/victoire-de-samothrace/",
+      "test": "Unavailable menu control is hidden",
+      "passed": true
+    },
+    {
+      "scope": "nojs:collection/victoire-de-samothrace/",
+      "test": "Navigation links stay inside project base",
+      "passed": true
+    },
+    {
+      "scope": "nojs:en/",
+      "test": "Page loads without JavaScript",
+      "passed": true
+    },
+    {
+      "scope": "nojs:en/",
+      "test": "Fallback navigation is visible",
+      "passed": true
+    },
+    {
+      "scope": "nojs:en/",
+      "test": "Unavailable menu control is hidden",
+      "passed": true
+    },
+    {
+      "scope": "nojs:en/",
+      "test": "Navigation links stay inside project base",
+      "passed": true
+    },
+    {
+      "scope": "nojs:en/collection/",
+      "test": "Page loads without JavaScript",
+      "passed": true
+    },
+    {
+      "scope": "nojs:en/collection/",
+      "test": "Fallback navigation is visible",
+      "passed": true
+    },
+    {
+      "scope": "nojs:en/collection/",
+      "test": "Unavailable menu control is hidden",
+      "passed": true
+    },
+    {
+      "scope": "nojs:en/collection/",
+      "test": "Navigation links stay inside project base",
+      "passed": true
+    },
+    {
+      "scope": "nojs:en/collection/athena/",
+      "test": "Page loads without JavaScript",
+      "passed": true
+    },
+    {
+      "scope": "nojs:en/collection/athena/",
+      "test": "Fallback navigation is visible",
+      "passed": true
+    },
+    {
+      "scope": "nojs:en/collection/athena/",
+      "test": "Unavailable menu control is hidden",
+      "passed": true
+    },
+    {
+      "scope": "nojs:en/collection/athena/",
+      "test": "Navigation links stay inside project base",
+      "passed": true
+    },
+    {
+      "scope": "nojs:en/collection/discobolus/",
+      "test": "Page loads without JavaScript",
+      "passed": true
+    },
+    {
+      "scope": "nojs:en/collection/discobolus/",
+      "test": "Fallback navigation is visible",
+      "passed": true
+    },
+    {
+      "scope": "nojs:en/collection/discobolus/",
+      "test": "Unavailable menu control is hidden",
+      "passed": true
+    },
+    {
+      "scope": "nojs:en/collection/discobolus/",
+      "test": "Navigation links stay inside project base",
+      "passed": true
+    },
+    {
+      "scope": "nojs:en/collection/poseidon/",
+      "test": "Page loads without JavaScript",
+      "passed": true
+    },
+    {
+      "scope": "nojs:en/collection/poseidon/",
+      "test": "Fallback navigation is visible",
+      "passed": true
+    },
+    {
+      "scope": "nojs:en/collection/poseidon/",
+      "test": "Unavailable menu control is hidden",
+      "passed": true
+    },
+    {
+      "scope": "nojs:en/collection/poseidon/",
+      "test": "Navigation links stay inside project base",
+      "passed": true
+    },
+    {
+      "scope": "nojs:en/collection/prometheus/",
+      "test": "Page loads without JavaScript",
+      "passed": true
+    },
+    {
+      "scope": "nojs:en/collection/prometheus/",
+      "test": "Fallback navigation is visible",
+      "passed": true
+    },
+    {
+      "scope": "nojs:en/collection/prometheus/",
+      "test": "Unavailable menu control is hidden",
+      "passed": true
+    },
+    {
+      "scope": "nojs:en/collection/prometheus/",
+      "test": "Navigation links stay inside project base",
+      "passed": true
+    },
+    {
+      "scope": "nojs:en/collection/venus-de-milo/",
+      "test": "Page loads without JavaScript",
+      "passed": true
+    },
+    {
+      "scope": "nojs:en/collection/venus-de-milo/",
+      "test": "Fallback navigation is visible",
+      "passed": true
+    },
+    {
+      "scope": "nojs:en/collection/venus-de-milo/",
+      "test": "Unavailable menu control is hidden",
+      "passed": true
+    },
+    {
+      "scope": "nojs:en/collection/venus-de-milo/",
+      "test": "Navigation links stay inside project base",
+      "passed": true
+    },
+    {
+      "scope": "nojs:en/collection/winged-victory-of-samothrace/",
+      "test": "Page loads without JavaScript",
+      "passed": true
+    },
+    {
+      "scope": "nojs:en/collection/winged-victory-of-samothrace/",
+      "test": "Fallback navigation is visible",
+      "passed": true
+    },
+    {
+      "scope": "nojs:en/collection/winged-victory-of-samothrace/",
+      "test": "Unavailable menu control is hidden",
+      "passed": true
+    },
+    {
+      "scope": "nojs:en/collection/winged-victory-of-samothrace/",
+      "test": "Navigation links stay inside project base",
+      "passed": true
+    },
+    {
+      "scope": "nojs:en/gallery/",
+      "test": "Page loads without JavaScript",
+      "passed": true
+    },
+    {
+      "scope": "nojs:en/gallery/",
+      "test": "Fallback navigation is visible",
+      "passed": true
+    },
+    {
+      "scope": "nojs:en/gallery/",
+      "test": "Unavailable menu control is hidden",
+      "passed": true
+    },
+    {
+      "scope": "nojs:en/gallery/",
+      "test": "Navigation links stay inside project base",
+      "passed": true
+    },
+    {
+      "scope": "nojs:en/questions/",
+      "test": "Page loads without JavaScript",
+      "passed": true
+    },
+    {
+      "scope": "nojs:en/questions/",
+      "test": "Fallback navigation is visible",
+      "passed": true
+    },
+    {
+      "scope": "nojs:en/questions/",
+      "test": "Unavailable menu control is hidden",
+      "passed": true
+    },
+    {
+      "scope": "nojs:en/questions/",
+      "test": "Navigation links stay inside project base",
+      "passed": true
+    },
+    {
+      "scope": "nojs:en/sign-up/",
+      "test": "Page loads without JavaScript",
+      "passed": true
+    },
+    {
+      "scope": "nojs:en/sign-up/",
+      "test": "Fallback navigation is visible",
+      "passed": true
+    },
+    {
+      "scope": "nojs:en/sign-up/",
+      "test": "Unavailable menu control is hidden",
+      "passed": true
+    },
+    {
+      "scope": "nojs:en/sign-up/",
+      "test": "Navigation links stay inside project base",
+      "passed": true
+    },
+    {
+      "scope": "nojs:en/sign-up/",
+      "test": "Form demo explains JavaScript requirement",
+      "passed": true
+    },
+    {
+      "scope": "nojs:galerie/",
+      "test": "Page loads without JavaScript",
+      "passed": true
+    },
+    {
+      "scope": "nojs:galerie/",
+      "test": "Fallback navigation is visible",
+      "passed": true
+    },
+    {
+      "scope": "nojs:galerie/",
+      "test": "Unavailable menu control is hidden",
+      "passed": true
+    },
+    {
+      "scope": "nojs:galerie/",
+      "test": "Navigation links stay inside project base",
+      "passed": true
+    },
+    {
+      "scope": "nojs:inscription/",
+      "test": "Page loads without JavaScript",
+      "passed": true
+    },
+    {
+      "scope": "nojs:inscription/",
+      "test": "Fallback navigation is visible",
+      "passed": true
+    },
+    {
+      "scope": "nojs:inscription/",
+      "test": "Unavailable menu control is hidden",
+      "passed": true
+    },
+    {
+      "scope": "nojs:inscription/",
+      "test": "Navigation links stay inside project base",
+      "passed": true
+    },
+    {
+      "scope": "nojs:inscription/",
+      "test": "Form demo explains JavaScript requirement",
+      "passed": true
+    },
+    {
+      "scope": "nojs:questions/",
+      "test": "Page loads without JavaScript",
+      "passed": true
+    },
+    {
+      "scope": "nojs:questions/",
+      "test": "Fallback navigation is visible",
+      "passed": true
+    },
+    {
+      "scope": "nojs:questions/",
+      "test": "Unavailable menu control is hidden",
+      "passed": true
+    },
+    {
+      "scope": "nojs:questions/",
+      "test": "Navigation links stay inside project base",
+      "passed": true
+    }
+  ]
+}

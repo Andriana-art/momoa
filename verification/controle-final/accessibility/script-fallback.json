@@ -1,0 +1,575 @@
+{
+  "dateUTC": "2026-11-14T21:28:05.677Z",
+  "startCommit": "d0cc82660f58166022296534bb7f6d2cbe2c7b90",
+  "endCommit": "d0cc82660f58166022296534bb7f6d2cbe2c7b90",
+  "stableCommit": true,
+  "checks": 32,
+  "failed": 0,
+  "findings": [],
+  "details": [
+    {
+      "name": "normal-form-inert-removed-and-note-hidden",
+      "passed": true,
+      "lang": "fr",
+      "width": 390,
+      "normalState": {
+        "js": true,
+        "inert": false,
+        "visible": true,
+        "noteHidden": true
+      }
+    },
+    {
+      "name": "normal-form-input-focusable",
+      "passed": true,
+      "lang": "fr",
+      "width": 390
+    },
+    {
+      "name": "script-failure-restores-native-navigation",
+      "passed": true,
+      "lang": "fr",
+      "width": 390,
+      "route": "",
+      "fallback": {
+        "js": false,
+        "navLinks": [
+          {
+            "text": "Accueil",
+            "href": "http://127.0.0.1:4197/momoa/"
+          },
+          {
+            "text": "La galerie",
+            "href": "http://127.0.0.1:4197/momoa/galerie/"
+          },
+          {
+            "text": "Collection",
+            "href": "http://127.0.0.1:4197/momoa/collection/"
+          },
+          {
+            "text": "Inscription",
+            "href": "http://127.0.0.1:4197/momoa/inscription/"
+          }
+        ],
+        "menuToggleVisible": false,
+        "mainVisible": true
+      },
+      "expectedFailures": [
+        {
+          "url": "http://127.0.0.1:4197/momoa/assets/site.js?v=1472df88a4ff",
+          "error": "net::ERR_FAILED"
+        }
+      ]
+    },
+    {
+      "name": "script-failure-navigation-link-works",
+      "passed": true,
+      "lang": "fr",
+      "width": 390,
+      "route": "",
+      "expected": "http://127.0.0.1:4197/momoa/",
+      "actual": "http://127.0.0.1:4197/momoa/"
+    },
+    {
+      "name": "script-failure-restores-native-navigation",
+      "passed": true,
+      "lang": "fr",
+      "width": 390,
+      "route": "inscription/",
+      "fallback": {
+        "js": false,
+        "navLinks": [
+          {
+            "text": "Accueil",
+            "href": "http://127.0.0.1:4197/momoa/"
+          },
+          {
+            "text": "La galerie",
+            "href": "http://127.0.0.1:4197/momoa/galerie/"
+          },
+          {
+            "text": "Collection",
+            "href": "http://127.0.0.1:4197/momoa/collection/"
+          },
+          {
+            "text": "Inscription",
+            "href": "http://127.0.0.1:4197/momoa/inscription/"
+          }
+        ],
+        "menuToggleVisible": false,
+        "mainVisible": true
+      },
+      "expectedFailures": [
+        {
+          "url": "http://127.0.0.1:4197/momoa/assets/site.js?v=1472df88a4ff",
+          "error": "net::ERR_FAILED"
+        },
+        {
+          "url": "http://127.0.0.1:4197/momoa/assets/site.js?v=1472df88a4ff",
+          "error": "net::ERR_FAILED"
+        }
+      ]
+    },
+    {
+      "name": "script-failure-note-shown-and-dead-controls-excluded",
+      "passed": true,
+      "lang": "fr",
+      "width": 390,
+      "route": "inscription/",
+      "form": {
+        "hidden": true,
+        "inert": true,
+        "noteVisible": true,
+        "note": "Activez JavaScript pour essayer le formulaire de démonstration.",
+        "focusExcluded": true,
+        "visibleInputCount": 0
+      }
+    },
+    {
+      "name": "script-failure-navigation-link-works",
+      "passed": true,
+      "lang": "fr",
+      "width": 390,
+      "route": "inscription/",
+      "expected": "http://127.0.0.1:4197/momoa/",
+      "actual": "http://127.0.0.1:4197/momoa/"
+    },
+    {
+      "name": "JavaScript-disabled-keeps-fallback",
+      "passed": true,
+      "lang": "fr",
+      "width": 390,
+      "nojsState": {
+        "js": false,
+        "formHidden": true,
+        "noteVisible": true,
+        "navVisible": true
+      }
+    },
+    {
+      "name": "normal-form-inert-removed-and-note-hidden",
+      "passed": true,
+      "lang": "en",
+      "width": 390,
+      "normalState": {
+        "js": true,
+        "inert": false,
+        "visible": true,
+        "noteHidden": true
+      }
+    },
+    {
+      "name": "normal-form-input-focusable",
+      "passed": true,
+      "lang": "en",
+      "width": 390
+    },
+    {
+      "name": "script-failure-restores-native-navigation",
+      "passed": true,
+      "lang": "en",
+      "width": 390,
+      "route": "en/",
+      "fallback": {
+        "js": false,
+        "navLinks": [
+          {
+            "text": "Home",
+            "href": "http://127.0.0.1:4197/momoa/en/"
+          },
+          {
+            "text": "The gallery",
+            "href": "http://127.0.0.1:4197/momoa/en/gallery/"
+          },
+          {
+            "text": "Collection",
+            "href": "http://127.0.0.1:4197/momoa/en/collection/"
+          },
+          {
+            "text": "Sign up",
+            "href": "http://127.0.0.1:4197/momoa/en/sign-up/"
+          }
+        ],
+        "menuToggleVisible": false,
+        "mainVisible": true
+      },
+      "expectedFailures": [
+        {
+          "url": "http://127.0.0.1:4197/momoa/assets/site.js?v=1472df88a4ff",
+          "error": "net::ERR_FAILED"
+        }
+      ]
+    },
+    {
+      "name": "script-failure-navigation-link-works",
+      "passed": true,
+      "lang": "en",
+      "width": 390,
+      "route": "en/",
+      "expected": "http://127.0.0.1:4197/momoa/en/",
+      "actual": "http://127.0.0.1:4197/momoa/en/"
+    },
+    {
+      "name": "script-failure-restores-native-navigation",
+      "passed": true,
+      "lang": "en",
+      "width": 390,
+      "route": "en/sign-up/",
+      "fallback": {
+        "js": false,
+        "navLinks": [
+          {
+            "text": "Home",
+            "href": "http://127.0.0.1:4197/momoa/en/"
+          },
+          {
+            "text": "The gallery",
+            "href": "http://127.0.0.1:4197/momoa/en/gallery/"
+          },
+          {
+            "text": "Collection",
+            "href": "http://127.0.0.1:4197/momoa/en/collection/"
+          },
+          {
+            "text": "Sign up",
+            "href": "http://127.0.0.1:4197/momoa/en/sign-up/"
+          }
+        ],
+        "menuToggleVisible": false,
+        "mainVisible": true
+      },
+      "expectedFailures": [
+        {
+          "url": "http://127.0.0.1:4197/momoa/assets/site.js?v=1472df88a4ff",
+          "error": "net::ERR_FAILED"
+        },
+        {
+          "url": "http://127.0.0.1:4197/momoa/assets/site.js?v=1472df88a4ff",
+          "error": "net::ERR_FAILED"
+        }
+      ]
+    },
+    {
+      "name": "script-failure-note-shown-and-dead-controls-excluded",
+      "passed": true,
+      "lang": "en",
+      "width": 390,
+      "route": "en/sign-up/",
+      "form": {
+        "hidden": true,
+        "inert": true,
+        "noteVisible": true,
+        "note": "Enable JavaScript to try the demonstration form.",
+        "focusExcluded": true,
+        "visibleInputCount": 0
+      }
+    },
+    {
+      "name": "script-failure-navigation-link-works",
+      "passed": true,
+      "lang": "en",
+      "width": 390,
+      "route": "en/sign-up/",
+      "expected": "http://127.0.0.1:4197/momoa/en/",
+      "actual": "http://127.0.0.1:4197/momoa/en/"
+    },
+    {
+      "name": "JavaScript-disabled-keeps-fallback",
+      "passed": true,
+      "lang": "en",
+      "width": 390,
+      "nojsState": {
+        "js": false,
+        "formHidden": true,
+        "noteVisible": true,
+        "navVisible": true
+      }
+    },
+    {
+      "name": "normal-form-inert-removed-and-note-hidden",
+      "passed": true,
+      "lang": "fr",
+      "width": 1440,
+      "normalState": {
+        "js": true,
+        "inert": false,
+        "visible": true,
+        "noteHidden": true
+      }
+    },
+    {
+      "name": "normal-form-input-focusable",
+      "passed": true,
+      "lang": "fr",
+      "width": 1440
+    },
+    {
+      "name": "script-failure-restores-native-navigation",
+      "passed": true,
+      "lang": "fr",
+      "width": 1440,
+      "route": "",
+      "fallback": {
+        "js": false,
+        "navLinks": [
+          {
+            "text": "Accueil",
+            "href": "http://127.0.0.1:4197/momoa/"
+          },
+          {
+            "text": "La galerie",
+            "href": "http://127.0.0.1:4197/momoa/galerie/"
+          },
+          {
+            "text": "Collection",
+            "href": "http://127.0.0.1:4197/momoa/collection/"
+          },
+          {
+            "text": "Inscription",
+            "href": "http://127.0.0.1:4197/momoa/inscription/"
+          }
+        ],
+        "menuToggleVisible": false,
+        "mainVisible": true
+      },
+      "expectedFailures": [
+        {
+          "url": "http://127.0.0.1:4197/momoa/assets/site.js?v=1472df88a4ff",
+          "error": "net::ERR_FAILED"
+        }
+      ]
+    },
+    {
+      "name": "script-failure-navigation-link-works",
+      "passed": true,
+      "lang": "fr",
+      "width": 1440,
+      "route": "",
+      "expected": "http://127.0.0.1:4197/momoa/",
+      "actual": "http://127.0.0.1:4197/momoa/"
+    },
+    {
+      "name": "script-failure-restores-native-navigation",
+      "passed": true,
+      "lang": "fr",
+      "width": 1440,
+      "route": "inscription/",
+      "fallback": {
+        "js": false,
+        "navLinks": [
+          {
+            "text": "Accueil",
+            "href": "http://127.0.0.1:4197/momoa/"
+          },
+          {
+            "text": "La galerie",
+            "href": "http://127.0.0.1:4197/momoa/galerie/"
+          },
+          {
+            "text": "Collection",
+            "href": "http://127.0.0.1:4197/momoa/collection/"
+          },
+          {
+            "text": "Inscription",
+            "href": "http://127.0.0.1:4197/momoa/inscription/"
+          }
+        ],
+        "menuToggleVisible": false,
+        "mainVisible": true
+      },
+      "expectedFailures": [
+        {
+          "url": "http://127.0.0.1:4197/momoa/assets/site.js?v=1472df88a4ff",
+          "error": "net::ERR_FAILED"
+        },
+        {
+          "url": "http://127.0.0.1:4197/momoa/assets/site.js?v=1472df88a4ff",
+          "error": "net::ERR_FAILED"
+        }
+      ]
+    },
+    {
+      "name": "script-failure-note-shown-and-dead-controls-excluded",
+      "passed": true,
+      "lang": "fr",
+      "width": 1440,
+      "route": "inscription/",
+      "form": {
+        "hidden": true,
+        "inert": true,
+        "noteVisible": true,
+        "note": "Activez JavaScript pour essayer le formulaire de démonstration.",
+        "focusExcluded": true,
+        "visibleInputCount": 0
+      }
+    },
+    {
+      "name": "script-failure-navigation-link-works",
+      "passed": true,
+      "lang": "fr",
+      "width": 1440,
+      "route": "inscription/",
+      "expected": "http://127.0.0.1:4197/momoa/",
+      "actual": "http://127.0.0.1:4197/momoa/"
+    },
+    {
+      "name": "JavaScript-disabled-keeps-fallback",
+      "passed": true,
+      "lang": "fr",
+      "width": 1440,
+      "nojsState": {
+        "js": false,
+        "formHidden": true,
+        "noteVisible": true,
+        "navVisible": true
+      }
+    },
+    {
+      "name": "normal-form-inert-removed-and-note-hidden",
+      "passed": true,
+      "lang": "en",
+      "width": 1440,
+      "normalState": {
+        "js": true,
+        "inert": false,
+        "visible": true,
+        "noteHidden": true
+      }
+    },
+    {
+      "name": "normal-form-input-focusable",
+      "passed": true,
+      "lang": "en",
+      "width": 1440
+    },
+    {
+      "name": "script-failure-restores-native-navigation",
+      "passed": true,
+      "lang": "en",
+      "width": 1440,
+      "route": "en/",
+      "fallback": {
+        "js": false,
+        "navLinks": [
+          {
+            "text": "Home",
+            "href": "http://127.0.0.1:4197/momoa/en/"
+          },
+          {
+            "text": "The gallery",
+            "href": "http://127.0.0.1:4197/momoa/en/gallery/"
+          },
+          {
+            "text": "Collection",
+            "href": "http://127.0.0.1:4197/momoa/en/collection/"
+          },
+          {
+            "text": "Sign up",
+            "href": "http://127.0.0.1:4197/momoa/en/sign-up/"
+          }
+        ],
+        "menuToggleVisible": false,
+        "mainVisible": true
+      },
+      "expectedFailures": [
+        {
+          "url": "http://127.0.0.1:4197/momoa/assets/site.js?v=1472df88a4ff",
+          "error": "net::ERR_FAILED"
+        }
+      ]
+    },
+    {
+      "name": "script-failure-navigation-link-works",
+      "passed": true,
+      "lang": "en",
+      "width": 1440,
+      "route": "en/",
+      "expected": "http://127.0.0.1:4197/momoa/en/",
+      "actual": "http://127.0.0.1:4197/momoa/en/"
+    },
+    {
+      "name": "script-failure-restores-native-navigation",
+      "passed": true,
+      "lang": "en",
+      "width": 1440,
+      "route": "en/sign-up/",
+      "fallback": {
+        "js": false,
+        "navLinks": [
+          {
+            "text": "Home",
+            "href": "http://127.0.0.1:4197/momoa/en/"
+          },
+          {
+            "text": "The gallery",
+            "href": "http://127.0.0.1:4197/momoa/en/gallery/"
+          },
+          {
+            "text": "Collection",
+            "href": "http://127.0.0.1:4197/momoa/en/collection/"
+          },
+          {
+            "text": "Sign up",
+            "href": "http://127.0.0.1:4197/momoa/en/sign-up/"
+          }
+        ],
+        "menuToggleVisible": false,
+        "mainVisible": true
+      },
+      "expectedFailures": [
+        {
+          "url": "http://127.0.0.1:4197/momoa/assets/site.js?v=1472df88a4ff",
+          "error": "net::ERR_FAILED"
+        },
+        {
+          "url": "http://127.0.0.1:4197/momoa/assets/site.js?v=1472df88a4ff",
+          "error": "net::ERR_FAILED"
+        }
+      ]
+    },
+    {
+      "name": "script-failure-note-shown-and-dead-controls-excluded",
+      "passed": true,
+      "lang": "en",
+      "width": 1440,
+      "route": "en/sign-up/",
+      "form": {
+        "hidden": true,
+        "inert": true,
+        "noteVisible": true,
+        "note": "Enable JavaScript to try the demonstration form.",
+        "focusExcluded": true,
+        "visibleInputCount": 0
+      }
+    },
+    {
+      "name": "script-failure-navigation-link-works",
+      "passed": true,
+      "lang": "en",
+      "width": 1440,
+      "route": "en/sign-up/",
+      "expected": "http://127.0.0.1:4197/momoa/en/",
+      "actual": "http://127.0.0.1:4197/momoa/en/"
+    },
+    {
+      "name": "JavaScript-disabled-keeps-fallback",
+      "passed": true,
+      "lang": "en",
+      "width": 1440,
+      "nojsState": {
+        "js": false,
+        "formHidden": true,
+        "noteVisible": true,
+        "navVisible": true
+      }
+    }
+  ],
+  "sourcesSHA256": {
+    "docs/index.html": "f905e234c49ca399d2a89a73bcb5ec29b4da0439745ea682f552a535f7eee5d0",
+    "docs/en/index.html": "b5ea920532fda01e0ac8c6bdeaf923c6e1bc1ab4b2cb29fe63b2a4c2e7859a31",
+    "docs/inscription/index.html": "1077737b422f6208e30e16dd1d0f3ff4f417e8231782008ab8539ec148a8f0dd",
+    "docs/en/sign-up/index.html": "2486bf68db497dc3a8ac42e33e9ce7dafdee41694cbee914be2c6d8b825758a7",
+    "docs/assets/styles.css": "926106291faa31d8ad61d5a9f28200c5d184b5e8206cebbab2d168c716d1b823",
+    "docs/assets/site.js": "1472df88a4ff82fddc1c1f2d35fe193c99a9c76b37b0adc103dcda0dc214c0c8"
+  }
+}

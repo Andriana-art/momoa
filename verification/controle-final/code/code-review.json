@@ -1,0 +1,28 @@
+{
+  "date_utc": "2026-11-14T21:27:59.222022+00:00",
+  "commit": "d0cc82660f58166022296534bb7f6d2cbe2c7b90",
+  "method": "Read-only source review; runtime fault injection belongs to the separate accessibility and responsive proofs.",
+  "checks": {
+    "initial_signup_form_occupies_space_with_js": true,
+    "initial_signup_controls_inert_until_handlers_attached": true,
+    "inert_removed_after_handlers_attached": true,
+    "without_js_form_hidden_and_note_visible": true,
+    "script_load_error_removes_js_class_to_restore_fallback": true,
+    "image_load_error_does_not_remove_js_class": true,
+    "hidden_attribute_overrides_grid_after_confirmation": true,
+    "css_and_js_urls_are_content_versioned": true,
+    "headings_font_preload_used_by_all_content_pages": true
+  },
+  "blocking_findings": [],
+  "source_sha256": {
+    "src/build.mjs": "c9e159429771e9f3b056c51ed7bebea0a2a590cbe281abf6f5949b152c4da329",
+    "docs/assets/styles.css": "926106291faa31d8ad61d5a9f28200c5d184b5e8206cebbab2d168c716d1b823",
+    "docs/assets/site.js": "1472df88a4ff82fddc1c1f2d35fe193c99a9c76b37b0adc103dcda0dc214c0c8",
+    "docs/inscription/index.html": "1077737b422f6208e30e16dd1d0f3ff4f417e8231782008ab8539ec148a8f0dd",
+    "docs/en/sign-up/index.html": "2486bf68db497dc3a8ac42e33e9ce7dafdee41694cbee914be2c6d8b825758a7"
+  },
+  "limits": [
+    "The fallback note retains the prior instruction to enable JavaScript, including when the main script fails to download. The controls are hidden rather than left inert and visible.",
+    "This review does not establish a cause for the isolated Google FAQ layout shift; local font-delay tests did not reproduce it."
+  ]
+}

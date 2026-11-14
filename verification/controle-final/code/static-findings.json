@@ -1,0 +1,1814 @@
+{
+  "date_utc": "2026-11-14T21:23:16.981090+00:00",
+  "commit": "d0cc82660f58166022296534bb7f6d2cbe2c7b90",
+  "deployed_html": 23,
+  "business_pages": 22,
+  "local_references": 783,
+  "local_reference_breakdown": {
+    "href": 485,
+    "src": 160,
+    "srcset": 86,
+    "imagesrcset": 16,
+    "inline-css-url": 24,
+    "css-url": 12
+  },
+  "internal_errors": [],
+  "nonblocking_notes": [
+    {
+      "page": "404.html",
+      "note": "Standalone error page has no description/canonical/robots metadata. This is a nonblocking SEO limitation; unknown paths should return HTTP404, checked separately on the published site."
+    }
+  ],
+  "external_links_unique": 13,
+  "external_unconfirmed": [
+    {
+      "url": "https://www.smb.museum/en/museums-institutions/zentralarchiv/holdings/overview/internal-business-records-up-to-1945/#c38859",
+      "reachable": false,
+      "error": "The read operation timed out"
+    }
+  ],
+  "bootstrap_used": false,
+  "source_conventions": {
+    "generator": "src/build.mjs",
+    "content": "src/content.mjs",
+    "stylesheet_source": "docs/assets/styles.css",
+    "styles_inlined_from_single_source_on_homes": true,
+    "behavior_script": "docs/assets/site.js",
+    "tiny_inline_script": "adds js class for progressive enhancement",
+    "indentation_and_classes": "consistent descriptive conventions; no course-specific formatter supplied"
+  },
+  "seo_optional_improvements": {
+    "sitemap": false,
+    "robots_txt": false,
+    "canonical_count": 0,
+    "notes": "Small internally linked static site has title, language, H1 and description on all22 contentpages; sitemap/canonical metadata are optional enhancements."
+  },
+  "pages": [
+    {
+      "page": "404.html",
+      "language": "fr",
+      "title": "Page introuvable – Momoa",
+      "description": [],
+      "h1_count": 1,
+      "heading_levels": [
+        1
+      ],
+      "heading_level_jumps": [],
+      "main_count": 1,
+      "duplicate_ids": [],
+      "images": [],
+      "missing_alt": [],
+      "unnamed_links_buttons": [],
+      "unlabelled_fields": [],
+      "nested_interactive": [],
+      "inline_event_handlers": [],
+      "inline_style_attributes": 0,
+      "viewport": [
+        "width=device-width, initial-scale=1"
+      ],
+      "canonical": [],
+      "hreflang": [],
+      "robots": [],
+      "sha256": "0638b97726dc7dc943ef4c16d0df7470733474c68837b0d56e70f1b4f795883a",
+      "checks": {
+        "language": true,
+        "title": true,
+        "h1": true,
+        "heading_order": true,
+        "main": true,
+        "unique_ids": true,
+        "alt_present": true,
+        "named_controls": true,
+        "labelled_fields": true,
+        "no_nested_interactive": true,
+        "no_inline_events": true,
+        "no_presentation_attributes": true,
+        "viewport": true
+      }
+    },
+    {
+      "page": "collection/athena/index.html",
+      "language": "fr",
+      "title": "Athéna — MOMOA",
+      "description": [
+        "Un casque et une égide pour reconnaître Athéna"
+      ],
+      "h1_count": 1,
+      "heading_levels": [
+        2,
+        1,
+        2,
+        2
+      ],
+      "heading_level_jumps": [],
+      "main_count": 1,
+      "duplicate_ids": [],
+      "images": [
+        {
+          "src": "../../assets/images/emblem.svg",
+          "alt": ""
+        },
+        {
+          "src": "../../assets/images/menu-open.svg",
+          "alt": ""
+        },
+        {
+          "src": "../../assets/images/menu-close.svg",
+          "alt": ""
+        },
+        {
+          "src": "../../assets/images/notice-athena-fr-mobile.webp",
+          "alt": "Athéna"
+        },
+        {
+          "src": "../../assets/images/emblem.svg",
+          "alt": ""
+        }
+      ],
+      "missing_alt": [],
+      "unnamed_links_buttons": [],
+      "unlabelled_fields": [],
+      "nested_interactive": [],
+      "inline_event_handlers": [],
+      "inline_style_attributes": 0,
+      "viewport": [
+        "width=device-width, initial-scale=1"
+      ],
+      "canonical": [],
+      "hreflang": [
+        "en"
+      ],
+      "robots": [],
+      "sha256": "971a54084d43afcdf5ae1448f0b4bab289a33d4af3eee01c901a30e85434a2cb",
+      "checks": {
+        "language": true,
+        "title": true,
+        "h1": true,
+        "heading_order": true,
+        "main": true,
+        "unique_ids": true,
+        "alt_present": true,
+        "named_controls": true,
+        "labelled_fields": true,
+        "no_nested_interactive": true,
+        "no_inline_events": true,
+        "no_presentation_attributes": true,
+        "viewport": true,
+        "description": true,
+        "bilingual_switch": true
+      }
+    },
+    {
+      "page": "collection/discobole/index.html",
+      "language": "fr",
+      "title": "Discobole — MOMOA",
+      "description": [
+        "L’instant qui précède le lancer"
+      ],
+      "h1_count": 1,
+      "heading_levels": [
+        2,
+        1,
+        2,
+        2
+      ],
+      "heading_level_jumps": [],
+      "main_count": 1,
+      "duplicate_ids": [],
+      "images": [
+        {
+          "src": "../../assets/images/emblem.svg",
+          "alt": ""
+        },
+        {
+          "src": "../../assets/images/menu-open.svg",
+          "alt": ""
+        },
+        {
+          "src": "../../assets/images/menu-close.svg",
+          "alt": ""
+        },
+        {
+          "src": "../../assets/images/notice-discobole-fr-mobile.webp",
+          "alt": "Discobole"
+        },
+        {
+          "src": "../../assets/images/emblem.svg",
+          "alt": ""
+        }
+      ],
+      "missing_alt": [],
+      "unnamed_links_buttons": [],
+      "unlabelled_fields": [],
+      "nested_interactive": [],
+      "inline_event_handlers": [],
+      "inline_style_attributes": 0,
+      "viewport": [
+        "width=device-width, initial-scale=1"
+      ],
+      "canonical": [],
+      "hreflang": [
+        "en"
+      ],
+      "robots": [],
+      "sha256": "8294b35c04e452f09a33e19827fbfdcd88d31dbddc5fdd3066a9f991c933339a",
+      "checks": {
+        "language": true,
+        "title": true,
+        "h1": true,
+        "heading_order": true,
+        "main": true,
+        "unique_ids": true,
+        "alt_present": true,
+        "named_controls": true,
+        "labelled_fields": true,
+        "no_nested_interactive": true,
+        "no_inline_events": true,
+        "no_presentation_attributes": true,
+        "viewport": true,
+        "description": true,
+        "bilingual_switch": true
+      }
+    },
+    {
+      "page": "collection/index.html",
+      "language": "fr",
+      "title": "Collection — MOMOA",
+      "description": [
+        "Découvrez les six sculptures de la collection MOMOA, de l’Antiquité à ses réinterprétations."
+      ],
+      "h1_count": 1,
+      "heading_levels": [
+        2,
+        1,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2
+      ],
+      "heading_level_jumps": [],
+      "main_count": 1,
+      "duplicate_ids": [],
+      "images": [
+        {
+          "src": "../assets/images/emblem.svg",
+          "alt": ""
+        },
+        {
+          "src": "../assets/images/menu-open.svg",
+          "alt": ""
+        },
+        {
+          "src": "../assets/images/menu-close.svg",
+          "alt": ""
+        },
+        {
+          "src": "../assets/images/collection-victoire.webp",
+          "alt": ""
+        },
+        {
+          "src": "../assets/images/collection-discobole.webp",
+          "alt": ""
+        },
+        {
+          "src": "../assets/images/collection-venus.webp",
+          "alt": ""
+        },
+        {
+          "src": "../assets/images/collection-prometheus.webp",
+          "alt": ""
+        },
+        {
+          "src": "../assets/images/collection-athena.webp",
+          "alt": ""
+        },
+        {
+          "src": "../assets/images/collection-poseidon.webp",
+          "alt": ""
+        },
+        {
+          "src": "../assets/images/emblem.svg",
+          "alt": ""
+        }
+      ],
+      "missing_alt": [],
+      "unnamed_links_buttons": [],
+      "unlabelled_fields": [],
+      "nested_interactive": [],
+      "inline_event_handlers": [],
+      "inline_style_attributes": 0,
+      "viewport": [
+        "width=device-width, initial-scale=1"
+      ],
+      "canonical": [],
+      "hreflang": [
+        "en"
+      ],
+      "robots": [],
+      "sha256": "7ee8d5e1cc03141877e8e2b6bc3251b560ba1d3510a3684974e7f900f873d988",
+      "checks": {
+        "language": true,
+        "title": true,
+        "h1": true,
+        "heading_order": true,
+        "main": true,
+        "unique_ids": true,
+        "alt_present": true,
+        "named_controls": true,
+        "labelled_fields": true,
+        "no_nested_interactive": true,
+        "no_inline_events": true,
+        "no_presentation_attributes": true,
+        "viewport": true,
+        "description": true,
+        "bilingual_switch": true
+      }
+    },
+    {
+      "page": "collection/poseidon/index.html",
+      "language": "fr",
+      "title": "Poséidon — MOMOA",
+      "description": [
+        "Le bras levé"
+      ],
+      "h1_count": 1,
+      "heading_levels": [
+        2,
+        1,
+        2,
+        2
+      ],
+      "heading_level_jumps": [],
+      "main_count": 1,
+      "duplicate_ids": [],
+      "images": [
+        {
+          "src": "../../assets/images/emblem.svg",
+          "alt": ""
+        },
+        {
+          "src": "../../assets/images/menu-open.svg",
+          "alt": ""
+        },
+        {
+          "src": "../../assets/images/menu-close.svg",
+          "alt": ""
+        },
+        {
+          "src": "../../assets/images/notice-poseidon-fr-mobile.webp",
+          "alt": "Poséidon"
+        },
+        {
+          "src": "../../assets/images/emblem.svg",
+          "alt": ""
+        }
+      ],
+      "missing_alt": [],
+      "unnamed_links_buttons": [],
+      "unlabelled_fields": [],
+      "nested_interactive": [],
+      "inline_event_handlers": [],
+      "inline_style_attributes": 0,
+      "viewport": [
+        "width=device-width, initial-scale=1"
+      ],
+      "canonical": [],
+      "hreflang": [
+        "en"
+      ],
+      "robots": [],
+      "sha256": "b9c0f2b222ea82cf1076998d7a20edea97783fa25f4a3987b6274697c84eec27",
+      "checks": {
+        "language": true,
+        "title": true,
+        "h1": true,
+        "heading_order": true,
+        "main": true,
+        "unique_ids": true,
+        "alt_present": true,
+        "named_controls": true,
+        "labelled_fields": true,
+        "no_nested_interactive": true,
+        "no_inline_events": true,
+        "no_presentation_attributes": true,
+        "viewport": true,
+        "description": true,
+        "bilingual_switch": true
+      }
+    },
+    {
+      "page": "collection/prometheus/index.html",
+      "language": "fr",
+      "title": "Prométhée — MOMOA",
+      "description": [
+        "Les Océanides entourent le Titan enchaîné"
+      ],
+      "h1_count": 1,
+      "heading_levels": [
+        2,
+        1,
+        2,
+        2
+      ],
+      "heading_level_jumps": [],
+      "main_count": 1,
+      "duplicate_ids": [],
+      "images": [
+        {
+          "src": "../../assets/images/emblem.svg",
+          "alt": ""
+        },
+        {
+          "src": "../../assets/images/menu-open.svg",
+          "alt": ""
+        },
+        {
+          "src": "../../assets/images/menu-close.svg",
+          "alt": ""
+        },
+        {
+          "src": "../../assets/images/notice-prometheus-fr-mobile.webp",
+          "alt": "Prométhée"
+        },
+        {
+          "src": "../../assets/images/emblem.svg",
+          "alt": ""
+        }
+      ],
+      "missing_alt": [],
+      "unnamed_links_buttons": [],
+      "unlabelled_fields": [],
+      "nested_interactive": [],
+      "inline_event_handlers": [],
+      "inline_style_attributes": 0,
+      "viewport": [
+        "width=device-width, initial-scale=1"
+      ],
+      "canonical": [],
+      "hreflang": [
+        "en"
+      ],
+      "robots": [],
+      "sha256": "31c97cbb9bf9708643d30d089a48123b37cd1700c8219ca30c823860c867497a",
+      "checks": {
+        "language": true,
+        "title": true,
+        "h1": true,
+        "heading_order": true,
+        "main": true,
+        "unique_ids": true,
+        "alt_present": true,
+        "named_controls": true,
+        "labelled_fields": true,
+        "no_nested_interactive": true,
+        "no_inline_events": true,
+        "no_presentation_attributes": true,
+        "viewport": true,
+        "description": true,
+        "bilingual_switch": true
+      }
+    },
+    {
+      "page": "collection/venus-de-milo/index.html",
+      "language": "fr",
+      "title": "Vénus de Milo — MOMOA",
+      "description": [
+        "Un buste nu, un drapé noué aux hanches"
+      ],
+      "h1_count": 1,
+      "heading_levels": [
+        2,
+        1,
+        2,
+        2
+      ],
+      "heading_level_jumps": [],
+      "main_count": 1,
+      "duplicate_ids": [],
+      "images": [
+        {
+          "src": "../../assets/images/emblem.svg",
+          "alt": ""
+        },
+        {
+          "src": "../../assets/images/menu-open.svg",
+          "alt": ""
+        },
+        {
+          "src": "../../assets/images/menu-close.svg",
+          "alt": ""
+        },
+        {
+          "src": "../../assets/images/notice-venus-fr-mobile.webp",
+          "alt": "Vénus de Milo"
+        },
+        {
+          "src": "../../assets/images/emblem.svg",
+          "alt": ""
+        }
+      ],
+      "missing_alt": [],
+      "unnamed_links_buttons": [],
+      "unlabelled_fields": [],
+      "nested_interactive": [],
+      "inline_event_handlers": [],
+      "inline_style_attributes": 0,
+      "viewport": [
+        "width=device-width, initial-scale=1"
+      ],
+      "canonical": [],
+      "hreflang": [
+        "en"
+      ],
+      "robots": [],
+      "sha256": "9becbff9390bb0e4adc3a73b27e14c99fadf0b5874bbc238b30a36bed6ad26e9",
+      "checks": {
+        "language": true,
+        "title": true,
+        "h1": true,
+        "heading_order": true,
+        "main": true,
+        "unique_ids": true,
+        "alt_present": true,
+        "named_controls": true,
+        "labelled_fields": true,
+        "no_nested_interactive": true,
+        "no_inline_events": true,
+        "no_presentation_attributes": true,
+        "viewport": true,
+        "description": true,
+        "bilingual_switch": true
+      }
+    },
+    {
+      "page": "collection/victoire-de-samothrace/index.html",
+      "language": "fr",
+      "title": "Victoire de Samothrace — MOMOA",
+      "description": [
+        "Les plis du marbre dessinent le vent"
+      ],
+      "h1_count": 1,
+      "heading_levels": [
+        2,
+        1,
+        2,
+        2
+      ],
+      "heading_level_jumps": [],
+      "main_count": 1,
+      "duplicate_ids": [],
+      "images": [
+        {
+          "src": "../../assets/images/emblem.svg",
+          "alt": ""
+        },
+        {
+          "src": "../../assets/images/menu-open.svg",
+          "alt": ""
+        },
+        {
+          "src": "../../assets/images/menu-close.svg",
+          "alt": ""
+        },
+        {
+          "src": "../../assets/images/notice-victoire-fr-mobile.webp",
+          "alt": "Victoire de Samothrace"
+        },
+        {
+          "src": "../../assets/images/emblem.svg",
+          "alt": ""
+        }
+      ],
+      "missing_alt": [],
+      "unnamed_links_buttons": [],
+      "unlabelled_fields": [],
+      "nested_interactive": [],
+      "inline_event_handlers": [],
+      "inline_style_attributes": 0,
+      "viewport": [
+        "width=device-width, initial-scale=1"
+      ],
+      "canonical": [],
+      "hreflang": [
+        "en"
+      ],
+      "robots": [],
+      "sha256": "80c27cd3b55d50892c4304b16a1bc3b6a33d0ec1b5ac4d9f7916a26a70f58ffd",
+      "checks": {
+        "language": true,
+        "title": true,
+        "h1": true,
+        "heading_order": true,
+        "main": true,
+        "unique_ids": true,
+        "alt_present": true,
+        "named_controls": true,
+        "labelled_fields": true,
+        "no_nested_interactive": true,
+        "no_inline_events": true,
+        "no_presentation_attributes": true,
+        "viewport": true,
+        "description": true,
+        "bilingual_switch": true
+      }
+    },
+    {
+      "page": "en/collection/athena/index.html",
+      "language": "en",
+      "title": "Athena — MOMOA",
+      "description": [
+        "Athena’s helmet and aegis identify the goddess"
+      ],
+      "h1_count": 1,
+      "heading_levels": [
+        2,
+        1,
+        2,
+        2
+      ],
+      "heading_level_jumps": [],
+      "main_count": 1,
+      "duplicate_ids": [],
+      "images": [
+        {
+          "src": "../../../assets/images/emblem.svg",
+          "alt": ""
+        },
+        {
+          "src": "../../../assets/images/menu-open.svg",
+          "alt": ""
+        },
+        {
+          "src": "../../../assets/images/menu-close.svg",
+          "alt": ""
+        },
+        {
+          "src": "../../../assets/images/notice-athena-en-mobile.webp",
+          "alt": "Athena"
+        },
+        {
+          "src": "../../../assets/images/emblem.svg",
+          "alt": ""
+        }
+      ],
+      "missing_alt": [],
+      "unnamed_links_buttons": [],
+      "unlabelled_fields": [],
+      "nested_interactive": [],
+      "inline_event_handlers": [],
+      "inline_style_attributes": 0,
+      "viewport": [
+        "width=device-width, initial-scale=1"
+      ],
+      "canonical": [],
+      "hreflang": [
+        "fr"
+      ],
+      "robots": [],
+      "sha256": "0426539400f10d23d3aa5c7bc4b6c42a637a0f45e38321b7f384712a72858e91",
+      "checks": {
+        "language": true,
+        "title": true,
+        "h1": true,
+        "heading_order": true,
+        "main": true,
+        "unique_ids": true,
+        "alt_present": true,
+        "named_controls": true,
+        "labelled_fields": true,
+        "no_nested_interactive": true,
+        "no_inline_events": true,
+        "no_presentation_attributes": true,
+        "viewport": true,
+        "description": true,
+        "bilingual_switch": true
+      }
+    },
+    {
+      "page": "en/collection/discobolus/index.html",
+      "language": "en",
+      "title": "Discobolus — MOMOA",
+      "description": [
+        "The moment before the throw"
+      ],
+      "h1_count": 1,
+      "heading_levels": [
+        2,
+        1,
+        2,
+        2
+      ],
+      "heading_level_jumps": [],
+      "main_count": 1,
+      "duplicate_ids": [],
+      "images": [
+        {
+          "src": "../../../assets/images/emblem.svg",
+          "alt": ""
+        },
+        {
+          "src": "../../../assets/images/menu-open.svg",
+          "alt": ""
+        },
+        {
+          "src": "../../../assets/images/menu-close.svg",
+          "alt": ""
+        },
+        {
+          "src": "../../../assets/images/notice-discobole-en-mobile.webp",
+          "alt": "Discobolus"
+        },
+        {
+          "src": "../../../assets/images/emblem.svg",
+          "alt": ""
+        }
+      ],
+      "missing_alt": [],
+      "unnamed_links_buttons": [],
+      "unlabelled_fields": [],
+      "nested_interactive": [],
+      "inline_event_handlers": [],
+      "inline_style_attributes": 0,
+      "viewport": [
+        "width=device-width, initial-scale=1"
+      ],
+      "canonical": [],
+      "hreflang": [
+        "fr"
+      ],
+      "robots": [],
+      "sha256": "6e79d5d95e237db57c7f26e5a9656c001c7afa2f1022055460d5ce19598c00bd",
+      "checks": {
+        "language": true,
+        "title": true,
+        "h1": true,
+        "heading_order": true,
+        "main": true,
+        "unique_ids": true,
+        "alt_present": true,
+        "named_controls": true,
+        "labelled_fields": true,
+        "no_nested_interactive": true,
+        "no_inline_events": true,
+        "no_presentation_attributes": true,
+        "viewport": true,
+        "description": true,
+        "bilingual_switch": true
+      }
+    },
+    {
+      "page": "en/collection/index.html",
+      "language": "en",
+      "title": "Collection — MOMOA",
+      "description": [
+        "Explore the six sculptures in the MOMOA collection, from antiquity to modern interpretations."
+      ],
+      "h1_count": 1,
+      "heading_levels": [
+        2,
+        1,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2
+      ],
+      "heading_level_jumps": [],
+      "main_count": 1,
+      "duplicate_ids": [],
+      "images": [
+        {
+          "src": "../../assets/images/emblem.svg",
+          "alt": ""
+        },
+        {
+          "src": "../../assets/images/menu-open.svg",
+          "alt": ""
+        },
+        {
+          "src": "../../assets/images/menu-close.svg",
+          "alt": ""
+        },
+        {
+          "src": "../../assets/images/collection-victoire.webp",
+          "alt": ""
+        },
+        {
+          "src": "../../assets/images/collection-discobole.webp",
+          "alt": ""
+        },
+        {
+          "src": "../../assets/images/collection-venus.webp",
+          "alt": ""
+        },
+        {
+          "src": "../../assets/images/collection-prometheus.webp",
+          "alt": ""
+        },
+        {
+          "src": "../../assets/images/collection-athena.webp",
+          "alt": ""
+        },
+        {
+          "src": "../../assets/images/collection-poseidon.webp",
+          "alt": ""
+        },
+        {
+          "src": "../../assets/images/emblem.svg",
+          "alt": ""
+        }
+      ],
+      "missing_alt": [],
+      "unnamed_links_buttons": [],
+      "unlabelled_fields": [],
+      "nested_interactive": [],
+      "inline_event_handlers": [],
+      "inline_style_attributes": 0,
+      "viewport": [
+        "width=device-width, initial-scale=1"
+      ],
+      "canonical": [],
+      "hreflang": [
+        "fr"
+      ],
+      "robots": [],
+      "sha256": "f57f5d586514f14ec8e7bedadc656468c1eefc35670c12cc5ef6277b5f5fc6c3",
+      "checks": {
+        "language": true,
+        "title": true,
+        "h1": true,
+        "heading_order": true,
+        "main": true,
+        "unique_ids": true,
+        "alt_present": true,
+        "named_controls": true,
+        "labelled_fields": true,
+        "no_nested_interactive": true,
+        "no_inline_events": true,
+        "no_presentation_attributes": true,
+        "viewport": true,
+        "description": true,
+        "bilingual_switch": true
+      }
+    },
+    {
+      "page": "en/collection/poseidon/index.html",
+      "language": "en",
+      "title": "Poseidon — MOMOA",
+      "description": [
+        "An arm raised"
+      ],
+      "h1_count": 1,
+      "heading_levels": [
+        2,
+        1,
+        2,
+        2
+      ],
+      "heading_level_jumps": [],
+      "main_count": 1,
+      "duplicate_ids": [],
+      "images": [
+        {
+          "src": "../../../assets/images/emblem.svg",
+          "alt": ""
+        },
+        {
+          "src": "../../../assets/images/menu-open.svg",
+          "alt": ""
+        },
+        {
+          "src": "../../../assets/images/menu-close.svg",
+          "alt": ""
+        },
+        {
+          "src": "../../../assets/images/notice-poseidon-en-mobile.webp",
+          "alt": "Poseidon"
+        },
+        {
+          "src": "../../../assets/images/emblem.svg",
+          "alt": ""
+        }
+      ],
+      "missing_alt": [],
+      "unnamed_links_buttons": [],
+      "unlabelled_fields": [],
+      "nested_interactive": [],
+      "inline_event_handlers": [],
+      "inline_style_attributes": 0,
+      "viewport": [
+        "width=device-width, initial-scale=1"
+      ],
+      "canonical": [],
+      "hreflang": [
+        "fr"
+      ],
+      "robots": [],
+      "sha256": "a127a7ea797dd61805708d784caca6c4c409a6b0f3b1a2ea80cd3380fee747d1",
+      "checks": {
+        "language": true,
+        "title": true,
+        "h1": true,
+        "heading_order": true,
+        "main": true,
+        "unique_ids": true,
+        "alt_present": true,
+        "named_controls": true,
+        "labelled_fields": true,
+        "no_nested_interactive": true,
+        "no_inline_events": true,
+        "no_presentation_attributes": true,
+        "viewport": true,
+        "description": true,
+        "bilingual_switch": true
+      }
+    },
+    {
+      "page": "en/collection/prometheus/index.html",
+      "language": "en",
+      "title": "Prometheus — MOMOA",
+      "description": [
+        "The Oceanids gather around the chained Titan"
+      ],
+      "h1_count": 1,
+      "heading_levels": [
+        2,
+        1,
+        2,
+        2
+      ],
+      "heading_level_jumps": [],
+      "main_count": 1,
+      "duplicate_ids": [],
+      "images": [
+        {
+          "src": "../../../assets/images/emblem.svg",
+          "alt": ""
+        },
+        {
+          "src": "../../../assets/images/menu-open.svg",
+          "alt": ""
+        },
+        {
+          "src": "../../../assets/images/menu-close.svg",
+          "alt": ""
+        },
+        {
+          "src": "../../../assets/images/notice-prometheus-en-mobile.webp",
+          "alt": "Prometheus"
+        },
+        {
+          "src": "../../../assets/images/emblem.svg",
+          "alt": ""
+        }
+      ],
+      "missing_alt": [],
+      "unnamed_links_buttons": [],
+      "unlabelled_fields": [],
+      "nested_interactive": [],
+      "inline_event_handlers": [],
+      "inline_style_attributes": 0,
+      "viewport": [
+        "width=device-width, initial-scale=1"
+      ],
+      "canonical": [],
+      "hreflang": [
+        "fr"
+      ],
+      "robots": [],
+      "sha256": "3b84bb8cfbb68ec976d8faf51141adffafb6d49c768c6fa6c5c7bc296ce53d6c",
+      "checks": {
+        "language": true,
+        "title": true,
+        "h1": true,
+        "heading_order": true,
+        "main": true,
+        "unique_ids": true,
+        "alt_present": true,
+        "named_controls": true,
+        "labelled_fields": true,
+        "no_nested_interactive": true,
+        "no_inline_events": true,
+        "no_presentation_attributes": true,
+        "viewport": true,
+        "description": true,
+        "bilingual_switch": true
+      }
+    },
+    {
+      "page": "en/collection/venus-de-milo/index.html",
+      "language": "en",
+      "title": "Venus de Milo — MOMOA",
+      "description": [
+        "A bare torso above drapery gathered at the hips"
+      ],
+      "h1_count": 1,
+      "heading_levels": [
+        2,
+        1,
+        2,
+        2
+      ],
+      "heading_level_jumps": [],
+      "main_count": 1,
+      "duplicate_ids": [],
+      "images": [
+        {
+          "src": "../../../assets/images/emblem.svg",
+          "alt": ""
+        },
+        {
+          "src": "../../../assets/images/menu-open.svg",
+          "alt": ""
+        },
+        {
+          "src": "../../../assets/images/menu-close.svg",
+          "alt": ""
+        },
+        {
+          "src": "../../../assets/images/notice-venus-en-mobile.webp",
+          "alt": "Venus de Milo"
+        },
+        {
+          "src": "../../../assets/images/emblem.svg",
+          "alt": ""
+        }
+      ],
+      "missing_alt": [],
+      "unnamed_links_buttons": [],
+      "unlabelled_fields": [],
+      "nested_interactive": [],
+      "inline_event_handlers": [],
+      "inline_style_attributes": 0,
+      "viewport": [
+        "width=device-width, initial-scale=1"
+      ],
+      "canonical": [],
+      "hreflang": [
+        "fr"
+      ],
+      "robots": [],
+      "sha256": "1dacef5a5364714bde7ce8cef7ab3661ff0bda100d70b0ad972b1215349881b3",
+      "checks": {
+        "language": true,
+        "title": true,
+        "h1": true,
+        "heading_order": true,
+        "main": true,
+        "unique_ids": true,
+        "alt_present": true,
+        "named_controls": true,
+        "labelled_fields": true,
+        "no_nested_interactive": true,
+        "no_inline_events": true,
+        "no_presentation_attributes": true,
+        "viewport": true,
+        "description": true,
+        "bilingual_switch": true
+      }
+    },
+    {
+      "page": "en/collection/winged-victory-of-samothrace/index.html",
+      "language": "en",
+      "title": "Winged Victory of Samothrace — MOMOA",
+      "description": [
+        "Wind takes shape in the folds of marble"
+      ],
+      "h1_count": 1,
+      "heading_levels": [
+        2,
+        1,
+        2,
+        2
+      ],
+      "heading_level_jumps": [],
+      "main_count": 1,
+      "duplicate_ids": [],
+      "images": [
+        {
+          "src": "../../../assets/images/emblem.svg",
+          "alt": ""
+        },
+        {
+          "src": "../../../assets/images/menu-open.svg",
+          "alt": ""
+        },
+        {
+          "src": "../../../assets/images/menu-close.svg",
+          "alt": ""
+        },
+        {
+          "src": "../../../assets/images/notice-victoire-en-mobile.webp",
+          "alt": "Winged Victory of Samothrace"
+        },
+        {
+          "src": "../../../assets/images/emblem.svg",
+          "alt": ""
+        }
+      ],
+      "missing_alt": [],
+      "unnamed_links_buttons": [],
+      "unlabelled_fields": [],
+      "nested_interactive": [],
+      "inline_event_handlers": [],
+      "inline_style_attributes": 0,
+      "viewport": [
+        "width=device-width, initial-scale=1"
+      ],
+      "canonical": [],
+      "hreflang": [
+        "fr"
+      ],
+      "robots": [],
+      "sha256": "9c954339e3de3f80a58197a01533606a215bebf9684937705805dc8eb62c695c",
+      "checks": {
+        "language": true,
+        "title": true,
+        "h1": true,
+        "heading_order": true,
+        "main": true,
+        "unique_ids": true,
+        "alt_present": true,
+        "named_controls": true,
+        "labelled_fields": true,
+        "no_nested_interactive": true,
+        "no_inline_events": true,
+        "no_presentation_attributes": true,
+        "viewport": true,
+        "description": true,
+        "bilingual_switch": true
+      }
+    },
+    {
+      "page": "en/gallery/index.html",
+      "language": "en",
+      "title": "The gallery — MOMOA",
+      "description": [
+        "Discover the story of the MOMOA gallery and the works it presents."
+      ],
+      "h1_count": 1,
+      "heading_levels": [
+        2,
+        1,
+        2,
+        2,
+        2,
+        2,
+        2
+      ],
+      "heading_level_jumps": [],
+      "main_count": 1,
+      "duplicate_ids": [],
+      "images": [
+        {
+          "src": "../../assets/images/emblem.svg",
+          "alt": ""
+        },
+        {
+          "src": "../../assets/images/menu-open.svg",
+          "alt": ""
+        },
+        {
+          "src": "../../assets/images/menu-close.svg",
+          "alt": ""
+        },
+        {
+          "src": "../../assets/images/gallery-portrait-mobile.webp",
+          "alt": "Prometheus"
+        },
+        {
+          "src": "../../assets/images/gallery-exhibition.webp",
+          "alt": "Detail of the Prometheus and Oceanids sculpture group"
+        },
+        {
+          "src": "../../assets/images/caryatids.webp",
+          "alt": "Caryatids"
+        },
+        {
+          "src": "../../assets/images/emblem.svg",
+          "alt": ""
+        }
+      ],
+      "missing_alt": [],
+      "unnamed_links_buttons": [],
+      "unlabelled_fields": [],
+      "nested_interactive": [],
+      "inline_event_handlers": [],
+      "inline_style_attributes": 0,
+      "viewport": [
+        "width=device-width, initial-scale=1"
+      ],
+      "canonical": [],
+      "hreflang": [
+        "fr"
+      ],
+      "robots": [],
+      "sha256": "c0db1816d23af85254c25b27b2a2a7e680459d14a5319e98f91a066a17a5c422",
+      "checks": {
+        "language": true,
+        "title": true,
+        "h1": true,
+        "heading_order": true,
+        "main": true,
+        "unique_ids": true,
+        "alt_present": true,
+        "named_controls": true,
+        "labelled_fields": true,
+        "no_nested_interactive": true,
+        "no_inline_events": true,
+        "no_presentation_attributes": true,
+        "viewport": true,
+        "description": true,
+        "bilingual_switch": true
+      }
+    },
+    {
+      "page": "en/index.html",
+      "language": "en",
+      "title": "MOMOA — Greek sculpture and reproductions",
+      "description": [
+        "Discover MOMOA, a fictional gallery of Greek sculpture and reproductions."
+      ],
+      "h1_count": 1,
+      "heading_levels": [
+        2,
+        1,
+        2,
+        3,
+        3,
+        2,
+        2,
+        2,
+        2,
+        2
+      ],
+      "heading_level_jumps": [],
+      "main_count": 1,
+      "duplicate_ids": [],
+      "images": [
+        {
+          "src": "../assets/images/emblem.svg",
+          "alt": ""
+        },
+        {
+          "src": "../assets/images/menu-open.svg",
+          "alt": ""
+        },
+        {
+          "src": "../assets/images/menu-close.svg",
+          "alt": ""
+        },
+        {
+          "src": "../assets/images/hero-bust-plinth.webp",
+          "alt": "Marble bust on a stone plinth"
+        },
+        {
+          "src": "../assets/images/home-victoire-en.webp",
+          "alt": ""
+        },
+        {
+          "src": "../assets/images/home-venus-en.webp",
+          "alt": ""
+        },
+        {
+          "src": "../assets/images/stone-texture-320.webp",
+          "alt": ""
+        },
+        {
+          "src": "../assets/images/caryatids.webp",
+          "alt": "Caryatids"
+        },
+        {
+          "src": "../assets/images/home-discobole-en.webp",
+          "alt": ""
+        },
+        {
+          "src": "../assets/images/home-poseidon.webp",
+          "alt": ""
+        },
+        {
+          "src": "../assets/images/stone-texture-320.webp",
+          "alt": ""
+        },
+        {
+          "src": "../assets/images/stone-texture-320.webp",
+          "alt": ""
+        },
+        {
+          "src": "../assets/images/emblem.svg",
+          "alt": ""
+        }
+      ],
+      "missing_alt": [],
+      "unnamed_links_buttons": [],
+      "unlabelled_fields": [],
+      "nested_interactive": [],
+      "inline_event_handlers": [],
+      "inline_style_attributes": 0,
+      "viewport": [
+        "width=device-width, initial-scale=1"
+      ],
+      "canonical": [],
+      "hreflang": [
+        "fr"
+      ],
+      "robots": [],
+      "sha256": "b5ea920532fda01e0ac8c6bdeaf923c6e1bc1ab4b2cb29fe63b2a4c2e7859a31",
+      "checks": {
+        "language": true,
+        "title": true,
+        "h1": true,
+        "heading_order": true,
+        "main": true,
+        "unique_ids": true,
+        "alt_present": true,
+        "named_controls": true,
+        "labelled_fields": true,
+        "no_nested_interactive": true,
+        "no_inline_events": true,
+        "no_presentation_attributes": true,
+        "viewport": true,
+        "description": true,
+        "bilingual_switch": true
+      }
+    },
+    {
+      "page": "en/questions/index.html",
+      "language": "en",
+      "title": "Frequently asked questions — MOMOA",
+      "description": [
+        "Frequently asked questions about MOMOA, its sculptures, and its demonstration form."
+      ],
+      "h1_count": 1,
+      "heading_levels": [
+        2,
+        1,
+        2,
+        2,
+        2
+      ],
+      "heading_level_jumps": [],
+      "main_count": 1,
+      "duplicate_ids": [],
+      "images": [
+        {
+          "src": "../../assets/images/emblem.svg",
+          "alt": ""
+        },
+        {
+          "src": "../../assets/images/menu-open.svg",
+          "alt": ""
+        },
+        {
+          "src": "../../assets/images/menu-close.svg",
+          "alt": ""
+        },
+        {
+          "src": "../../assets/images/emblem.svg",
+          "alt": ""
+        }
+      ],
+      "missing_alt": [],
+      "unnamed_links_buttons": [],
+      "unlabelled_fields": [],
+      "nested_interactive": [],
+      "inline_event_handlers": [],
+      "inline_style_attributes": 0,
+      "viewport": [
+        "width=device-width, initial-scale=1"
+      ],
+      "canonical": [],
+      "hreflang": [
+        "fr"
+      ],
+      "robots": [],
+      "sha256": "02d77577b211eb625684bd6e74f2beaa5194bd7ba6144b83ff8d55d94e907c39",
+      "checks": {
+        "language": true,
+        "title": true,
+        "h1": true,
+        "heading_order": true,
+        "main": true,
+        "unique_ids": true,
+        "alt_present": true,
+        "named_controls": true,
+        "labelled_fields": true,
+        "no_nested_interactive": true,
+        "no_inline_events": true,
+        "no_presentation_attributes": true,
+        "viewport": true,
+        "description": true,
+        "bilingual_switch": true
+      }
+    },
+    {
+      "page": "en/sign-up/index.html",
+      "language": "en",
+      "title": "Sign up — MOMOA",
+      "description": [
+        "Try the demonstration sign-up form for the MOMOA newsletter."
+      ],
+      "h1_count": 1,
+      "heading_levels": [
+        2,
+        1,
+        2,
+        2
+      ],
+      "heading_level_jumps": [],
+      "main_count": 1,
+      "duplicate_ids": [],
+      "images": [
+        {
+          "src": "../../assets/images/emblem.svg",
+          "alt": ""
+        },
+        {
+          "src": "../../assets/images/menu-open.svg",
+          "alt": ""
+        },
+        {
+          "src": "../../assets/images/menu-close.svg",
+          "alt": ""
+        },
+        {
+          "src": "../../assets/images/signup-victoire-en-mobile.webp",
+          "alt": "Winged Victory of Samothrace"
+        },
+        {
+          "src": "../../assets/images/emblem.svg",
+          "alt": ""
+        }
+      ],
+      "missing_alt": [],
+      "unnamed_links_buttons": [],
+      "unlabelled_fields": [],
+      "nested_interactive": [],
+      "inline_event_handlers": [],
+      "inline_style_attributes": 0,
+      "viewport": [
+        "width=device-width, initial-scale=1"
+      ],
+      "canonical": [],
+      "hreflang": [
+        "fr"
+      ],
+      "robots": [],
+      "sha256": "2486bf68db497dc3a8ac42e33e9ce7dafdee41694cbee914be2c6d8b825758a7",
+      "checks": {
+        "language": true,
+        "title": true,
+        "h1": true,
+        "heading_order": true,
+        "main": true,
+        "unique_ids": true,
+        "alt_present": true,
+        "named_controls": true,
+        "labelled_fields": true,
+        "no_nested_interactive": true,
+        "no_inline_events": true,
+        "no_presentation_attributes": true,
+        "viewport": true,
+        "description": true,
+        "bilingual_switch": true
+      }
+    },
+    {
+      "page": "galerie/index.html",
+      "language": "fr",
+      "title": "La galerie — MOMOA",
+      "description": [
+        "Découvrez l’histoire de la galerie MOMOA et les œuvres présentées."
+      ],
+      "h1_count": 1,
+      "heading_levels": [
+        2,
+        1,
+        2,
+        2,
+        2,
+        2,
+        2
+      ],
+      "heading_level_jumps": [],
+      "main_count": 1,
+      "duplicate_ids": [],
+      "images": [
+        {
+          "src": "../assets/images/emblem.svg",
+          "alt": ""
+        },
+        {
+          "src": "../assets/images/menu-open.svg",
+          "alt": ""
+        },
+        {
+          "src": "../assets/images/menu-close.svg",
+          "alt": ""
+        },
+        {
+          "src": "../assets/images/gallery-portrait-mobile.webp",
+          "alt": "Prométhée"
+        },
+        {
+          "src": "../assets/images/gallery-exhibition.webp",
+          "alt": "Détail du groupe de Prométhée et des Océanides"
+        },
+        {
+          "src": "../assets/images/caryatids.webp",
+          "alt": "Caryatides"
+        },
+        {
+          "src": "../assets/images/emblem.svg",
+          "alt": ""
+        }
+      ],
+      "missing_alt": [],
+      "unnamed_links_buttons": [],
+      "unlabelled_fields": [],
+      "nested_interactive": [],
+      "inline_event_handlers": [],
+      "inline_style_attributes": 0,
+      "viewport": [
+        "width=device-width, initial-scale=1"
+      ],
+      "canonical": [],
+      "hreflang": [
+        "en"
+      ],
+      "robots": [],
+      "sha256": "5f0e8c65655c4ef7f52fb27d019aee5625775a0d413cacebf97c875020fb293c",
+      "checks": {
+        "language": true,
+        "title": true,
+        "h1": true,
+        "heading_order": true,
+        "main": true,
+        "unique_ids": true,
+        "alt_present": true,
+        "named_controls": true,
+        "labelled_fields": true,
+        "no_nested_interactive": true,
+        "no_inline_events": true,
+        "no_presentation_attributes": true,
+        "viewport": true,
+        "description": true,
+        "bilingual_switch": true
+      }
+    },
+    {
+      "page": "index.html",
+      "language": "fr",
+      "title": "MOMOA — Sculpture grecque et reproductions",
+      "description": [
+        "Découvrez MOMOA, une galerie fictive consacrée à la sculpture grecque et à ses reproductions."
+      ],
+      "h1_count": 1,
+      "heading_levels": [
+        2,
+        1,
+        2,
+        3,
+        3,
+        2,
+        2,
+        2,
+        2,
+        2
+      ],
+      "heading_level_jumps": [],
+      "main_count": 1,
+      "duplicate_ids": [],
+      "images": [
+        {
+          "src": "assets/images/emblem.svg",
+          "alt": ""
+        },
+        {
+          "src": "assets/images/menu-open.svg",
+          "alt": ""
+        },
+        {
+          "src": "assets/images/menu-close.svg",
+          "alt": ""
+        },
+        {
+          "src": "assets/images/hero-bust-plinth.webp",
+          "alt": "Buste de marbre sur un socle de pierre"
+        },
+        {
+          "src": "assets/images/home-victoire-fr.webp",
+          "alt": ""
+        },
+        {
+          "src": "assets/images/home-venus-fr.webp",
+          "alt": ""
+        },
+        {
+          "src": "assets/images/stone-texture-320.webp",
+          "alt": ""
+        },
+        {
+          "src": "assets/images/caryatids.webp",
+          "alt": "Caryatides"
+        },
+        {
+          "src": "assets/images/home-discobole-fr.webp",
+          "alt": ""
+        },
+        {
+          "src": "assets/images/home-poseidon.webp",
+          "alt": ""
+        },
+        {
+          "src": "assets/images/stone-texture-320.webp",
+          "alt": ""
+        },
+        {
+          "src": "assets/images/stone-texture-320.webp",
+          "alt": ""
+        },
+        {
+          "src": "assets/images/emblem.svg",
+          "alt": ""
+        }
+      ],
+      "missing_alt": [],
+      "unnamed_links_buttons": [],
+      "unlabelled_fields": [],
+      "nested_interactive": [],
+      "inline_event_handlers": [],
+      "inline_style_attributes": 0,
+      "viewport": [
+        "width=device-width, initial-scale=1"
+      ],
+      "canonical": [],
+      "hreflang": [
+        "en"
+      ],
+      "robots": [],
+      "sha256": "f905e234c49ca399d2a89a73bcb5ec29b4da0439745ea682f552a535f7eee5d0",
+      "checks": {
+        "language": true,
+        "title": true,
+        "h1": true,
+        "heading_order": true,
+        "main": true,
+        "unique_ids": true,
+        "alt_present": true,
+        "named_controls": true,
+        "labelled_fields": true,
+        "no_nested_interactive": true,
+        "no_inline_events": true,
+        "no_presentation_attributes": true,
+        "viewport": true,
+        "description": true,
+        "bilingual_switch": true
+      }
+    },
+    {
+      "page": "inscription/index.html",
+      "language": "fr",
+      "title": "Inscription — MOMOA",
+      "description": [
+        "Essayez le formulaire fictif de la lettre d’information de MOMOA."
+      ],
+      "h1_count": 1,
+      "heading_levels": [
+        2,
+        1,
+        2,
+        2
+      ],
+      "heading_level_jumps": [],
+      "main_count": 1,
+      "duplicate_ids": [],
+      "images": [
+        {
+          "src": "../assets/images/emblem.svg",
+          "alt": ""
+        },
+        {
+          "src": "../assets/images/menu-open.svg",
+          "alt": ""
+        },
+        {
+          "src": "../assets/images/menu-close.svg",
+          "alt": ""
+        },
+        {
+          "src": "../assets/images/signup-victoire-fr-mobile.webp",
+          "alt": "Victoire de Samothrace"
+        },
+        {
+          "src": "../assets/images/emblem.svg",
+          "alt": ""
+        }
+      ],
+      "missing_alt": [],
+      "unnamed_links_buttons": [],
+      "unlabelled_fields": [],
+      "nested_interactive": [],
+      "inline_event_handlers": [],
+      "inline_style_attributes": 0,
+      "viewport": [
+        "width=device-width, initial-scale=1"
+      ],
+      "canonical": [],
+      "hreflang": [
+        "en"
+      ],
+      "robots": [],
+      "sha256": "1077737b422f6208e30e16dd1d0f3ff4f417e8231782008ab8539ec148a8f0dd",
+      "checks": {
+        "language": true,
+        "title": true,
+        "h1": true,
+        "heading_order": true,
+        "main": true,
+        "unique_ids": true,
+        "alt_present": true,
+        "named_controls": true,
+        "labelled_fields": true,
+        "no_nested_interactive": true,
+        "no_inline_events": true,
+        "no_presentation_attributes": true,
+        "viewport": true,
+        "description": true,
+        "bilingual_switch": true
+      }
+    },
+    {
+      "page": "questions/index.html",
+      "language": "fr",
+      "title": "Questions fréquentes — MOMOA",
+      "description": [
+        "Questions fréquentes sur la galerie MOMOA, ses sculptures et son formulaire de démonstration."
+      ],
+      "h1_count": 1,
+      "heading_levels": [
+        2,
+        1,
+        2,
+        2,
+        2
+      ],
+      "heading_level_jumps": [],
+      "main_count": 1,
+      "duplicate_ids": [],
+      "images": [
+        {
+          "src": "../assets/images/emblem.svg",
+          "alt": ""
+        },
+        {
+          "src": "../assets/images/menu-open.svg",
+          "alt": ""
+        },
+        {
+          "src": "../assets/images/menu-close.svg",
+          "alt": ""
+        },
+        {
+          "src": "../assets/images/emblem.svg",
+          "alt": ""
+        }
+      ],
+      "missing_alt": [],
+      "unnamed_links_buttons": [],
+      "unlabelled_fields": [],
+      "nested_interactive": [],
+      "inline_event_handlers": [],
+      "inline_style_attributes": 0,
+      "viewport": [
+        "width=device-width, initial-scale=1"
+      ],
+      "canonical": [],
+      "hreflang": [
+        "en"
+      ],
+      "robots": [],
+      "sha256": "73cfc5efc2216660a36c279a967dca7685346d9aacbb0f5ebb80b63b8b291221",
+      "checks": {
+        "language": true,
+        "title": true,
+        "h1": true,
+        "heading_order": true,
+        "main": true,
+        "unique_ids": true,
+        "alt_present": true,
+        "named_controls": true,
+        "labelled_fields": true,
+        "no_nested_interactive": true,
+        "no_inline_events": true,
+        "no_presentation_attributes": true,
+        "viewport": true,
+        "description": true,
+        "bilingual_switch": true
+      }
+    }
+  ]
+}

@@ -1,18 +1,18 @@
 # Grille de remise de MOMOA
 
-Cette grille reprend les sept critères fournis pour le projet. Les preuves finales portent sur les fichiers identifiés par leurs [empreintes SHA-256](empreintes-finales.json), après corrections graphiques et régénération des 22 pages, publiées dans le commit `57e156f34f697b3f07b73534adda23a3f558b462`. Le [détail des contrôles](README.md) donne les outils, le périmètre et les limites.
+Cette grille reprend les sept critères fournis pour le projet. Le [dernier contrôle complet](CONTROLE-FINAL.md) porte sur les 23 documents publiés dans le commit `90ac25625c539c70b6c79353c44dc21eacf909f6`, identifiés par leurs [empreintes SHA-256](controle-final/empreintes.json). Les campagnes antérieures, dont les comparaisons Figma, restent conservées avec leurs dates et leurs propres sources. Le [détail des contrôles](README.md) donne le périmètre et les limites.
 
 Le [contrôle complémentaire de l’affichage initial](affichage-initial/README.md) couvre la modification ultérieure du chargement CSS des deux accueils : dix vues restent identiques au pixel près, avec nouvelle validation HTML/CSS et contrôles des menus.
 
 | Critère | Conclusion | Éléments vérifiés |
 | --- | --- | --- |
 | 1. Conformité graphique générale aux maquettes | Conformité générale vérifiée, adaptations et écarts résiduels documentés | 44 vues de base : 4 accueils, 16 vues galerie/collection/inscription/FAQ et 24 vues de notices, en FR/EN à 390 et 1440 px ; états complémentaires du menu et du formulaire. |
-| 2. Responsive | Contrôles réussis | 286 mises en page sur 13 largeurs de 320 à 1920 px, 18 états interactifs et 12 vues avec zone CSS équivalente à 200 % ; aucun échec détecté. |
+| 2. Responsive | Contrôles réussis | 299 mises en page sur 13 largeurs de 320 à 1920 px, 18 états interactifs et 174 contrôles fonctionnels ; aucun échec détecté. Les 12 vues antérieures avec zone CSS équivalente à 200 % restent documentées. |
 | 3. Bootstrap | Sans objet : facultatif et non utilisé | CSS Grid, Flexbox, variables partagées et media queries assurent la mise en page. |
 | 4. Règles d’écriture du code | Conventions usuelles appliquées | Structure HTML sémantique, identifiants uniques, absence d’attributs style et d’événements HTML, source CSS commune et JavaScript séparé, modèles communs, contenus bilingues centralisés et échappés ; syntaxe du générateur et régénération vérifiées. Les styles des accueils sont intégrés automatiquement au HTML pour supprimer une requête bloquante. |
-| 5. Validation W3C | Zéro erreur | Nu HTML Checker : 22 HTML et CSS sans message ; service CSS W3C : zéro erreur et 191 avertissements conservés dans le rapport. |
+| 5. Validation W3C | Zéro erreur | Nu HTML Checker : 23 HTML et CSS sans message ; validateur CSS officiel W3C exécuté localement, profil CSS3 : zéro erreur et 11 avertissements conservés. Le service web retournait des erreurs 500. |
 | 6. Bases SEO | Bases appliquées aux 22 pages | Titres et descriptions renseignés, un H1 par page, hiérarchie cohérente, langue du document, UTF-8, viewport, images avec attribut alt approprié et liens nommés ; URL publiques en HTTP 200 sans directive noindex. |
-| 7. Accessibilité | Contrôles automatisés et fonctionnels réussis dans le périmètre décrit | 50 contrôles axe sans violation, menu et formulaires au clavier, focus, navigation principale sans JavaScript, 20 associations textuelles au seuil AA ; borne minimale de contraste 4,686:1. |
+| 7. Accessibilité | Contrôles automatisés et fonctionnels réussis dans le périmètre décrit | 52 contrôles axe sans violation, 171 contrôles clavier/focus et 32 contrôles de repli ; 23 associations textuelles au seuil AA, borne minimale de contraste 4,686:1. Les contrastes axe incomplets et les limites de l’audit manuel sont explicités dans le bilan final. |
 
 ## Fidélité graphique et adaptations conservées
 

@@ -1,0 +1,14 @@
+{
+  "date_utc": "2026-11-14T21:33:15.900118+00:00",
+  "transport": "GET uri",
+  "parameters": {
+    "uri": "https://raw.githubusercontent.com/Andriana-art/momoa/d0cc82660f58166022296534bb7f6d2cbe2c7b90/docs/assets/styles.css",
+    "profile": "css3",
+    "usermedium": "all",
+    "warning": "2",
+    "output": "json",
+    "lang": "en"
+  },
+  "css_sha256": "926106291faa31d8ad61d5a9f28200c5d184b5e8206cebbab2d168c716d1b823",
+  "service_error": "HTTP Error 500: Internal Server Error"
+}

@@ -1,0 +1,38 @@
+[
+  {
+    "date_utc": "2026-11-14T21:09:52.146654+00:00",
+    "url": "https://andriana-art.github.io/momoa/assets/images/stone-texture.webp",
+    "status": 200,
+    "bytes": 42982,
+    "sha256": "635b2286d20fc28ea48dd1ef541aa3fedc84b5e0580df3122d8f3dba53005b90",
+    "headers": {
+      "server": "envoy",
+      "content-type": "image/webp",
+      "etag": "\"6af8c5ff-a7e6\"",
+      "cache-control": "max-age=600",
+      "age": "212",
+      "date": "Sat, 14 Nov 2026 21:09:52 GMT",
+      "via": "1.1 varnish",
+      "x-served-by": "cache-msp11862-MSP",
+      "x-cache": "HIT"
+    }
+  },
+  {
+    "date_utc": "2026-11-14T21:09:52.302062+00:00",
+    "url": "https://andriana-art.github.io/momoa/assets/images/stone-texture.webp?v=final-check",
+    "status": 200,
+    "bytes": 42982,
+    "sha256": "635b2286d20fc28ea48dd1ef541aa3fedc84b5e0580df3122d8f3dba53005b90",
+    "headers": {
+      "server": "envoy",
+      "content-type": "image/webp",
+      "etag": "\"6af8c5ff-a7e6\"",
+      "cache-control": "max-age=600",
+      "date": "Sat, 14 Nov 2026 21:09:52 GMT",
+      "via": "1.1 varnish",
+      "age": "212",
+      "x-served-by": "cache-msp11862-MSP",
+      "x-cache": "HIT"
+    }
+  }
+]

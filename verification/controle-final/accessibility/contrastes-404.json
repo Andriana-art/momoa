@@ -1,0 +1,28 @@
+{
+  "dateUTC": "2026-11-14T21:27:21.227132+00:00",
+  "checks": [
+    {
+      "fore": "#e2e8f0",
+      "back": "#0f172a",
+      "scope": "404 paragraph text",
+      "ratio": 14.481508292066573,
+      "normalTextAA": true
+    },
+    {
+      "fore": "#38bdf8",
+      "back": "#0f172a",
+      "scope": "404 heading",
+      "ratio": 8.333436820893095,
+      "normalTextAA": true
+    },
+    {
+      "fore": "#0f172a",
+      "back": "#38bdf8",
+      "scope": "404 return link",
+      "ratio": 8.333436820893095,
+      "normalTextAA": true
+    }
+  ],
+  "allPass": true,
+  "sha256": "0638b97726dc7dc943ef4c16d0df7470733474c68837b0d56e70f1b4f795883a"
+}

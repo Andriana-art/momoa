@@ -1,0 +1,160 @@
+{
+  "dateUTC": "2026-11-14T21:24:15.471Z",
+  "baselineCommit": "95333ef6d9e81d5d2293c04440aedfb7b0b94d2b",
+  "testedCommit": "d0cc82660f58166022296534bb7f6d2cbe2c7b90",
+  "sourceHashes": {
+    "docs/inscription/index.html": "1077737b422f6208e30e16dd1d0f3ff4f417e8231782008ab8539ec148a8f0dd",
+    "docs/en/sign-up/index.html": "2486bf68db497dc3a8ac42e33e9ce7dafdee41694cbee914be2c6d8b825758a7",
+    "docs/assets/styles.css": "926106291faa31d8ad61d5a9f28200c5d184b5e8206cebbab2d168c716d1b823",
+    "docs/assets/site.js": "1472df88a4ff82fddc1c1f2d35fe193c99a9c76b37b0adc103dcda0dc214c0c8"
+  },
+  "method": "Before version intercepted from pinned git blobs for signupHTML, sharedCSSandJS; after from same localserver; same browserfonts/assets, captures after font+image load and300ms hoversettle.",
+  "comparisons": [
+    {
+      "lang": "fr",
+      "width": 390,
+      "state": "initial",
+      "sameDimensions": true,
+      "differingChannels": 0,
+      "maxChannelDelta": 0,
+      "boxDifferences": []
+    },
+    {
+      "lang": "fr",
+      "width": 390,
+      "state": "errors",
+      "sameDimensions": true,
+      "differingChannels": 0,
+      "maxChannelDelta": 0,
+      "boxDifferences": []
+    },
+    {
+      "lang": "fr",
+      "width": 390,
+      "state": "confirmation",
+      "sameDimensions": true,
+      "differingChannels": 0,
+      "maxChannelDelta": 0,
+      "boxDifferences": []
+    },
+    {
+      "lang": "fr",
+      "width": 390,
+      "state": "return",
+      "sameDimensions": true,
+      "differingChannels": 0,
+      "maxChannelDelta": 0,
+      "boxDifferences": []
+    },
+    {
+      "lang": "en",
+      "width": 390,
+      "state": "initial",
+      "sameDimensions": true,
+      "differingChannels": 0,
+      "maxChannelDelta": 0,
+      "boxDifferences": []
+    },
+    {
+      "lang": "en",
+      "width": 390,
+      "state": "errors",
+      "sameDimensions": true,
+      "differingChannels": 0,
+      "maxChannelDelta": 0,
+      "boxDifferences": []
+    },
+    {
+      "lang": "en",
+      "width": 390,
+      "state": "confirmation",
+      "sameDimensions": true,
+      "differingChannels": 0,
+      "maxChannelDelta": 0,
+      "boxDifferences": []
+    },
+    {
+      "lang": "en",
+      "width": 390,
+      "state": "return",
+      "sameDimensions": true,
+      "differingChannels": 0,
+      "maxChannelDelta": 0,
+      "boxDifferences": []
+    },
+    {
+      "lang": "fr",
+      "width": 1440,
+      "state": "initial",
+      "sameDimensions": true,
+      "differingChannels": 0,
+      "maxChannelDelta": 0,
+      "boxDifferences": []
+    },
+    {
+      "lang": "fr",
+      "width": 1440,
+      "state": "errors",
+      "sameDimensions": true,
+      "differingChannels": 0,
+      "maxChannelDelta": 0,
+      "boxDifferences": []
+    },
+    {
+      "lang": "fr",
+      "width": 1440,
+      "state": "confirmation",
+      "sameDimensions": true,
+      "differingChannels": 0,
+      "maxChannelDelta": 0,
+      "boxDifferences": []
+    },
+    {
+      "lang": "fr",
+      "width": 1440,
+      "state": "return",
+      "sameDimensions": true,
+      "differingChannels": 0,
+      "maxChannelDelta": 0,
+      "boxDifferences": []
+    },
+    {
+      "lang": "en",
+      "width": 1440,
+      "state": "initial",
+      "sameDimensions": true,
+      "differingChannels": 0,
+      "maxChannelDelta": 0,
+      "boxDifferences": []
+    },
+    {
+      "lang": "en",
+      "width": 1440,
+      "state": "errors",
+      "sameDimensions": true,
+      "differingChannels": 0,
+      "maxChannelDelta": 0,
+      "boxDifferences": []
+    },
+    {
+      "lang": "en",
+      "width": 1440,
+      "state": "confirmation",
+      "sameDimensions": true,
+      "differingChannels": 0,
+      "maxChannelDelta": 0,
+      "boxDifferences": []
+    },
+    {
+      "lang": "en",
+      "width": 1440,
+      "state": "return",
+      "sameDimensions": true,
+      "differingChannels": 0,
+      "maxChannelDelta": 0,
+      "boxDifferences": []
+    }
+  ],
+  "failedComparisons": 0,
+  "pageErrors": []
+}

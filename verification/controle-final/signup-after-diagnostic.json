@@ -1,0 +1,93 @@
+{
+  "phase": "after",
+  "type": "Controlled local diagnostic: site.js held for at least1000ms to observe initialform layout before and after handlers initialize; no PageSpeed result",
+  "viewport": {
+    "width": 412,
+    "height": 823
+  },
+  "actualDelayMs": 2466,
+  "sourceSHA256": {
+    "html": "1077737b422f6208e30e16dd1d0f3ff4f417e8231782008ab8539ec148a8f0dd",
+    "css": "926106291faa31d8ad61d5a9f28200c5d184b5e8206cebbab2d168c716d1b823",
+    "js": "1472df88a4ff82fddc1c1f2d35fe193c99a9c76b37b0adc103dcda0dc214c0c8"
+  },
+  "before": {
+    "formHiddenAttribute": false,
+    "formInert": true,
+    "formDisplay": "grid",
+    "fallbackHidden": false,
+    "fallbackDisplay": "none",
+    "aside": {
+      "x": 24,
+      "y": 903.59375,
+      "width": 364,
+      "height": 454.25,
+      "top": 903.59375,
+      "right": 388,
+      "bottom": 1357.84375,
+      "left": 24
+    },
+    "form": {
+      "x": 24,
+      "y": 354.59375,
+      "width": 364,
+      "height": 501,
+      "top": 354.59375,
+      "right": 388,
+      "bottom": 855.59375,
+      "left": 24
+    },
+    "fontsLoaded": "loaded",
+    "paint": [
+      {
+        "name": "first-paint",
+        "startTime": 1952
+      },
+      {
+        "name": "first-contentful-paint",
+        "startTime": 1952
+      }
+    ]
+  },
+  "after": {
+    "formHiddenAttribute": false,
+    "formInert": false,
+    "formDisplay": "grid",
+    "fallbackHidden": true,
+    "fallbackDisplay": "none",
+    "aside": {
+      "x": 24,
+      "y": 903.59375,
+      "width": 364,
+      "height": 454.25,
+      "top": 903.59375,
+      "right": 388,
+      "bottom": 1357.84375,
+      "left": 24
+    },
+    "form": {
+      "x": 24,
+      "y": 354.59375,
+      "width": 364,
+      "height": 501,
+      "top": 354.59375,
+      "right": 388,
+      "bottom": 855.59375,
+      "left": 24
+    },
+    "fontsLoaded": "loaded",
+    "paint": [
+      {
+        "name": "first-paint",
+        "startTime": 1952
+      },
+      {
+        "name": "first-contentful-paint",
+        "startTime": 1952
+      }
+    ]
+  },
+  "asideMovementPx": 0,
+  "shifts": [],
+  "cls": 0
+}

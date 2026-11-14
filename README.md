@@ -53,23 +53,25 @@ Les liens générés sont relatifs au dossier du projet. Les options de publicat
 
 ## Vérifications avant remise
 
+Le [dernier contrôle de l’ensemble du projet](verification/CONTROLE-FINAL.md) couvre les 23 pages, le déploiement et les 22 pages mobiles dans Lighthouse. Il documente la correction du décalage initial du formulaire : l’inscription française passe de 89 à 100. La campagne finale donne 22 performances à 100 et deux à 99 ; les deux accueils sont à 100 sur mobile et ordinateur. Les 24 mesures donnent 100 en accessibilité, bonnes pratiques et SEO.
+
 Le [contrôle complémentaire de l’affichage initial](verification/affichage-initial/README.md) documente le rapport mobile à 99 fourni et la suppression de la requête CSS bloquante des accueils. Après publication, les quatre nouvelles mesures Google des accueils français et anglais, sur mobile et ordinateur, donnent **100 en performances, accessibilité, bonnes pratiques et SEO**. Les rapports datés et les vérifications sont conservés.
 
-La [grille de remise détaillée](verification/GRILLE-REMISE.md) reprend les sept critères du projet. Les [preuves et leur périmètre](verification/README.md) sont inclus dans le dépôt ; les empreintes SHA-256 identifient les fichiers contrôlés après les corrections graphiques, publiés dans le commit `57e156f34f697b3f07b73534adda23a3f558b462`.
+La [grille de remise détaillée](verification/GRILLE-REMISE.md) reprend les sept critères du projet. Les [preuves et leur périmètre](verification/README.md) sont inclus dans le dépôt ; les [dernières empreintes SHA-256](verification/controle-final/empreintes.json) identifient les fichiers publiés dans le commit `90ac25625c539c70b6c79353c44dc21eacf909f6`. Les campagnes antérieures restent archivées avec leurs propres versions.
 
 Le 14 novembre 2026, PageSpeed Insights a mesuré **100 en performances, accessibilité, bonnes pratiques et SEO** sur l’accueil et la galerie en français, sur mobile et ordinateur. Les deux rapports ont été générés après la publication du commit `23e1d1b`. [Rapport de l’accueil](https://pagespeed.web.dev/analysis/https-andriana-art-github-io-momoa/gwpmqxnzpp?form_factor=mobile) · [Rapport de la galerie](https://pagespeed.web.dev/analysis/https-andriana-art-github-io-momoa-galerie/4u32hpct1y?form_factor=mobile)
 
 | Critère | Résultat |
 | --- | --- |
 | Conformité graphique | 44 vues de base comparées aux maquettes Figma, en français et en anglais à 390 et 1440 px, avec contrôle des états interactifs. Les écarts résiduels et adaptations utiles sont documentés. |
-| Responsive | 286 mises en page à 13 largeurs de 320 à 1920 px et 18 états interactifs sans échec ; 12 vues avec zone CSS équivalente à un zoom de 200 %. |
+| Responsive | 299 mises en page à 13 largeurs de 320 à 1920 px et 18 états interactifs sans échec ; 174 contrôles fonctionnels complémentaires réussis. |
 | Bootstrap | Facultatif dans la grille, non utilisé ; mise en page en CSS Grid et Flexbox. |
 | Écriture du code | Sources communes, contenus bilingues centralisés, HTML sémantique, CSS et comportements JavaScript séparés ; génération reproductible des 22 pages. |
-| Validation W3C | Nu HTML Checker 26.11.9 : 22 HTML et CSS sans message. Service CSS W3C : zéro erreur et 191 avertissements, détaillés dans les preuves. |
+| Validation W3C | Nu HTML Checker 26.11.9 : 23 HTML et CSS sans message. Validateur CSS officiel W3C exécuté localement : zéro erreur et 11 avertissements, détaillés dans les preuves. |
 | SEO | Titres et descriptions renseignés, une hiérarchie de titres cohérente, langues FR/EN, images et liens nommés ; 22 URL publiées accessibles aux robots. |
-| Accessibilité | 50 contrôles axe-core sans violation détectée ; navigation au clavier et formulaire contrôlés ; borne minimale de contraste textuel calculée à 4,686:1. |
+| Accessibilité | 52 contrôles axe-core sans violation détectée ; 171 contrôles clavier et 32 contrôles de repli réussis ; 23 associations textuelles au seuil AA, borne minimale de 4,686:1. |
 
-Les derniers rapports Lighthouse du site publié après corrections obtiennent 100 dans les quatre catégories sur les deux accueils, en français et en anglais, sur mobile et ordinateur. La version optimisée obtient 100 sur les huit mesures conservées : trois passages mobiles par langue et un passage ordinateur par langue. Les rapports et les dates sont conservés dans `verification/`.
+Les derniers rapports Lighthouse obtiennent 100 dans les quatre catégories sur les deux accueils, en français et en anglais, sur mobile et ordinateur. Le contrôle complet conserve aussi les deux notices mobiles mesurées à 99 : Poséidon en français et Vénus en anglais. Une campagne antérieure avait donné 100 sur huit passages des accueils ; ses rapports restent archivés avec leurs dates dans `verification/`.
 
 Les scores concernent les pages et les conditions indiquées dans chaque rapport. Les polices et les images optimisées sont hébergées avec le site. La version de DM Sans utilise la taille optique de 14 déjà définie dans la feuille de style. La licence SIL Open Font License est incluse dans `docs/assets/fonts/`.
 

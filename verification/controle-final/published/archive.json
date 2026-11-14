@@ -1,0 +1,20 @@
+{
+  "date_utc": "2026-11-14T21:34:36.134054+00:00",
+  "commit": "90ac25625c539c70b6c79353c44dc21eacf909f6",
+  "url": "https://codeload.github.com/Andriana-art/momoa/zip/refs/heads/main",
+  "bytes": 6739399,
+  "zip_sha256": "62167d161c43d7165a1b55818ffb9ccd55d39225dcdf000c58d9d7013bdd511f",
+  "contains_git_history": false,
+  "crc_error": null,
+  "tracked_files": 178,
+  "archive_files": 178,
+  "mismatches": [],
+  "extra_files": [],
+  "suspicious_names": [],
+  "business_pages": 22,
+  "custom_404_present": true,
+  "source_generator_present": true,
+  "readme_present": true,
+  "font_licenses_present": true,
+  "proof_readme_present": true
+}

@@ -1,0 +1,150 @@
+{
+  "phase": "before",
+  "type": "Controlled local diagnostic: site.js held for at least1000ms to observe initialform layout before and after handlers initialize; no PageSpeed result",
+  "viewport": {
+    "width": 412,
+    "height": 823
+  },
+  "actualDelayMs": 1178,
+  "sourceSHA256": {
+    "html": "5ad1382d91793751bd2cd705b48c799ec390f0bfcb7e3deb30d38a34fe98bf75",
+    "css": "ee206eb99422fd83218b35e59ea027754d6dfbcea7c82c31afc1a4f2a92ec2b2",
+    "js": "46ff8627d9fb986850a39b45db2ae914acc80890a5e1717909fd21eea6c6e2dc"
+  },
+  "before": {
+    "formHiddenAttribute": true,
+    "formDisplay": "none",
+    "fallbackHidden": false,
+    "fallbackDisplay": "block",
+    "aside": {
+      "x": 24,
+      "y": 450.59375,
+      "width": 364,
+      "height": 454.25,
+      "top": 450.59375,
+      "right": 388,
+      "bottom": 904.84375,
+      "left": 24
+    },
+    "form": {
+      "x": 0,
+      "y": 0,
+      "width": 0,
+      "height": 0,
+      "top": 0,
+      "right": 0,
+      "bottom": 0,
+      "left": 0
+    },
+    "fontsLoaded": "loaded",
+    "paint": [
+      {
+        "name": "first-paint",
+        "startTime": 576
+      },
+      {
+        "name": "first-contentful-paint",
+        "startTime": 576
+      }
+    ]
+  },
+  "after": {
+    "formHiddenAttribute": false,
+    "formDisplay": "grid",
+    "fallbackHidden": true,
+    "fallbackDisplay": "none",
+    "aside": {
+      "x": 24,
+      "y": 903.59375,
+      "width": 364,
+      "height": 454.25,
+      "top": 903.59375,
+      "right": 388,
+      "bottom": 1357.84375,
+      "left": 24
+    },
+    "form": {
+      "x": 24,
+      "y": 354.59375,
+      "width": 364,
+      "height": 501,
+      "top": 354.59375,
+      "right": 388,
+      "bottom": 855.59375,
+      "left": 24
+    },
+    "fontsLoaded": "loaded",
+    "paint": [
+      {
+        "name": "first-paint",
+        "startTime": 576
+      },
+      {
+        "name": "first-contentful-paint",
+        "startTime": 576
+      }
+    ]
+  },
+  "asideMovementPx": 453,
+  "shifts": [
+    {
+      "value": 0.00039914061639632556,
+      "startTime": 555.6999999992549,
+      "sources": [
+        {
+          "before": {
+            "x": 24,
+            "y": 129,
+            "width": 364,
+            "height": 99.296875,
+            "top": 129,
+            "right": 388,
+            "bottom": 228.296875,
+            "left": 24
+          },
+          "after": {
+            "x": 24,
+            "y": 126,
+            "width": 364,
+            "height": 99.296875,
+            "top": 126,
+            "right": 388,
+            "bottom": 225.296875,
+            "left": 24
+          }
+        }
+      ]
+    },
+    {
+      "value": 0.21980908533543528,
+      "startTime": 1409.800000000745,
+      "sources": [
+        {
+          "tag": "ASIDE",
+          "className": "signup-about",
+          "before": {
+            "x": 24,
+            "y": 450.59375,
+            "width": 364,
+            "height": 372.40625,
+            "top": 450.59375,
+            "right": 388,
+            "bottom": 823,
+            "left": 24
+          },
+          "after": {
+            "x": 0,
+            "y": 0,
+            "width": 0,
+            "height": 0,
+            "top": 0,
+            "right": 0,
+            "bottom": 0,
+            "left": 0
+          }
+        }
+      ]
+    }
+  ],
+  "cls": 0.2202082259518316
+}

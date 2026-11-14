@@ -1,0 +1,55 @@
+{
+  "dateUTC": "2026-11-14T21:30:21.322907+00:00",
+  "commit": "d0cc82660f58166022296534bb7f6d2cbe2c7b90",
+  "axe": {
+    "version": "4.14.0",
+    "htmlPages": 23,
+    "viewports": [
+      390,
+      1440
+    ],
+    "basePageChecks": 46,
+    "interactiveStateChecks": 6,
+    "checks": 52,
+    "violations": 0,
+    "incompleteChecks": 50,
+    "incompleteByRule": {
+      "color-contrast": 50
+    },
+    "incompleteNodesByRule": {
+      "color-contrast": 782
+    }
+  },
+  "keyboard": {
+    "checks": 171,
+    "failed": 0,
+    "coverage": "Navigation et focus au clavier, liens d’évitement, structure et ordre de tabulation sur six types de page en FR/EN à390/1440px ; menus, erreurs et confirmation/retour du formulaire, ancresFAQ et retour404."
+  },
+  "scriptFallback": {
+    "checks": 32,
+    "failed": 0,
+    "stableCommit": true,
+    "coverage": "SurFR/EN et390/1440px : initialisation normale, retrait de inert après installation des gestionnaires, scripts de navigation/formulaire volontairement bloqués, navigation de repli fonctionnelle, note visible, contrôles inertes exclus, JavaScript désactivé."
+  },
+  "textContrast": {
+    "checks": 23,
+    "allPassNormalTextAA": true,
+    "minimumRatio": 4.685876480208053,
+    "cssSHA256": "926106291faa31d8ad61d5a9f28200c5d184b5e8206cebbab2d168c716d1b823",
+    "method": "20 associations existantes couvrant textes et états de survol stabilisés, plus3 sur la page404. Bornes conservatrices des dégradés et couleurs sur images ; photographie mobile protégée par empreinte."
+  },
+  "sourceFiles": 26,
+  "limits": [
+    "Les50 vérifications incomplètes axe portent sur color-contrast lorsque des images/dégradés empêchent sa conclusion automatique. Les calculs complémentaires vérifient les associations de texte recensées ; il ne s’agit pas d’une résolution automatique de tous les cas WCAG.",
+    "Contrôles locaux avec Chromium156. Les lecteurs d’écran, le zoom natif, les autres moteurs de navigateur, le contraste des icônes/contours et les couleurs intermédiaires des transitions ne sont pas couverts exhaustivement.",
+    "Ce contrôle ne constitue pas un audit manuel complet de conformité WCAG."
+  ],
+  "reports": {
+    "axe": "axe-all-pages.json",
+    "keyboard": "keyboard.json",
+    "scriptFallback": "script-fallback.json",
+    "contrast": "contrastes.json",
+    "contrast404": "contrastes-404.json",
+    "sources": "sources.json"
+  }
+}

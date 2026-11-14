@@ -1,5 +1,7 @@
 # Vérifications de MOMOA avant remise
 
+Le [contrôle final de l’ensemble du projet](CONTROLE-FINAL.md) est la synthèse la plus récente : 23 pages, 299 mises en page, 52 contrôles axe et 24 mesures Google après correction du formulaire. Performances : 22 passages à 100 et deux à 99 ; les autres catégories classiques sont à 100 sur les 24 passages. Il contient les empreintes actuelles et les résultats complets.
+
 Le [contrôle complémentaire de l’affichage initial](affichage-initial/README.md) documente le rapport mobile à 99 fourni et la correction du chargement CSS des accueils. Les quatre nouvelles mesures Google des accueils FR/EN, sur mobile et ordinateur, obtiennent **100 dans les quatre catégories**. Il contient les rapports autonomes, les nouvelles empreintes et les contrôles associés. Les rapports plus anciens restent conservés avec leurs dates et leurs sources d’origine.
 
 ## Adresse à analyser dans PageSpeed
@@ -15,7 +17,7 @@ Le [bilan selon les sept critères](GRILLE-REMISE.md) rassemble les conclusions 
 
 Les preuves brutes sont conservées avec leurs dates, identifiants de base et chemins de travail d’origine. Ces chemins servent à documenter le contrôle ; les fichiers inclus ci-dessous sont consultables dans le dépôt. Les identifiants de base antérieurs à la mise à jour de l’historique n’identifient pas à eux seuls l’arbre final : les empreintes des fichiers font foi.
 
-## Preuves finales
+## Preuves de la campagne antérieure au contrôle complet
 
 | Contrôle | Périmètre et résultat | Fichiers |
 | --- | --- | --- |
