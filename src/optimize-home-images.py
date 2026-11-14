@@ -1,8 +1,8 @@
 #!/usr/bin/env python3
-"""Build responsive homepage images without changing their originals.
+"""Crée les variantes d'images de l'accueil avec Pillow (WebP et AVIF).
 
-Requires Pillow with WebP and AVIF support (``python3 -m pip install Pillow``).
-Run from any directory: ``python3 src/optimize-home-images.py``.
+Installation : python3 -m pip install Pillow
+Utilisation : python3 src/optimize-home-images.py
 """
 
 from pathlib import Path
@@ -55,7 +55,7 @@ def build_mobile_hero():
             )
 
     with Image.open(IMAGE_DIRECTORY / "hero-gallery-640.webp") as image:
-        # Bake the mobile hero's solid 87% ink overlay into the photo.
+        # Intégrer le voile sombre de 87 % au fond mobile.
         scene = image.convert("RGB")
         ink = Image.new("RGB", scene.size, (16, 23, 34))
         Image.blend(scene, ink, 0.87).save(

@@ -1,9 +1,7 @@
 #!/usr/bin/env python3
-"""Allège DM Sans en conservant les caractères et les réglages du site.
+"""Réduit les fichiers DM Sans avec fontTools, en conservant les caractères.
 
-Prérequis facultatif : python3 -m pip install 'fonttools[woff]'
-Les fichiers optimisés sont déjà inclus ; ce script n'est pas nécessaire
-pour consulter le site ou générer ses pages HTML.
+Prérequis : python3 -m pip install 'fonttools[woff]'
 """
 
 import argparse

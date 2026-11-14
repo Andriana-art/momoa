@@ -1,4 +1,4 @@
-// MOMOA’s bilingual text and route map, based on the approved Figma and Builder export.
+// Textes et routes FR/EN issus des maquettes Figma et de l'export Builder.io.
 export const languages = {
   "fr": {
     "routes": {

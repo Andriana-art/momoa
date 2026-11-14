@@ -428,8 +428,7 @@ function pageStyles(page) {
   if (page.name !== "home") {
     return `<link rel="stylesheet" href="${relative(page, "assets/styles.css")}?v=${stylesheetVersion}">`;
   }
-  // The homepages render without a second blocking network request. Keep one
-  // CSS source, resolving its asset URLs relative to each generated document.
+  // Intégrer le CSS aux accueils et adapter les chemins des ressources.
   const inlineStyles = stylesheet.replace(/url\("((?:fonts|images)\/[^"]+)"\)/g,
     (_, asset) => `url("${relative(page, `assets/${asset}`)}")`);
   return `<style>\n${inlineStyles}</style>`;
