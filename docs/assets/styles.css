@@ -204,7 +204,7 @@ button {
   background-color: var(--ivory);
 }
 
-/* The menu replaces the page content while it is open, matching the Figma state. */
+/* Le menu ouvert remplace le contenu de la page. */
 .site-header {
   position: relative;
   z-index: 1;
@@ -302,7 +302,7 @@ button {
   background: transparent;
 }
 
-/* Establish the enhanced header before first paint, without waiting for site.js. */
+/* Préparer le menu avant le chargement du script. */
 .js .menu-toggle {
   display: grid;
 }
@@ -506,7 +506,7 @@ button {
 }
 
 .home-artworks {
-  /* Preserve the enlarged photograph's crop from the mobile Figma frames. */
+  /* Conserver le cadrage prévu sur mobile. */
   --wall-size: 1416.947vw 940.338vw;
   --wall-position: -640.072vw -322.033vw;
   padding-block: 3rem;
@@ -623,7 +623,7 @@ button {
   background-image: none;
 }
 
-/* Native lazy loading defers the offscreen texture without changing its blend. */
+/* Charger les textures hors écran au défilement. */
 .home-texture {
   position: absolute;
   z-index: -1;
@@ -967,8 +967,7 @@ button {
   gap: 1.5rem;
 }
 
-/* The head script sets .js before rendering, so the form reserves its space
-   while its deferred event handlers load. Without JavaScript, show the note. */
+/* Garder la place du formulaire pendant le chargement du script. */
 html:not(.js) .signup-form, .js .signup-unavailable {
   display: none;
 }
@@ -1078,7 +1077,7 @@ html:not(.js) .signup-form, .js .signup-unavailable {
   }
 }
 
-/* Keep this breakpoint in sync with the menu script and picture sources. */
+/* Seuil partagé avec le menu et les images adaptatives. */
 @media (min-width: 56rem) {
   :root {
     --gutter: clamp(2rem, 5.56vw, 5rem);

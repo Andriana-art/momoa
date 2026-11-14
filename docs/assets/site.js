@@ -33,7 +33,7 @@ document.addEventListener("keydown", (event) => {
 });
 desktopLayout.addEventListener("change", (event) => {
   if (!event.matches || mobileMenu.hidden) return;
-  // The desktop CSS can blur the mobile controls before this callback runs.
+  // Restituer le focus après le passage à la navigation sur ordinateur.
   const restoreFocus = menuHasFocus;
   setMenu(false, false);
   if (restoreFocus) {
