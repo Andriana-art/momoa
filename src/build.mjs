@@ -452,7 +452,14 @@ function documentFor(page) {
   <meta name="description" content="${escape(description)}">
   <meta name="theme-color" content="#101722">
   <title>${escape(title)}</title>
-  <script>document.documentElement.classList.add("js");</script>
+  <script>
+    document.documentElement.classList.add("js");
+    document.addEventListener("error", (event) => {
+      if (event.target.tagName === "SCRIPT") {
+        document.documentElement.classList.remove("js");
+      }
+    }, true);
+  </script>
   <link rel="icon" href="${assetLink(page, "emblem.svg")}" type="image/svg+xml">
   ${stylesAndPreloads}
   <script src="${relative(page, "assets/site.js")}?v=${scriptVersion}" defer></script>
