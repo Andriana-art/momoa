@@ -48,22 +48,24 @@ Les liens générés sont relatifs au dossier du projet. Les options de publicat
 
 ## Vérifications avant remise
 
-Les derniers contrôles portent sur le site publié à partir du commit `36e98ce`. Le [bilan détaillé et les rapports consultables hors ligne](verification/README.md) sont inclus dans le dépôt.
+Le 14 novembre 2026, PageSpeed Insights a mesuré **100 en performances, accessibilité, bonnes pratiques et SEO** sur l’accueil et la galerie en français, sur mobile et ordinateur. Les deux rapports ont été générés après la publication du commit `23e1d1b`. [Rapport de l’accueil](https://pagespeed.web.dev/analysis/https-andriana-art-github-io-momoa/gwpmqxnzpp?form_factor=mobile) · [Rapport de la galerie](https://pagespeed.web.dev/analysis/https-andriana-art-github-io-momoa-galerie/4u32hpct1y?form_factor=mobile)
+
+Les contrôles ci-dessous ont été répétés après l’optimisation, à l’exception de la vérification des liens externes. Le [bilan de l’audit précédent et ses rapports hors ligne](verification/README.md) sont conservés dans le dépôt.
 
 | Contrôle | Résultat |
 | --- | --- |
 | HTML et CSS | Nu HTML Checker 26.11.9 ne relève aucune erreur ni aucun avertissement dans les 22 pages HTML et la feuille de style. |
 | Pages publiées | Les 22 pages répondent avec le statut HTTP 200 et correspondent aux fichiers testés. |
-| Liens et ressources locales | 715 références locales, dont les liens vers les pages, les ancres et les ressources, vérifiées sans erreur. |
-| Mise en page | 44 contrôles : les 22 pages en vue mobile et ordinateur, sans débordement horizontal, erreur JavaScript ni ressource en échec. |
-| Accessibilité automatisée | axe-core 4.14.0 ne détecte aucune violation lors de 50 contrôles, couvrant les 22 pages sur mobile et ordinateur ainsi que les états interactifs. Les limites de ce contrôle sont indiquées dans `verification/README.md`. |
+| Liens et ressources locales | 708 références locales, dont les liens vers les pages, les ancres et les ressources, vérifiées sans erreur. |
+| Mise en page | 342 contrôles de mise en page sur les 22 pages, de 320 à 1920 pixels CSS, sans débordement horizontal, chevauchement ni ressource en échec. |
+| Accessibilité automatisée | axe-core 4.14.0 ne détecte aucune violation lors de 54 contrôles, couvrant les 22 pages sur mobile et ordinateur ainsi que les états interactifs. |
 | Navigation et formulaire | Ouverture et fermeture du menu, touche Échap, retour du focus et formulaire de démonstration vérifiés dans les deux langues. La navigation principale reste utilisable sans JavaScript. |
-| Contrastes du texte | Les 18 associations contrôlées passent le seuil AA de 4,5:1 ; la borne conservatrice la plus basse sur les fonds texturés est de 4,686:1. Méthode et portée détaillées dans `verification/`. |
-| Images publiées | Les 10 images de chaque accueil se chargent après défilement, en français et en anglais, sur mobile et ordinateur. |
-| Lighthouse 13.6.0 | Les accueils français et anglais publiés obtiennent 100 en performances, accessibilité, bonnes pratiques et SEO sur mobile et ordinateur. Les quatre rapports HTML complets sont inclus dans `verification/`. |
-| Sources et crédits | Les 13 liens externes présents dans les pages vers les sources, crédits et licences répondent avec le statut HTTP 200. Les licences des polices sont incluses. |
+| Contrastes du texte | Les 836 échantillons contrôlés sur les fonds texturés respectent les seuils applicables. Le rapport le plus bas mesuré est de 5,07 pour 1. |
+| Images | Les 75 fichiers WebP ont été décodés. Les images optimisées ont été vérifiées sur le site publié. |
+| Lighthouse 13.6.0 | En complément des rapports PageSpeed, l’accueil et la galerie en français et en anglais ont obtenu 100 dans les quatre catégories lors des essais locaux sur mobile et ordinateur. |
+| Sources et crédits | Les 13 liens externes vers les sources, crédits et licences répondaient avec le statut HTTP 200 lors de l’audit précédent. Les licences des polices sont incluses. |
 
-Les contrôles actuels et leur périmètre sont détaillés dans `verification/`. Une nouvelle analyse sur le site de PageSpeed Insights a renvoyé « Unable to resolve » et n’a produit aucun nouveau rapport partageable ; les scores ci-dessus proviennent de Lighthouse exécuté directement sur le site publié. Ils concernent les pages et les conditions de test indiquées dans les rapports.
+Les scores concernent les pages et les conditions indiquées dans chaque rapport. Les polices et les images optimisées sont hébergées avec le site. La version de DM Sans utilise la taille optique de 14 déjà définie dans la feuille de style. La licence SIL Open Font License est incluse dans `docs/assets/fonts/`.
 
 Pour effectuer un contrôle complémentaire avec WAVE, utilisez les adresses du [site public MOMOA](https://andriana-art.github.io/momoa/) dans [WAVE en ligne](https://wave.webaim.org/). L’extension WAVE permet aussi d’examiner les états interactifs, comme le menu ouvert et les messages du formulaire.
 
