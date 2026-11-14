@@ -1,5 +1,7 @@
 # Vérifications de MOMOA avant remise
 
+Le [contrôle complémentaire de l’affichage initial](affichage-initial/README.md) documente le rapport mobile à 99 fourni après la campagne ci-dessous et la correction du chargement CSS des accueils. Il contient les nouvelles empreintes et les contrôles associés. Les rapports plus anciens restent conservés avec leurs dates et leurs sources d’origine.
+
 ## Adresse à analyser dans PageSpeed
 
 L’adresse publique du site est **https://andriana-art.github.io/momoa/**.

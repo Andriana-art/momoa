@@ -1,0 +1,14 @@
+{
+  "sha256": {
+    "docs/index.html": "6160628b26765b3ab5bd2c4ea6877772c825d88baacfe9526d3101cd26c3a7dc",
+    "docs/en/index.html": "7a9ce06d1a0c9c09e9d59a2507c65223b8dc31082c5a05498ab8f7a7f0c1d2ea",
+    "docs/assets/styles.css": "ee206eb99422fd83218b35e59ea027754d6dfbcea7c82c31afc1a4f2a92ec2b2",
+    "src/build.mjs": "b56d315d611626b10c685bf13be228dd60840884c8e031548abdc5037150254a"
+  },
+  "html_gzip": {
+    "docs/index.html": 8011,
+    "docs/en/index.html": 7892
+  },
+  "source_css_unique": "docs/assets/styles.css",
+  "autres_pages_html_inchangees": 20
+}

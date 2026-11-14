@@ -5,8 +5,9 @@ import { fileURLToPath } from "node:url";
 import { artworks, languages } from "./content.mjs";
 
 const output = fileURLToPath(new URL("../docs/", import.meta.url));
+const stylesheet = await readFile(new URL("../docs/assets/styles.css", import.meta.url), "utf8");
 const stylesheetVersion = createHash("sha256")
-  .update(await readFile(new URL("../docs/assets/styles.css", import.meta.url)))
+  .update(stylesheet)
   .digest("hex").slice(0, 12);
 const imageFolder = "assets/images/";
 const imageBreakpoint = "(min-width: 56rem)";
@@ -420,6 +421,17 @@ function heroPreloads(page) {
   <link rel="preload" as="image" type="image/webp" media="${escape(mobileHeroMedia)}" href="${assetLink(page, "hero-gallery-dark-640.webp")}">`;
 }
 
+function pageStyles(page) {
+  if (page.name !== "home") {
+    return `<link rel="stylesheet" href="${relative(page, "assets/styles.css")}?v=${stylesheetVersion}">`;
+  }
+  // The homepages render without a second blocking network request. Keep one
+  // CSS source, resolving its asset URLs relative to each generated document.
+  const inlineStyles = stylesheet.replace(/url\("((?:fonts|images)\/[^"]+)"\)/g,
+    (_, asset) => `url("${relative(page, `assets/${asset}`)}")`);
+  return `<style>\n${inlineStyles}</style>`;
+}
+
 function documentFor(page) {
   const copy = languages[page.lang];
   const title = page.name === "home" ? copy.htmlTitle : `${page.artwork?.title[page.lang] ?? copy.title[page.name]} — MOMOA`;
@@ -427,6 +439,10 @@ function documentFor(page) {
   const galleryFontPreload = (page.name === "gallery" || page.name === "home")
     ? `\n  <link rel="preload" href="${relative(page, "assets/fonts/cormorant-garamond-latin-wght-normal.woff2")}" as="font" type="font/woff2" crossorigin>`
     : "";
+  const bodyFontPreload = `<link rel="preload" href="${relative(page, "assets/fonts/dm-sans-latin-standard-normal.woff2")}" as="font" type="font/woff2" crossorigin>`;
+  const stylesAndPreloads = page.name === "home"
+    ? `${galleryFontPreload.trimStart()}${heroPreloads(page)}\n  ${bodyFontPreload}\n  ${pageStyles(page)}`
+    : `${pageStyles(page)}${galleryFontPreload}\n  ${bodyFontPreload}`;
   return `<!doctype html>
 <html lang="${page.lang}">
 <head>
@@ -437,8 +453,7 @@ function documentFor(page) {
   <title>${escape(title)}</title>
   <script>document.documentElement.classList.add("js");</script>
   <link rel="icon" href="${assetLink(page, "emblem.svg")}" type="image/svg+xml">
-  <link rel="stylesheet" href="${relative(page, "assets/styles.css")}?v=${stylesheetVersion}">${galleryFontPreload}${page.name === "home" ? heroPreloads(page) : ""}
-  <link rel="preload" href="${relative(page, "assets/fonts/dm-sans-latin-standard-normal.woff2")}" as="font" type="font/woff2" crossorigin>
+  ${stylesAndPreloads}
   <script src="${relative(page, "assets/site.js")}" defer></script>
 </head>
 <body class="page-${page.name}">
