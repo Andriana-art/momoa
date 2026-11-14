@@ -36,7 +36,7 @@ Le [site publié sur GitHub Pages](https://andriana-art.github.io/momoa/) peut �
 
 4. Ouvrez [http://localhost:8000/](http://localhost:8000/) dans votre navigateur. Laissez le terminal ouvert pendant la prévisualisation. Pour arrêter le serveur, appuyez sur Ctrl+C dans le terminal.
 
-Les pages HTML et les images sont déjà générées ; aucune installation de dépendances n’est nécessaire pour consulter le site. Pour modifier les textes, éditez `src/content.mjs`, puis exécutez `node src/build.mjs` avec Node.js 22 ou une version plus récente. Après une modification du CSS, relancez aussi `node src/build.mjs` pour actualiser son URL versionnée, puis actualisez la page dans le navigateur. Après une modification du JavaScript, actualisez également la page.
+Les pages HTML et les images sont déjà générées ; aucune installation de dépendances n’est nécessaire pour consulter le site. Pour modifier les textes, éditez `src/content.mjs`, puis exécutez `node src/build.mjs` avec Node.js 22 ou une version plus récente. Après une modification du CSS, relancez aussi `node src/build.mjs` pour réintégrer les styles aux accueils et actualiser l’URL versionnée utilisée par les autres pages, puis actualisez la page dans le navigateur. Après une modification du JavaScript, actualisez également la page.
 
 La réduction facultative des polices utilise `python3 src/optimize-fonts.py` avec fontTools et son support WOFF2 (`python3 -m pip install "fonttools[woff]"`). Les caractères sont conservés ; les fichiers optimisés sont déjà inclus.
 
@@ -52,6 +52,8 @@ Pour régénérer les variantes d’images de l’accueil, exécutez `python3 sr
 Les liens générés sont relatifs au dossier du projet. Les options de publication et le dossier source `/docs` sont décrits dans le [guide de configuration de GitHub Pages](https://docs.github.com/en/pages/getting-started-with-github-pages/configuring-a-publishing-source-for-your-github-pages-site).
 
 ## Vérifications avant remise
+
+Le [contrôle complémentaire de l’affichage initial](verification/affichage-initial/README.md) documente le rapport mobile à 99 fourni, la suppression de la requête CSS bloquante des accueils et les vérifications de cette modification.
 
 La [grille de remise détaillée](verification/GRILLE-REMISE.md) reprend les sept critères du projet. Les [preuves et leur périmètre](verification/README.md) sont inclus dans le dépôt ; les empreintes SHA-256 identifient les fichiers contrôlés après les corrections graphiques, publiés dans le commit `57e156f34f697b3f07b73534adda23a3f558b462`.
 
