@@ -506,16 +506,16 @@ export const artworks = [
         "heading": "Les Océanides entourent le Titan enchaîné",
         "body": "Prométhée est enchaîné au rocher, entouré des Océanides. L’aigle et les liens rendent sa captivité visible, tandis que les figures qui l’entourent partagent sa douleur. Eduard Müller conçoit le groupe en 1868. Commandée en 1872, sa version monumentale en marbre est installée à la Nationalgalerie de Berlin en 1879. Il s’agit d’une création du XIXe siècle inspirée du mythe grec.",
         "references": "Eduard Müller · 1872–1879 · marbre · Alte Nationalgalerie, Berlin",
-        "sourceLabel": "Archives de la Nationalgalerie de Berlin · I/NG 1812 ↗",
-        "sourceHref": "https://www.smb.museum/en/museums-institutions/zentralarchiv/holdings/overview/internal-business-records-up-to-1945/#c38859",
+        "sourceLabel": "Archives de la Nationalgalerie · I/NG 1812 (PDF) ↗",
+        "sourceHref": "https://www.smb.museum/fileadmin/website/Institute/Zentralarchiv/Bestaende/Dokumente/ZA_Findbuch_Nationalgalerie.pdf#page=259",
         "creditLine": "Photo : Montserrat Mondragón / Pexels"
       },
       "en": {
         "heading": "The Oceanids gather around the chained Titan",
         "body": "Prometheus is chained to a rock, surrounded by the Oceanids. The eagle and his bonds make his captivity visible, while the surrounding figures share his suffering. Eduard Müller designed the group in 1868. Commissioned in 1872, the monumental marble version was installed in Berlin’s Nationalgalerie in 1879. It is a nineteenth-century interpretation of Greek myth.",
         "references": "Eduard Müller · 1872–1879 · marble · Alte Nationalgalerie, Berlin",
-        "sourceLabel": "Berlin Nationalgalerie archives · I/NG 1812 ↗",
-        "sourceHref": "https://www.smb.museum/en/museums-institutions/zentralarchiv/holdings/overview/internal-business-records-up-to-1945/#c38859",
+        "sourceLabel": "Nationalgalerie archives · I/NG 1812 (PDF) ↗",
+        "sourceHref": "https://www.smb.museum/fileadmin/website/Institute/Zentralarchiv/Bestaende/Dokumente/ZA_Findbuch_Nationalgalerie.pdf#page=259",
         "creditLine": "Photo: Montserrat Mondragón / Pexels"
       }
     }
