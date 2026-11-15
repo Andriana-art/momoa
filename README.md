@@ -4,6 +4,8 @@ MOMOA est une galerie fictive consacrée à la sculpture grecque, réalisée dan
 
 [Voir le site](https://andriana-art.github.io/momoa/) · [Maquettes Figma](https://www.figma.com/design/2hP92QF9qMobRzZcJIsvFf/Momoa-Export-HTM-Builder.io?node-id=282-1408)
 
+[Fiche de remise (PDF)](MOMOA-remise.pdf)
+
 Le formulaire est une démonstration : aucune inscription n’est créée et aucune donnée n’est envoyée ni conservée.
 
 ## Ouvrir le projet
