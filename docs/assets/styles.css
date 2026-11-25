@@ -307,6 +307,30 @@ button {
   display: grid;
 }
 
+@media (max-width: 19rem) {
+  .header-inner {
+    grid-template-areas: "brand" "controls";
+    grid-template-columns: minmax(0, 1fr);
+    grid-template-rows: auto;
+    padding-block: 0.75rem;
+  }
+
+  .header-controls {
+    flex-wrap: wrap;
+    justify-content: flex-end;
+  }
+
+  .languages [lang] {
+    width: auto;
+    min-width: 44px;
+    padding-inline: 0.25rem;
+  }
+
+  .desktop-nav {
+    grid-row: 3;
+  }
+}
+
 .menu-toggle[aria-expanded="true"] .menu-icon-open {
   display: none;
 }
@@ -826,8 +850,28 @@ button {
   margin-block-start: auto;
 }
 
+.reading-notes {
+  display: grid;
+  gap: 2rem;
+  padding-block: 1.5rem 3rem;
+}
+
+.reading-notes > section {
+  display: grid;
+  gap: 0.75rem;
+  max-width: 70ch;
+}
+
+.reading-notes h2, .signup-form h2 {
+  font-size: 1.75rem;
+}
+
 .collection-intro {
   padding-block: 4.5rem 3.5rem;
+}
+
+.collection-intro > p, .faq-intro {
+  margin-block-start: 1rem;
 }
 
 .collection-grid {

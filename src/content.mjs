@@ -88,6 +88,8 @@ export const languages = {
       "faqTitle": "Une question ?"
     },
     "faq": {
+      "title": "Questions fréquentes",
+      "intro": "Ces questions fréquentes portent sur la collection, le projet universitaire et le formulaire de démonstration.",
       "items": [
         {
           "id": "a-propos-de-momoa",
@@ -118,8 +120,8 @@ export const languages = {
     },
     "gallery": {
       "introTitle": [
-        "Prenez le temps",
-        "de regarder"
+        "La galerie MOMOA",
+        "de près"
       ],
       "introBody": "Chaque sculpture se découvre aussi dans les détails.",
       "photoCredit": "Photo : Montserrat Mondragón / Pexels",
@@ -127,7 +129,7 @@ export const languages = {
         "La galerie et",
         "son histoire"
       ],
-      "historyBody": "Paul Dechewsky travaille dans le milieu artistique depuis plus de trente ans. MOMOA prolonge cette activité avec une collection consacrée à la sculpture grecque et à ses héritages.",
+      "historyBody": "Paul Dechewsky travaille dans le milieu artistique depuis plus de trente ans. La galerie MOMOA prolonge cette activité avec une collection consacrée à la sculpture grecque et à ses héritages.",
       "historyAuthor": "Paul Dechewsky, responsable de la galerie",
       "historyNote": "MOMOA est une galerie fictive conçue dans le cadre d’un projet universitaire.",
       "expositionsTitle": "Expositions",
@@ -148,7 +150,8 @@ export const languages = {
       "storyFrameLabel": "Caryatides"
     },
     "collection": {
-      "title": "Explorez la collection",
+      "title": "Explorez la collection MOMOA",
+      "intro": "La collection MOMOA réunit des sculptures grecques, des copies romaines et des œuvres inspirées des mythes grecs. Chaque notice situe l’œuvre dans son époque.",
       "notice": "Découvrir l’œuvre →",
       "back": "← Retour à la collection",
       "noticeLabel": "Notice de l’œuvre",
@@ -159,7 +162,8 @@ export const languages = {
     },
     "signup": {
       "title": "Les nouvelles de MOMOA",
-      "body": "Pour suivre les expositions et les œuvres présentées.",
+      "body": "Essayez le formulaire des nouvelles de MOMOA pour découvrir comment suivre les expositions et les œuvres présentées.",
+      "formTitle": "Formulaire de démonstration",
       "formNote": "Tous les champs sont obligatoires.",
       "fields": {
         "lastName": "Nom",
@@ -259,7 +263,7 @@ export const languages = {
         "Why show",
         "reproductions?"
       ],
-      "reproductionsBody": "Many Greek sculptures are known to us through Roman copies. MOMOA follows this history through a collection of reproductions.",
+      "reproductionsBody": "Many works of Greek sculpture are known to us through Roman copies. MOMOA follows this history through a collection of reproductions.",
       "reproductionsCta": "Discover the gallery",
       "homeCards": {
         "victoire": "Wind takes shape in the folds of marble.",
@@ -271,6 +275,8 @@ export const languages = {
       "faqTitle": "Have a question?"
     },
     "faq": {
+      "title": "Frequently asked questions",
+      "intro": "These frequently asked questions cover the collection, the university project, and the demonstration sign-up form.",
       "items": [
         {
           "id": "about-momoa",
@@ -301,7 +307,8 @@ export const languages = {
     },
     "gallery": {
       "introTitle": [
-        "Take a closer look"
+        "The MOMOA gallery",
+        "up close"
       ],
       "introBody": "Every sculpture has more to reveal up close.",
       "photoCredit": "Photo: Montserrat Mondragón / Pexels",
@@ -309,7 +316,7 @@ export const languages = {
         "The story of",
         "the gallery"
       ],
-      "historyBody": "Paul Dechewsky has worked in the art world for over thirty years. MOMOA continues this work with a collection devoted to Greek sculpture and its legacy.",
+      "historyBody": "Paul Dechewsky has worked in the art world for over thirty years. The MOMOA gallery continues this work with a collection devoted to Greek sculpture and its legacy.",
       "historyAuthor": "Paul Dechewsky, gallery manager",
       "historyNote": "MOMOA is a fictional gallery created as part of a university project.",
       "expositionsTitle": "Exhibitions",
@@ -330,7 +337,8 @@ export const languages = {
       "storyFrameLabel": "Caryatids"
     },
     "collection": {
-      "title": "Explore the collection",
+      "title": "Explore the MOMOA collection",
+      "intro": "The MOMOA collection brings together Greek sculptures, Roman copies, and works inspired by Greek myths. Each notice places its work in its own period.",
       "notice": "Discover the work →",
       "back": "← Back to the collection",
       "noticeLabel": "Artwork notice",
@@ -341,7 +349,8 @@ export const languages = {
     },
     "signup": {
       "title": "News from MOMOA",
-      "body": "Follow the exhibitions and featured works.",
+      "body": "The News from MOMOA form shows how to sign up for updates on exhibitions and featured works.",
+      "formTitle": "Demonstration form",
       "formNote": "All fields are required.",
       "fields": {
         "lastName": "Last name",

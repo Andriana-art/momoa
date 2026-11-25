@@ -32,10 +32,10 @@ document.addEventListener("keydown", (event) => {
   setMenu(false);
 });
 desktopLayout.addEventListener("change", (event) => {
-  if (!event.matches || mobileMenu.hidden) return;
+  if (!event.matches) return;
   // Restituer le focus après le passage à la navigation sur ordinateur.
   const restoreFocus = menuHasFocus;
-  setMenu(false, false);
+  if (!mobileMenu.hidden) setMenu(false, false);
   if (restoreFocus) {
     document.querySelector(".desktop-nav a").focus({ preventScroll: true });
   }

@@ -6,6 +6,9 @@
   <meta name="description" content="Explorez l’Antiquité chez MOMOA, galerie fictive de sculptures grecques et de reproductions. Découvrez la Victoire de Samothrace, Vénus de Milo et Poséidon.">
   <meta name="theme-color" content="#101722">
   <title>MOMOA — Sculpture grecque et reproductions</title>
+  <link rel="canonical" href="https://andriana-art.github.io/momoa/">
+  <link rel="alternate" hreflang="fr" href="https://andriana-art.github.io/momoa/">
+  <link rel="alternate" hreflang="en" href="https://andriana-art.github.io/momoa/en/">
   <script type="application/ld+json">{"@context":"https://schema.org","url":"https://andriana-art.github.io/momoa/","inLanguage":"fr","@type":"WebPage","name":"MOMOA","description":"Galerie fictive de reproductions de sculptures grecques · Projet universitaire","isPartOf":{"@type":"WebSite","@id":"https://andriana-art.github.io/momoa/#website","url":"https://andriana-art.github.io/momoa/","name":"MOMOA","inLanguage":["fr","en"]}}</script>
   <script>
     document.documentElement.classList.add("js");
@@ -329,6 +332,30 @@ button {
 /* Préparer le menu avant le chargement du script. */
 .js .menu-toggle {
   display: grid;
+}
+
+@media (max-width: 19rem) {
+  .header-inner {
+    grid-template-areas: "brand" "controls";
+    grid-template-columns: minmax(0, 1fr);
+    grid-template-rows: auto;
+    padding-block: 0.75rem;
+  }
+
+  .header-controls {
+    flex-wrap: wrap;
+    justify-content: flex-end;
+  }
+
+  .languages [lang] {
+    width: auto;
+    min-width: 44px;
+    padding-inline: 0.25rem;
+  }
+
+  .desktop-nav {
+    grid-row: 3;
+  }
 }
 
 .menu-toggle[aria-expanded="true"] .menu-icon-open {
@@ -850,8 +877,28 @@ button {
   margin-block-start: auto;
 }
 
+.reading-notes {
+  display: grid;
+  gap: 2rem;
+  padding-block: 1.5rem 3rem;
+}
+
+.reading-notes > section {
+  display: grid;
+  gap: 0.75rem;
+  max-width: 70ch;
+}
+
+.reading-notes h2, .signup-form h2 {
+  font-size: 1.75rem;
+}
+
 .collection-intro {
   padding-block: 4.5rem 3.5rem;
+}
+
+.collection-intro > p, .faq-intro {
+  margin-block-start: 1rem;
 }
 
 .collection-grid {
@@ -1440,7 +1487,7 @@ html:not(.js) .signup-form, .js .signup-unavailable {
   }
 }
 </style>
-  <script src="assets/site.js?v=90c8f0ace511" defer></script>
+  <script src="assets/site.js?v=510cf1c2dd76" defer></script>
 </head>
 <body class="page-home">
   <a class="skip-link" href="#main-content">Aller au contenu</a>
