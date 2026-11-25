@@ -205,7 +205,7 @@ export const languages = {
     "descriptions": {
       "home": "Explore Greek sculpture and reproductions at MOMOA, a fictional gallery featuring the Winged Victory of Samothrace, Venus de Milo and Poseidon.",
       "gallery": "Read the story of MOMOA, a fictional gallery created for a university project. Explore how it presents sculpture and helps visitors look more closely.",
-      "collection": "Browse six works in the MOMOA collection, from ancient Greek sculpture and Roman copies to later interpretations. Each work has its own illustrated page.",
+      "collection": "Browse six works in the MOMOA collection, from ancient Greek sculpture and Roman copies to later interpretations. Each work has its own page with a photograph.",
       "signup": "Try the demo sign-up form for the MOMOA newsletter about exhibitions and featured works. No subscription is created, and no information is sent or stored.",
       "faq": "Find answers to frequently asked questions about the fictional MOMOA gallery, the origins of its sculptures and how the demonstration sign-up form works."
     },
@@ -395,7 +395,7 @@ export const artworks = [
       },
       "en": {
         "heading": "Wind takes shape in the folds of marble",
-        "metaDescription": "The Winged Victory of Samothrace shows Nike on a ship’s prow. MOMOA examines its wind-swept marble folds and the right wing reconstructed in plaster.",
+        "metaDescription": "The Winged Victory of Samothrace shows Nike on a ship’s prow. Its lifted folds suggest the force of the wind. The right wing is a plaster reconstruction.",
         "body": "The Winged Victory of Samothrace depicts Nike, goddess of victory, alighting on a ship’s prow. Fabric clings to her body while the lifted folds suggest the force of the wind. Discovered on Samothrace in 1863, this Greek sculpture dates to 200–175 BCE. The figure is carved in Parian marble; the ship is Lartos marble. The right wing is a plaster reconstruction.",
         "references": "Greece, Hellenistic period · 200–175 BCE · Parian marble · Musée du Louvre, Paris · inv. Ma 2369",
         "sourceLabel": "Record: Musée du Louvre →",
@@ -440,7 +440,7 @@ export const artworks = [
       },
       "en": {
         "heading": "The moment before the throw",
-        "metaDescription": "The Discobolus captures the moment before the throw. MOMOA’s notice traces this Roman marble copy to a lost Greek bronze attributed to the sculptor Myron.",
+        "metaDescription": "The Discobolus captures the moment before the throw. MOMOA’s notice traces this Roman marble copy to a lost Greek bronze attributed to Myron.",
         "body": "In the Discobolus, the athlete pauses just before releasing his discus. This Roman marble copy follows a lost Greek bronze attributed to Myron in the fifth century BCE. His bent torso and sweeping arm hold the movement in balance. The head was incorrectly positioned during restoration: it should turn towards the discus.",
         "references": "2nd century CE · marble · British Museum, London · inv. 1805,0703.43",
         "sourceLabel": "Record: British Museum →",
@@ -545,7 +545,7 @@ export const artworks = [
     "notices": {
       "fr": {
         "heading": "Un casque et une égide pour reconnaître Athéna",
-        "metaDescription": "Casque et égide à tête de Gorgone permettent de reconnaître l’Athéna de Perge. MOMOA présente cette sculpture d’époque romaine conservée au musée d’Antalya.",
+        "metaDescription": "Le casque et l’égide à tête de Gorgone identifient Athéna. La sculpture photographiée correspond à l’Athéna de Perge, conservée au musée d’Antalya.",
         "body": "Le casque et l’égide ornée d’une tête de Gorgone permettent de reconnaître Athéna. Sur sa poitrine, les écailles de cette protection contrastent avec les plis du vêtement rassemblé à la taille. La sculpture photographiée correspond à l’Athéna de Perge, conservée au musée d’Antalya. C’est une œuvre d’époque romaine représentant la déesse grecque.",
         "references": "Époque romaine · marbre · provenance : Perge · Musée d’Antalya, Türkiye",
         "sourceLabel": "Vues de référence : Athéna de Perge →",
@@ -554,7 +554,7 @@ export const artworks = [
       },
       "en": {
         "heading": "Athena’s helmet and aegis identify the goddess",
-        "metaDescription": "The helmet and the Gorgon’s head on her aegis identify Athena. MOMOA’s notice examines this Roman-period marble figure from Perge, now in Antalya Museum.",
+        "metaDescription": "A helmet and an aegis with a Gorgon’s head identify Athena. The figure pictured matches the Roman-period Athena from Perge in Antalya Museum.",
         "body": "The helmet and aegis bearing a Gorgon’s head identify Athena. The scales of this protective garment contrast with the folds gathered at her waist. The photographed sculpture matches the Athena from Perge in Antalya Museum. It is a Roman-period work depicting the Greek goddess.",
         "references": "Roman period · marble · from Perge · Antalya Museum, Türkiye",
         "sourceLabel": "Reference views: Athena from Perge →",
