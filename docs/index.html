@@ -213,6 +213,8 @@ button {
 .button--outline {
   border-color: currentColor;
   background: transparent;
+  /* Garder le contraste quand le texte et le fond inversent leurs couleurs. */
+  transition: none;
 }
 
 .button--outline:hover {
@@ -1487,7 +1489,7 @@ html:not(.js) .signup-form, .js .signup-unavailable {
   }
 }
 </style>
-  <script src="assets/site.js?v=510cf1c2dd76" defer></script>
+  <script src="assets/site.js?v=3325a9244069" defer></script>
 </head>
 <body class="page-home">
   <a class="skip-link" href="#main-content">Aller au contenu</a>

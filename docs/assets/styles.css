@@ -186,6 +186,8 @@ button {
 .button--outline {
   border-color: currentColor;
   background: transparent;
+  /* Garder le contraste quand le texte et le fond inversent leurs couleurs. */
+  transition: none;
 }
 
 .button--outline:hover {
