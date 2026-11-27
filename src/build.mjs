@@ -99,8 +99,10 @@ function externalLink(url, label) {
 }
 
 function brand(page) {
-  return `<span class="brand">${image(page, "emblem.svg", "", 26, 48)}<span>momoa</span></span>`;
-}
+  const home = pageLink(page, languages[page.lang].routes.home);
+  const label = page.lang === "fr" ? "MOMOA — Accueil" : "MOMOA — Home";
+  return `<a class="brand" href="${home}" aria-label="${label}">${image(page, "emblem.svg", "", 26, 48)}<span>momoa</span></a>`;
+} 
 
 function navigation(page, className) {
   const copy = languages[page.lang];
