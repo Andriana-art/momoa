@@ -24,7 +24,7 @@ Sous Windows, remplacer `python3` par `py`. Ouvrir ensuite [localhost:8000](http
 - `src/content.mjs` : textes français et anglais.
 - `src/build.mjs` : génération des pages HTML.
 
-Après une modification des textes, du CSS ou du JavaScript, régénérer les pages avec Node.js :
+Pour modifier le logo ou les coordonnées du pied de page, éditer `src/build.mjs`. Après une modification des sources, régénérer les pages dans `docs/` avec Node.js.
 
 ```bash
 node src/build.mjs
