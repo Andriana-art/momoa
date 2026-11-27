@@ -20,7 +20,7 @@ Sous Windows, remplacer `python3` par `py`. Ouvrir ensuite [localhost:8000](http
 
 ## Fichiers
 
-- `docs/` : pages du site, styles, JavaScript, images et polices.
+- `docs/` : pages HTML du site, feuille partagée dans `css/`, script dans `js/`, images et polices dans `assets/`.
 - `src/content.mjs` : textes français et anglais.
 - `src/build.mjs` : génération des pages HTML.
 

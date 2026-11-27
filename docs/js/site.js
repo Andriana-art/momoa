@@ -104,3 +104,8 @@ if (form) {
   form.hidden = false;
   form.inert = false;
 }
+
+// Garder la navigation native disponible tant que le script ne l’a pas remplacée.
+const restoreNavigationFocus = !desktopLayout.matches && desktopNav.contains(document.activeElement);
+document.documentElement.classList.add("js");
+if (restoreNavigationFocus) menuButton.focus({ preventScroll: true });

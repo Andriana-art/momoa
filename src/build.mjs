@@ -6,13 +6,14 @@ import { artworks, languages } from "./content.mjs";
 import { artworkNotes, galleryNotes } from "./reading-notes.mjs";
 
 const siteUrl = "https://andriana-art.github.io/momoa/";
-const output = fileURLToPath(new URL("../docs/", import.meta.url));
-const stylesheet = await readFile(new URL("../docs/assets/styles.css", import.meta.url), "utf8");
+const outputDirectory = new URL("../docs/", import.meta.url);
+const stylesheetPath = "css/styles.css";
+const scriptPath = "js/site.js";
 const stylesheetVersion = createHash("sha256")
-  .update(stylesheet)
+  .update(await readFile(new URL(stylesheetPath, outputDirectory)))
   .digest("hex").slice(0, 12);
 const scriptVersion = createHash("sha256")
-  .update(await readFile(new URL("../docs/assets/site.js", import.meta.url)))
+  .update(await readFile(new URL(scriptPath, outputDirectory)))
   .digest("hex").slice(0, 12);
 const imageFolder = "assets/images/";
 const imageBreakpoint = "(min-width: 56rem)";
@@ -146,8 +147,8 @@ function header(page) {
           ${controls[1]}
         </div>
         <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="mobile-menu" aria-label="${escape(copy.menuOpen)}" data-open-label="${escape(copy.menuOpen)}" data-close-label="${escape(copy.menuClose)}">
-          ${image(page, "menu-open.svg", "", 24, 18, { className: "menu-icon-open" })}
-          ${image(page, "menu-close.svg", "", 24, 24, { className: "menu-icon-close" })}
+          <img class="menu-icon-open" src="${assetLink(page, "menu-open.svg")}" alt="" decoding="async">
+          <img class="menu-icon-close" src="${assetLink(page, "menu-close.svg")}" alt="" decoding="async">
         </button>
       </div>
     </div>
@@ -544,16 +545,6 @@ function heroPreloads(page) {
   <link rel="preload" as="image" type="image/webp" media="${escape(mobileHeroMedia)}" href="${assetLink(page, "hero-gallery-dark-640.webp")}">`;
 }
 
-function pageStyles(page) {
-  if (page.name !== "home") {
-    return `<link rel="stylesheet" href="${relative(page, "assets/styles.css")}?v=${stylesheetVersion}">`;
-  }
-  // Intégrer le CSS aux accueils et adapter les chemins des ressources.
-  const inlineStyles = stylesheet.replace(/url\("((?:fonts|images)\/[^"]+)"\)/g,
-    (_, asset) => `url("${relative(page, `assets/${asset}`)}")`);
-  return `<style>\n${inlineStyles}</style>`;
-}
-
 function documentFor(page) {
   const copy = languages[page.lang];
   const title = page.name === "home" ? copy.htmlTitle : `${page.artwork?.title[page.lang] ?? copy.title[page.name]} — MOMOA`;
@@ -567,11 +558,8 @@ function documentFor(page) {
     const translated = pageFor(lang, page.name, page.artwork);
     return `<link rel="alternate" hreflang="${lang}" href="${publishedPageUrl(translated.route)}">`;
   }).join("\n  ");
-  const serifFontPreload = `\n  <link rel="preload" href="${relative(page, "assets/fonts/cormorant-garamond-latin-wght-normal.woff2")}" as="font" type="font/woff2" crossorigin>`;
-  const bodyFontPreload = `<link rel="preload" href="${relative(page, "assets/fonts/dm-sans-latin-standard-normal.woff2")}" as="font" type="font/woff2" crossorigin>`;
-  const stylesAndPreloads = page.name === "home"
-    ? `${serifFontPreload.trimStart()}${heroPreloads(page)}\n  ${bodyFontPreload}\n  ${pageStyles(page)}`
-    : `${pageStyles(page)}${serifFontPreload}\n  ${bodyFontPreload}`;
+  const scriptUrl = `${relative(page, scriptPath)}?v=${scriptVersion}`;
+  const homePreloads = page.name === "home" ? heroPreloads(page) : "";
   return `<!doctype html>
 <html lang="${page.lang}">
 <head>
@@ -583,17 +571,11 @@ function documentFor(page) {
   <link rel="canonical" href="${publishedPageUrl(page.route)}">
   ${alternateLinks}
   <script type="application/ld+json">${structuredData}</script>
-  <script>
-    document.documentElement.classList.add("js");
-    document.addEventListener("error", (event) => {
-      if (event.target.tagName === "SCRIPT") {
-        document.documentElement.classList.remove("js");
-      }
-    }, true);
-  </script>
   <link rel="icon" href="${assetLink(page, "emblem.svg")}" type="image/svg+xml">
-  ${stylesAndPreloads}
-  <script src="${relative(page, "assets/site.js")}?v=${scriptVersion}" defer></script>
+  <link rel="stylesheet" href="${relative(page, stylesheetPath)}?v=${stylesheetVersion}">
+  <link rel="preload" href="${relative(page, "assets/fonts/cormorant-garamond-latin-wght-normal.woff2")}" as="font" type="font/woff2" crossorigin>${homePreloads}
+  <link rel="preload" href="${relative(page, "assets/fonts/dm-sans-latin-standard-normal.woff2")}" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="${scriptUrl}" as="script">
 </head>
 <body class="page-${page.name}">
   <a class="skip-link" href="#main-content">${escape(copy.skipLink)}</a>
@@ -602,6 +584,7 @@ function documentFor(page) {
     ${render[page.name](page)}
   </main>
   ${footer(page)}
+  <script src="${scriptUrl}" defer></script>
 </body>
 </html>
 `;
@@ -614,9 +597,9 @@ const pages = Object.keys(languages).flatMap((lang) => [
 
 const documents = pages.map((page) => ({ page, html: documentFor(page) }));
 for (const { page, html } of documents) {
-  const directory = fileURLToPath(new URL(`${page.directory}/`, new URL("../docs/", import.meta.url)));
+  const directory = fileURLToPath(new URL(`${page.directory}/`, outputDirectory));
   await mkdir(directory, { recursive: true });
   await writeFile(`${directory}index.html`, html);
 }
-await writeFile(`${output}.nojekyll`, "");
+await writeFile(new URL(".nojekyll", outputDirectory), "");
 console.log(`Generated ${pages.length} pages in docs/.`);

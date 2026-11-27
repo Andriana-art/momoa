@@ -1,6 +1,6 @@
 @font-face {
   font-family: "Cormorant Garamond";
-  src: url("fonts/cormorant-garamond-latin-ext-wght-normal.woff2") format("woff2");
+  src: url("../assets/fonts/cormorant-garamond-latin-ext-wght-normal.woff2") format("woff2");
   font-weight: 300 700;
   font-style: normal;
   font-display: swap;
@@ -9,7 +9,7 @@
 
 @font-face {
   font-family: "Cormorant Garamond";
-  src: url("fonts/cormorant-garamond-latin-wght-normal.woff2") format("woff2");
+  src: url("../assets/fonts/cormorant-garamond-latin-wght-normal.woff2") format("woff2");
   font-weight: 300 700;
   font-style: normal;
   font-display: swap;
@@ -18,7 +18,7 @@
 
 @font-face {
   font-family: "DM Sans";
-  src: url("fonts/dm-sans-latin-ext-standard-normal.woff2") format("woff2");
+  src: url("../assets/fonts/dm-sans-latin-ext-standard-normal.woff2") format("woff2");
   font-weight: 400 500;
   font-style: normal;
   font-display: swap;
@@ -27,7 +27,7 @@
 
 @font-face {
   font-family: "DM Sans";
-  src: url("fonts/dm-sans-latin-standard-normal.woff2") format("woff2");
+  src: url("../assets/fonts/dm-sans-latin-standard-normal.woff2") format("woff2");
   font-weight: 400 500;
   font-style: normal;
   font-display: swap;
@@ -50,7 +50,7 @@
   --radius: 0.75rem;
   --gutter: 1.5rem;
   --content-width: 80rem;
-  --stone-texture: url("images/stone-texture-320.webp");
+  --stone-texture: url("../assets/images/stone-texture-320.webp");
   --serif: "Cormorant Garamond", Georgia, serif;
   --sans: "DM Sans", Arial, sans-serif;
 }
@@ -283,6 +283,18 @@ button {
   display: none;
 }
 
+.menu-icon-open, .menu-icon-close {
+  width: 24px;
+}
+
+.menu-icon-open {
+  height: 18px;
+}
+
+.menu-icon-close {
+  height: 24px;
+}
+
 .desktop-nav {
   grid-column: 1 / -1;
   grid-row: 2;
@@ -304,7 +316,7 @@ button {
   background: transparent;
 }
 
-/* Préparer le menu avant le chargement du script. */
+/* Afficher le bouton une fois le menu interactif activé. */
 .js .menu-toggle {
   display: grid;
 }
@@ -481,7 +493,7 @@ button {
 }
 
 .hero::before {
-  --hero-background: url("images/hero-gallery-dark-640.webp");
+  --hero-background: url("../assets/images/hero-gallery-dark-640.webp");
   --hero-shade: none;
   position: absolute;
   z-index: -1;
@@ -539,7 +551,7 @@ button {
   background-color: var(--artwork-background);
   background-image:
     linear-gradient(rgba(35, 51, 64, 0.78), rgba(35, 51, 64, 0.78)),
-    url("images/slate-wall.webp");
+    url("../assets/images/slate-wall.webp");
   background-size: auto, var(--wall-size);
   background-position: center, var(--wall-position);
   background-repeat: no-repeat;
@@ -551,7 +563,7 @@ button {
   background-image:
     linear-gradient(to bottom, var(--ink), transparent 6rem),
     linear-gradient(rgba(35, 51, 64, 0.78), rgba(35, 51, 64, 0.78)),
-    url("images/slate-wall.webp");
+    url("../assets/images/slate-wall.webp");
   background-size: auto, auto, var(--wall-size);
   background-position: center, center, var(--wall-position);
 }
@@ -773,7 +785,7 @@ button {
 }
 
 .gallery-history {
-  --history-background: url("images/gallery-history-540.webp");
+  --history-background: url("../assets/images/gallery-history-540.webp");
   display: grid;
   align-items: center;
   min-height: 32.5rem;
@@ -1097,16 +1109,16 @@ html:not(.js) .signup-form, .js .signup-unavailable {
 
 @media (min-width: 40rem) {
   :root {
-    --stone-texture: url("images/stone-texture.webp");
+    --stone-texture: url("../assets/images/stone-texture.webp");
   }
 
   .hero::before {
-    --hero-background: url("images/hero-gallery.webp");
+    --hero-background: url("../assets/images/hero-gallery.webp");
     --hero-shade: linear-gradient(rgba(16, 23, 34, 0.87), rgba(16, 23, 34, 0.87));
   }
 
   .gallery-history {
-    --history-background: url("images/gallery-history.webp");
+    --history-background: url("../assets/images/gallery-history.webp");
   }
 
   .home-card-grid, .collection-grid, .gallery-cards, .gallery-information {
@@ -1460,4 +1472,78 @@ html:not(.js) .signup-form, .js .signup-unavailable {
   .button {
     transition: none;
   }
+}
+
+/* Pages d’erreur statiques. */
+.page-error {
+  --error-background: #0f172a;
+  --error-accent: #38bdf8;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  padding: 16px;
+  color: #e2e8f0;
+  background: var(--error-background);
+  font: 1rem/normal system-ui, -apple-system, "Segoe UI", sans-serif;
+  text-align: center;
+}
+
+.page-error h1, .page-error-legacy h1 {
+  font-family: inherit;
+  font-weight: bold;
+  line-height: normal;
+}
+
+.page-error h1 {
+  color: var(--error-accent);
+  font-size: clamp(4rem, 20vw, 8rem);
+}
+
+.page-error p {
+  margin: 12px 0 28px;
+  font-size: 1.1rem;
+}
+
+.page-error a {
+  display: inline-block;
+  padding: 12px 24px;
+  border-radius: 8px;
+  color: var(--error-background);
+  background: var(--error-accent);
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.legacy-error, .page-error-legacy {
+  background: #f8f9fa;
+}
+
+.page-error-legacy {
+  margin: 8px;
+  padding: 50px;
+  color: #333;
+  font: 1rem/normal Arial, sans-serif;
+  text-align: center;
+}
+
+.page-error-legacy h1 {
+  margin: 0.67em 0;
+  color: #e74c3c;
+  font-size: 50px;
+}
+
+.page-error-legacy p {
+  margin: 1em 0;
+  font-size: 18px;
+}
+
+.page-error-legacy a {
+  color: #3498db;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.page-error-legacy a:hover {
+  text-decoration: underline;
 }
