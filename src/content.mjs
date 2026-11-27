@@ -20,11 +20,11 @@ export const languages = {
       "faq": "Questions fréquentes"
     },
     "descriptions": {
-      "home": "Découvrez MOMOA, une galerie fictive consacrée à la sculpture grecque et à ses reproductions.",
-      "gallery": "Découvrez l’histoire de la galerie MOMOA et les œuvres présentées.",
-      "collection": "Découvrez les six sculptures de la collection MOMOA, de l’Antiquité à ses réinterprétations.",
-      "signup": "Essayez le formulaire fictif de la lettre d’information de MOMOA.",
-      "faq": "Questions fréquentes sur la galerie MOMOA, ses sculptures et son formulaire de démonstration."
+      "home": "Explorez l’Antiquité chez MOMOA, galerie fictive de sculptures grecques et de reproductions. Découvrez la Victoire de Samothrace, Vénus de Milo et Poséidon.",
+      "gallery": "Découvrez l’histoire de MOMOA, galerie fictive créée pour un projet universitaire, ainsi que sa démarche pour exposer et faire observer les sculptures.",
+      "collection": "Parcourez les six œuvres de la collection MOMOA, des sculptures grecques aux copies romaines et aux réinterprétations. Chaque œuvre a sa notice.",
+      "signup": "Essayez le formulaire de démonstration de la lettre d’information de MOMOA. Aucune inscription n’est créée et aucune donnée n’est envoyée ni conservée.",
+      "faq": "La FAQ de MOMOA explique le projet de galerie fictive, l’origine des sculptures de la collection et le fonctionnement du formulaire de démonstration."
     },
     "htmlTitle": "MOMOA — Sculpture grecque et reproductions",
     "nav": [
@@ -88,6 +88,8 @@ export const languages = {
       "faqTitle": "Une question ?"
     },
     "faq": {
+      "title": "Questions fréquentes",
+      "intro": "Ces questions fréquentes portent sur la collection, le projet universitaire et le formulaire de démonstration.",
       "items": [
         {
           "id": "a-propos-de-momoa",
@@ -118,8 +120,8 @@ export const languages = {
     },
     "gallery": {
       "introTitle": [
-        "Prenez le temps",
-        "de regarder"
+        "La galerie MOMOA",
+        "de près"
       ],
       "introBody": "Chaque sculpture se découvre aussi dans les détails.",
       "photoCredit": "Photo : Montserrat Mondragón / Pexels",
@@ -127,7 +129,7 @@ export const languages = {
         "La galerie et",
         "son histoire"
       ],
-      "historyBody": "Paul Dechewsky travaille dans le milieu artistique depuis plus de trente ans. MOMOA prolonge cette activité avec une collection consacrée à la sculpture grecque et à ses héritages.",
+      "historyBody": "Paul Dechewsky travaille dans le milieu artistique depuis plus de trente ans. La galerie MOMOA prolonge cette activité avec une collection consacrée à la sculpture grecque et à ses héritages.",
       "historyAuthor": "Paul Dechewsky, responsable de la galerie",
       "historyNote": "MOMOA est une galerie fictive conçue dans le cadre d’un projet universitaire.",
       "expositionsTitle": "Expositions",
@@ -148,7 +150,8 @@ export const languages = {
       "storyFrameLabel": "Caryatides"
     },
     "collection": {
-      "title": "Explorez la collection",
+      "title": "Explorez la collection MOMOA",
+      "intro": "La collection MOMOA réunit des sculptures grecques, des copies romaines et des œuvres inspirées des mythes grecs. Chaque notice situe l’œuvre dans son époque.",
       "notice": "Découvrir l’œuvre →",
       "back": "← Retour à la collection",
       "noticeLabel": "Notice de l’œuvre",
@@ -159,7 +162,8 @@ export const languages = {
     },
     "signup": {
       "title": "Les nouvelles de MOMOA",
-      "body": "Pour suivre les expositions et les œuvres présentées.",
+      "body": "Essayez le formulaire des nouvelles de MOMOA pour découvrir comment suivre les expositions et les œuvres présentées.",
+      "formTitle": "Formulaire de démonstration",
       "formNote": "Tous les champs sont obligatoires.",
       "fields": {
         "lastName": "Nom",
@@ -203,11 +207,11 @@ export const languages = {
       "faq": "Frequently asked questions"
     },
     "descriptions": {
-      "home": "Discover MOMOA, a fictional gallery of Greek sculpture and reproductions.",
-      "gallery": "Discover the story of the MOMOA gallery and the works it presents.",
-      "collection": "Explore the six sculptures in the MOMOA collection, from antiquity to modern interpretations.",
-      "signup": "Try the demonstration sign-up form for the MOMOA newsletter.",
-      "faq": "Frequently asked questions about MOMOA, its sculptures, and its demonstration form."
+      "home": "Explore Greek sculpture and reproductions at MOMOA, a fictional gallery featuring the Winged Victory of Samothrace, Venus de Milo and Poseidon.",
+      "gallery": "Read the story of MOMOA, a fictional gallery created for a university project. Explore how it presents sculpture and helps visitors look more closely.",
+      "collection": "Browse six works in the MOMOA collection, from ancient Greek sculpture and Roman copies to later interpretations. Each work has its own page with a photograph.",
+      "signup": "Try the demo sign-up form for the MOMOA newsletter about exhibitions and featured works. No subscription is created, and no information is sent or stored.",
+      "faq": "Find answers to frequently asked questions about the fictional MOMOA gallery, the origins of its sculptures and how the demonstration sign-up form works."
     },
     "htmlTitle": "MOMOA — Greek sculpture and reproductions",
     "nav": [
@@ -259,7 +263,7 @@ export const languages = {
         "Why show",
         "reproductions?"
       ],
-      "reproductionsBody": "Many Greek sculptures are known to us through Roman copies. MOMOA follows this history through a collection of reproductions.",
+      "reproductionsBody": "Many works of Greek sculpture are known to us through Roman copies. MOMOA follows this history through a collection of reproductions.",
       "reproductionsCta": "Discover the gallery",
       "homeCards": {
         "victoire": "Wind takes shape in the folds of marble.",
@@ -271,6 +275,8 @@ export const languages = {
       "faqTitle": "Have a question?"
     },
     "faq": {
+      "title": "Frequently asked questions",
+      "intro": "These frequently asked questions cover the collection, the university project, and the demonstration sign-up form.",
       "items": [
         {
           "id": "about-momoa",
@@ -301,7 +307,8 @@ export const languages = {
     },
     "gallery": {
       "introTitle": [
-        "Take a closer look"
+        "The MOMOA gallery",
+        "up close"
       ],
       "introBody": "Every sculpture has more to reveal up close.",
       "photoCredit": "Photo: Montserrat Mondragón / Pexels",
@@ -309,7 +316,7 @@ export const languages = {
         "The story of",
         "the gallery"
       ],
-      "historyBody": "Paul Dechewsky has worked in the art world for over thirty years. MOMOA continues this work with a collection devoted to Greek sculpture and its legacy.",
+      "historyBody": "Paul Dechewsky has worked in the art world for over thirty years. The MOMOA gallery continues this work with a collection devoted to Greek sculpture and its legacy.",
       "historyAuthor": "Paul Dechewsky, gallery manager",
       "historyNote": "MOMOA is a fictional gallery created as part of a university project.",
       "expositionsTitle": "Exhibitions",
@@ -330,7 +337,8 @@ export const languages = {
       "storyFrameLabel": "Caryatids"
     },
     "collection": {
-      "title": "Explore the collection",
+      "title": "Explore the MOMOA collection",
+      "intro": "The MOMOA collection brings together Greek sculptures, Roman copies, and works inspired by Greek myths. Each notice places its work in its own period.",
       "notice": "Discover the work →",
       "back": "← Back to the collection",
       "noticeLabel": "Artwork notice",
@@ -341,7 +349,8 @@ export const languages = {
     },
     "signup": {
       "title": "News from MOMOA",
-      "body": "Follow the exhibitions and featured works.",
+      "body": "The News from MOMOA form shows how to sign up for updates on exhibitions and featured works.",
+      "formTitle": "Demonstration form",
       "formNote": "All fields are required.",
       "fields": {
         "lastName": "Last name",
@@ -385,7 +394,8 @@ export const artworks = [
     "notices": {
       "fr": {
         "heading": "Les plis du marbre dessinent le vent",
-        "body": "Niké, déesse de la Victoire, se pose sur la proue d’un navire. Le vêtement plaqué contre son corps et les plis soulevés donnent l’impression du vent. Découverte à Samothrace en 1863, cette sculpture grecque date de 200–175 av. J.-C. La figure est en marbre de Paros, le navire en marbre de Lartos. L’aile droite a été reconstituée en plâtre.",
+        "metaDescription": "La Victoire de Samothrace représente Niké sur la proue d’un navire. La notice MOMOA explique comment les plis du marbre de Paros donnent l’impression du vent.",
+        "body": "Dans la Victoire de Samothrace, Niké, déesse de la victoire, se pose sur la proue d’un navire. Le vêtement plaqué contre son corps et les plis soulevés donnent l’impression du vent. Découverte à Samothrace en 1863, cette sculpture grecque date de 200–175 av. J.-C. La figure est en marbre de Paros, le navire en marbre de Lartos. L’aile droite a été reconstituée en plâtre.",
         "references": "Grèce, époque hellénistique · 200–175 av. J.-C. · marbre de Paros · Musée du Louvre, Paris · inv. Ma 2369",
         "sourceLabel": "Notice : musée du Louvre →",
         "sourceHref": "https://collections.louvre.fr/ark:/53355/cl010252531",
@@ -394,7 +404,8 @@ export const artworks = [
       },
       "en": {
         "heading": "Wind takes shape in the folds of marble",
-        "body": "Nike, goddess of Victory, alights on a ship’s prow. Fabric clings to her body while the lifted folds suggest the force of the wind. Discovered on Samothrace in 1863, this Greek sculpture dates to 200–175 BCE. The figure is carved in Parian marble; the ship is Lartos marble. The right wing is a plaster reconstruction.",
+        "metaDescription": "The Winged Victory of Samothrace shows Nike on a ship’s prow. Its lifted folds suggest the force of the wind. The right wing is a plaster reconstruction.",
+        "body": "The Winged Victory of Samothrace depicts Nike, goddess of victory, alighting on a ship’s prow. Fabric clings to her body while the lifted folds suggest the force of the wind. Discovered on Samothrace in 1863, this Greek sculpture dates to 200–175 BCE. The figure is carved in Parian marble; the ship is Lartos marble. The right wing is a plaster reconstruction.",
         "references": "Greece, Hellenistic period · 200–175 BCE · Parian marble · Musée du Louvre, Paris · inv. Ma 2369",
         "sourceLabel": "Record: Musée du Louvre →",
         "sourceHref": "https://collections.louvre.fr/en/ark:/53355/cl010252531",
@@ -420,7 +431,8 @@ export const artworks = [
     "notices": {
       "fr": {
         "heading": "L’instant qui précède le lancer",
-        "body": "L’athlète retient son mouvement juste avant le lancer du disque. Cette copie romaine en marbre reprend un bronze grec aujourd’hui perdu, attribué à Myron au Ve siècle av. J.-C. Le torse se plie tandis que le bras décrit un large arc. La tête a été mal orientée lors d’une restauration : elle devrait se tourner vers le disque.",
+        "metaDescription": "Le Discobole saisit l’athlète juste avant le lancer. MOMOA présente la copie romaine en marbre et le bronze grec disparu, attribué à Myron, qui l’a inspirée.",
+        "body": "Dans le Discobole, l’athlète retient son mouvement juste avant le lancer du disque. Cette copie romaine en marbre reprend un bronze grec aujourd’hui perdu, attribué à Myron au Ve siècle av. J.-C. Le torse se plie tandis que le bras décrit un large arc. La tête a été mal orientée lors d’une restauration : elle devrait se tourner vers le disque.",
         "references": "IIe siècle ap. J.-C. · marbre · British Museum, Londres · inv. 1805,0703.43",
         "sourceLabel": "Notice : British Museum →",
         "sourceHref": "https://www.britishmuseum.org/collection/object/G_1805-0703-43",
@@ -437,7 +449,8 @@ export const artworks = [
       },
       "en": {
         "heading": "The moment before the throw",
-        "body": "The athlete pauses just before releasing his discus. This Roman marble copy follows a lost Greek bronze attributed to Myron in the fifth century BCE. His bent torso and sweeping arm hold the movement in balance. The head was incorrectly positioned during restoration: it should turn towards the discus.",
+        "metaDescription": "The Discobolus captures the moment before the throw. MOMOA’s notice traces this Roman marble copy to a lost Greek bronze attributed to Myron.",
+        "body": "In the Discobolus, the athlete pauses just before releasing his discus. This Roman marble copy follows a lost Greek bronze attributed to Myron in the fifth century BCE. His bent torso and sweeping arm hold the movement in balance. The head was incorrectly positioned during restoration: it should turn towards the discus.",
         "references": "2nd century CE · marble · British Museum, London · inv. 1805,0703.43",
         "sourceLabel": "Record: British Museum →",
         "sourceHref": "https://www.britishmuseum.org/collection/object/G_1805-0703-43",
@@ -471,7 +484,8 @@ export const artworks = [
     "notices": {
       "fr": {
         "heading": "Un buste nu, un drapé noué aux hanches",
-        "body": "Découverte sur l’île de Mélos en 1820, cette sculpture grecque montre une déesse au buste nu, le bas du corps enveloppé d’un drapé. Deux blocs de marbre de Paros s’assemblent au niveau des hanches. Généralement reconnue comme Aphrodite, elle pourrait aussi représenter Amphitrite. La disparition des bras et des attributs empêche de trancher avec certitude.",
+        "metaDescription": "Découverte à Mélos en 1820, la Vénus de Milo est taillée dans le marbre de Paros. La notice MOMOA revient sur son drapé et l’identité incertaine de la déesse.",
+        "body": "La Vénus de Milo, sculpture grecque découverte sur l’île de Mélos en 1820, montre une déesse au buste nu, le bas du corps enveloppé d’un drapé. Deux blocs de marbre de Paros s’assemblent au niveau des hanches. Généralement reconnue comme Aphrodite, elle pourrait aussi représenter Amphitrite. La disparition des bras et des attributs empêche de trancher avec certitude.",
         "references": "Grèce, époque hellénistique · 150–125 av. J.-C. · marbre de Paros · Musée du Louvre, Paris · inv. Ma 399",
         "sourceLabel": "Notice : musée du Louvre →",
         "sourceHref": "https://collections.louvre.fr/ark:/53355/cl010277627",
@@ -479,7 +493,8 @@ export const artworks = [
       },
       "en": {
         "heading": "A bare torso above drapery gathered at the hips",
-        "body": "Discovered on the island of Melos in 1820, this Greek sculpture depicts a goddess with a bare torso and drapery around her lower body. Two blocks of Parian marble meet at the hips. Usually identified as Aphrodite, she may instead represent Amphitrite. The missing arms and attributes leave her identity uncertain.",
+        "metaDescription": "Found on Melos in 1820, the Venus de Milo is carved in Parian marble. MOMOA’s notice looks at her drapery and why the goddess’s identity is still uncertain.",
+        "body": "The Venus de Milo, a Greek sculpture discovered on the island of Melos in 1820, depicts a goddess with a bare torso and drapery around her lower body. Two blocks of Parian marble meet at the hips. Usually identified as Aphrodite, she may instead represent Amphitrite. The missing arms and attributes leave her identity uncertain.",
         "references": "Greece, Hellenistic period · 150–125 BCE · Parian marble · Musée du Louvre, Paris · inv. Ma 399",
         "sourceLabel": "Record: Musée du Louvre →",
         "sourceHref": "https://collections.louvre.fr/en/ark:/53355/cl010277627",
@@ -504,6 +519,7 @@ export const artworks = [
     "notices": {
       "fr": {
         "heading": "Les Océanides entourent le Titan enchaîné",
+        "metaDescription": "Dans le groupe de marbre d’Eduard Müller, les Océanides entourent Prométhée enchaîné. La notice MOMOA retrace cette relecture du mythe grec au XIXe siècle.",
         "body": "Prométhée est enchaîné au rocher, entouré des Océanides. L’aigle et les liens rendent sa captivité visible, tandis que les figures qui l’entourent partagent sa douleur. Eduard Müller conçoit le groupe en 1868. Commandée en 1872, sa version monumentale en marbre est installée à la Nationalgalerie de Berlin en 1879. Il s’agit d’une création du XIXe siècle inspirée du mythe grec.",
         "references": "Eduard Müller · 1872–1879 · marbre · Alte Nationalgalerie, Berlin",
         "sourceLabel": "Archives de la Nationalgalerie · I/NG 1812 (PDF) ↗",
@@ -512,6 +528,7 @@ export const artworks = [
       },
       "en": {
         "heading": "The Oceanids gather around the chained Titan",
+        "metaDescription": "In Eduard Müller’s marble group, the Oceanids gather around a chained Prometheus. MOMOA’s notice traces this nineteenth-century interpretation of Greek myth.",
         "body": "Prometheus is chained to a rock, surrounded by the Oceanids. The eagle and his bonds make his captivity visible, while the surrounding figures share his suffering. Eduard Müller designed the group in 1868. Commissioned in 1872, the monumental marble version was installed in Berlin’s Nationalgalerie in 1879. It is a nineteenth-century interpretation of Greek myth.",
         "references": "Eduard Müller · 1872–1879 · marble · Alte Nationalgalerie, Berlin",
         "sourceLabel": "Nationalgalerie archives · I/NG 1812 (PDF) ↗",
@@ -537,6 +554,7 @@ export const artworks = [
     "notices": {
       "fr": {
         "heading": "Un casque et une égide pour reconnaître Athéna",
+        "metaDescription": "Le casque et l’égide à tête de Gorgone identifient Athéna. La sculpture photographiée correspond à l’Athéna de Perge, conservée au musée d’Antalya.",
         "body": "Le casque et l’égide ornée d’une tête de Gorgone permettent de reconnaître Athéna. Sur sa poitrine, les écailles de cette protection contrastent avec les plis du vêtement rassemblé à la taille. La sculpture photographiée correspond à l’Athéna de Perge, conservée au musée d’Antalya. C’est une œuvre d’époque romaine représentant la déesse grecque.",
         "references": "Époque romaine · marbre · provenance : Perge · Musée d’Antalya, Türkiye",
         "sourceLabel": "Vues de référence : Athéna de Perge →",
@@ -545,6 +563,7 @@ export const artworks = [
       },
       "en": {
         "heading": "Athena’s helmet and aegis identify the goddess",
+        "metaDescription": "A helmet and an aegis with a Gorgon’s head identify Athena. The figure pictured matches the Roman-period Athena from Perge in Antalya Museum.",
         "body": "The helmet and aegis bearing a Gorgon’s head identify Athena. The scales of this protective garment contrast with the folds gathered at her waist. The photographed sculpture matches the Athena from Perge in Antalya Museum. It is a Roman-period work depicting the Greek goddess.",
         "references": "Roman period · marble · from Perge · Antalya Museum, Türkiye",
         "sourceLabel": "Reference views: Athena from Perge →",
@@ -570,6 +589,7 @@ export const artworks = [
     "notices": {
       "fr": {
         "heading": "Le bras levé",
+        "metaDescription": "La statue hellénistique de Poséidon, découverte à Mélos, est taillée dans le marbre de Paros. MOMOA décrit son bras levé et le dauphin qui la soutient.",
         "body": "Le bras droit levé devait tenir un trident. Près de la jambe, un dauphin soutient la statue. Découvert à Mélos en 1877, ce Poséidon grec de l’époque hellénistique est taillé dans le marbre de Paros. Un manteau couvre ses hanches.",
         "references": "Grèce · époque hellénistique · 125–100 av. J.-C. · marbre de Paros · hauteur 2,35 m · Musée national archéologique d’Athènes, inv. 235",
         "sourceLabel": "Source : Musée d’Athènes ↗",
@@ -579,6 +599,7 @@ export const artworks = [
       },
       "en": {
         "heading": "An arm raised",
+        "metaDescription": "Found on Melos, this Hellenistic statue of Poseidon is carved in Parian marble. MOMOA looks at the raised arm and the dolphin that supports the figure.",
         "body": "The raised right hand probably held a trident. A dolphin beside the leg supports the statue. Found on Melos in 1877, this Greek Hellenistic Poseidon is carved in Parian marble, with a cloak covering his hips.",
         "references": "Greece · Hellenistic period · 125–100 BCE · Parian marble · height 2.35 m · National Archaeological Museum, Athens, inv. 235",
         "sourceLabel": "Source: National Archaeological Museum ↗",

@@ -3,9 +3,13 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Discover MOMOA, a fictional gallery of Greek sculpture and reproductions.">
+  <meta name="description" content="Explore Greek sculpture and reproductions at MOMOA, a fictional gallery featuring the Winged Victory of Samothrace, Venus de Milo and Poseidon.">
   <meta name="theme-color" content="#101722">
   <title>MOMOA — Greek sculpture and reproductions</title>
+  <link rel="canonical" href="https://andriana-art.github.io/momoa/en/">
+  <link rel="alternate" hreflang="fr" href="https://andriana-art.github.io/momoa/">
+  <link rel="alternate" hreflang="en" href="https://andriana-art.github.io/momoa/en/">
+  <script type="application/ld+json">{"@context":"https://schema.org","url":"https://andriana-art.github.io/momoa/en/","inLanguage":"en","@type":"WebPage","name":"MOMOA","description":"Fictional gallery of Greek sculpture reproductions · University project","isPartOf":{"@type":"WebSite","@id":"https://andriana-art.github.io/momoa/#website","url":"https://andriana-art.github.io/momoa/","name":"MOMOA","inLanguage":["fr","en"]}}</script>
   <script>
     document.documentElement.classList.add("js");
     document.addEventListener("error", (event) => {
@@ -209,6 +213,8 @@ button {
 .button--outline {
   border-color: currentColor;
   background: transparent;
+  /* Garder le contraste quand le texte et le fond inversent leurs couleurs. */
+  transition: none;
 }
 
 .button--outline:hover {
@@ -328,6 +334,30 @@ button {
 /* Préparer le menu avant le chargement du script. */
 .js .menu-toggle {
   display: grid;
+}
+
+@media (max-width: 19rem) {
+  .header-inner {
+    grid-template-areas: "brand" "controls";
+    grid-template-columns: minmax(0, 1fr);
+    grid-template-rows: auto;
+    padding-block: 0.75rem;
+  }
+
+  .header-controls {
+    flex-wrap: wrap;
+    justify-content: flex-end;
+  }
+
+  .languages [lang] {
+    width: auto;
+    min-width: 44px;
+    padding-inline: 0.25rem;
+  }
+
+  .desktop-nav {
+    grid-row: 3;
+  }
 }
 
 .menu-toggle[aria-expanded="true"] .menu-icon-open {
@@ -849,8 +879,28 @@ button {
   margin-block-start: auto;
 }
 
+.reading-notes {
+  display: grid;
+  gap: 2rem;
+  padding-block: 1.5rem 3rem;
+}
+
+.reading-notes > section {
+  display: grid;
+  gap: 0.75rem;
+  max-width: 70ch;
+}
+
+.reading-notes h2, .signup-form h2 {
+  font-size: 1.75rem;
+}
+
 .collection-intro {
   padding-block: 4.5rem 3.5rem;
+}
+
+.collection-intro > p, .faq-intro {
+  margin-block-start: 1rem;
 }
 
 .collection-grid {
@@ -1439,13 +1489,13 @@ html:not(.js) .signup-form, .js .signup-unavailable {
   }
 }
 </style>
-  <script src="../assets/site.js?v=90c8f0ace511" defer></script>
+  <script src="../assets/site.js?v=3325a9244069" defer></script>
 </head>
 <body class="page-home">
   <a class="skip-link" href="#main-content">Skip to content</a>
   <header class="site-header">
     <div class="header-inner">
-      <span class="brand"><img src="../assets/images/emblem.svg" alt="" width="26" height="48" decoding="async"><span>momoa</span></span>
+      <a class="brand" href="./" aria-label="MOMOA — Home"><img src="../assets/images/emblem.svg" alt="" width="26" height="48" decoding="async"><span>momoa</span></a>
       <nav class="desktop-nav" aria-label="Main navigation">
         <ul class="nav-links">
         <li><a href="./" aria-current="page">Home</a></li>
@@ -1534,7 +1584,7 @@ html:not(.js) .signup-form, .js .signup-unavailable {
         <img class="reproductions-image" src="../assets/images/caryatids.webp" srcset="../assets/images/caryatids-480.webp 480w, ../assets/images/caryatids-640.webp 640w, ../assets/images/caryatids-768.webp 768w, ../assets/images/caryatids-1248.webp 1248w, ../assets/images/caryatids.webp 2048w" sizes="(min-width: 90rem) 624px, (min-width: 56rem) 43.05vw, calc(100vw - 3rem)" alt="Caryatids" width="2048" height="1365" loading="lazy" decoding="async">
         <div class="reproductions-copy">
           <h2 id="reproductions-title"><span>Why show</span> <span>reproductions?</span></h2>
-          <p>Many Greek sculptures are known to us through Roman copies. MOMOA follows this history through a collection of reproductions.</p>
+          <p>Many works of Greek sculpture are known to us through Roman copies. MOMOA follows this history through a collection of reproductions.</p>
           <a class="button button--outline" href="gallery/">Discover the gallery</a>
         </div>
       </div>
@@ -1592,8 +1642,13 @@ html:not(.js) .signup-form, .js .signup-unavailable {
     <div class="container footer-inner">
       <div class="footer-grid">
         <div class="footer-identity">
-          <span class="brand"><img src="../assets/images/emblem.svg" alt="" width="26" height="48" decoding="async"><span>momoa</span></span>
+          <a class="brand" href="./" aria-label="MOMOA — Home"><img src="../assets/images/emblem.svg" alt="" width="26" height="48" decoding="async"><span>momoa</span></a>
           <p>Fictional gallery of Greek sculpture reproductions · University project</p>
+          <address>
+            1 rue de Paris 06100<br>
+            <a href="mailto:dedal@gmail.com">dedal@gmail.com</a><br>
+            <a href="tel:+33163458556">01.63.45.85.56</a>
+          </address>
         </div>
         <nav aria-label="Useful links">
           <ul class="footer-links">
