@@ -161,6 +161,11 @@ function footer(page) {
         <div class="footer-identity">
           ${brand(page)}
           <p>${escape(copy.footerTagline)}</p>
+           <address>
+            1 rue de Paris 06100<br>
+            <a href="mailto:dedal@gmail.com">dedal@gmail.com</a><br>
+            <a href="tel:+33163458556">01.63.45.85.56</a>
+          </address>
         </div>
         <nav aria-label="${escape(copy.footerNav)}">
           ${navigation(page, "footer-links")}
