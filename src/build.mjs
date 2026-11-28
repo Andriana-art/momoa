@@ -183,8 +183,7 @@ function footer(page) {
             <a href="tel:+33163458556">01.63.45.85.56</a>
           </address>
         </div>
-        <nav id="footer-social" class="footer-social" aria-labelledby="footer-social-title">
-          <p id="footer-social-title">${escape(copy.footerSocial)}</p>
+        <nav id="footer-social" class="footer-social" aria-label="${escape(copy.footerSocial)}">
           <ul>
             ${socialLinks.map(({ name, href, icon }) =>
               `<li><a href="${escape(href)}" aria-label="${escape(name)}"><img src="${assetLink(page, icon)}" alt="" decoding="async"></a></li>`
