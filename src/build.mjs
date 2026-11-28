@@ -27,8 +27,8 @@ const panelImageSizes = "(min-width: 90rem) 576px, (min-width: 56rem) calc(43.05
 const caryatidWidths = [480, 640, 768, 1248, 2048];
 const socialLinks = [
   { name: "Instagram", href: "https://www.instagram.com/", icon: "social-instagram.svg" },
-  { name: "Facebook", href: "https://www.facebook.com/", icon: "social-facebook.svg" },
   { name: "X", href: "https://about.x.com/", icon: "social-x.svg" },
+  { name: "Facebook", href: "https://www.facebook.com/", icon: "social-facebook.svg" },
 ];
 
 function escape(value) {
@@ -172,27 +172,25 @@ function footer(page) {
   return `<footer class="site-footer">
     <div class="container footer-inner">
       <div class="footer-grid">
-        <div class="footer-identity">
-          ${brand(page)}
-          <p>${escape(copy.footerTagline)}</p>
-        </div>
-        <div class="footer-navigation">
-          <nav aria-label="${escape(copy.footerNav)}">
-            ${navigation(page, "footer-links")}
-          </nav>
-          <nav id="footer-social" class="footer-social" aria-label="${escape(copy.footerSocial)}">
-            <ul>
-              ${socialLinks.map(({ name, href, icon }) =>
-                `<li><a href="${escape(href)}"><img src="${assetLink(page, icon)}" alt="" decoding="async">${escape(name)}</a></li>`
-              ).join("\n              ")}
-            </ul>
-          </nav>
-          <address>
-            1 rue de Paris 06100<br>
-            <a href="mailto:dedal@gmail.com">dedal@gmail.com</a><br>
-            <a href="tel:+33163458556">01.63.45.85.56</a>
-          </address>
-        </div>
+        ${brand(page)}
+        <nav aria-label="${escape(copy.footerNav)}">
+          ${navigation(page, "footer-links")}
+        </nav>
+      </div>
+      <div class="footer-details">
+        <nav id="footer-social" class="footer-social" aria-labelledby="footer-social-title">
+          <p id="footer-social-title">${escape(copy.footerSocial)}</p>
+          <ul>
+            ${socialLinks.map(({ name, href, icon }) =>
+              `<li><a href="${escape(href)}" aria-label="${escape(name)}"><img src="${assetLink(page, icon)}" alt="" decoding="async"></a></li>`
+            ).join("\n            ")}
+          </ul>
+        </nav>
+        <address class="footer-contact">
+          <span>1 rue de Paris 06100</span>
+          <a href="mailto:dedal@gmail.com">dedal@gmail.com</a>
+          <a href="tel:+33163458556">01.63.45.85.56</a>
+        </address>
       </div>
       <p class="footer-copyright">${escape(copy.footerCopy)}</p>
     </div>
@@ -482,7 +480,7 @@ function structuredDataFor(page) {
         ...common,
         "@type": "WebPage",
         name: "MOMOA",
-        description: copy.footerTagline,
+        description: copy.hero.subtitle,
         isPartOf: {
           "@type": "WebSite",
           "@id": `${siteUrl}#website`,

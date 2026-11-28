@@ -20,7 +20,7 @@ export const languages = {
       "faq": "Questions fréquentes"
     },
     "descriptions": {
-      "home": "Explorez l’Antiquité chez MOMOA, galerie fictive de sculptures grecques et de reproductions. Découvrez la Victoire de Samothrace, Vénus de Milo et Poséidon.",
+      "home": "Explorez l’Antiquité chez MOMOA, galerie de sculptures grecques et de reproductions. Découvrez la Victoire de Samothrace, Vénus de Milo et Poséidon.",
       "gallery": "Découvrez l’histoire de MOMOA, galerie fictive créée pour un projet universitaire, ainsi que sa démarche pour exposer et faire observer les sculptures.",
       "collection": "Parcourez les six œuvres de la collection MOMOA, des sculptures grecques aux copies romaines et aux réinterprétations. Chaque œuvre a sa notice.",
       "signup": "Essayez le formulaire de démonstration de la lettre d’information de MOMOA. Aucune inscription n’est créée et aucune donnée n’est envoyée ni conservée.",
@@ -53,7 +53,6 @@ export const languages = {
     "footerNav": "Liens utiles",
     "footerSocial": "Réseaux sociaux",
     "languageLabel": "Langue",
-    "footerTagline": "Galerie fictive de reproductions de sculptures grecques · Projet universitaire",
     "footerCopy": "© MOMOA 2026",
     "hero": {
       "title": [
@@ -208,7 +207,7 @@ export const languages = {
       "faq": "Frequently asked questions"
     },
     "descriptions": {
-      "home": "Explore Greek sculpture and reproductions at MOMOA, a fictional gallery featuring the Winged Victory of Samothrace, Venus de Milo and Poseidon.",
+      "home": "Explore Greek sculpture and reproductions at MOMOA. Discover the Winged Victory of Samothrace, Venus de Milo, the Discobolus and Poseidon.",
       "gallery": "Read the story of MOMOA, a fictional gallery created for a university project. Explore how it presents sculpture and helps visitors look more closely.",
       "collection": "Browse six works in the MOMOA collection, from ancient Greek sculpture and Roman copies to later interpretations. Each work has its own page with a photograph.",
       "signup": "Try the demo sign-up form for the MOMOA newsletter about exhibitions and featured works. No subscription is created, and no information is sent or stored.",
@@ -241,7 +240,6 @@ export const languages = {
     "footerNav": "Useful links",
     "footerSocial": "Social media",
     "languageLabel": "Language",
-    "footerTagline": "Fictional gallery of Greek sculpture reproductions · University project",
     "footerCopy": "© MOMOA 2026",
     "hero": {
       "title": [
