@@ -116,13 +116,15 @@ function brand(page) {
   return `<a class="brand" href="${home}" aria-label="${label}">${image(page, "emblem.svg", "", 26, 48)}<span>momoa</span></a>`;
 }
 
-function navigation(page, className) {
+function navigation(page, className, { includeFaq = false } = {}) {
   const copy = languages[page.lang];
-  const active = page.artwork ? copy.routes.collection : page.name === "faq" ? copy.routes.gallery : page.route;
+  const links = includeFaq ? [...copy.nav, { label: "FAQ", href: copy.routes.faq }] : copy.nav;
+  const active = page.artwork ? copy.routes.collection : page.route;
+  const sectionRoute = page.name === "faq" && !includeFaq ? copy.routes.gallery : active;
   return `<ul class="${className}">
-        ${copy.nav.map(({ label, href }) => {
+        ${links.map(({ label, href }) => {
           const current = href === page.route ? ' aria-current="page"' : "";
-          const section = href === active && href !== page.route ? ' class="section-current"' : "";
+          const section = href === sectionRoute && href !== page.route ? ' class="section-current"' : "";
           return `<li><a href="${pageLink(page, href)}"${current}${section}>${escape(label)}</a></li>`;
         }).join("\n        ")}
       </ul>`;
@@ -175,13 +177,16 @@ function footer(page) {
         ${brand(page)}
         <div class="footer-navigation">
           <nav aria-label="${escape(copy.footerNav)}">
-            ${navigation(page, "footer-links")}
+            ${navigation(page, "footer-links", { includeFaq: true })}
           </nav>
-          <address class="footer-contact">
-            <span>1 rue de Paris 06100</span>
-            <a href="mailto:dedal@gmail.com">dedal@gmail.com</a>
-            <a href="tel:+33163458556">01.63.45.85.56</a>
-          </address>
+          <div class="footer-contact-group">
+            <h2 id="footer-contact-title">Contact</h2>
+            <address class="footer-contact">
+              <span>1 rue de Paris 06100</span>
+              <a href="mailto:dedal@gmail.com">dedal@gmail.com</a>
+              <a href="tel:+33163458556">01.63.45.85.56</a>
+            </address>
+          </div>
         </div>
         <nav id="footer-social" class="footer-social" aria-label="${escape(copy.footerSocial)}">
           <ul>
