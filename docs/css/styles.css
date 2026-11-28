@@ -473,6 +473,29 @@ button {
   text-decoration: underline;
 }
 
+.footer-social {
+  border-block-start: 1px solid var(--field-border);
+  padding-block-start: 1rem;
+}
+
+.footer-social p {
+  font-weight: 500;
+}
+
+.footer-social ul {
+  display: flex;
+  flex-wrap: wrap;
+  column-gap: 1.25rem;
+}
+
+.footer-social a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 2.75rem;
+  min-height: 2.75rem;
+}
+
 .page-home {
   background: var(--ink);
 }

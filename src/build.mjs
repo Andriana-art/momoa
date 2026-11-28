@@ -164,6 +164,12 @@ function header(page) {
 
 function footer(page) {
   const copy = languages[page.lang];
+  const shareUrl = encodeURIComponent(publishedPageUrl(page.route));
+  const socialLinks = [
+    ["Facebook", `https://www.facebook.com/sharer/sharer.php?u=${shareUrl}`],
+    ["LinkedIn", `https://www.linkedin.com/sharing/share-offsite/?url=${shareUrl}`],
+    ["Bluesky", `https://bsky.app/intent/compose?text=${shareUrl}`],
+  ];
   return `<footer class="site-footer">
     <div class="container footer-inner">
       <div class="footer-grid">
@@ -181,6 +187,14 @@ function footer(page) {
         </nav>
       </div>
       <p class="footer-copyright">${escape(copy.footerCopy)}</p>
+      <nav class="footer-social" aria-labelledby="footer-share-label">
+        <p id="footer-share-label">${escape(copy.footerShare)}</p>
+        <ul>
+          ${socialLinks.map(([name, href]) =>
+            `<li><a href="${escape(href)}" aria-label="${escape(`${copy.footerShareOn} ${name}`)}">${escape(name)}</a></li>`
+          ).join("\n          ")}
+        </ul>
+      </nav>
     </div>
   </footer>`;
 }
