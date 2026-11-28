@@ -173,11 +173,16 @@ function footer(page) {
     <div class="container footer-inner">
       <div class="footer-grid">
         ${brand(page)}
-        <nav aria-label="${escape(copy.footerNav)}">
-          ${navigation(page, "footer-links")}
-        </nav>
-      </div>
-      <div class="footer-details">
+        <div class="footer-navigation">
+          <nav aria-label="${escape(copy.footerNav)}">
+            ${navigation(page, "footer-links")}
+          </nav>
+          <address class="footer-contact">
+            <span>1 rue de Paris 06100</span>
+            <a href="mailto:dedal@gmail.com">dedal@gmail.com</a>
+            <a href="tel:+33163458556">01.63.45.85.56</a>
+          </address>
+        </div>
         <nav id="footer-social" class="footer-social" aria-labelledby="footer-social-title">
           <p id="footer-social-title">${escape(copy.footerSocial)}</p>
           <ul>
@@ -186,11 +191,6 @@ function footer(page) {
             ).join("\n            ")}
           </ul>
         </nav>
-        <address class="footer-contact">
-          <span>1 rue de Paris 06100</span>
-          <a href="mailto:dedal@gmail.com">dedal@gmail.com</a>
-          <a href="tel:+33163458556">01.63.45.85.56</a>
-        </address>
       </div>
       <p class="footer-copyright">${escape(copy.footerCopy)}</p>
     </div>
