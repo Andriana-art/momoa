@@ -20,12 +20,11 @@ Sous Windows, remplacer `python3` par `py`. Ouvrir ensuite [localhost:8000](http
 
 ## Fichiers
 
-- `docs/` : pages du site, styles, JavaScript, images et polices.
+- `docs/` : pages HTML du site, feuille partagée dans `css/`, script dans `js/`, images et polices dans `assets/`.
 - `src/content.mjs` : textes français et anglais.
 - `src/build.mjs` : génération des pages HTML.
-- `verification/` : [vérifications avant remise](verification/README.md), deux captures et un rapport Lighthouse.
 
-Après une modification des textes, du CSS ou du JavaScript, régénérer les pages avec Node.js :
+Pour modifier le logo ou les coordonnées du pied de page, éditer `src/build.mjs`. Après une modification des sources, régénérer les pages dans `docs/` avec Node.js.
 
 ```bash
 node src/build.mjs

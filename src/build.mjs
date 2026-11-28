@@ -3,14 +3,17 @@ import { mkdir, readFile, writeFile } from "node:fs/promises";
 import { posix } from "node:path";
 import { fileURLToPath } from "node:url";
 import { artworks, languages } from "./content.mjs";
+import { artworkNotes, galleryNotes } from "./reading-notes.mjs";
 
-const output = fileURLToPath(new URL("../docs/", import.meta.url));
-const stylesheet = await readFile(new URL("../docs/assets/styles.css", import.meta.url), "utf8");
+const siteUrl = "https://andriana-art.github.io/momoa/";
+const outputDirectory = new URL("../docs/", import.meta.url);
+const stylesheetPath = "css/styles.css";
+const scriptPath = "js/site.js";
 const stylesheetVersion = createHash("sha256")
-  .update(stylesheet)
+  .update(await readFile(new URL(stylesheetPath, outputDirectory)))
   .digest("hex").slice(0, 12);
 const scriptVersion = createHash("sha256")
-  .update(await readFile(new URL("../docs/assets/site.js", import.meta.url)))
+  .update(await readFile(new URL(scriptPath, outputDirectory)))
   .digest("hex").slice(0, 12);
 const imageFolder = "assets/images/";
 const imageBreakpoint = "(min-width: 56rem)";
@@ -22,6 +25,11 @@ const splitImageSizes = "(min-width: 90rem) 624px, (min-width: 56rem) 43.05vw, c
 const homeCardImageSizes = "(min-width: 90rem) 624px, (min-width: 56rem) calc((100vw - 2 * clamp(2rem, 5.56vw, 5rem) - 2rem) / 2), (min-width: 40rem) calc((100vw - 5.5rem) / 2), calc(100vw - 3rem)";
 const panelImageSizes = "(min-width: 90rem) 576px, (min-width: 56rem) calc(43.05vw - 3rem), (min-width: 40rem) calc(50vw - 5.25rem), calc(100vw - 5.5rem)";
 const caryatidWidths = [480, 640, 768, 1248, 2048];
+const socialLinks = [
+  { name: "Instagram", href: "https://www.instagram.com/", icon: "social-instagram.svg" },
+  { name: "Facebook", href: "https://www.facebook.com/", icon: "social-facebook.svg" },
+  { name: "X", href: "https://about.x.com/", icon: "social-x.svg" },
+];
 
 function escape(value) {
   return String(value).replace(/[&<>"']/g, (character) => ({
@@ -31,6 +39,10 @@ function escape(value) {
 
 function noticeRoute(lang, artwork) {
   return `${languages[lang].routes.collection}/${artwork.slug[lang]}`;
+}
+
+function noticeImage(page, size) {
+  return `notice-${page.artwork.key}-${page.lang}-${size}.webp`;
 }
 
 function pageFor(lang, name, artwork) {
@@ -99,7 +111,9 @@ function externalLink(url, label) {
 }
 
 function brand(page) {
-  return `<span class="brand">${image(page, "emblem.svg", "", 26, 48)}<span>momoa</span></span>`;
+  const home = pageLink(page, languages[page.lang].routes.home);
+  const label = page.lang === "fr" ? "MOMOA — Accueil" : "MOMOA — Home";
+  return `<a class="brand" href="${home}" aria-label="${label}">${image(page, "emblem.svg", "", 26, 48)}<span>momoa</span></a>`;
 }
 
 function navigation(page, className) {
@@ -138,8 +152,8 @@ function header(page) {
           ${controls[1]}
         </div>
         <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="mobile-menu" aria-label="${escape(copy.menuOpen)}" data-open-label="${escape(copy.menuOpen)}" data-close-label="${escape(copy.menuClose)}">
-          ${image(page, "menu-open.svg", "", 24, 18, { className: "menu-icon-open" })}
-          ${image(page, "menu-close.svg", "", 24, 24, { className: "menu-icon-close" })}
+          <img class="menu-icon-open" src="${assetLink(page, "menu-open.svg")}" alt="" decoding="async">
+          <img class="menu-icon-close" src="${assetLink(page, "menu-close.svg")}" alt="" decoding="async">
         </button>
       </div>
     </div>
@@ -161,11 +175,18 @@ function footer(page) {
         <div class="footer-identity">
           ${brand(page)}
           <p>${escape(copy.footerTagline)}</p>
-           <address>
+          <address>
             1 rue de Paris 06100<br>
             <a href="mailto:dedal@gmail.com">dedal@gmail.com</a><br>
             <a href="tel:+33163458556">01.63.45.85.56</a>
           </address>
+          <nav class="footer-social" aria-label="${escape(copy.footerSocial)}">
+            <ul>
+              ${socialLinks.map(({ name, href, icon }) =>
+                `<li><a href="${escape(href)}"><img src="${assetLink(page, icon)}" alt="" decoding="async">${escape(name)}</a></li>`
+              ).join("\n              ")}
+            </ul>
+          </nav>
         </div>
         <nav aria-label="${escape(copy.footerNav)}">
           ${navigation(page, "footer-links")}
@@ -260,7 +281,7 @@ function home(page) {
       <div class="container home-faq-grid">
         <h2 id="home-faq-title">${escape(faqTitle)}</h2>
         <ul class="faq-links">
-          ${copy.faq.items.map(({ id, question }) => `<li><a href="${pageLink(page, routes.faq)}#${id}"><span>${escape(question)}</span><span aria-hidden="true">+</span></a></li>`).join("\n          ")}
+          ${copy.faq.items.map(({ id, heading, question }) => `<li><a href="${pageLink(page, routes.faq)}#${id}"><span>${escape(heading ?? question)}</span><span aria-hidden="true">+</span></a></li>`).join("\n          ")}
         </ul>
       </div>
     </section>
@@ -271,6 +292,15 @@ function home(page) {
         ${buttonLink(page, routes.signup, newsletter.cta)}
       </div>
     </section>`;
+}
+
+function readingNotes(sections) {
+  return `<div class="container reading-notes">
+      ${sections.map(({ heading, paragraphs }) => `<section>
+        <h2>${escape(heading)}</h2>
+        ${paragraphs.map((paragraph) => `<p>${escape(paragraph)}</p>`).join("\n        ")}
+      </section>`).join("\n      ")}
+    </div>`;
 }
 
 function gallery(page) {
@@ -321,11 +351,16 @@ function gallery(page) {
         <p>${escape(copy.newsBody)}</p>
         ${buttonLink(page, routes.signup, copy.newsCta, "outline")}
       </section>
-    </div>`;
+    </div>
+    ${readingNotes(galleryNotes[page.lang])}`;
 }
 
 function collection(page) {
-  return `<div class="container collection-intro"><h1>${escape(languages[page.lang].collection.title)}</h1></div>
+  const { title, intro } = languages[page.lang].collection;
+  return `<div class="container collection-intro">
+      <h1>${escape(title)}</h1>
+      <p>${escape(intro)}</p>
+    </div>
     <div class="container collection-grid">
       ${artworks.map((artwork) => artworkCard(page, artwork)).join("\n      ")}
     </div>`;
@@ -338,24 +373,26 @@ function notice(page) {
   const index = artworks.indexOf(artwork);
   const previous = artworks.at(index - 1);
   const next = artworks[(index + 1) % artworks.length];
-  const photo = `notice-${artwork.key}-${lang}`;
-  return `<article class="container notice-grid">
-      <div class="notice-heading">
-        ${buttonLink(page, copy.routes.collection, copy.collection.back, "outline", "notice-back")}
-        <h1>${escape(artwork.title[lang])}</h1>
-      </div>
-      ${portrait(page, [`${photo}-desktop.webp`, `${photo}-mobile.webp`], artwork.title[lang], [960, 1200, 513, 675], "notice-photo")}
-      <div class="notice-text">
-        <h2>${escape(item.heading)}</h2>
-        <p class="notice-body">${escape(item.body)}</p>
-        <p>${escape(item.references)}</p>
-        <p class="notice-source">${item.sourceHref ? externalLink(item.sourceHref, item.sourceLabel) : escape(item.sourceLabel)}${item.alternateSource ? `<br>${externalLink(item.alternateSource.href, item.alternateSource.label)}` : ""}</p>
-        <div class="notice-credit">
-          <h2>${escape(copy.collection.creditTitle)}</h2>
-          <p>${item.creditHref ? externalLink(item.creditHref, item.creditLine) : escape(item.creditLine)}${item.creditLicense ? `<br>${externalLink(item.creditLicense.href, item.creditLicense.label)}` : ""}</p>
+  return `<article>
+      <div class="container notice-grid">
+        <div class="notice-heading">
+          ${buttonLink(page, copy.routes.collection, copy.collection.back, "outline", "notice-back")}
+          <h1>${escape(artwork.title[lang])}</h1>
         </div>
-        ${buttonLink(page, copy.routes.gallery, copy.collection.noticeCta, "primary", "notice-gallery")}
+        ${portrait(page, [noticeImage(page, "desktop"), noticeImage(page, "mobile")], artwork.title[lang], [960, 1200, 513, 675], "notice-photo")}
+        <div class="notice-text">
+          <h2>${escape(item.heading)}</h2>
+          <p class="notice-body">${escape(item.body)}</p>
+          <p>${escape(item.references)}</p>
+          <p class="notice-source">${item.sourceHref ? externalLink(item.sourceHref, item.sourceLabel) : escape(item.sourceLabel)}${item.alternateSource ? `<br>${externalLink(item.alternateSource.href, item.alternateSource.label)}` : ""}</p>
+          <div class="notice-credit">
+            <h2>${escape(copy.collection.creditTitle)}</h2>
+            <p>${item.creditHref ? externalLink(item.creditHref, item.creditLine) : escape(item.creditLine)}${item.creditLicense ? `<br>${externalLink(item.creditLicense.href, item.creditLicense.label)}` : ""}</p>
+          </div>
+          ${buttonLink(page, copy.routes.gallery, copy.collection.noticeCta, "primary", "notice-gallery")}
+        </div>
       </div>
+      ${readingNotes(artworkNotes[artwork.key][lang])}
     </article>
     <nav class="notice-navigation" aria-label="${escape(copy.artworkNav)}">
       <ul class="container">
@@ -366,13 +403,14 @@ function notice(page) {
 }
 
 function faq(page) {
-  const copy = languages[page.lang];
+  const { title, intro, items } = languages[page.lang].faq;
   return `<section class="container faq-page" aria-labelledby="faq-title">
-      <h1 id="faq-title">${escape(copy.home.faqTitle)}</h1>
+      <h1 id="faq-title">${escape(title)}</h1>
+      <p class="faq-intro">${escape(intro)}</p>
       <ul class="faq-answers">
-        ${copy.faq.items.map((item) => `<li>
-          <h2 id="${item.id}" tabindex="-1">${escape(item.question)}</h2>
-          <p>${escape(item.answer)}</p>
+        ${items.map((item) => `<li>
+          <h2 id="${item.id}" tabindex="-1">${escape(item.heading ?? item.question)}</h2>
+          <p>${escape(item.body)}</p>
           ${item.note ? `<p class="faq-note">${escape(item.note)}</p>` : ""}
           ${item.action ? buttonLink(page, item.action.href, item.action.label) : ""}
         </li>`).join("\n        ")}
@@ -395,7 +433,8 @@ function signup(page) {
     <div class="container signup-grid split-grid">
       <div id="signup-form" tabindex="-1">
         <p class="signup-unavailable">${escape(signupUnavailable)}</p>
-        <form class="signup-form" aria-labelledby="signup-title" aria-describedby="form-instructions demo-note" novalidate inert>
+        <form class="signup-form" aria-labelledby="signup-form-title" aria-describedby="form-instructions demo-note" novalidate inert>
+          <h2 id="signup-form-title">${escape(copy.formTitle)}</h2>
           <p id="form-instructions" class="form-note">${escape(copy.formNote)}</p>
           ${fields.map(([name, type, autocomplete]) => `<div class="form-field">
             <label for="${name}">${escape(copy.fields[name])}</label>
@@ -422,6 +461,95 @@ function signup(page) {
 
 const render = { home, gallery, collection, notice, signup, faq };
 
+function publishedPageUrl(route) {
+  return new URL(route === "/" ? "" : `${route.slice(1)}/`, siteUrl).href;
+}
+
+function structuredDataFor(page) {
+  const { lang, name, route, artwork } = page;
+  const copy = languages[lang];
+  const common = {
+    "@context": "https://schema.org",
+    url: publishedPageUrl(route),
+    inLanguage: lang,
+  };
+
+  switch (name) {
+    case "home":
+      return {
+        ...common,
+        "@type": "WebPage",
+        name: "MOMOA",
+        description: copy.footerTagline,
+        isPartOf: {
+          "@type": "WebSite",
+          "@id": `${siteUrl}#website`,
+          url: siteUrl,
+          name: "MOMOA",
+          inLanguage: Object.keys(languages),
+        },
+      };
+    case "gallery":
+      return {
+        ...common,
+        "@type": "AboutPage",
+        name: copy.gallery.introTitle.join(" "),
+        description: copy.gallery.historyNote,
+      };
+    case "collection":
+      return {
+        ...common,
+        "@type": "CollectionPage",
+        name: copy.collection.title,
+        mainEntity: {
+          "@type": "ItemList",
+          itemListElement: artworks.map((work, index) => ({
+            "@type": "ListItem",
+            position: index + 1,
+            name: work.title[lang],
+            url: publishedPageUrl(noticeRoute(lang, work)),
+          })),
+        },
+      };
+    case "notice":
+      return {
+        ...common,
+        "@type": "WebPage",
+        name: artwork.title[lang],
+        mainEntity: {
+          "@type": "VisualArtwork",
+          name: artwork.title[lang],
+          artform: "Sculpture",
+          description: artwork.notices[lang].body,
+          image: new URL(`${imageFolder}${noticeImage(page, "desktop")}`, siteUrl).href,
+        },
+      };
+    case "faq":
+      return {
+        ...common,
+        "@type": "FAQPage",
+        name: copy.faq.title,
+        mainEntity: copy.faq.items.filter(({ question }) => question).map(({ question, body, note }) => ({
+          "@type": "Question",
+          name: question,
+          acceptedAnswer: {
+            "@type": "Answer",
+            text: note ? `${body} ${note}` : body,
+          },
+        })),
+      };
+    case "signup":
+      return {
+        ...common,
+        "@type": "WebPage",
+        name: copy.signup.title,
+        description: copy.signup.demoNote,
+      };
+    default:
+      throw new Error(`Unknown page type for structured data: ${name}`);
+  }
+}
+
 function heroPreloads(page) {
   return `
   <link rel="preload" as="image" type="image/avif" media="${escape(mobileHeroMedia)}" imagesrcset="${imageSourceSet(page, "hero-bust-plinth.avif", 1260, heroWidths)}" imagesizes="${mobileHeroSizes}" fetchpriority="high">
@@ -429,25 +557,21 @@ function heroPreloads(page) {
   <link rel="preload" as="image" type="image/webp" media="${escape(mobileHeroMedia)}" href="${assetLink(page, "hero-gallery-dark-640.webp")}">`;
 }
 
-function pageStyles(page) {
-  if (page.name !== "home") {
-    return `<link rel="stylesheet" href="${relative(page, "assets/styles.css")}?v=${stylesheetVersion}">`;
-  }
-  // Intégrer le CSS aux accueils et adapter les chemins des ressources.
-  const inlineStyles = stylesheet.replace(/url\("((?:fonts|images)\/[^"]+)"\)/g,
-    (_, asset) => `url("${relative(page, `assets/${asset}`)}")`);
-  return `<style>\n${inlineStyles}</style>`;
-}
-
 function documentFor(page) {
   const copy = languages[page.lang];
   const title = page.name === "home" ? copy.htmlTitle : `${page.artwork?.title[page.lang] ?? copy.title[page.name]} — MOMOA`;
-  const description = page.artwork ? page.artwork.notices[page.lang].heading : copy.descriptions[page.name];
-  const serifFontPreload = `\n  <link rel="preload" href="${relative(page, "assets/fonts/cormorant-garamond-latin-wght-normal.woff2")}" as="font" type="font/woff2" crossorigin>`;
-  const bodyFontPreload = `<link rel="preload" href="${relative(page, "assets/fonts/dm-sans-latin-standard-normal.woff2")}" as="font" type="font/woff2" crossorigin>`;
-  const stylesAndPreloads = page.name === "home"
-    ? `${serifFontPreload.trimStart()}${heroPreloads(page)}\n  ${bodyFontPreload}\n  ${pageStyles(page)}`
-    : `${pageStyles(page)}${serifFontPreload}\n  ${bodyFontPreload}`;
+  const description = page.artwork ? page.artwork.notices[page.lang].metaDescription : copy.descriptions[page.name];
+  const descriptionLength = typeof description === "string" ? [...description].length : 0;
+  if (descriptionLength < 132 || descriptionLength > 160 || description !== description.trim()) {
+    throw new Error(`Invalid meta description for ${page.route}: expected 132–160 characters with no leading or trailing whitespace (found ${descriptionLength}).`);
+  }
+  const structuredData = JSON.stringify(structuredDataFor(page)).replace(/</g, "\\u003c");
+  const alternateLinks = Object.keys(languages).map((lang) => {
+    const translated = pageFor(lang, page.name, page.artwork);
+    return `<link rel="alternate" hreflang="${lang}" href="${publishedPageUrl(translated.route)}">`;
+  }).join("\n  ");
+  const scriptUrl = `${relative(page, scriptPath)}?v=${scriptVersion}`;
+  const homePreloads = page.name === "home" ? heroPreloads(page) : "";
   return `<!doctype html>
 <html lang="${page.lang}">
 <head>
@@ -456,17 +580,14 @@ function documentFor(page) {
   <meta name="description" content="${escape(description)}">
   <meta name="theme-color" content="#101722">
   <title>${escape(title)}</title>
-  <script>
-    document.documentElement.classList.add("js");
-    document.addEventListener("error", (event) => {
-      if (event.target.tagName === "SCRIPT") {
-        document.documentElement.classList.remove("js");
-      }
-    }, true);
-  </script>
+  <link rel="canonical" href="${publishedPageUrl(page.route)}">
+  ${alternateLinks}
+  <script type="application/ld+json">${structuredData}</script>
   <link rel="icon" href="${assetLink(page, "emblem.svg")}" type="image/svg+xml">
-  ${stylesAndPreloads}
-  <script src="${relative(page, "assets/site.js")}?v=${scriptVersion}" defer></script>
+  <link rel="stylesheet" href="${relative(page, stylesheetPath)}?v=${stylesheetVersion}">
+  <link rel="preload" href="${relative(page, "assets/fonts/cormorant-garamond-latin-wght-normal.woff2")}" as="font" type="font/woff2" crossorigin>${homePreloads}
+  <link rel="preload" href="${relative(page, "assets/fonts/dm-sans-latin-standard-normal.woff2")}" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="${scriptUrl}" as="script">
 </head>
 <body class="page-${page.name}">
   <a class="skip-link" href="#main-content">${escape(copy.skipLink)}</a>
@@ -475,6 +596,7 @@ function documentFor(page) {
     ${render[page.name](page)}
   </main>
   ${footer(page)}
+  <script src="${scriptUrl}" defer></script>
 </body>
 </html>
 `;
@@ -485,10 +607,11 @@ const pages = Object.keys(languages).flatMap((lang) => [
   ...artworks.map((artwork) => pageFor(lang, "notice", artwork)),
 ]);
 
-for (const page of pages) {
-  const directory = fileURLToPath(new URL(`${page.directory}/`, new URL("../docs/", import.meta.url)));
+const documents = pages.map((page) => ({ page, html: documentFor(page) }));
+for (const { page, html } of documents) {
+  const directory = fileURLToPath(new URL(`${page.directory}/`, outputDirectory));
   await mkdir(directory, { recursive: true });
-  await writeFile(`${directory}index.html`, documentFor(page));
+  await writeFile(`${directory}index.html`, html);
 }
-await writeFile(`${output}.nojekyll`, "");
+await writeFile(new URL(".nojekyll", outputDirectory), "");
 console.log(`Generated ${pages.length} pages in docs/.`);

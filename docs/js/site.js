@@ -3,12 +3,13 @@
 const menuButton = document.querySelector(".menu-toggle");
 const mobileMenu = document.getElementById("mobile-menu");
 const closeButton = mobileMenu.querySelector(".menu-close");
+const desktopNav = document.querySelector(".desktop-nav");
 const desktopLayout = window.matchMedia("(min-width: 56rem)");
 let scrollBeforeMenu = 0;
-let menuHasFocus = false;
+let lastFocusedElement = document.activeElement;
 
 document.addEventListener("focusin", (event) => {
-  menuHasFocus = event.target === menuButton || mobileMenu.contains(event.target);
+  lastFocusedElement = event.target;
 });
 
 function setMenu(open, returnFocus = true) {
@@ -32,12 +33,13 @@ document.addEventListener("keydown", (event) => {
   setMenu(false);
 });
 desktopLayout.addEventListener("change", (event) => {
-  if (!event.matches || mobileMenu.hidden) return;
-  // Restituer le focus après le passage à la navigation sur ordinateur.
-  const restoreFocus = menuHasFocus;
-  setMenu(false, false);
-  if (restoreFocus) {
-    document.querySelector(".desktop-nav a").focus({ preventScroll: true });
+  // Restituer le focus lorsque le contrôle actif disparaît de la navigation.
+  if (event.matches) {
+    const restoreFocus = lastFocusedElement === menuButton || mobileMenu.contains(lastFocusedElement);
+    if (!mobileMenu.hidden) setMenu(false, false);
+    if (restoreFocus) desktopNav.querySelector("a").focus({ preventScroll: true });
+  } else if (desktopNav.contains(lastFocusedElement)) {
+    menuButton.focus({ preventScroll: true });
   }
 });
 window.addEventListener("pageshow", (event) => {
@@ -102,3 +104,8 @@ if (form) {
   form.hidden = false;
   form.inert = false;
 }
+
+// Garder la navigation native disponible tant que le script ne l’a pas remplacée.
+const restoreNavigationFocus = !desktopLayout.matches && desktopNav.contains(document.activeElement);
+document.documentElement.classList.add("js");
+if (restoreNavigationFocus) menuButton.focus({ preventScroll: true });

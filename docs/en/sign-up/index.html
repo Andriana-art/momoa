@@ -3,28 +3,24 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Try the demonstration sign-up form for the MOMOA newsletter.">
+  <meta name="description" content="Try the demo sign-up form for the MOMOA newsletter about exhibitions and featured works. No subscription is created, and no information is sent or stored.">
   <meta name="theme-color" content="#101722">
   <title>Sign up — MOMOA</title>
-  <script>
-    document.documentElement.classList.add("js");
-    document.addEventListener("error", (event) => {
-      if (event.target.tagName === "SCRIPT") {
-        document.documentElement.classList.remove("js");
-      }
-    }, true);
-  </script>
+  <link rel="canonical" href="https://andriana-art.github.io/momoa/en/sign-up/">
+  <link rel="alternate" hreflang="fr" href="https://andriana-art.github.io/momoa/inscription/">
+  <link rel="alternate" hreflang="en" href="https://andriana-art.github.io/momoa/en/sign-up/">
+  <script type="application/ld+json">{"@context":"https://schema.org","url":"https://andriana-art.github.io/momoa/en/sign-up/","inLanguage":"en","@type":"WebPage","name":"News from MOMOA","description":"Demo form: no data is sent or stored."}</script>
   <link rel="icon" href="../../assets/images/emblem.svg" type="image/svg+xml">
-  <link rel="stylesheet" href="../../assets/styles.css?v=76321b3491e7">
+  <link rel="stylesheet" href="../../css/styles.css?v=a500754524a2">
   <link rel="preload" href="../../assets/fonts/cormorant-garamond-latin-wght-normal.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="preload" href="../../assets/fonts/dm-sans-latin-standard-normal.woff2" as="font" type="font/woff2" crossorigin>
-  <script src="../../assets/site.js?v=90c8f0ace511" defer></script>
+  <link rel="preload" href="../../js/site.js?v=6ee37ac721a4" as="script">
 </head>
 <body class="page-signup">
   <a class="skip-link" href="#main-content">Skip to content</a>
   <header class="site-header">
     <div class="header-inner">
-      <span class="brand"><img src="../../assets/images/emblem.svg" alt="" width="26" height="48" decoding="async"><span>momoa</span></span>
+      <a class="brand" href="../" aria-label="MOMOA — Home"><img src="../../assets/images/emblem.svg" alt="" width="26" height="48" decoding="async"><span>momoa</span></a>
       <nav class="desktop-nav" aria-label="Main navigation">
         <ul class="nav-links">
         <li><a href="../">Home</a></li>
@@ -40,8 +36,8 @@
           <span lang="en" aria-current="true" title="English">EN</span>
         </div>
         <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="mobile-menu" aria-label="Open menu" data-open-label="Open menu" data-close-label="Close the menu">
-          <img class="menu-icon-open" src="../../assets/images/menu-open.svg" alt="" width="24" height="18" decoding="async">
-          <img class="menu-icon-close" src="../../assets/images/menu-close.svg" alt="" width="24" height="24" decoding="async">
+          <img class="menu-icon-open" src="../../assets/images/menu-open.svg" alt="" decoding="async">
+          <img class="menu-icon-close" src="../../assets/images/menu-close.svg" alt="" decoding="async">
         </button>
       </div>
     </div>
@@ -61,12 +57,13 @@
   <main id="main-content" tabindex="-1" class="stone">
     <div class="container signup-intro">
       <h1 id="signup-title">News from MOMOA</h1>
-      <p>Follow the exhibitions and featured works.</p>
+      <p>The News from MOMOA form shows how to sign up for updates on exhibitions and featured works.</p>
     </div>
     <div class="container signup-grid split-grid">
       <div id="signup-form" tabindex="-1">
         <p class="signup-unavailable">Enable JavaScript to try the demonstration form.</p>
-        <form class="signup-form" aria-labelledby="signup-title" aria-describedby="form-instructions demo-note" novalidate inert>
+        <form class="signup-form" aria-labelledby="signup-form-title" aria-describedby="form-instructions demo-note" novalidate inert>
+          <h2 id="signup-form-title">Demonstration form</h2>
           <p id="form-instructions" class="form-note">All fields are required.</p>
           <div class="form-field">
             <label for="lastName">Last name</label>
@@ -107,8 +104,20 @@
     <div class="container footer-inner">
       <div class="footer-grid">
         <div class="footer-identity">
-          <span class="brand"><img src="../../assets/images/emblem.svg" alt="" width="26" height="48" decoding="async"><span>momoa</span></span>
+          <a class="brand" href="../" aria-label="MOMOA — Home"><img src="../../assets/images/emblem.svg" alt="" width="26" height="48" decoding="async"><span>momoa</span></a>
           <p>Fictional gallery of Greek sculpture reproductions · University project</p>
+          <address>
+            1 rue de Paris 06100<br>
+            <a href="mailto:dedal@gmail.com">dedal@gmail.com</a><br>
+            <a href="tel:+33163458556">01.63.45.85.56</a>
+          </address>
+          <nav class="footer-social" aria-label="Social media">
+            <ul>
+              <li><a href="https://www.instagram.com/"><img src="../../assets/images/social-instagram.svg" alt="" decoding="async">Instagram</a></li>
+              <li><a href="https://www.facebook.com/"><img src="../../assets/images/social-facebook.svg" alt="" decoding="async">Facebook</a></li>
+              <li><a href="https://about.x.com/"><img src="../../assets/images/social-x.svg" alt="" decoding="async">X</a></li>
+            </ul>
+          </nav>
         </div>
         <nav aria-label="Useful links">
           <ul class="footer-links">
@@ -122,5 +131,6 @@
       <p class="footer-copyright">© MOMOA 2026</p>
     </div>
   </footer>
+  <script src="../../js/site.js?v=6ee37ac721a4" defer></script>
 </body>
 </html>
