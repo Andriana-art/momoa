@@ -438,9 +438,13 @@ button {
   gap: 1.5rem;
 }
 
-.footer-identity {
+.footer-identity, .footer-navigation {
   display: grid;
   gap: 1rem;
+}
+
+.footer-navigation {
+  align-content: start;
 }
 
 .site-footer .brand {
@@ -1217,9 +1221,13 @@ html:not(.js) .signup-form, .js .signup-unavailable {
     gap: clamp(2rem, 8.89vw, 8rem);
   }
 
-  .footer-links {
+  .footer-links, .footer-social ul {
     grid-template-columns: repeat(4, minmax(0, 1fr));
     gap: 1rem;
+  }
+
+  .footer-social ul {
+    display: grid;
   }
 
   .split-grid, .hero-grid {

@@ -180,7 +180,12 @@ function footer(page) {
             <a href="mailto:dedal@gmail.com">dedal@gmail.com</a><br>
             <a href="tel:+33163458556">01.63.45.85.56</a>
           </address>
-          <nav class="footer-social" aria-label="${escape(copy.footerSocial)}">
+        </div>
+        <div class="footer-navigation">
+          <nav aria-label="${escape(copy.footerNav)}">
+            ${navigation(page, "footer-links")}
+          </nav>
+          <nav id="footer-social" class="footer-social" aria-label="${escape(copy.footerSocial)}">
             <ul>
               ${socialLinks.map(({ name, href, icon }) =>
                 `<li><a href="${escape(href)}"><img src="${assetLink(page, icon)}" alt="" decoding="async">${escape(name)}</a></li>`
@@ -188,9 +193,6 @@ function footer(page) {
             </ul>
           </nav>
         </div>
-        <nav aria-label="${escape(copy.footerNav)}">
-          ${navigation(page, "footer-links")}
-        </nav>
       </div>
       <p class="footer-copyright">${escape(copy.footerCopy)}</p>
     </div>
