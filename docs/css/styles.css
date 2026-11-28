@@ -440,11 +440,8 @@ button {
 
 .footer-identity, .footer-navigation {
   display: grid;
-  gap: 1rem;
-}
-
-.footer-navigation {
   align-content: start;
+  gap: 1rem;
 }
 
 .site-footer .brand {
