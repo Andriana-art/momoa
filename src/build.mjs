@@ -25,6 +25,11 @@ const splitImageSizes = "(min-width: 90rem) 624px, (min-width: 56rem) 43.05vw, c
 const homeCardImageSizes = "(min-width: 90rem) 624px, (min-width: 56rem) calc((100vw - 2 * clamp(2rem, 5.56vw, 5rem) - 2rem) / 2), (min-width: 40rem) calc((100vw - 5.5rem) / 2), calc(100vw - 3rem)";
 const panelImageSizes = "(min-width: 90rem) 576px, (min-width: 56rem) calc(43.05vw - 3rem), (min-width: 40rem) calc(50vw - 5.25rem), calc(100vw - 5.5rem)";
 const caryatidWidths = [480, 640, 768, 1248, 2048];
+const socialLinks = [
+  { name: "Instagram", href: "https://www.instagram.com/", icon: "social-instagram.svg" },
+  { name: "Facebook", href: "https://www.facebook.com/", icon: "social-facebook.svg" },
+  { name: "X", href: "https://about.x.com/", icon: "social-x.svg" },
+];
 
 function escape(value) {
   return String(value).replace(/[&<>"']/g, (character) => ({
@@ -164,12 +169,6 @@ function header(page) {
 
 function footer(page) {
   const copy = languages[page.lang];
-  const shareUrl = encodeURIComponent(publishedPageUrl(page.route));
-  const socialLinks = [
-    ["Facebook", `https://www.facebook.com/sharer/sharer.php?u=${shareUrl}`],
-    ["LinkedIn", `https://www.linkedin.com/sharing/share-offsite/?url=${shareUrl}`],
-    ["Bluesky", `https://bsky.app/intent/compose?text=${shareUrl}`],
-  ];
   return `<footer class="site-footer">
     <div class="container footer-inner">
       <div class="footer-grid">
@@ -181,20 +180,19 @@ function footer(page) {
             <a href="mailto:dedal@gmail.com">dedal@gmail.com</a><br>
             <a href="tel:+33163458556">01.63.45.85.56</a>
           </address>
+          <nav class="footer-social" aria-label="${escape(copy.footerSocial)}">
+            <ul>
+              ${socialLinks.map(({ name, href, icon }) =>
+                `<li><a href="${escape(href)}"><img src="${assetLink(page, icon)}" alt="" decoding="async">${escape(name)}</a></li>`
+              ).join("\n              ")}
+            </ul>
+          </nav>
         </div>
         <nav aria-label="${escape(copy.footerNav)}">
           ${navigation(page, "footer-links")}
         </nav>
       </div>
       <p class="footer-copyright">${escape(copy.footerCopy)}</p>
-      <nav class="footer-social" aria-labelledby="footer-share-label">
-        <p id="footer-share-label">${escape(copy.footerShare)}</p>
-        <ul>
-          ${socialLinks.map(([name, href]) =>
-            `<li><a href="${escape(href)}" aria-label="${escape(`${copy.footerShareOn} ${name}`)}">${escape(name)}</a></li>`
-          ).join("\n          ")}
-        </ul>
-      </nav>
     </div>
   </footer>`;
 }
@@ -283,7 +281,7 @@ function home(page) {
       <div class="container home-faq-grid">
         <h2 id="home-faq-title">${escape(faqTitle)}</h2>
         <ul class="faq-links">
-          ${copy.faq.items.map(({ id, question }) => `<li><a href="${pageLink(page, routes.faq)}#${id}"><span>${escape(question)}</span><span aria-hidden="true">+</span></a></li>`).join("\n          ")}
+          ${copy.faq.items.map(({ id, heading, question }) => `<li><a href="${pageLink(page, routes.faq)}#${id}"><span>${escape(heading ?? question)}</span><span aria-hidden="true">+</span></a></li>`).join("\n          ")}
         </ul>
       </div>
     </section>
@@ -411,8 +409,8 @@ function faq(page) {
       <p class="faq-intro">${escape(intro)}</p>
       <ul class="faq-answers">
         ${items.map((item) => `<li>
-          <h2 id="${item.id}" tabindex="-1">${escape(item.question)}</h2>
-          <p>${escape(item.answer)}</p>
+          <h2 id="${item.id}" tabindex="-1">${escape(item.heading ?? item.question)}</h2>
+          <p>${escape(item.body)}</p>
           ${item.note ? `<p class="faq-note">${escape(item.note)}</p>` : ""}
           ${item.action ? buttonLink(page, item.action.href, item.action.label) : ""}
         </li>`).join("\n        ")}
@@ -531,12 +529,12 @@ function structuredDataFor(page) {
         ...common,
         "@type": "FAQPage",
         name: copy.faq.title,
-        mainEntity: copy.faq.items.map(({ question, answer, note }) => ({
+        mainEntity: copy.faq.items.filter(({ question }) => question).map(({ question, body, note }) => ({
           "@type": "Question",
           name: question,
           acceptedAnswer: {
             "@type": "Answer",
-            text: note ? `${answer} ${note}` : answer,
+            text: note ? `${body} ${note}` : body,
           },
         })),
       };
