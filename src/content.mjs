@@ -94,18 +94,18 @@ export const languages = {
       "items": [
         {
           "id": "a-propos-de-momoa",
-          "heading": "À propos de nous",
-          "body": "MOMOA invite à regarder la sculpture grecque de près. Du geste du Discobole au drapé de la Victoire de Samothrace, les reproductions et leurs notices donnent à voir le mouvement et racontent l’histoire des œuvres. Cette galerie fictive a été imaginée dans le cadre d’un projet universitaire."
+          "question": "MOMOA est-elle une vraie galerie ?",
+          "answer": "MOMOA est une galerie imaginée pour un projet universitaire. Vous pouvez y découvrir les œuvres et leur histoire, comme dans une véritable collection."
         },
         {
           "id": "origine-des-sculptures",
           "question": "Toutes les sculptures sont-elles grecques ?",
-          "body": "La collection va au-delà de la Grèce antique : elle réunit aussi des copies romaines et des œuvres plus récentes inspirées des mythes grecs. Chaque notice vous aide à les situer."
+          "answer": "La collection va au-delà de la Grèce antique : elle réunit aussi des copies romaines et des œuvres plus récentes inspirées des mythes grecs. Chaque notice vous aide à les situer."
         },
         {
           "id": "inscription",
           "question": "Comment s’inscrire ?",
-          "body": "Directement sur notre page Inscription ! Il vous suffit de renseigner votre nom et votre adresse e-mail.",
+          "answer": "Directement sur notre page Inscription ! Il vous suffit de renseigner votre nom et votre adresse e-mail.",
           "note": "Note : ce site est une démonstration universitaire ; le formulaire est fictif et aucune donnée n’est conservée.",
           "action": {
             "label": "S’inscrire",
@@ -212,7 +212,7 @@ export const languages = {
       "gallery": "Read the story of MOMOA, a fictional gallery created for a university project. Explore how it presents sculpture and helps visitors look more closely.",
       "collection": "Browse six works in the MOMOA collection, from ancient Greek sculpture and Roman copies to later interpretations. Each work has its own page with a photograph.",
       "signup": "Try the demo sign-up form for the MOMOA newsletter about exhibitions and featured works. No subscription is created, and no information is sent or stored.",
-      "faq": "Learn about MOMOA, a fictional gallery created for a university project, the origins of the sculptures in its collection and the demonstration sign-up form."
+      "faq": "Find answers to frequently asked questions about the fictional MOMOA gallery, the origins of its sculptures and how the demonstration sign-up form works."
     },
     "htmlTitle": "MOMOA — Greek sculpture and reproductions",
     "nav": [
@@ -282,18 +282,18 @@ export const languages = {
       "items": [
         {
           "id": "about-momoa",
-          "heading": "About us",
-          "body": "MOMOA invites you to take a closer look at Greek sculpture. From the Discobolus poised to throw to the drapery of the Winged Victory of Samothrace, the reproductions and their accompanying notes capture movement and tell the stories behind the works. This fictional gallery was created as part of a university project."
+          "question": "Is MOMOA a real gallery?",
+          "answer": "MOMOA is an imagined gallery created for a university project. You can explore the works and their stories, just as you would in a real collection."
         },
         {
           "id": "sculpture-origins",
           "question": "Are all the sculptures Greek?",
-          "body": "The collection reaches beyond ancient Greece, with Roman copies and later works inspired by Greek myths. Each artwork page helps you place the work in its time."
+          "answer": "The collection reaches beyond ancient Greece, with Roman copies and later works inspired by Greek myths. Each artwork page helps you place the work in its time."
         },
         {
           "id": "sign-up",
           "question": "How do I sign up?",
-          "body": "Simply head to our Sign Up page and enter your name and email.",
+          "answer": "Simply head to our Sign Up page and enter your name and email.",
           "note": "Note: As this is an academic project, the form is for demonstration purposes only and no data is stored.",
           "action": {
             "label": "Sign up",

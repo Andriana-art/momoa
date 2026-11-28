@@ -281,7 +281,7 @@ function home(page) {
       <div class="container home-faq-grid">
         <h2 id="home-faq-title">${escape(faqTitle)}</h2>
         <ul class="faq-links">
-          ${copy.faq.items.map(({ id, heading, question }) => `<li><a href="${pageLink(page, routes.faq)}#${id}"><span>${escape(heading ?? question)}</span><span aria-hidden="true">+</span></a></li>`).join("\n          ")}
+          ${copy.faq.items.map(({ id, question }) => `<li><a href="${pageLink(page, routes.faq)}#${id}"><span>${escape(question)}</span><span aria-hidden="true">+</span></a></li>`).join("\n          ")}
         </ul>
       </div>
     </section>
@@ -409,8 +409,8 @@ function faq(page) {
       <p class="faq-intro">${escape(intro)}</p>
       <ul class="faq-answers">
         ${items.map((item) => `<li>
-          <h2 id="${item.id}" tabindex="-1">${escape(item.heading ?? item.question)}</h2>
-          <p>${escape(item.body)}</p>
+          <h2 id="${item.id}" tabindex="-1">${escape(item.question)}</h2>
+          <p>${escape(item.answer)}</p>
           ${item.note ? `<p class="faq-note">${escape(item.note)}</p>` : ""}
           ${item.action ? buttonLink(page, item.action.href, item.action.label) : ""}
         </li>`).join("\n        ")}
@@ -529,12 +529,12 @@ function structuredDataFor(page) {
         ...common,
         "@type": "FAQPage",
         name: copy.faq.title,
-        mainEntity: copy.faq.items.filter(({ question }) => question).map(({ question, body, note }) => ({
+        mainEntity: copy.faq.items.map(({ question, answer, note }) => ({
           "@type": "Question",
           name: question,
           acceptedAnswer: {
             "@type": "Answer",
-            text: note ? `${body} ${note}` : body,
+            text: note ? `${answer} ${note}` : answer,
           },
         })),
       };
