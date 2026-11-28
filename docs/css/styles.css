@@ -522,6 +522,12 @@ button {
   }
 }
 
+@media (forced-colors: active) and (prefers-color-scheme: light) {
+  .menu-icon-close {
+    filter: invert(1);
+  }
+}
+
 @media (forced-colors: active) and (prefers-color-scheme: dark) {
   .footer-social img {
     filter: invert(1);

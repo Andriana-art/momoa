@@ -15,7 +15,7 @@ export const languages = {
     "galleryExhibitionAlt": "Détail du groupe de Prométhée et des Océanides",
     "title": {
       "gallery": "La galerie",
-      "collection": "Collection",
+      "collection": "Collection de sculptures grecques",
       "signup": "Inscription",
       "faq": "Questions fréquentes"
     },
@@ -202,7 +202,7 @@ export const languages = {
     "galleryExhibitionAlt": "Detail of the Prometheus and Oceanids sculpture group",
     "title": {
       "gallery": "The gallery",
-      "collection": "Collection",
+      "collection": "Greek sculpture collection",
       "signup": "Sign up",
       "faq": "Frequently asked questions"
     },
